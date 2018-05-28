@@ -1,0 +1,10 @@
+E:\Git\Single\GitKraken\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\ProjectAutoSupplying.exe.config
+E:\Git\Single\GitKraken\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\ProjectAutoSupplying.exe
+E:\Git\Single\GitKraken\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\ProjectAutoSupplying.pdb
+E:\Git\Single\GitKraken\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.csprojResolveAssemblyReference.cache
+E:\Git\Single\GitKraken\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.Form1.resources
+E:\Git\Single\GitKraken\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.Properties.Resources.resources
+E:\Git\Single\GitKraken\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.csproj.GenerateResource.cache
+E:\Git\Single\GitKraken\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.csproj.CoreCompileInputs.cache
+E:\Git\Single\GitKraken\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.exe
+E:\Git\Single\GitKraken\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.pdb
