@@ -260,6 +260,9 @@
             // 
             // tabControlUpper
             // 
+            this.tabControlUpper.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlUpper.Controls.Add(this.tabPage1);
             this.tabControlUpper.Controls.Add(this.tabPage2);
             this.tabControlUpper.Controls.Add(this.tabPage3);
@@ -271,7 +274,11 @@
             this.tabControlUpper.Name = "tabControlUpper";
             this.tabControlUpper.Padding = new System.Drawing.Point(0, 0);
             this.tabControlUpper.SelectedIndex = 0;
+<<<<<<< HEAD
             this.tabControlUpper.Size = new System.Drawing.Size(749, 365);
+=======
+            this.tabControlUpper.Size = new System.Drawing.Size(769, 360);
+>>>>>>> gui
             this.tabControlUpper.TabIndex = 0;
             // 
             // tabPage1
@@ -280,13 +287,20 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+<<<<<<< HEAD
             this.tabPage1.Size = new System.Drawing.Size(741, 339);
+=======
+            this.tabPage1.Size = new System.Drawing.Size(761, 334);
+>>>>>>> gui
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Справочники";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabControlCatalogueInherit
             // 
+            this.tabControlCatalogueInherit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlCatalogueInherit.Controls.Add(this.tabPage4);
             this.tabControlCatalogueInherit.Controls.Add(this.tabPage5);
             this.tabControlCatalogueInherit.Controls.Add(this.tabPage6);
@@ -295,7 +309,11 @@
             this.tabControlCatalogueInherit.Location = new System.Drawing.Point(3, 3);
             this.tabControlCatalogueInherit.Name = "tabControlCatalogueInherit";
             this.tabControlCatalogueInherit.SelectedIndex = 0;
+<<<<<<< HEAD
             this.tabControlCatalogueInherit.Size = new System.Drawing.Size(735, 333);
+=======
+            this.tabControlCatalogueInherit.Size = new System.Drawing.Size(769, 338);
+>>>>>>> gui
             this.tabControlCatalogueInherit.TabIndex = 0;
             // 
             // tabPage4
@@ -317,12 +335,54 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+<<<<<<< HEAD
             this.tabPage4.Size = new System.Drawing.Size(727, 307);
+=======
+            this.tabPage4.Size = new System.Drawing.Size(761, 312);
+>>>>>>> gui
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "Сведения о предприятии";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // label6
+<<<<<<< HEAD
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label6.Location = new System.Drawing.Point(294, 81);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 17);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Код ОКПО";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(140, 142);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(127, 20);
+            this.textBox6.TabIndex = 12;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(140, 116);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(503, 20);
+            this.textBox5.TabIndex = 11;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(140, 81);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(127, 20);
+            this.textBox4.TabIndex = 10;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(387, 81);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(127, 20);
+            this.textBox3.TabIndex = 9;
+=======
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -396,6 +456,54 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(212, 20);
             this.textBox2.TabIndex = 5;
+>>>>>>> gui
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label5.Location = new System.Drawing.Point(86, 116);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 17);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Адрес";
+            // 
+<<<<<<< HEAD
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.Location = new System.Drawing.Point(14, 142);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 17);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Номер для связи";
+=======
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(140, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(346, 20);
+            this.textBox1.TabIndex = 3;
+>>>>>>> gui
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(28, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Наименование";
+            // 
+<<<<<<< HEAD
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(140, 50);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(212, 20);
+            this.textBox2.TabIndex = 5;
             // 
             // label2
             // 
@@ -455,9 +563,74 @@
             this.label9.Size = new System.Drawing.Size(49, 17);
             this.label9.TabIndex = 17;
             this.label9.Text = "Серия";
+=======
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Location = new System.Drawing.Point(17, 167);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(725, 64);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(222, 11);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(147, 21);
+            this.comboBox1.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label9.Location = new System.Drawing.Point(380, 38);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 17);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Серия";
             // 
             // textBox8
             // 
+            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox8.Location = new System.Drawing.Point(435, 38);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(81, 20);
+            this.textBox8.TabIndex = 16;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox7.Location = new System.Drawing.Point(222, 38);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(147, 20);
+            this.textBox7.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label8.Location = new System.Drawing.Point(45, 39);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(171, 17);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Регистрационный номер";
+>>>>>>> gui
+            // 
+            // textBox8
+            // 
+<<<<<<< HEAD
             this.textBox8.Location = new System.Drawing.Point(398, 38);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(61, 20);
@@ -492,36 +665,73 @@
             // 
             // groupBox1
             // 
+=======
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label7.Location = new System.Drawing.Point(46, 11);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(170, 17);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Лицензионная карточка";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+>>>>>>> gui
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.textBox9);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
+<<<<<<< HEAD
             this.groupBox1.Location = new System.Drawing.Point(16, 238);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(631, 70);
+=======
+            this.groupBox1.Location = new System.Drawing.Point(16, 237);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(726, 70);
+>>>>>>> gui
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // comboBox2
             // 
+<<<<<<< HEAD
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(185, 12);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(127, 21);
+=======
+            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(223, 12);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(147, 21);
+>>>>>>> gui
             this.comboBox2.TabIndex = 19;
             // 
             // textBox9
             // 
+<<<<<<< HEAD
             this.textBox9.Location = new System.Drawing.Point(185, 38);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(274, 20);
+=======
+            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox9.Location = new System.Drawing.Point(223, 38);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(294, 20);
+>>>>>>> gui
             this.textBox9.TabIndex = 18;
             // 
             // label11
             // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label11.Location = new System.Drawing.Point(57, 39);
+            this.label11.Location = new System.Drawing.Point(95, 39);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(122, 17);
             this.label11.TabIndex = 19;
@@ -529,9 +739,16 @@
             // 
             // label10
             // 
+<<<<<<< HEAD
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label10.Location = new System.Drawing.Point(30, 13);
+=======
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label10.Location = new System.Drawing.Point(68, 13);
+>>>>>>> gui
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(149, 17);
             this.label10.TabIndex = 18;
@@ -544,13 +761,19 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+<<<<<<< HEAD
             this.tabPage5.Size = new System.Drawing.Size(727, 307);
+=======
+            this.tabPage5.Size = new System.Drawing.Size(761, 312);
+>>>>>>> gui
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Данные о заказчиках";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.textBox14);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.label16);
@@ -563,15 +786,16 @@
             this.groupBox4.Controls.Add(this.textBox12);
             this.groupBox4.Controls.Add(this.textBox11);
             this.groupBox4.Controls.Add(this.textBox10);
-            this.groupBox4.Location = new System.Drawing.Point(16, 195);
+            this.groupBox4.Location = new System.Drawing.Point(16, 176);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(704, 113);
+            this.groupBox4.Size = new System.Drawing.Size(725, 128);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Данные о заказчике";
             // 
             // textBox14
             // 
+<<<<<<< HEAD
             this.textBox14.Location = new System.Drawing.Point(594, 76);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(102, 20);
@@ -582,6 +806,21 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label17.Location = new System.Drawing.Point(530, 77);
+=======
+            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox14.Location = new System.Drawing.Point(604, 76);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(102, 20);
+            this.textBox14.TabIndex = 23;
+            this.textBox14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox10_MouseClick);
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label17.Location = new System.Drawing.Point(540, 77);
+>>>>>>> gui
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(58, 17);
             this.label17.TabIndex = 22;
@@ -589,9 +828,16 @@
             // 
             // label16
             // 
+<<<<<<< HEAD
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label16.Location = new System.Drawing.Point(358, 75);
+=======
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label16.Location = new System.Drawing.Point(368, 75);
+>>>>>>> gui
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(49, 17);
             this.label16.TabIndex = 21;
@@ -599,9 +845,16 @@
             // 
             // label15
             // 
+<<<<<<< HEAD
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label15.Location = new System.Drawing.Point(531, 48);
+=======
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label15.Location = new System.Drawing.Point(541, 48);
+>>>>>>> gui
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(38, 17);
             this.label15.TabIndex = 20;
@@ -609,6 +862,7 @@
             // 
             // comboBox3
             // 
+<<<<<<< HEAD
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(118, 75);
             this.comboBox3.Name = "comboBox3";
@@ -620,6 +874,23 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label14.Location = new System.Drawing.Point(22, 76);
+=======
+            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(128, 75);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(234, 21);
+            this.comboBox3.TabIndex = 19;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.comboBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox10_MouseClick);
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label14.Location = new System.Drawing.Point(32, 76);
+>>>>>>> gui
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(90, 17);
             this.label14.TabIndex = 18;
@@ -627,9 +898,10 @@
             // 
             // label13
             // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label13.Location = new System.Drawing.Point(26, 48);
+            this.label13.Location = new System.Drawing.Point(36, 48);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(85, 17);
             this.label13.TabIndex = 17;
@@ -637,9 +909,16 @@
             // 
             // label12
             // 
+<<<<<<< HEAD
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label12.Location = new System.Drawing.Point(63, 22);
+=======
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label12.Location = new System.Drawing.Point(73, 22);
+>>>>>>> gui
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(48, 17);
             this.label12.TabIndex = 16;
@@ -647,6 +926,7 @@
             // 
             // textBox13
             // 
+<<<<<<< HEAD
             this.textBox13.Location = new System.Drawing.Point(413, 76);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(111, 20);
@@ -679,15 +959,70 @@
             this.groupBox3.Location = new System.Drawing.Point(16, 7);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(704, 182);
+=======
+            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox13.Location = new System.Drawing.Point(423, 76);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(111, 20);
+            this.textBox13.TabIndex = 7;
+            this.textBox13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox10_MouseClick);
+            // 
+            // textBox12
+            // 
+            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox12.Location = new System.Drawing.Point(585, 47);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(121, 20);
+            this.textBox12.TabIndex = 6;
+            this.textBox12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox10_MouseClick);
+            // 
+            // textBox11
+            // 
+            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox11.Location = new System.Drawing.Point(127, 45);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(274, 20);
+            this.textBox11.TabIndex = 5;
+            this.textBox11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox10_MouseClick);
+            // 
+            // textBox10
+            // 
+            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox10.Location = new System.Drawing.Point(127, 19);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(579, 20);
+            this.textBox10.TabIndex = 4;
+            this.textBox10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox10_MouseClick);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Location = new System.Drawing.Point(16, 7);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(737, 168);
+>>>>>>> gui
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             // 
             // dataGridView1
             // 
+<<<<<<< HEAD
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(690, 162);
+=======
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 13);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(724, 148);
+>>>>>>> gui
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPage6
@@ -702,16 +1037,27 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+<<<<<<< HEAD
             this.tabPage6.Size = new System.Drawing.Size(727, 307);
+=======
+            this.tabPage6.Size = new System.Drawing.Size(761, 312);
+>>>>>>> gui
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "Реквизиты банков";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
+<<<<<<< HEAD
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label20.Location = new System.Drawing.Point(43, 124);
+=======
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label20.Location = new System.Drawing.Point(46, 124);
+>>>>>>> gui
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(91, 17);
             this.label20.TabIndex = 22;
@@ -719,9 +1065,16 @@
             // 
             // label19
             // 
+<<<<<<< HEAD
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label19.Location = new System.Drawing.Point(28, 58);
+=======
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label19.Location = new System.Drawing.Point(31, 58);
+>>>>>>> gui
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(106, 17);
             this.label19.TabIndex = 21;
@@ -729,9 +1082,16 @@
             // 
             // label18
             // 
+<<<<<<< HEAD
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label18.Location = new System.Drawing.Point(58, 22);
+=======
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label18.Location = new System.Drawing.Point(61, 22);
+>>>>>>> gui
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(76, 17);
             this.label18.TabIndex = 20;
@@ -739,14 +1099,24 @@
             // 
             // textBox16
             // 
+<<<<<<< HEAD
             this.textBox16.Location = new System.Drawing.Point(140, 19);
+=======
+            this.textBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox16.Location = new System.Drawing.Point(143, 19);
+>>>>>>> gui
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(287, 20);
             this.textBox16.TabIndex = 20;
             // 
             // richTextBox2
             // 
+<<<<<<< HEAD
             this.richTextBox2.Location = new System.Drawing.Point(140, 124);
+=======
+            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.richTextBox2.Location = new System.Drawing.Point(143, 124);
+>>>>>>> gui
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(408, 46);
             this.richTextBox2.TabIndex = 10;
@@ -754,7 +1124,12 @@
             // 
             // richTextBox1
             // 
+<<<<<<< HEAD
             this.richTextBox1.Location = new System.Drawing.Point(140, 57);
+=======
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.richTextBox1.Location = new System.Drawing.Point(143, 57);
+>>>>>>> gui
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(408, 46);
             this.richTextBox1.TabIndex = 9;
@@ -762,30 +1137,38 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.textBox15);
             this.groupBox5.Controls.Add(this.label21);
             this.groupBox5.Controls.Add(this.label22);
             this.groupBox5.Controls.Add(this.label23);
             this.groupBox5.Controls.Add(this.textBox21);
             this.groupBox5.Controls.Add(this.textBox22);
-            this.groupBox5.Location = new System.Drawing.Point(16, 176);
+            this.groupBox5.Location = new System.Drawing.Point(17, 174);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(702, 132);
+            this.groupBox5.Size = new System.Drawing.Size(728, 132);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
             // 
             // textBox15
             // 
+<<<<<<< HEAD
             this.textBox15.Location = new System.Drawing.Point(137, 97);
+=======
+            this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox15.Location = new System.Drawing.Point(141, 97);
+>>>>>>> gui
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(194, 20);
             this.textBox15.TabIndex = 19;
             // 
             // label21
             // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label21.Location = new System.Drawing.Point(50, 97);
+            this.label21.Location = new System.Drawing.Point(54, 97);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(81, 17);
             this.label21.TabIndex = 18;
@@ -793,9 +1176,10 @@
             // 
             // label22
             // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label22.Location = new System.Drawing.Point(52, 58);
+            this.label22.Location = new System.Drawing.Point(56, 58);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(79, 17);
             this.label22.TabIndex = 17;
@@ -803,9 +1187,10 @@
             // 
             // label23
             // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label23.Location = new System.Drawing.Point(15, 20);
+            this.label23.Location = new System.Drawing.Point(19, 20);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(116, 17);
             this.label23.TabIndex = 16;
@@ -813,14 +1198,16 @@
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(137, 57);
+            this.textBox21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox21.Location = new System.Drawing.Point(141, 57);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(194, 20);
             this.textBox21.TabIndex = 5;
             // 
             // textBox22
             // 
-            this.textBox22.Location = new System.Drawing.Point(137, 19);
+            this.textBox22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox22.Location = new System.Drawing.Point(141, 19);
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(287, 20);
             this.textBox22.TabIndex = 4;
@@ -831,13 +1218,20 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+<<<<<<< HEAD
             this.tabPage7.Size = new System.Drawing.Size(727, 307);
+=======
+            this.tabPage7.Size = new System.Drawing.Size(761, 312);
+>>>>>>> gui
             this.tabPage7.TabIndex = 3;
             this.tabPage7.Text = "Справочник по ПС";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage12);
             this.tabControl1.Controls.Add(this.tabPage13);
             this.tabControl1.Controls.Add(this.tabPage14);
@@ -847,7 +1241,11 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
+<<<<<<< HEAD
             this.tabControl1.Size = new System.Drawing.Size(721, 301);
+=======
+            this.tabControl1.Size = new System.Drawing.Size(765, 315);
+>>>>>>> gui
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage12
@@ -856,7 +1254,11 @@
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
+<<<<<<< HEAD
             this.tabPage12.Size = new System.Drawing.Size(713, 275);
+=======
+            this.tabPage12.Size = new System.Drawing.Size(757, 289);
+>>>>>>> gui
             this.tabPage12.TabIndex = 0;
             this.tabPage12.Text = "Список подвижного состава";
             this.tabPage12.UseVisualStyleBackColor = true;
@@ -869,7 +1271,11 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(16, 6);
             this.dataGridView2.Name = "dataGridView2";
+<<<<<<< HEAD
             this.dataGridView2.Size = new System.Drawing.Size(700, 282);
+=======
+            this.dataGridView2.Size = new System.Drawing.Size(723, 277);
+>>>>>>> gui
             this.dataGridView2.TabIndex = 0;
             // 
             // tabPage13
@@ -879,13 +1285,19 @@
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
+<<<<<<< HEAD
             this.tabPage13.Size = new System.Drawing.Size(713, 275);
+=======
+            this.tabPage13.Size = new System.Drawing.Size(757, 289);
+>>>>>>> gui
             this.tabPage13.TabIndex = 1;
             this.tabPage13.Text = "Справочник по водителям";
             this.tabPage13.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Controls.Add(this.label34);
             this.groupBox7.Controls.Add(this.richTextBox3);
             this.groupBox7.Controls.Add(this.label33);
@@ -901,13 +1313,17 @@
             this.groupBox7.Controls.Add(this.textBox26);
             this.groupBox7.Location = new System.Drawing.Point(16, 188);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(700, 98);
+            this.groupBox7.Size = new System.Drawing.Size(722, 98);
             this.groupBox7.TabIndex = 2;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Персональные данные";
             // 
             // label34
             // 
+<<<<<<< HEAD
+=======
+            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+>>>>>>> gui
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label34.Location = new System.Drawing.Point(274, 69);
@@ -915,6 +1331,7 @@
             this.label34.Size = new System.Drawing.Size(48, 17);
             this.label34.TabIndex = 17;
             this.label34.Text = "Адрес";
+<<<<<<< HEAD
             // 
             // richTextBox3
             // 
@@ -1264,9 +1681,400 @@
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(202, 21);
             this.comboBox9.TabIndex = 14;
+=======
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.richTextBox3.Location = new System.Drawing.Point(7, 45);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(262, 44);
+            this.richTextBox3.TabIndex = 16;
+            this.richTextBox3.Text = "";
+            // 
+            // label33
+            // 
+            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label33.Location = new System.Drawing.Point(446, 46);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(123, 17);
+            this.label33.TabIndex = 15;
+            this.label33.Text = "Дата увольнения";
+            // 
+            // label32
+            // 
+            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label32.Location = new System.Drawing.Point(470, 19);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(95, 17);
+            this.label32.TabIndex = 14;
+            this.label32.Text = "Дата приема";
+            // 
+            // label31
+            // 
+            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label31.Location = new System.Drawing.Point(305, 46);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(47, 17);
+            this.label31.TabIndex = 13;
+            this.label31.Text = "Класс";
+            // 
+            // label30
+            // 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label30.Location = new System.Drawing.Point(224, 16);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(98, 17);
+            this.label30.TabIndex = 12;
+            this.label30.Text = "Удост. Номер";
+            // 
+            // textBox30
+            // 
+            this.textBox30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox30.Location = new System.Drawing.Point(521, 71);
+            this.textBox30.Name = "textBox30";
+            this.textBox30.Size = new System.Drawing.Size(195, 20);
+            this.textBox30.TabIndex = 11;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(571, 46);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(145, 20);
+            this.dateTimePicker2.TabIndex = 10;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(571, 15);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(145, 20);
+            this.dateTimePicker1.TabIndex = 9;
+            // 
+            // textBox28
+            // 
+            this.textBox28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox28.Location = new System.Drawing.Point(358, 46);
+            this.textBox28.Name = "textBox28";
+            this.textBox28.Size = new System.Drawing.Size(79, 20);
+            this.textBox28.TabIndex = 7;
+            // 
+            // textBox27
+            // 
+            this.textBox27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox27.Location = new System.Drawing.Point(328, 16);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(109, 20);
+            this.textBox27.TabIndex = 6;
+            // 
+            // label29
+            // 
+            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label29.Location = new System.Drawing.Point(446, 72);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(68, 17);
+            this.label29.TabIndex = 5;
+            this.label29.Text = "Телефон";
+            // 
+            // textBox26
+            // 
+            this.textBox26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox26.Location = new System.Drawing.Point(7, 15);
+            this.textBox26.Name = "textBox26";
+            this.textBox26.Size = new System.Drawing.Size(189, 20);
+            this.textBox26.TabIndex = 4;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox6.Controls.Add(this.dataGridView3);
+            this.groupBox6.Location = new System.Drawing.Point(16, 6);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(722, 182);
+            this.groupBox6.TabIndex = 1;
+            this.groupBox6.TabStop = false;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(7, 14);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(709, 162);
+            this.dataGridView3.TabIndex = 0;
+            // 
+            // tabPage14
+            // 
+            this.tabPage14.Controls.Add(this.dataGridView9);
+            this.tabPage14.Location = new System.Drawing.Point(4, 22);
+            this.tabPage14.Name = "tabPage14";
+            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage14.Size = new System.Drawing.Size(757, 289);
+            this.tabPage14.TabIndex = 2;
+            this.tabPage14.Text = "Причины простоя";
+            this.tabPage14.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView9
+            // 
+            this.dataGridView9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView9.Location = new System.Drawing.Point(16, 6);
+            this.dataGridView9.Name = "dataGridView9";
+            this.dataGridView9.Size = new System.Drawing.Size(721, 276);
+            this.dataGridView9.TabIndex = 0;
+            // 
+            // tabPage15
+            // 
+            this.tabPage15.Controls.Add(this.dataGridView10);
+            this.tabPage15.Location = new System.Drawing.Point(4, 22);
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage15.Size = new System.Drawing.Size(757, 289);
+            this.tabPage15.TabIndex = 3;
+            this.tabPage15.Text = "Топливо";
+            this.tabPage15.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView10
+            // 
+            this.dataGridView10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView10.Location = new System.Drawing.Point(16, 6);
+            this.dataGridView10.Name = "dataGridView10";
+            this.dataGridView10.Size = new System.Drawing.Size(722, 276);
+            this.dataGridView10.TabIndex = 0;
+            // 
+            // tabPage16
+            // 
+            this.tabPage16.Controls.Add(this.dataGridView11);
+            this.tabPage16.Location = new System.Drawing.Point(4, 22);
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage16.Size = new System.Drawing.Size(757, 289);
+            this.tabPage16.TabIndex = 4;
+            this.tabPage16.Text = "Отопители";
+            this.tabPage16.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView11
+            // 
+            this.dataGridView11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView11.Location = new System.Drawing.Point(16, 6);
+            this.dataGridView11.Name = "dataGridView11";
+            this.dataGridView11.Size = new System.Drawing.Size(721, 276);
+            this.dataGridView11.TabIndex = 1;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.tabControl2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(761, 334);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Маршруты и тарифы";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl2.Controls.Add(this.tabPage8);
+            this.tabControl2.Controls.Add(this.tabPage17);
+            this.tabControl2.Controls.Add(this.tabPage18);
+            this.tabControl2.Controls.Add(this.tabPage19);
+            this.tabControl2.Location = new System.Drawing.Point(-4, 0);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(769, 338);
+            this.tabControl2.TabIndex = 0;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.groupBox8);
+            this.tabPage8.Controls.Add(this.dataGridView4);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(761, 312);
+            this.tabPage8.TabIndex = 0;
+            this.tabPage8.Text = "Марки ПС и тарифы по перевозкам";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox8.Controls.Add(this.textBox17);
+            this.groupBox8.Controls.Add(this.dataGridView5);
+            this.groupBox8.Location = new System.Drawing.Point(433, 7);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(322, 301);
+            this.groupBox8.TabIndex = 1;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Тарифы на перевозки для выбранной марки";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.textBox17.Location = new System.Drawing.Point(87, 19);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(149, 32);
+            this.textBox17.TabIndex = 2;
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Location = new System.Drawing.Point(6, 57);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.Size = new System.Drawing.Size(310, 238);
+            this.dataGridView5.TabIndex = 1;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(16, 6);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(411, 296);
+            this.dataGridView4.TabIndex = 0;
+            // 
+            // tabPage17
+            // 
+            this.tabPage17.Controls.Add(this.dataGridView6);
+            this.tabPage17.Controls.Add(this.groupBox9);
+            this.tabPage17.Location = new System.Drawing.Point(4, 22);
+            this.tabPage17.Name = "tabPage17";
+            this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage17.Size = new System.Drawing.Size(761, 312);
+            this.tabPage17.TabIndex = 1;
+            this.tabPage17.Text = "Данные о маршрутах";
+            this.tabPage17.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Location = new System.Drawing.Point(16, 137);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.Size = new System.Drawing.Size(726, 167);
+            this.dataGridView6.TabIndex = 1;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox9.Controls.Add(this.label39);
+            this.groupBox9.Controls.Add(this.label38);
+            this.groupBox9.Controls.Add(this.label37);
+            this.groupBox9.Controls.Add(this.label36);
+            this.groupBox9.Controls.Add(this.comboBox10);
+            this.groupBox9.Controls.Add(this.comboBox9);
+            this.groupBox9.Controls.Add(this.label35);
+            this.groupBox9.Controls.Add(this.textBox23);
+            this.groupBox9.Controls.Add(this.textBox19);
+            this.groupBox9.Controls.Add(this.textBox18);
+            this.groupBox9.Location = new System.Drawing.Point(16, 6);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(726, 125);
+            this.groupBox9.TabIndex = 0;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Данные о маршруте";
+            // 
+            // label39
+            // 
+            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label39.Location = new System.Drawing.Point(450, 55);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(120, 17);
+            this.label39.TabIndex = 19;
+            this.label39.Text = "Время круга час.";
+            // 
+            // label38
+            // 
+            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label38.Location = new System.Drawing.Point(460, 19);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(110, 17);
+            this.label38.TabIndex = 18;
+            this.label38.Text = "Расстояние км.";
+            // 
+            // label37
+            // 
+            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label37.Location = new System.Drawing.Point(49, 95);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(73, 17);
+            this.label37.TabIndex = 17;
+            this.label37.Text = "Конечная";
+            // 
+            // label36
+            // 
+            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label36.Location = new System.Drawing.Point(16, 57);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(106, 17);
+            this.label36.TabIndex = 16;
+            this.label36.Text = "Вид перевозки";
+            // 
+            // comboBox10
+            // 
+            this.comboBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Location = new System.Drawing.Point(128, 91);
+            this.comboBox10.Name = "comboBox10";
+            this.comboBox10.Size = new System.Drawing.Size(284, 21);
+            this.comboBox10.TabIndex = 15;
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(128, 54);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(202, 21);
+            this.comboBox9.TabIndex = 14;
             // 
             // label35
             // 
+            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label35.Location = new System.Drawing.Point(54, 19);
@@ -1275,6 +2083,24 @@
             this.label35.TabIndex = 13;
             this.label35.Text = "Маршрут";
             // 
+            // textBox23
+            // 
+            this.textBox23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox23.Location = new System.Drawing.Point(576, 19);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(103, 20);
+            this.textBox23.TabIndex = 7;
+>>>>>>> gui
+            // 
+            // textBox19
+            // 
+            this.textBox19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox19.Location = new System.Drawing.Point(576, 54);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(103, 20);
+            this.textBox19.TabIndex = 5;
+            // 
+<<<<<<< HEAD
             // textBox23
             // 
             this.textBox23.Location = new System.Drawing.Point(576, 19);
@@ -1291,6 +2117,11 @@
             // 
             // textBox18
             // 
+=======
+            // textBox18
+            // 
+            this.textBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+>>>>>>> gui
             this.textBox18.Location = new System.Drawing.Point(128, 19);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(284, 20);
@@ -1302,7 +2133,11 @@
             this.tabPage18.Location = new System.Drawing.Point(4, 22);
             this.tabPage18.Name = "tabPage18";
             this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
+<<<<<<< HEAD
             this.tabPage18.Size = new System.Drawing.Size(727, 307);
+=======
+            this.tabPage18.Size = new System.Drawing.Size(761, 312);
+>>>>>>> gui
             this.tabPage18.TabIndex = 2;
             this.tabPage18.Text = "Конечные и остановочные пункты";
             this.tabPage18.UseVisualStyleBackColor = true;
@@ -1315,7 +2150,11 @@
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView8.Location = new System.Drawing.Point(16, 6);
             this.dataGridView8.Name = "dataGridView8";
+<<<<<<< HEAD
             this.dataGridView8.Size = new System.Drawing.Size(700, 302);
+=======
+            this.dataGridView8.Size = new System.Drawing.Size(724, 298);
+>>>>>>> gui
             this.dataGridView8.TabIndex = 0;
             // 
             // tabPage19
@@ -1324,7 +2163,11 @@
             this.tabPage19.Location = new System.Drawing.Point(4, 22);
             this.tabPage19.Name = "tabPage19";
             this.tabPage19.Padding = new System.Windows.Forms.Padding(3);
+<<<<<<< HEAD
             this.tabPage19.Size = new System.Drawing.Size(727, 307);
+=======
+            this.tabPage19.Size = new System.Drawing.Size(761, 312);
+>>>>>>> gui
             this.tabPage19.TabIndex = 3;
             this.tabPage19.Text = "Виды перевозок";
             this.tabPage19.UseVisualStyleBackColor = true;
@@ -1337,7 +2180,11 @@
             this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView7.Location = new System.Drawing.Point(16, 6);
             this.dataGridView7.Name = "dataGridView7";
+<<<<<<< HEAD
             this.dataGridView7.Size = new System.Drawing.Size(700, 302);
+=======
+            this.dataGridView7.Size = new System.Drawing.Size(725, 298);
+>>>>>>> gui
             this.dataGridView7.TabIndex = 0;
             // 
             // tabPage3
@@ -1346,7 +2193,11 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+<<<<<<< HEAD
             this.tabPage3.Size = new System.Drawing.Size(741, 339);
+=======
+            this.tabPage3.Size = new System.Drawing.Size(761, 334);
+>>>>>>> gui
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Учет транспортной работы";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1399,7 +2250,11 @@
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+<<<<<<< HEAD
             this.tabPage9.Size = new System.Drawing.Size(741, 339);
+=======
+            this.tabPage9.Size = new System.Drawing.Size(761, 334);
+>>>>>>> gui
             this.tabPage9.TabIndex = 3;
             this.tabPage9.Text = "Отчеты по топливу";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -1463,12 +2318,17 @@
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+<<<<<<< HEAD
             this.tabPage10.Size = new System.Drawing.Size(741, 339);
+=======
+            this.tabPage10.Size = new System.Drawing.Size(761, 334);
+>>>>>>> gui
             this.tabPage10.TabIndex = 4;
             this.tabPage10.Text = "Инф. по накладным";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
             // dataGridView12
+<<<<<<< HEAD
             // 
             this.dataGridView12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -1722,6 +2582,270 @@
             // 
             // label43
             // 
+=======
+            // 
+            this.dataGridView12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView12.Location = new System.Drawing.Point(16, 6);
+            this.dataGridView12.Name = "dataGridView12";
+            this.dataGridView12.Size = new System.Drawing.Size(727, 320);
+            this.dataGridView12.TabIndex = 0;
+            // 
+            // tabPage11
+            // 
+            this.tabPage11.Controls.Add(this.button1);
+            this.tabPage11.Controls.Add(this.groupBox16);
+            this.tabPage11.Controls.Add(this.groupBox14);
+            this.tabPage11.Controls.Add(this.groupBox12);
+            this.tabPage11.Controls.Add(this.groupBox11);
+            this.tabPage11.Controls.Add(this.groupBox10);
+            this.tabPage11.Location = new System.Drawing.Point(4, 22);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Size = new System.Drawing.Size(761, 334);
+            this.tabPage11.TabIndex = 5;
+            this.tabPage11.Text = "Работа с путевыми листами";
+            this.tabPage11.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.button1.Location = new System.Drawing.Point(521, 307);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(222, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Создать путевой лист";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox16.Controls.Add(this.label45);
+            this.groupBox16.Controls.Add(this.label44);
+            this.groupBox16.Controls.Add(this.textBox40);
+            this.groupBox16.Controls.Add(this.textBox39);
+            this.groupBox16.Location = new System.Drawing.Point(521, 226);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(222, 75);
+            this.groupBox16.TabIndex = 4;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Рассчет стоимости";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label45.Location = new System.Drawing.Point(34, 20);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(79, 17);
+            this.label45.TabIndex = 19;
+            this.label45.Text = "Перевозки";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label44.Location = new System.Drawing.Point(68, 48);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(45, 17);
+            this.label44.TabIndex = 16;
+            this.label44.Text = "Всего";
+            // 
+            // textBox40
+            // 
+            this.textBox40.Location = new System.Drawing.Point(119, 45);
+            this.textBox40.Name = "textBox40";
+            this.textBox40.Size = new System.Drawing.Size(70, 20);
+            this.textBox40.TabIndex = 18;
+            // 
+            // textBox39
+            // 
+            this.textBox39.Location = new System.Drawing.Point(119, 17);
+            this.textBox39.Name = "textBox39";
+            this.textBox39.Size = new System.Drawing.Size(70, 20);
+            this.textBox39.TabIndex = 17;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox14.Controls.Add(this.button2);
+            this.groupBox14.Controls.Add(this.listBox1);
+            this.groupBox14.Controls.Add(this.dataGridView13);
+            this.groupBox14.Controls.Add(this.groupBox15);
+            this.groupBox14.Location = new System.Drawing.Point(16, 134);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(727, 86);
+            this.groupBox14.TabIndex = 5;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Сведения о поставках";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button2.Location = new System.Drawing.Point(6, 50);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(133, 30);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Добавить";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(7, 14);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(132, 30);
+            this.listBox1.TabIndex = 6;
+            // 
+            // dataGridView13
+            // 
+            this.dataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView13.Location = new System.Drawing.Point(145, 14);
+            this.dataGridView13.Name = "dataGridView13";
+            this.dataGridView13.Size = new System.Drawing.Size(549, 66);
+            this.dataGridView13.TabIndex = 5;
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Location = new System.Drawing.Point(0, 125);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(700, 83);
+            this.groupBox15.TabIndex = 4;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Учет горючего";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox12.Controls.Add(this.textBox38);
+            this.groupBox12.Controls.Add(this.label40);
+            this.groupBox12.Controls.Add(this.textBox34);
+            this.groupBox12.Controls.Add(this.textBox35);
+            this.groupBox12.Controls.Add(this.textBox36);
+            this.groupBox12.Controls.Add(this.textBox37);
+            this.groupBox12.Controls.Add(this.textBox33);
+            this.groupBox12.Controls.Add(this.textBox32);
+            this.groupBox12.Controls.Add(this.textBox31);
+            this.groupBox12.Controls.Add(this.textBox29);
+            this.groupBox12.Location = new System.Drawing.Point(254, 226);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(261, 104);
+            this.groupBox12.TabIndex = 3;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Учет горючего";
+            // 
+            // textBox38
+            // 
+            this.textBox38.Location = new System.Drawing.Point(185, 71);
+            this.textBox38.Name = "textBox38";
+            this.textBox38.Size = new System.Drawing.Size(70, 20);
+            this.textBox38.TabIndex = 16;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label40.Location = new System.Drawing.Point(6, 71);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(166, 17);
+            this.label40.TabIndex = 16;
+            this.label40.Text = "Выдано для доп. обурд.";
+            // 
+            // textBox34
+            // 
+            this.textBox34.Location = new System.Drawing.Point(195, 20);
+            this.textBox34.Name = "textBox34";
+            this.textBox34.ReadOnly = true;
+            this.textBox34.Size = new System.Drawing.Size(60, 20);
+            this.textBox34.TabIndex = 7;
+            this.textBox34.Text = "Сдано";
+            this.textBox34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox35
+            // 
+            this.textBox35.Location = new System.Drawing.Point(125, 20);
+            this.textBox35.Name = "textBox35";
+            this.textBox35.ReadOnly = true;
+            this.textBox35.Size = new System.Drawing.Size(73, 20);
+            this.textBox35.TabIndex = 6;
+            this.textBox35.Text = "Ост. возвр.";
+            this.textBox35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox36
+            // 
+            this.textBox36.Location = new System.Drawing.Point(58, 20);
+            this.textBox36.Name = "textBox36";
+            this.textBox36.ReadOnly = true;
+            this.textBox36.Size = new System.Drawing.Size(68, 20);
+            this.textBox36.TabIndex = 5;
+            this.textBox36.Text = "Ост. выезд";
+            this.textBox36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox37
+            // 
+            this.textBox37.Location = new System.Drawing.Point(6, 20);
+            this.textBox37.Name = "textBox37";
+            this.textBox37.ReadOnly = true;
+            this.textBox37.Size = new System.Drawing.Size(54, 20);
+            this.textBox37.TabIndex = 4;
+            this.textBox37.Text = "Выдано";
+            this.textBox37.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox33
+            // 
+            this.textBox33.Location = new System.Drawing.Point(195, 39);
+            this.textBox33.Name = "textBox33";
+            this.textBox33.Size = new System.Drawing.Size(60, 20);
+            this.textBox33.TabIndex = 3;
+            // 
+            // textBox32
+            // 
+            this.textBox32.Location = new System.Drawing.Point(125, 39);
+            this.textBox32.Name = "textBox32";
+            this.textBox32.Size = new System.Drawing.Size(73, 20);
+            this.textBox32.TabIndex = 2;
+            // 
+            // textBox31
+            // 
+            this.textBox31.Location = new System.Drawing.Point(58, 39);
+            this.textBox31.Name = "textBox31";
+            this.textBox31.Size = new System.Drawing.Size(68, 20);
+            this.textBox31.TabIndex = 1;
+            // 
+            // textBox29
+            // 
+            this.textBox29.Location = new System.Drawing.Point(6, 39);
+            this.textBox29.Name = "textBox29";
+            this.textBox29.Size = new System.Drawing.Size(54, 20);
+            this.textBox29.TabIndex = 0;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox11.Controls.Add(this.label43);
+            this.groupBox11.Controls.Add(this.label42);
+            this.groupBox11.Controls.Add(this.label41);
+            this.groupBox11.Controls.Add(this.textBox25);
+            this.groupBox11.Controls.Add(this.textBox24);
+            this.groupBox11.Controls.Add(this.textBox20);
+            this.groupBox11.Controls.Add(this.groupBox13);
+            this.groupBox11.Location = new System.Drawing.Point(16, 226);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(232, 104);
+            this.groupBox11.TabIndex = 2;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Учет работы машины";
+            // 
+            // label43
+            // 
+>>>>>>> gui
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label43.Location = new System.Drawing.Point(6, 71);
@@ -1782,6 +2906,12 @@
             // 
             // groupBox10
             // 
+<<<<<<< HEAD
+=======
+            this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+>>>>>>> gui
             this.groupBox10.Controls.Add(this.groupBox18);
             this.groupBox10.Controls.Add(this.groupBox17);
             this.groupBox10.Controls.Add(this.label28);
@@ -1796,18 +2926,24 @@
             this.groupBox10.Controls.Add(this.comboBox4);
             this.groupBox10.Location = new System.Drawing.Point(16, 6);
             this.groupBox10.Name = "groupBox10";
+<<<<<<< HEAD
             this.groupBox10.Size = new System.Drawing.Size(700, 122);
+=======
+            this.groupBox10.Size = new System.Drawing.Size(727, 122);
+>>>>>>> gui
             this.groupBox10.TabIndex = 1;
             this.groupBox10.TabStop = false;
             // 
             // groupBox18
             // 
+            this.groupBox18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox18.Controls.Add(this.listBox2);
             this.groupBox18.Controls.Add(this.dataGridView14);
             this.groupBox18.Controls.Add(this.button3);
             this.groupBox18.Location = new System.Drawing.Point(292, 12);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(402, 52);
+            this.groupBox18.Size = new System.Drawing.Size(429, 52);
             this.groupBox18.TabIndex = 18;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Прицепы";
@@ -1840,12 +2976,21 @@
             // 
             // groupBox17
             // 
+<<<<<<< HEAD
+=======
+            this.groupBox17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+>>>>>>> gui
             this.groupBox17.Controls.Add(this.listBox3);
             this.groupBox17.Controls.Add(this.dataGridView15);
             this.groupBox17.Controls.Add(this.button4);
             this.groupBox17.Location = new System.Drawing.Point(292, 67);
             this.groupBox17.Name = "groupBox17";
+<<<<<<< HEAD
             this.groupBox17.Size = new System.Drawing.Size(402, 49);
+=======
+            this.groupBox17.Size = new System.Drawing.Size(429, 49);
+>>>>>>> gui
             this.groupBox17.TabIndex = 17;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Сопр. лица";
@@ -1878,6 +3023,10 @@
             // 
             // label28
             // 
+<<<<<<< HEAD
+=======
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+>>>>>>> gui
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label28.Location = new System.Drawing.Point(175, 95);
@@ -1888,6 +3037,10 @@
             // 
             // comboBox8
             // 
+<<<<<<< HEAD
+=======
+            this.comboBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+>>>>>>> gui
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Location = new System.Drawing.Point(213, 95);
             this.comboBox8.Name = "comboBox8";
@@ -1896,6 +3049,10 @@
             // 
             // label27
             // 
+<<<<<<< HEAD
+=======
+            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+>>>>>>> gui
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label27.Location = new System.Drawing.Point(41, 95);
@@ -1906,6 +3063,10 @@
             // 
             // comboBox7
             // 
+<<<<<<< HEAD
+=======
+            this.comboBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+>>>>>>> gui
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(118, 95);
             this.comboBox7.Name = "comboBox7";
@@ -1914,6 +3075,10 @@
             // 
             // label26
             // 
+<<<<<<< HEAD
+=======
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+>>>>>>> gui
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label26.Location = new System.Drawing.Point(44, 68);
@@ -1924,6 +3089,10 @@
             // 
             // label25
             // 
+<<<<<<< HEAD
+=======
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+>>>>>>> gui
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label25.Location = new System.Drawing.Point(8, 39);
@@ -1934,6 +3103,10 @@
             // 
             // label24
             // 
+<<<<<<< HEAD
+=======
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+>>>>>>> gui
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label24.Location = new System.Drawing.Point(44, 13);
@@ -1944,6 +3117,10 @@
             // 
             // comboBox6
             // 
+<<<<<<< HEAD
+=======
+            this.comboBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+>>>>>>> gui
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(118, 67);
             this.comboBox6.Name = "comboBox6";
@@ -1952,6 +3129,10 @@
             // 
             // comboBox5
             // 
+<<<<<<< HEAD
+=======
+            this.comboBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+>>>>>>> gui
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(118, 39);
             this.comboBox5.Name = "comboBox5";
@@ -1960,6 +3141,10 @@
             // 
             // comboBox4
             // 
+<<<<<<< HEAD
+=======
+            this.comboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+>>>>>>> gui
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(118, 12);
             this.comboBox4.Name = "comboBox4";
@@ -1970,8 +3155,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 365);
+            this.ClientSize = new System.Drawing.Size(774, 361);
             this.Controls.Add(this.tabControlUpper);
+            this.MinimumSize = new System.Drawing.Size(790, 400);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControlUpper.ResumeLayout(false);
