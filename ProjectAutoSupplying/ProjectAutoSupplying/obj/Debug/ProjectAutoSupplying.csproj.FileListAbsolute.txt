@@ -7,3 +7,6 @@ C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSuppl
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.csproj.CoreCompileInputs.cache
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.exe
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.pdb
+C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\Database.mdf
+C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\Database_log.ldf
+C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.csprojResolveAssemblyReference.cache

@@ -1,0 +1,1825 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Additional Operation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Time" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Additional operation (load/unload)">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Additional Operation ID" Type="int" Nullable="false" />
+          <Property Name="Load and Unload operation ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Car/Trailer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="State number" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="Model" Type="varchar(max)" Nullable="false" />
+          <Property Name="Type ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Car/Tralers in WayList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Car/Trailer ID" Type="int" Nullable="false" />
+          <Property Name="WayList ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cargo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="Units" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contract">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company" Type="varchar(max)" Nullable="false" />
+          <Property Name="Legal entity ID" Type="int" Nullable="false" />
+          <Property Name="Arrive time" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Where to get cargo" Type="varchar(max)" Nullable="false" />
+          <Property Name="Where to deliver cargo" Type="varchar(max)" Nullable="false" />
+          <Property Name="Cargo ID" Type="int" Nullable="false" />
+          <Property Name="Count trips" Type="int" Nullable="false" />
+          <Property Name="Distance" Type="float" Nullable="false" />
+          <Property Name="Tonnes" Type="float" Nullable="false" />
+          <Property Name="WayList ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Costing">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Costing kind" Type="varchar(max)" Nullable="false" />
+          <Property Name="For tonnes" Type="float" Nullable="false" />
+          <Property Name="Underweight" Type="float" Nullable="false" />
+          <Property Name="For spec. prnsp" Type="float" Nullable="false" />
+          <Property Name="For transport service" Type="float" Nullable="false" />
+          <Property Name="Load/unload work" Type="float" Nullable="false" />
+          <Property Name="Over-standard simple loading" Type="float" Nullable="false" />
+          <Property Name="Over-standard simple unloading" Type="float" Nullable="false" />
+          <Property Name="Other costing" Type="float" Nullable="false" />
+          <Property Name="Discounts for reducing downtime" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Distance of transportation by road group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Total" Type="float" Nullable="false" />
+          <Property Name="In city" Type="float" Nullable="false" />
+          <Property Name="First group" Type="float" Nullable="false" />
+          <Property Name="Second group" Type="float" Nullable="false" />
+          <Property Name="Third group" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DownTime on Line">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="Start time" Type="datetime" Nullable="false" />
+          <Property Name="End time" Type="datetime" Nullable="false" />
+          <Property Name="Code" Type="varchar(max)" Nullable="false" />
+          <Property Name="WayList ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Driver Work">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Operation ID" Type="int" Nullable="false" />
+          <Property Name="Time on shedule" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Zero mileage" Type="float" Nullable="false" />
+          <Property Name="Speedometer display" Type="float" Nullable="false" />
+          <Property Name="Fact time" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Moving Fuel ID" Type="int" Nullable="false" />
+          <Property Name="Way List ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Driver/Accompanying">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="Surname" Type="varchar(max)" Nullable="false" />
+          <Property Name="Thridname" Type="varchar(max)" Nullable="false" />
+          <Property Name="Certification" Type="varchar(max)" Nullable="false" />
+          <Property Name="Role ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Driver/Accompanying in WayList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Driver/Accompanying ID" Type="int" Nullable="false" />
+          <Property Name="WayList ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Fuel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="Number" Type="varchar(max)" Nullable="false" />
+          <Property Name="Price" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Information about the cargo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nomenclature code" Type="varchar(max)" Nullable="false" />
+          <Property Name="Preisc. position" Type="varchar(max)" Nullable="false" />
+          <Property Name="Cargo ID" Type="int" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+          <Property Name="Price" Type="float" Nullable="false" />
+          <Property Name="Summary" Type="float" Nullable="false" />
+          <Property Name="Documents count" Type="int" Nullable="false" />
+          <Property Name="Pack kind" Type="varchar(max)" Nullable="false" />
+          <Property Name="Place Count" Type="int" Nullable="false" />
+          <Property Name="Mass determination method" Type="varchar(max)" Nullable="false" />
+          <Property Name="Mass" Type="float" Nullable="false" />
+          <Property Name="Waybill ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Legal Entity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="Region" Type="varchar(max)" Nullable="false" />
+          <Property Name="City" Type="varchar(max)" Nullable="false" />
+          <Property Name="Legal Adress" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Loading and unloading operations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Operation" Type="varchar(max)" Nullable="false" />
+          <Property Name="Executor" Type="varchar(max)" Nullable="false" />
+          <Property Name="Method" Type="varchar(max)" Nullable="false" />
+          <Property Name="Arrive time" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Departure time" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Downtime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Waybill ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Moving Fuel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Fuel ID" Type="int" Nullable="false" />
+          <Property Name="Given" Type="float" Nullable="false" />
+          <Property Name="Balance at checkout" Type="float" Nullable="false" />
+          <Property Name="Balance at checkin" Type="float" Nullable="false" />
+          <Property Name="Commissioned" Type="float" Nullable="false" />
+          <Property Name="Coefficient of change in the norm" Type="float" Nullable="false" />
+          <Property Name="Work Time SpecObor." Type="int" Nullable="false" />
+          <Property Name="Work Time DvigFe." Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Operation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Other Information">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Distance on road group ID" Type="int" Nullable="false" />
+          <Property Name="Code exp." Type="int" Nullable="false" />
+          <Property Name="For transport service of client" Type="float" Nullable="false" />
+          <Property Name="For transport service of driver" Type="float" Nullable="false" />
+          <Property Name="Driver adjustment factor" Type="float" Nullable="false" />
+          <Property Name="Main tariff adjustment factor" Type="float" Nullable="false" />
+          <Property Name="Fine" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Transport Type">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WayBill">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Driver ID" Type="int" Nullable="false" />
+          <Property Name="Car ID" Type="int" Nullable="false" />
+          <Property Name="AutoEnterprise" Type="varchar(max)" Nullable="false" />
+          <Property Name="Transport kind" Type="varchar(max)" Nullable="false" />
+          <Property Name="Company customer" Type="varchar(max)" Nullable="false" />
+          <Property Name="Shipper" Type="varchar(max)" Nullable="false" />
+          <Property Name="Consignee" Type="varchar(max)" Nullable="false" />
+          <Property Name="Loading Point" Type="varchar(max)" Nullable="false" />
+          <Property Name="Unloading Point" Type="varchar(max)" Nullable="false" />
+          <Property Name="WayNumber" Type="varchar(max)" Nullable="false" />
+          <Property Name="Redirect" Type="varchar(max)" Nullable="false" />
+          <Property Name="Costing ID" Type="int" Nullable="false" />
+          <Property Name="Other Information ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WayBills In Contract">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Waybill ID" Type="int" Nullable="false" />
+          <Property Name="Contract ID" Type="int" Nullable="false" />
+          <Property Name="Arrive time" Type="time" Precision="7" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WayList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Contract ID" Type="int" Nullable="false" />
+          <Property Name="Arrive time" Type="time" Precision="7" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Additional operation (load/unload)_Additional_Opr">
+          <End Role="Additional Operation" Type="Self.Additional Operation" Multiplicity="1" />
+          <End Role="Additional operation (load/unload)" Type="Self.Additional operation (load/unload)" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Additional Operation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Additional operation (load/unload)">
+              <PropertyRef Name="Additional Operation ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Additional operation (load/unload)_Load_And_Unload">
+          <End Role="Loading and unloading operations" Type="Self.Loading and unloading operations" Multiplicity="1" />
+          <End Role="Additional operation (load/unload)" Type="Self.Additional operation (load/unload)" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Loading and unloading operations">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Additional operation (load/unload)">
+              <PropertyRef Name="Load and Unload operation ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Car/Trailer_Type">
+          <End Role="Transport Type" Type="Self.Transport Type" Multiplicity="1" />
+          <End Role="Car/Trailer" Type="Self.Car/Trailer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transport Type">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Car/Trailer">
+              <PropertyRef Name="Type ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Car/Tralers in WayList_Car">
+          <End Role="Car/Trailer" Type="Self.Car/Trailer" Multiplicity="1" />
+          <End Role="Car/Tralers in WayList" Type="Self.Car/Tralers in WayList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car/Trailer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Car/Tralers in WayList">
+              <PropertyRef Name="Car/Trailer ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Car/Tralers in WayList_WayList">
+          <End Role="WayList" Type="Self.WayList" Multiplicity="1" />
+          <End Role="Car/Tralers in WayList" Type="Self.Car/Tralers in WayList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayList">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Car/Tralers in WayList">
+              <PropertyRef Name="WayList ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contract_Cargo">
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
+          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Contract">
+              <PropertyRef Name="Cargo ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contract_LegalEntity">
+          <End Role="Legal Entity" Type="Self.Legal Entity" Multiplicity="1" />
+          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Legal Entity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Contract">
+              <PropertyRef Name="Legal entity ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contract_WayList">
+          <End Role="WayList" Type="Self.WayList" Multiplicity="1" />
+          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayList">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Contract">
+              <PropertyRef Name="WayList ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DownTime on Line_WayList">
+          <End Role="WayList" Type="Self.WayList" Multiplicity="1" />
+          <End Role="DownTime on Line" Type="Self.DownTime on Line" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayList">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DownTime on Line">
+              <PropertyRef Name="WayList ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Driver Work_Moving Fuel">
+          <End Role="Moving Fuel" Type="Self.Moving Fuel" Multiplicity="1" />
+          <End Role="Driver Work" Type="Self.Driver Work" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Moving Fuel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Driver Work">
+              <PropertyRef Name="Moving Fuel ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Driver Work_Operation">
+          <End Role="Operation" Type="Self.Operation" Multiplicity="1" />
+          <End Role="Driver Work" Type="Self.Driver Work" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Operation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Driver Work">
+              <PropertyRef Name="Operation ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Driver Work_Way List">
+          <End Role="WayList" Type="Self.WayList" Multiplicity="1" />
+          <End Role="Driver Work" Type="Self.Driver Work" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayList">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Driver Work">
+              <PropertyRef Name="Way List ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Driver/Accompanying in WayList_Dirver/Accompnying">
+          <End Role="Driver/Accompanying" Type="Self.Driver/Accompanying" Multiplicity="1" />
+          <End Role="Driver/Accompanying in WayList" Type="Self.Driver/Accompanying in WayList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Driver/Accompanying">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Driver/Accompanying in WayList">
+              <PropertyRef Name="Driver/Accompanying ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Driver/Accompanying in WayList_WayList">
+          <End Role="WayList" Type="Self.WayList" Multiplicity="1" />
+          <End Role="Driver/Accompanying in WayList" Type="Self.Driver/Accompanying in WayList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayList">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Driver/Accompanying in WayList">
+              <PropertyRef Name="WayList ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Driver/Accompanying_Role">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="Driver/Accompanying" Type="Self.Driver/Accompanying" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Driver/Accompanying">
+              <PropertyRef Name="Role ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Information about the cargo_Cargo">
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
+          <End Role="Information about the cargo" Type="Self.Information about the cargo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Information about the cargo">
+              <PropertyRef Name="Cargo ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Information about the cargo_Waybill">
+          <End Role="WayBill" Type="Self.WayBill" Multiplicity="1" />
+          <End Role="Information about the cargo" Type="Self.Information about the cargo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayBill">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Information about the cargo">
+              <PropertyRef Name="Waybill ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Loading and unloading operations_Waybill">
+          <End Role="WayBill" Type="Self.WayBill" Multiplicity="1" />
+          <End Role="Loading and unloading operations" Type="Self.Loading and unloading operations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayBill">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Loading and unloading operations">
+              <PropertyRef Name="Waybill ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Moving Fuel_Fuel">
+          <End Role="Fuel" Type="Self.Fuel" Multiplicity="1" />
+          <End Role="Moving Fuel" Type="Self.Moving Fuel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fuel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Moving Fuel">
+              <PropertyRef Name="Fuel ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Other Information_Distance on road group">
+          <End Role="Distance of transportation by road group" Type="Self.Distance of transportation by road group" Multiplicity="1" />
+          <End Role="Other Information" Type="Self.Other Information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Distance of transportation by road group">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Other Information">
+              <PropertyRef Name="Distance on road group ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WayBill_Car">
+          <End Role="Car/Trailer" Type="Self.Car/Trailer" Multiplicity="1" />
+          <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car/Trailer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayBill">
+              <PropertyRef Name="Car ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WayBill_Costing">
+          <End Role="Costing" Type="Self.Costing" Multiplicity="1" />
+          <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Costing">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayBill">
+              <PropertyRef Name="Costing ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WayBill_Driver">
+          <End Role="Driver/Accompanying" Type="Self.Driver/Accompanying" Multiplicity="1" />
+          <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Driver/Accompanying">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayBill">
+              <PropertyRef Name="Driver ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WayBill_Other Information">
+          <End Role="Other Information" Type="Self.Other Information" Multiplicity="1" />
+          <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Other Information">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayBill">
+              <PropertyRef Name="Other Information ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WayBills In Contract_Contract">
+          <End Role="Contract" Type="Self.Contract" Multiplicity="1" />
+          <End Role="WayBills In Contract" Type="Self.WayBills In Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contract">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayBills In Contract">
+              <PropertyRef Name="Contract ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WayBills In Contract_Waybill">
+          <End Role="WayBill" Type="Self.WayBill" Multiplicity="1" />
+          <End Role="WayBills In Contract" Type="Self.WayBills In Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayBill">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayBills In Contract">
+              <PropertyRef Name="Waybill ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WayList_Contract">
+          <End Role="Contract" Type="Self.Contract" Multiplicity="1" />
+          <End Role="WayList" Type="Self.WayList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contract">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayList">
+              <PropertyRef Name="Contract ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DatabaseModelStoreContainer">
+          <EntitySet Name="Additional Operation" EntityType="Self.Additional Operation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Additional operation (load/unload)" EntityType="Self.Additional operation (load/unload)" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Car/Trailer" EntityType="Self.Car/Trailer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Car/Tralers in WayList" EntityType="Self.Car/Tralers in WayList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cargo" EntityType="Self.Cargo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contract" EntityType="Self.Contract" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Costing" EntityType="Self.Costing" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Distance of transportation by road group" EntityType="Self.Distance of transportation by road group" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DownTime on Line" EntityType="Self.DownTime on Line" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Driver Work" EntityType="Self.Driver Work" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Driver/Accompanying" EntityType="Self.Driver/Accompanying" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Driver/Accompanying in WayList" EntityType="Self.Driver/Accompanying in WayList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Fuel" EntityType="Self.Fuel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Information about the cargo" EntityType="Self.Information about the cargo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Legal Entity" EntityType="Self.Legal Entity" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Loading and unloading operations" EntityType="Self.Loading and unloading operations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Moving Fuel" EntityType="Self.Moving Fuel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Operation" EntityType="Self.Operation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Other Information" EntityType="Self.Other Information" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transport Type" EntityType="Self.Transport Type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WayBill" EntityType="Self.WayBill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WayBills In Contract" EntityType="Self.WayBills In Contract" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WayList" EntityType="Self.WayList" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Additional operation (load/unload)_Additional_Opr" Association="Self.FK_Additional operation (load/unload)_Additional_Opr">
+            <End Role="Additional Operation" EntitySet="Additional Operation" />
+            <End Role="Additional operation (load/unload)" EntitySet="Additional operation (load/unload)" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Additional operation (load/unload)_Load_And_Unload" Association="Self.FK_Additional operation (load/unload)_Load_And_Unload">
+            <End Role="Loading and unloading operations" EntitySet="Loading and unloading operations" />
+            <End Role="Additional operation (load/unload)" EntitySet="Additional operation (load/unload)" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Car/Trailer_Type" Association="Self.FK_Car/Trailer_Type">
+            <End Role="Transport Type" EntitySet="Transport Type" />
+            <End Role="Car/Trailer" EntitySet="Car/Trailer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Car/Tralers in WayList_Car" Association="Self.FK_Car/Tralers in WayList_Car">
+            <End Role="Car/Trailer" EntitySet="Car/Trailer" />
+            <End Role="Car/Tralers in WayList" EntitySet="Car/Tralers in WayList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Car/Tralers in WayList_WayList" Association="Self.FK_Car/Tralers in WayList_WayList">
+            <End Role="WayList" EntitySet="WayList" />
+            <End Role="Car/Tralers in WayList" EntitySet="Car/Tralers in WayList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contract_Cargo" Association="Self.FK_Contract_Cargo">
+            <End Role="Cargo" EntitySet="Cargo" />
+            <End Role="Contract" EntitySet="Contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contract_LegalEntity" Association="Self.FK_Contract_LegalEntity">
+            <End Role="Legal Entity" EntitySet="Legal Entity" />
+            <End Role="Contract" EntitySet="Contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contract_WayList" Association="Self.FK_Contract_WayList">
+            <End Role="WayList" EntitySet="WayList" />
+            <End Role="Contract" EntitySet="Contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DownTime on Line_WayList" Association="Self.FK_DownTime on Line_WayList">
+            <End Role="WayList" EntitySet="WayList" />
+            <End Role="DownTime on Line" EntitySet="DownTime on Line" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Driver Work_Moving Fuel" Association="Self.FK_Driver Work_Moving Fuel">
+            <End Role="Moving Fuel" EntitySet="Moving Fuel" />
+            <End Role="Driver Work" EntitySet="Driver Work" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Driver Work_Operation" Association="Self.FK_Driver Work_Operation">
+            <End Role="Operation" EntitySet="Operation" />
+            <End Role="Driver Work" EntitySet="Driver Work" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Driver Work_Way List" Association="Self.FK_Driver Work_Way List">
+            <End Role="WayList" EntitySet="WayList" />
+            <End Role="Driver Work" EntitySet="Driver Work" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Driver/Accompanying in WayList_Dirver/Accompnying" Association="Self.FK_Driver/Accompanying in WayList_Dirver/Accompnying">
+            <End Role="Driver/Accompanying" EntitySet="Driver/Accompanying" />
+            <End Role="Driver/Accompanying in WayList" EntitySet="Driver/Accompanying in WayList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Driver/Accompanying in WayList_WayList" Association="Self.FK_Driver/Accompanying in WayList_WayList">
+            <End Role="WayList" EntitySet="WayList" />
+            <End Role="Driver/Accompanying in WayList" EntitySet="Driver/Accompanying in WayList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Driver/Accompanying_Role" Association="Self.FK_Driver/Accompanying_Role">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="Driver/Accompanying" EntitySet="Driver/Accompanying" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Information about the cargo_Cargo" Association="Self.FK_Information about the cargo_Cargo">
+            <End Role="Cargo" EntitySet="Cargo" />
+            <End Role="Information about the cargo" EntitySet="Information about the cargo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Information about the cargo_Waybill" Association="Self.FK_Information about the cargo_Waybill">
+            <End Role="WayBill" EntitySet="WayBill" />
+            <End Role="Information about the cargo" EntitySet="Information about the cargo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Loading and unloading operations_Waybill" Association="Self.FK_Loading and unloading operations_Waybill">
+            <End Role="WayBill" EntitySet="WayBill" />
+            <End Role="Loading and unloading operations" EntitySet="Loading and unloading operations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Moving Fuel_Fuel" Association="Self.FK_Moving Fuel_Fuel">
+            <End Role="Fuel" EntitySet="Fuel" />
+            <End Role="Moving Fuel" EntitySet="Moving Fuel" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Other Information_Distance on road group" Association="Self.FK_Other Information_Distance on road group">
+            <End Role="Distance of transportation by road group" EntitySet="Distance of transportation by road group" />
+            <End Role="Other Information" EntitySet="Other Information" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WayBill_Car" Association="Self.FK_WayBill_Car">
+            <End Role="Car/Trailer" EntitySet="Car/Trailer" />
+            <End Role="WayBill" EntitySet="WayBill" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WayBill_Costing" Association="Self.FK_WayBill_Costing">
+            <End Role="Costing" EntitySet="Costing" />
+            <End Role="WayBill" EntitySet="WayBill" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WayBill_Driver" Association="Self.FK_WayBill_Driver">
+            <End Role="Driver/Accompanying" EntitySet="Driver/Accompanying" />
+            <End Role="WayBill" EntitySet="WayBill" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WayBill_Other Information" Association="Self.FK_WayBill_Other Information">
+            <End Role="Other Information" EntitySet="Other Information" />
+            <End Role="WayBill" EntitySet="WayBill" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WayBills In Contract_Contract" Association="Self.FK_WayBills In Contract_Contract">
+            <End Role="Contract" EntitySet="Contract" />
+            <End Role="WayBills In Contract" EntitySet="WayBills In Contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WayBills In Contract_Waybill" Association="Self.FK_WayBills In Contract_Waybill">
+            <End Role="WayBill" EntitySet="WayBill" />
+            <End Role="WayBills In Contract" EntitySet="WayBills In Contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WayList_Contract" Association="Self.FK_WayList_Contract">
+            <End Role="Contract" EntitySet="Contract" />
+            <End Role="WayList" EntitySet="WayList" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Additional_Operation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Time" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Additional_operation__load_unload_" Relationship="Self.FK_Additional_operation__load_unload__Additional_Opr" FromRole="Additional_Operation" ToRole="Additional_operation__load_unload_" />
+        </EntityType>
+        <EntityType Name="Additional_operation__load_unload_">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Additional_Operation_ID" Type="Int32" Nullable="false" />
+          <Property Name="Load_and_Unload_operation_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Additional_Operation" Relationship="Self.FK_Additional_operation__load_unload__Additional_Opr" FromRole="Additional_operation__load_unload_" ToRole="Additional_Operation" />
+          <NavigationProperty Name="Loading_and_unloading_operations" Relationship="Self.FK_Additional_operation__load_unload__Load_And_Unload" FromRole="Additional_operation__load_unload_" ToRole="Loading_and_unloading_operations" />
+        </EntityType>
+        <EntityType Name="Car_Trailer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="State_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Type_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Transport_Type" Relationship="Self.FK_Car_Trailer_Type" FromRole="Car_Trailer" ToRole="Transport_Type" />
+          <NavigationProperty Name="Car_Tralers_in_WayList" Relationship="Self.FK_Car_Tralers_in_WayList_Car" FromRole="Car_Trailer" ToRole="Car_Tralers_in_WayList" />
+          <NavigationProperty Name="WayBills" Relationship="Self.FK_WayBill_Car" FromRole="Car_Trailer" ToRole="WayBill" />
+        </EntityType>
+        <EntityType Name="Car_Tralers_in_WayList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Car_Trailer_ID" Type="Int32" Nullable="false" />
+          <Property Name="WayList_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Car_Trailer" Relationship="Self.FK_Car_Tralers_in_WayList_Car" FromRole="Car_Tralers_in_WayList" ToRole="Car_Trailer" />
+          <NavigationProperty Name="WayList" Relationship="Self.FK_Car_Tralers_in_WayList_WayList" FromRole="Car_Tralers_in_WayList" ToRole="WayList" />
+        </EntityType>
+        <EntityType Name="Cargo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Units" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Contracts" Relationship="Self.FK_Contract_Cargo" FromRole="Cargo" ToRole="Contract" />
+          <NavigationProperty Name="Information_about_the_cargo" Relationship="Self.FK_Information_about_the_cargo_Cargo" FromRole="Cargo" ToRole="Information_about_the_cargo" />
+        </EntityType>
+        <EntityType Name="Contract">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Legal_entity_ID" Type="Int32" Nullable="false" />
+          <Property Name="Arrive_time" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="Where_to_get_cargo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Where_to_deliver_cargo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cargo_ID" Type="Int32" Nullable="false" />
+          <Property Name="Count_trips" Type="Int32" Nullable="false" />
+          <Property Name="Distance" Type="Double" Nullable="false" />
+          <Property Name="Tonnes" Type="Double" Nullable="false" />
+          <Property Name="WayList_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cargo" Relationship="Self.FK_Contract_Cargo" FromRole="Contract" ToRole="Cargo" />
+          <NavigationProperty Name="Legal_Entity" Relationship="Self.FK_Contract_LegalEntity" FromRole="Contract" ToRole="Legal_Entity" />
+          <NavigationProperty Name="WayList" Relationship="Self.FK_Contract_WayList" FromRole="Contract" ToRole="WayList" />
+          <NavigationProperty Name="WayBills_In_Contract" Relationship="Self.FK_WayBills_In_Contract_Contract" FromRole="Contract" ToRole="WayBills_In_Contract" />
+          <NavigationProperty Name="WayLists" Relationship="Self.FK_WayList_Contract" FromRole="Contract" ToRole="WayList" />
+        </EntityType>
+        <EntityType Name="Costing">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Costing_kind" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="For_tonnes" Type="Double" Nullable="false" />
+          <Property Name="Underweight" Type="Double" Nullable="false" />
+          <Property Name="For_spec__prnsp" Type="Double" Nullable="false" />
+          <Property Name="For_transport_service" Type="Double" Nullable="false" />
+          <Property Name="Load_unload_work" Type="Double" Nullable="false" />
+          <Property Name="Over_standard_simple_loading" Type="Double" Nullable="false" />
+          <Property Name="Over_standard_simple_unloading" Type="Double" Nullable="false" />
+          <Property Name="Other_costing" Type="Double" Nullable="false" />
+          <Property Name="Discounts_for_reducing_downtime" Type="Double" Nullable="false" />
+          <NavigationProperty Name="WayBills" Relationship="Self.FK_WayBill_Costing" FromRole="Costing" ToRole="WayBill" />
+        </EntityType>
+        <EntityType Name="Distance_of_transportation_by_road_group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Total" Type="Double" Nullable="false" />
+          <Property Name="In_city" Type="Double" Nullable="false" />
+          <Property Name="First_group" Type="Double" Nullable="false" />
+          <Property Name="Second_group" Type="Double" Nullable="false" />
+          <Property Name="Third_group" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Other_Information" Relationship="Self.FK_Other_Information_Distance_on_road_group" FromRole="Distance_of_transportation_by_road_group" ToRole="Other_Information" />
+        </EntityType>
+        <EntityType Name="DownTime_on_Line">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Start_time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="End_time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="WayList_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="WayList" Relationship="Self.FK_DownTime_on_Line_WayList" FromRole="DownTime_on_Line" ToRole="WayList" />
+        </EntityType>
+        <EntityType Name="Driver_Work">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Operation_ID" Type="Int32" Nullable="false" />
+          <Property Name="Time_on_shedule" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="Zero_mileage" Type="Double" Nullable="false" />
+          <Property Name="Speedometer_display" Type="Double" Nullable="false" />
+          <Property Name="Fact_time" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="Moving_Fuel_ID" Type="Int32" Nullable="false" />
+          <Property Name="Way_List_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Moving_Fuel" Relationship="Self.FK_Driver_Work_Moving_Fuel" FromRole="Driver_Work" ToRole="Moving_Fuel" />
+          <NavigationProperty Name="Operation" Relationship="Self.FK_Driver_Work_Operation" FromRole="Driver_Work" ToRole="Operation" />
+          <NavigationProperty Name="WayList" Relationship="Self.FK_Driver_Work_Way_List" FromRole="Driver_Work" ToRole="WayList" />
+        </EntityType>
+        <EntityType Name="Driver_Accompanying">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Thridname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Certification" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Role_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Driver_Accompanying_in_WayList" Relationship="Self.FK_Driver_Accompanying_in_WayList_Dirver_Accompnying" FromRole="Driver_Accompanying" ToRole="Driver_Accompanying_in_WayList" />
+          <NavigationProperty Name="Role" Relationship="Self.FK_Driver_Accompanying_Role" FromRole="Driver_Accompanying" ToRole="Role" />
+          <NavigationProperty Name="WayBills" Relationship="Self.FK_WayBill_Driver" FromRole="Driver_Accompanying" ToRole="WayBill" />
+        </EntityType>
+        <EntityType Name="Driver_Accompanying_in_WayList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Driver_Accompanying_ID" Type="Int32" Nullable="false" />
+          <Property Name="WayList_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Driver_Accompanying" Relationship="Self.FK_Driver_Accompanying_in_WayList_Dirver_Accompnying" FromRole="Driver_Accompanying_in_WayList" ToRole="Driver_Accompanying" />
+          <NavigationProperty Name="WayList" Relationship="Self.FK_Driver_Accompanying_in_WayList_WayList" FromRole="Driver_Accompanying_in_WayList" ToRole="WayList" />
+        </EntityType>
+        <EntityType Name="Fuel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Price" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Moving_Fuel" Relationship="Self.FK_Moving_Fuel_Fuel" FromRole="Fuel" ToRole="Moving_Fuel" />
+        </EntityType>
+        <EntityType Name="Information_about_the_cargo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nomenclature_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Preisc__position" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cargo_ID" Type="Int32" Nullable="false" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Double" Nullable="false" />
+          <Property Name="Summary" Type="Double" Nullable="false" />
+          <Property Name="Documents_count" Type="Int32" Nullable="false" />
+          <Property Name="Pack_kind" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Place_Count" Type="Int32" Nullable="false" />
+          <Property Name="Mass_determination_method" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mass" Type="Double" Nullable="false" />
+          <Property Name="Waybill_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cargo" Relationship="Self.FK_Information_about_the_cargo_Cargo" FromRole="Information_about_the_cargo" ToRole="Cargo" />
+          <NavigationProperty Name="WayBill" Relationship="Self.FK_Information_about_the_cargo_Waybill" FromRole="Information_about_the_cargo" ToRole="WayBill" />
+        </EntityType>
+        <EntityType Name="Legal_Entity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Region" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Legal_Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Contracts" Relationship="Self.FK_Contract_LegalEntity" FromRole="Legal_Entity" ToRole="Contract" />
+        </EntityType>
+        <EntityType Name="Loading_and_unloading_operation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Operation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Executor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Method" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Arrive_time" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="Departure_time" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="Downtime" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="Waybill_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Additional_operation__load_unload_" Relationship="Self.FK_Additional_operation__load_unload__Load_And_Unload" FromRole="Loading_and_unloading_operations" ToRole="Additional_operation__load_unload_" />
+          <NavigationProperty Name="WayBill" Relationship="Self.FK_Loading_and_unloading_operations_Waybill" FromRole="Loading_and_unloading_operations" ToRole="WayBill" />
+        </EntityType>
+        <EntityType Name="Moving_Fuel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Fuel_ID" Type="Int32" Nullable="false" />
+          <Property Name="Given" Type="Double" Nullable="false" />
+          <Property Name="Balance_at_checkout" Type="Double" Nullable="false" />
+          <Property Name="Balance_at_checkin" Type="Double" Nullable="false" />
+          <Property Name="Commissioned" Type="Double" Nullable="false" />
+          <Property Name="Coefficient_of_change_in_the_norm" Type="Double" Nullable="false" />
+          <Property Name="Work_Time_SpecObor_" Type="Int32" Nullable="false" />
+          <Property Name="Work_Time_DvigFe_" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Driver_Work" Relationship="Self.FK_Driver_Work_Moving_Fuel" FromRole="Moving_Fuel" ToRole="Driver_Work" />
+          <NavigationProperty Name="Fuel" Relationship="Self.FK_Moving_Fuel_Fuel" FromRole="Moving_Fuel" ToRole="Fuel" />
+        </EntityType>
+        <EntityType Name="Operation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Driver_Work" Relationship="Self.FK_Driver_Work_Operation" FromRole="Operation" ToRole="Driver_Work" />
+        </EntityType>
+        <EntityType Name="Other_Information">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Distance_on_road_group_ID" Type="Int32" Nullable="false" />
+          <Property Name="Code_exp_" Type="Int32" Nullable="false" />
+          <Property Name="For_transport_service_of_client" Type="Double" Nullable="false" />
+          <Property Name="For_transport_service_of_driver" Type="Double" Nullable="false" />
+          <Property Name="Driver_adjustment_factor" Type="Double" Nullable="false" />
+          <Property Name="Main_tariff_adjustment_factor" Type="Double" Nullable="false" />
+          <Property Name="Fine" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Distance_of_transportation_by_road_group" Relationship="Self.FK_Other_Information_Distance_on_road_group" FromRole="Other_Information" ToRole="Distance_of_transportation_by_road_group" />
+          <NavigationProperty Name="WayBills" Relationship="Self.FK_WayBill_Other_Information" FromRole="Other_Information" ToRole="WayBill" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Driver_Accompanying" Relationship="Self.FK_Driver_Accompanying_Role" FromRole="Role" ToRole="Driver_Accompanying" />
+        </EntityType>
+        <EntityType Name="Transport_Type">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Car_Trailer" Relationship="Self.FK_Car_Trailer_Type" FromRole="Transport_Type" ToRole="Car_Trailer" />
+        </EntityType>
+        <EntityType Name="WayBill">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Driver_ID" Type="Int32" Nullable="false" />
+          <Property Name="Car_ID" Type="Int32" Nullable="false" />
+          <Property Name="AutoEnterprise" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Transport_kind" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Company_customer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Shipper" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Consignee" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Loading_Point" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Unloading_Point" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="WayNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Redirect" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Costing_ID" Type="Int32" Nullable="false" />
+          <Property Name="Other_Information_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Car_Trailer" Relationship="Self.FK_WayBill_Car" FromRole="WayBill" ToRole="Car_Trailer" />
+          <NavigationProperty Name="Costing" Relationship="Self.FK_WayBill_Costing" FromRole="WayBill" ToRole="Costing" />
+          <NavigationProperty Name="Driver_Accompanying" Relationship="Self.FK_WayBill_Driver" FromRole="WayBill" ToRole="Driver_Accompanying" />
+          <NavigationProperty Name="Information_about_the_cargo" Relationship="Self.FK_Information_about_the_cargo_Waybill" FromRole="WayBill" ToRole="Information_about_the_cargo" />
+          <NavigationProperty Name="Loading_and_unloading_operations" Relationship="Self.FK_Loading_and_unloading_operations_Waybill" FromRole="WayBill" ToRole="Loading_and_unloading_operations" />
+          <NavigationProperty Name="Other_Information" Relationship="Self.FK_WayBill_Other_Information" FromRole="WayBill" ToRole="Other_Information" />
+          <NavigationProperty Name="WayBills_In_Contract" Relationship="Self.FK_WayBills_In_Contract_Waybill" FromRole="WayBill" ToRole="WayBills_In_Contract" />
+        </EntityType>
+        <EntityType Name="WayBills_In_Contract">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Waybill_ID" Type="Int32" Nullable="false" />
+          <Property Name="Contract_ID" Type="Int32" Nullable="false" />
+          <Property Name="Arrive_time" Type="Time" Nullable="false" Precision="7" />
+          <NavigationProperty Name="Contract" Relationship="Self.FK_WayBills_In_Contract_Contract" FromRole="WayBills_In_Contract" ToRole="Contract" />
+          <NavigationProperty Name="WayBill" Relationship="Self.FK_WayBills_In_Contract_Waybill" FromRole="WayBills_In_Contract" ToRole="WayBill" />
+        </EntityType>
+        <EntityType Name="WayList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Contract_ID" Type="Int32" Nullable="false" />
+          <Property Name="Arrive_time" Type="Time" Nullable="false" Precision="7" />
+          <NavigationProperty Name="Car_Tralers_in_WayList" Relationship="Self.FK_Car_Tralers_in_WayList_WayList" FromRole="WayList" ToRole="Car_Tralers_in_WayList" />
+          <NavigationProperty Name="Contracts" Relationship="Self.FK_Contract_WayList" FromRole="WayList" ToRole="Contract" />
+          <NavigationProperty Name="Contract" Relationship="Self.FK_WayList_Contract" FromRole="WayList" ToRole="Contract" />
+          <NavigationProperty Name="DownTime_on_Line" Relationship="Self.FK_DownTime_on_Line_WayList" FromRole="WayList" ToRole="DownTime_on_Line" />
+          <NavigationProperty Name="Driver_Work" Relationship="Self.FK_Driver_Work_Way_List" FromRole="WayList" ToRole="Driver_Work" />
+          <NavigationProperty Name="Driver_Accompanying_in_WayList" Relationship="Self.FK_Driver_Accompanying_in_WayList_WayList" FromRole="WayList" ToRole="Driver_Accompanying_in_WayList" />
+        </EntityType>
+        <Association Name="FK_Additional_operation__load_unload__Additional_Opr">
+          <End Role="Additional_Operation" Type="Self.Additional_Operation" Multiplicity="1" />
+          <End Role="Additional_operation__load_unload_" Type="Self.Additional_operation__load_unload_" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Additional_Operation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Additional_operation__load_unload_">
+              <PropertyRef Name="Additional_Operation_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Additional_operation__load_unload__Load_And_Unload">
+          <End Role="Loading_and_unloading_operations" Type="Self.Loading_and_unloading_operation" Multiplicity="1" />
+          <End Role="Additional_operation__load_unload_" Type="Self.Additional_operation__load_unload_" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Loading_and_unloading_operations">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Additional_operation__load_unload_">
+              <PropertyRef Name="Load_and_Unload_operation_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Car_Trailer_Type">
+          <End Role="Transport_Type" Type="Self.Transport_Type" Multiplicity="1" />
+          <End Role="Car_Trailer" Type="Self.Car_Trailer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transport_Type">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Car_Trailer">
+              <PropertyRef Name="Type_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Car_Tralers_in_WayList_Car">
+          <End Role="Car_Trailer" Type="Self.Car_Trailer" Multiplicity="1" />
+          <End Role="Car_Tralers_in_WayList" Type="Self.Car_Tralers_in_WayList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car_Trailer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Car_Tralers_in_WayList">
+              <PropertyRef Name="Car_Trailer_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WayBill_Car">
+          <End Role="Car_Trailer" Type="Self.Car_Trailer" Multiplicity="1" />
+          <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car_Trailer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayBill">
+              <PropertyRef Name="Car_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Car_Tralers_in_WayList_WayList">
+          <End Role="WayList" Type="Self.WayList" Multiplicity="1" />
+          <End Role="Car_Tralers_in_WayList" Type="Self.Car_Tralers_in_WayList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayList">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Car_Tralers_in_WayList">
+              <PropertyRef Name="WayList_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contract_Cargo">
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
+          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Contract">
+              <PropertyRef Name="Cargo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Information_about_the_cargo_Cargo">
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
+          <End Role="Information_about_the_cargo" Type="Self.Information_about_the_cargo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Information_about_the_cargo">
+              <PropertyRef Name="Cargo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contract_LegalEntity">
+          <End Role="Legal_Entity" Type="Self.Legal_Entity" Multiplicity="1" />
+          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Legal_Entity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Contract">
+              <PropertyRef Name="Legal_entity_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contract_WayList">
+          <End Role="WayList" Type="Self.WayList" Multiplicity="1" />
+          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayList">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Contract">
+              <PropertyRef Name="WayList_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WayBills_In_Contract_Contract">
+          <End Role="Contract" Type="Self.Contract" Multiplicity="1" />
+          <End Role="WayBills_In_Contract" Type="Self.WayBills_In_Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contract">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayBills_In_Contract">
+              <PropertyRef Name="Contract_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WayList_Contract">
+          <End Role="Contract" Type="Self.Contract" Multiplicity="1" />
+          <End Role="WayList" Type="Self.WayList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contract">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayList">
+              <PropertyRef Name="Contract_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WayBill_Costing">
+          <End Role="Costing" Type="Self.Costing" Multiplicity="1" />
+          <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Costing">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayBill">
+              <PropertyRef Name="Costing_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Other_Information_Distance_on_road_group">
+          <End Role="Distance_of_transportation_by_road_group" Type="Self.Distance_of_transportation_by_road_group" Multiplicity="1" />
+          <End Role="Other_Information" Type="Self.Other_Information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Distance_of_transportation_by_road_group">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Other_Information">
+              <PropertyRef Name="Distance_on_road_group_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DownTime_on_Line_WayList">
+          <End Role="WayList" Type="Self.WayList" Multiplicity="1" />
+          <End Role="DownTime_on_Line" Type="Self.DownTime_on_Line" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayList">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DownTime_on_Line">
+              <PropertyRef Name="WayList_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Driver_Work_Moving_Fuel">
+          <End Role="Moving_Fuel" Type="Self.Moving_Fuel" Multiplicity="1" />
+          <End Role="Driver_Work" Type="Self.Driver_Work" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Moving_Fuel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Driver_Work">
+              <PropertyRef Name="Moving_Fuel_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Driver_Work_Operation">
+          <End Role="Operation" Type="Self.Operation" Multiplicity="1" />
+          <End Role="Driver_Work" Type="Self.Driver_Work" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Operation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Driver_Work">
+              <PropertyRef Name="Operation_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Driver_Work_Way_List">
+          <End Role="WayList" Type="Self.WayList" Multiplicity="1" />
+          <End Role="Driver_Work" Type="Self.Driver_Work" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayList">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Driver_Work">
+              <PropertyRef Name="Way_List_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Driver_Accompanying_in_WayList_Dirver_Accompnying">
+          <End Role="Driver_Accompanying" Type="Self.Driver_Accompanying" Multiplicity="1" />
+          <End Role="Driver_Accompanying_in_WayList" Type="Self.Driver_Accompanying_in_WayList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Driver_Accompanying">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Driver_Accompanying_in_WayList">
+              <PropertyRef Name="Driver_Accompanying_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Driver_Accompanying_Role">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="Driver_Accompanying" Type="Self.Driver_Accompanying" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Driver_Accompanying">
+              <PropertyRef Name="Role_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WayBill_Driver">
+          <End Role="Driver_Accompanying" Type="Self.Driver_Accompanying" Multiplicity="1" />
+          <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Driver_Accompanying">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayBill">
+              <PropertyRef Name="Driver_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Driver_Accompanying_in_WayList_WayList">
+          <End Role="WayList" Type="Self.WayList" Multiplicity="1" />
+          <End Role="Driver_Accompanying_in_WayList" Type="Self.Driver_Accompanying_in_WayList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayList">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Driver_Accompanying_in_WayList">
+              <PropertyRef Name="WayList_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Moving_Fuel_Fuel">
+          <End Role="Fuel" Type="Self.Fuel" Multiplicity="1" />
+          <End Role="Moving_Fuel" Type="Self.Moving_Fuel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fuel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Moving_Fuel">
+              <PropertyRef Name="Fuel_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Information_about_the_cargo_Waybill">
+          <End Role="WayBill" Type="Self.WayBill" Multiplicity="1" />
+          <End Role="Information_about_the_cargo" Type="Self.Information_about_the_cargo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayBill">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Information_about_the_cargo">
+              <PropertyRef Name="Waybill_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Loading_and_unloading_operations_Waybill">
+          <End Role="WayBill" Type="Self.WayBill" Multiplicity="1" />
+          <End Role="Loading_and_unloading_operations" Type="Self.Loading_and_unloading_operation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayBill">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Loading_and_unloading_operations">
+              <PropertyRef Name="Waybill_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WayBill_Other_Information">
+          <End Role="Other_Information" Type="Self.Other_Information" Multiplicity="1" />
+          <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Other_Information">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayBill">
+              <PropertyRef Name="Other_Information_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WayBills_In_Contract_Waybill">
+          <End Role="WayBill" Type="Self.WayBill" Multiplicity="1" />
+          <End Role="WayBills_In_Contract" Type="Self.WayBills_In_Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WayBill">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayBills_In_Contract">
+              <PropertyRef Name="Waybill_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DatabaseEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Additional_Operations" EntityType="Self.Additional_Operation" />
+          <EntitySet Name="Additional_operation__load_unload_" EntityType="Self.Additional_operation__load_unload_" />
+          <EntitySet Name="Car_Trailer" EntityType="Self.Car_Trailer" />
+          <EntitySet Name="Car_Tralers_in_WayList" EntityType="Self.Car_Tralers_in_WayList" />
+          <EntitySet Name="Cargoes" EntityType="Self.Cargo" />
+          <EntitySet Name="Contracts" EntityType="Self.Contract" />
+          <EntitySet Name="Costings" EntityType="Self.Costing" />
+          <EntitySet Name="Distance_of_transportation_by_road_groups" EntityType="Self.Distance_of_transportation_by_road_group" />
+          <EntitySet Name="DownTime_on_Lines" EntityType="Self.DownTime_on_Line" />
+          <EntitySet Name="Driver_Works" EntityType="Self.Driver_Work" />
+          <EntitySet Name="Driver_Accompanying" EntityType="Self.Driver_Accompanying" />
+          <EntitySet Name="Driver_Accompanying_in_WayList" EntityType="Self.Driver_Accompanying_in_WayList" />
+          <EntitySet Name="Fuels" EntityType="Self.Fuel" />
+          <EntitySet Name="Information_about_the_cargoes" EntityType="Self.Information_about_the_cargo" />
+          <EntitySet Name="Legal_Entities" EntityType="Self.Legal_Entity" />
+          <EntitySet Name="Loading_and_unloading_operations" EntityType="Self.Loading_and_unloading_operation" />
+          <EntitySet Name="Moving_Fuels" EntityType="Self.Moving_Fuel" />
+          <EntitySet Name="Operations" EntityType="Self.Operation" />
+          <EntitySet Name="Other_Information" EntityType="Self.Other_Information" />
+          <EntitySet Name="Roles" EntityType="Self.Role" />
+          <EntitySet Name="Transport_Types" EntityType="Self.Transport_Type" />
+          <EntitySet Name="WayBills" EntityType="Self.WayBill" />
+          <EntitySet Name="WayBills_In_Contracts" EntityType="Self.WayBills_In_Contract" />
+          <EntitySet Name="WayLists" EntityType="Self.WayList" />
+          <AssociationSet Name="FK_Additional_operation__load_unload__Additional_Opr" Association="Self.FK_Additional_operation__load_unload__Additional_Opr">
+            <End Role="Additional_Operation" EntitySet="Additional_Operations" />
+            <End Role="Additional_operation__load_unload_" EntitySet="Additional_operation__load_unload_" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Additional_operation__load_unload__Load_And_Unload" Association="Self.FK_Additional_operation__load_unload__Load_And_Unload">
+            <End Role="Loading_and_unloading_operations" EntitySet="Loading_and_unloading_operations" />
+            <End Role="Additional_operation__load_unload_" EntitySet="Additional_operation__load_unload_" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Car_Trailer_Type" Association="Self.FK_Car_Trailer_Type">
+            <End Role="Transport_Type" EntitySet="Transport_Types" />
+            <End Role="Car_Trailer" EntitySet="Car_Trailer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Car_Tralers_in_WayList_Car" Association="Self.FK_Car_Tralers_in_WayList_Car">
+            <End Role="Car_Trailer" EntitySet="Car_Trailer" />
+            <End Role="Car_Tralers_in_WayList" EntitySet="Car_Tralers_in_WayList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WayBill_Car" Association="Self.FK_WayBill_Car">
+            <End Role="Car_Trailer" EntitySet="Car_Trailer" />
+            <End Role="WayBill" EntitySet="WayBills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Car_Tralers_in_WayList_WayList" Association="Self.FK_Car_Tralers_in_WayList_WayList">
+            <End Role="WayList" EntitySet="WayLists" />
+            <End Role="Car_Tralers_in_WayList" EntitySet="Car_Tralers_in_WayList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contract_Cargo" Association="Self.FK_Contract_Cargo">
+            <End Role="Cargo" EntitySet="Cargoes" />
+            <End Role="Contract" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Information_about_the_cargo_Cargo" Association="Self.FK_Information_about_the_cargo_Cargo">
+            <End Role="Cargo" EntitySet="Cargoes" />
+            <End Role="Information_about_the_cargo" EntitySet="Information_about_the_cargoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contract_LegalEntity" Association="Self.FK_Contract_LegalEntity">
+            <End Role="Legal_Entity" EntitySet="Legal_Entities" />
+            <End Role="Contract" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contract_WayList" Association="Self.FK_Contract_WayList">
+            <End Role="WayList" EntitySet="WayLists" />
+            <End Role="Contract" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WayBills_In_Contract_Contract" Association="Self.FK_WayBills_In_Contract_Contract">
+            <End Role="Contract" EntitySet="Contracts" />
+            <End Role="WayBills_In_Contract" EntitySet="WayBills_In_Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WayList_Contract" Association="Self.FK_WayList_Contract">
+            <End Role="Contract" EntitySet="Contracts" />
+            <End Role="WayList" EntitySet="WayLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WayBill_Costing" Association="Self.FK_WayBill_Costing">
+            <End Role="Costing" EntitySet="Costings" />
+            <End Role="WayBill" EntitySet="WayBills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Other_Information_Distance_on_road_group" Association="Self.FK_Other_Information_Distance_on_road_group">
+            <End Role="Distance_of_transportation_by_road_group" EntitySet="Distance_of_transportation_by_road_groups" />
+            <End Role="Other_Information" EntitySet="Other_Information" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DownTime_on_Line_WayList" Association="Self.FK_DownTime_on_Line_WayList">
+            <End Role="WayList" EntitySet="WayLists" />
+            <End Role="DownTime_on_Line" EntitySet="DownTime_on_Lines" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Driver_Work_Moving_Fuel" Association="Self.FK_Driver_Work_Moving_Fuel">
+            <End Role="Moving_Fuel" EntitySet="Moving_Fuels" />
+            <End Role="Driver_Work" EntitySet="Driver_Works" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Driver_Work_Operation" Association="Self.FK_Driver_Work_Operation">
+            <End Role="Operation" EntitySet="Operations" />
+            <End Role="Driver_Work" EntitySet="Driver_Works" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Driver_Work_Way_List" Association="Self.FK_Driver_Work_Way_List">
+            <End Role="WayList" EntitySet="WayLists" />
+            <End Role="Driver_Work" EntitySet="Driver_Works" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Driver_Accompanying_in_WayList_Dirver_Accompnying" Association="Self.FK_Driver_Accompanying_in_WayList_Dirver_Accompnying">
+            <End Role="Driver_Accompanying" EntitySet="Driver_Accompanying" />
+            <End Role="Driver_Accompanying_in_WayList" EntitySet="Driver_Accompanying_in_WayList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Driver_Accompanying_Role" Association="Self.FK_Driver_Accompanying_Role">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="Driver_Accompanying" EntitySet="Driver_Accompanying" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WayBill_Driver" Association="Self.FK_WayBill_Driver">
+            <End Role="Driver_Accompanying" EntitySet="Driver_Accompanying" />
+            <End Role="WayBill" EntitySet="WayBills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Driver_Accompanying_in_WayList_WayList" Association="Self.FK_Driver_Accompanying_in_WayList_WayList">
+            <End Role="WayList" EntitySet="WayLists" />
+            <End Role="Driver_Accompanying_in_WayList" EntitySet="Driver_Accompanying_in_WayList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Moving_Fuel_Fuel" Association="Self.FK_Moving_Fuel_Fuel">
+            <End Role="Fuel" EntitySet="Fuels" />
+            <End Role="Moving_Fuel" EntitySet="Moving_Fuels" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Information_about_the_cargo_Waybill" Association="Self.FK_Information_about_the_cargo_Waybill">
+            <End Role="WayBill" EntitySet="WayBills" />
+            <End Role="Information_about_the_cargo" EntitySet="Information_about_the_cargoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Loading_and_unloading_operations_Waybill" Association="Self.FK_Loading_and_unloading_operations_Waybill">
+            <End Role="WayBill" EntitySet="WayBills" />
+            <End Role="Loading_and_unloading_operations" EntitySet="Loading_and_unloading_operations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WayBill_Other_Information" Association="Self.FK_WayBill_Other_Information">
+            <End Role="Other_Information" EntitySet="Other_Information" />
+            <End Role="WayBill" EntitySet="WayBills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WayBills_In_Contract_Waybill" Association="Self.FK_WayBills_In_Contract_Waybill">
+            <End Role="WayBill" EntitySet="WayBills" />
+            <End Role="WayBills_In_Contract" EntitySet="WayBills_In_Contracts" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities1">
+          <EntitySetMapping Name="Additional_Operations">
+            <EntityTypeMapping TypeName="DatabaseModel.Additional_Operation">
+              <MappingFragment StoreEntitySet="Additional Operation">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Additional_operation__load_unload_">
+            <EntityTypeMapping TypeName="DatabaseModel.Additional_operation__load_unload_">
+              <MappingFragment StoreEntitySet="Additional operation (load/unload)">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Additional_Operation_ID" ColumnName="Additional Operation ID" />
+                <ScalarProperty Name="Load_and_Unload_operation_ID" ColumnName="Load and Unload operation ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Car_Trailer">
+            <EntityTypeMapping TypeName="DatabaseModel.Car_Trailer">
+              <MappingFragment StoreEntitySet="Car/Trailer">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="State_number" ColumnName="State number" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Type_ID" ColumnName="Type ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Car_Tralers_in_WayList">
+            <EntityTypeMapping TypeName="DatabaseModel.Car_Tralers_in_WayList">
+              <MappingFragment StoreEntitySet="Car/Tralers in WayList">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Car_Trailer_ID" ColumnName="Car/Trailer ID" />
+                <ScalarProperty Name="WayList_ID" ColumnName="WayList ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cargoes">
+            <EntityTypeMapping TypeName="DatabaseModel.Cargo">
+              <MappingFragment StoreEntitySet="Cargo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Units" ColumnName="Units" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contracts">
+            <EntityTypeMapping TypeName="DatabaseModel.Contract">
+              <MappingFragment StoreEntitySet="Contract">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Legal_entity_ID" ColumnName="Legal entity ID" />
+                <ScalarProperty Name="Arrive_time" ColumnName="Arrive time" />
+                <ScalarProperty Name="Where_to_get_cargo" ColumnName="Where to get cargo" />
+                <ScalarProperty Name="Where_to_deliver_cargo" ColumnName="Where to deliver cargo" />
+                <ScalarProperty Name="Cargo_ID" ColumnName="Cargo ID" />
+                <ScalarProperty Name="Count_trips" ColumnName="Count trips" />
+                <ScalarProperty Name="Distance" ColumnName="Distance" />
+                <ScalarProperty Name="Tonnes" ColumnName="Tonnes" />
+                <ScalarProperty Name="WayList_ID" ColumnName="WayList ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Costings">
+            <EntityTypeMapping TypeName="DatabaseModel.Costing">
+              <MappingFragment StoreEntitySet="Costing">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Costing_kind" ColumnName="Costing kind" />
+                <ScalarProperty Name="For_tonnes" ColumnName="For tonnes" />
+                <ScalarProperty Name="Underweight" ColumnName="Underweight" />
+                <ScalarProperty Name="For_spec__prnsp" ColumnName="For spec. prnsp" />
+                <ScalarProperty Name="For_transport_service" ColumnName="For transport service" />
+                <ScalarProperty Name="Load_unload_work" ColumnName="Load/unload work" />
+                <ScalarProperty Name="Over_standard_simple_loading" ColumnName="Over-standard simple loading" />
+                <ScalarProperty Name="Over_standard_simple_unloading" ColumnName="Over-standard simple unloading" />
+                <ScalarProperty Name="Other_costing" ColumnName="Other costing" />
+                <ScalarProperty Name="Discounts_for_reducing_downtime" ColumnName="Discounts for reducing downtime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Distance_of_transportation_by_road_groups">
+            <EntityTypeMapping TypeName="DatabaseModel.Distance_of_transportation_by_road_group">
+              <MappingFragment StoreEntitySet="Distance of transportation by road group">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="In_city" ColumnName="In city" />
+                <ScalarProperty Name="First_group" ColumnName="First group" />
+                <ScalarProperty Name="Second_group" ColumnName="Second group" />
+                <ScalarProperty Name="Third_group" ColumnName="Third group" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DownTime_on_Lines">
+            <EntityTypeMapping TypeName="DatabaseModel.DownTime_on_Line">
+              <MappingFragment StoreEntitySet="DownTime on Line">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Start_time" ColumnName="Start time" />
+                <ScalarProperty Name="End_time" ColumnName="End time" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="WayList_ID" ColumnName="WayList ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Driver_Works">
+            <EntityTypeMapping TypeName="DatabaseModel.Driver_Work">
+              <MappingFragment StoreEntitySet="Driver Work">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Operation_ID" ColumnName="Operation ID" />
+                <ScalarProperty Name="Time_on_shedule" ColumnName="Time on shedule" />
+                <ScalarProperty Name="Zero_mileage" ColumnName="Zero mileage" />
+                <ScalarProperty Name="Speedometer_display" ColumnName="Speedometer display" />
+                <ScalarProperty Name="Fact_time" ColumnName="Fact time" />
+                <ScalarProperty Name="Moving_Fuel_ID" ColumnName="Moving Fuel ID" />
+                <ScalarProperty Name="Way_List_ID" ColumnName="Way List ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Driver_Accompanying">
+            <EntityTypeMapping TypeName="DatabaseModel.Driver_Accompanying">
+              <MappingFragment StoreEntitySet="Driver/Accompanying">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Thridname" ColumnName="Thridname" />
+                <ScalarProperty Name="Certification" ColumnName="Certification" />
+                <ScalarProperty Name="Role_ID" ColumnName="Role ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Driver_Accompanying_in_WayList">
+            <EntityTypeMapping TypeName="DatabaseModel.Driver_Accompanying_in_WayList">
+              <MappingFragment StoreEntitySet="Driver/Accompanying in WayList">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Driver_Accompanying_ID" ColumnName="Driver/Accompanying ID" />
+                <ScalarProperty Name="WayList_ID" ColumnName="WayList ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fuels">
+            <EntityTypeMapping TypeName="DatabaseModel.Fuel">
+              <MappingFragment StoreEntitySet="Fuel">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Information_about_the_cargoes">
+            <EntityTypeMapping TypeName="DatabaseModel.Information_about_the_cargo">
+              <MappingFragment StoreEntitySet="Information about the cargo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nomenclature_code" ColumnName="Nomenclature code" />
+                <ScalarProperty Name="Preisc__position" ColumnName="Preisc. position" />
+                <ScalarProperty Name="Cargo_ID" ColumnName="Cargo ID" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Summary" ColumnName="Summary" />
+                <ScalarProperty Name="Documents_count" ColumnName="Documents count" />
+                <ScalarProperty Name="Pack_kind" ColumnName="Pack kind" />
+                <ScalarProperty Name="Place_Count" ColumnName="Place Count" />
+                <ScalarProperty Name="Mass_determination_method" ColumnName="Mass determination method" />
+                <ScalarProperty Name="Mass" ColumnName="Mass" />
+                <ScalarProperty Name="Waybill_ID" ColumnName="Waybill ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Legal_Entities">
+            <EntityTypeMapping TypeName="DatabaseModel.Legal_Entity">
+              <MappingFragment StoreEntitySet="Legal Entity">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Legal_Adress" ColumnName="Legal Adress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Loading_and_unloading_operations">
+            <EntityTypeMapping TypeName="DatabaseModel.Loading_and_unloading_operation">
+              <MappingFragment StoreEntitySet="Loading and unloading operations">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Operation" ColumnName="Operation" />
+                <ScalarProperty Name="Executor" ColumnName="Executor" />
+                <ScalarProperty Name="Method" ColumnName="Method" />
+                <ScalarProperty Name="Arrive_time" ColumnName="Arrive time" />
+                <ScalarProperty Name="Departure_time" ColumnName="Departure time" />
+                <ScalarProperty Name="Downtime" ColumnName="Downtime" />
+                <ScalarProperty Name="Waybill_ID" ColumnName="Waybill ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Moving_Fuels">
+            <EntityTypeMapping TypeName="DatabaseModel.Moving_Fuel">
+              <MappingFragment StoreEntitySet="Moving Fuel">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Fuel_ID" ColumnName="Fuel ID" />
+                <ScalarProperty Name="Given" ColumnName="Given" />
+                <ScalarProperty Name="Balance_at_checkout" ColumnName="Balance at checkout" />
+                <ScalarProperty Name="Balance_at_checkin" ColumnName="Balance at checkin" />
+                <ScalarProperty Name="Commissioned" ColumnName="Commissioned" />
+                <ScalarProperty Name="Coefficient_of_change_in_the_norm" ColumnName="Coefficient of change in the norm" />
+                <ScalarProperty Name="Work_Time_SpecObor_" ColumnName="Work Time SpecObor." />
+                <ScalarProperty Name="Work_Time_DvigFe_" ColumnName="Work Time DvigFe." />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Operations">
+            <EntityTypeMapping TypeName="DatabaseModel.Operation">
+              <MappingFragment StoreEntitySet="Operation">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Other_Information">
+            <EntityTypeMapping TypeName="DatabaseModel.Other_Information">
+              <MappingFragment StoreEntitySet="Other Information">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Distance_on_road_group_ID" ColumnName="Distance on road group ID" />
+                <ScalarProperty Name="Code_exp_" ColumnName="Code exp." />
+                <ScalarProperty Name="For_transport_service_of_client" ColumnName="For transport service of client" />
+                <ScalarProperty Name="For_transport_service_of_driver" ColumnName="For transport service of driver" />
+                <ScalarProperty Name="Driver_adjustment_factor" ColumnName="Driver adjustment factor" />
+                <ScalarProperty Name="Main_tariff_adjustment_factor" ColumnName="Main tariff adjustment factor" />
+                <ScalarProperty Name="Fine" ColumnName="Fine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="DatabaseModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transport_Types">
+            <EntityTypeMapping TypeName="DatabaseModel.Transport_Type">
+              <MappingFragment StoreEntitySet="Transport Type">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WayBills">
+            <EntityTypeMapping TypeName="DatabaseModel.WayBill">
+              <MappingFragment StoreEntitySet="WayBill">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Driver_ID" ColumnName="Driver ID" />
+                <ScalarProperty Name="Car_ID" ColumnName="Car ID" />
+                <ScalarProperty Name="AutoEnterprise" ColumnName="AutoEnterprise" />
+                <ScalarProperty Name="Transport_kind" ColumnName="Transport kind" />
+                <ScalarProperty Name="Company_customer" ColumnName="Company customer" />
+                <ScalarProperty Name="Shipper" ColumnName="Shipper" />
+                <ScalarProperty Name="Consignee" ColumnName="Consignee" />
+                <ScalarProperty Name="Loading_Point" ColumnName="Loading Point" />
+                <ScalarProperty Name="Unloading_Point" ColumnName="Unloading Point" />
+                <ScalarProperty Name="WayNumber" ColumnName="WayNumber" />
+                <ScalarProperty Name="Redirect" ColumnName="Redirect" />
+                <ScalarProperty Name="Costing_ID" ColumnName="Costing ID" />
+                <ScalarProperty Name="Other_Information_ID" ColumnName="Other Information ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WayBills_In_Contracts">
+            <EntityTypeMapping TypeName="DatabaseModel.WayBills_In_Contract">
+              <MappingFragment StoreEntitySet="WayBills In Contract">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Waybill_ID" ColumnName="Waybill ID" />
+                <ScalarProperty Name="Contract_ID" ColumnName="Contract ID" />
+                <ScalarProperty Name="Arrive_time" ColumnName="Arrive time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WayLists">
+            <EntityTypeMapping TypeName="DatabaseModel.WayList">
+              <MappingFragment StoreEntitySet="WayList">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Contract_ID" ColumnName="Contract ID" />
+                <ScalarProperty Name="Arrive_time" ColumnName="Arrive time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

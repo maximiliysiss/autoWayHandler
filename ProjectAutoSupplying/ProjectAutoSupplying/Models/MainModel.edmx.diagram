@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8acf8c5d199949f1b4a532d865233e58" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="DatabaseModel.Additional_Operation" Width="2.625" PointX="14.625" PointY="12" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Additional_operation__load_unload_" Width="2.875" PointX="14.75" PointY="9.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Car_Trailer" Width="1.5" PointX="3.25" PointY="6.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Car_Tralers_in_WayList" Width="1.875" PointX="5.5" PointY="5" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Cargo" Width="1.5" PointX="2.125" PointY="9.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Contract" Width="1.5" PointX="0.5" PointY="8.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Costing" Width="1.5" PointX="10.875" PointY="6.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Distance_of_transportation_by_road_group" Width="3.125" PointX="10.125" PointY="12.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.DownTime_on_Line" Width="2.375" PointX="2.5" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Driver_Work" Width="1.5" PointX="8.875" PointY="1.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Driver_Accompanying" Width="2" PointX="7.5" PointY="6.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Driver_Accompanying_in_WayList" Width="2.75" PointX="4.75" PointY="2.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Fuel" Width="1.5" PointX="17.5" PointY="3.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Information_about_the_cargo" Width="2.625" PointX="4.75" PointY="9" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Legal_Entity" Width="1.5" PointX="0.5" PointY="6.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Loading_and_unloading_operation" Width="3" PointX="13.875" PointY="7.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Moving_Fuel" Width="1.5" PointX="13.125" PointY="2.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Operation" Width="1.5" PointX="11.75" PointY="1.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Other_Information" Width="2.375" PointX="11.625" PointY="10.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Role" Width="1.5" PointX="9.125" PointY="5" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.Transport_Type" Width="1.5" PointX="3.875" PointY="7.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.WayBill" Width="1.5" PointX="9.375" PointY="8.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.WayBills_In_Contract" Width="2.625" PointX="4.875" PointY="10.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="DatabaseModel.WayList" Width="1.5" PointX="3" PointY="1.75" IsExpanded="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Additional_operation__load_unload__Additional_Opr" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Additional_operation__load_unload__Load_And_Unload" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Car_Trailer_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Car_Tralers_in_WayList_Car" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_WayBill_Car" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Car_Tralers_in_WayList_WayList" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Contract_Cargo" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Information_about_the_cargo_Cargo" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Contract_LegalEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Contract_WayList" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_WayBills_In_Contract_Contract" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_WayList_Contract" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_WayBill_Costing" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Other_Information_Distance_on_road_group" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_DownTime_on_Line_WayList" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Driver_Work_Moving_Fuel" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Driver_Work_Operation" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Driver_Work_Way_List" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Driver_Accompanying_in_WayList_Dirver_Accompnying" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Driver_Accompanying_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_WayBill_Driver" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Driver_Accompanying_in_WayList_WayList" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="DatabaseModel.FK_Moving_Fuel_Fuel" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Information_about_the_cargo_Waybill" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Loading_and_unloading_operations_Waybill" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_WayBill_Other_Information" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_WayBills_In_Contract_Waybill" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
