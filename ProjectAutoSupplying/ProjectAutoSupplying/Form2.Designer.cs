@@ -76,6 +76,16 @@
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox16.SuspendLayout();
             this.groupBox14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).BeginInit();
@@ -86,13 +96,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).BeginInit();
             this.groupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button1.Location = new System.Drawing.Point(650, 506);
+            this.button1.Location = new System.Drawing.Point(650, 553);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(222, 23);
             this.button1.TabIndex = 12;
@@ -106,7 +117,7 @@
             this.groupBox16.Controls.Add(this.label44);
             this.groupBox16.Controls.Add(this.textBox40);
             this.groupBox16.Controls.Add(this.textBox39);
-            this.groupBox16.Location = new System.Drawing.Point(650, 425);
+            this.groupBox16.Location = new System.Drawing.Point(650, 472);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(222, 75);
             this.groupBox16.TabIndex = 10;
@@ -155,9 +166,9 @@
             this.groupBox14.Controls.Add(this.button2);
             this.groupBox14.Controls.Add(this.listBox1);
             this.groupBox14.Controls.Add(this.dataGridView13);
-            this.groupBox14.Location = new System.Drawing.Point(16, 191);
+            this.groupBox14.Location = new System.Drawing.Point(16, 267);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(856, 228);
+            this.groupBox14.Size = new System.Drawing.Size(856, 199);
             this.groupBox14.TabIndex = 11;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Сведения о поставках";
@@ -177,7 +188,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(7, 14);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(132, 160);
+            this.listBox1.Size = new System.Drawing.Size(132, 134);
             this.listBox1.TabIndex = 6;
             // 
             // dataGridView13
@@ -188,7 +199,7 @@
             this.dataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView13.Location = new System.Drawing.Point(145, 14);
             this.dataGridView13.Name = "dataGridView13";
-            this.dataGridView13.Size = new System.Drawing.Size(705, 208);
+            this.dataGridView13.Size = new System.Drawing.Size(705, 179);
             this.dataGridView13.TabIndex = 5;
             // 
             // groupBox12
@@ -204,7 +215,7 @@
             this.groupBox12.Controls.Add(this.textBox32);
             this.groupBox12.Controls.Add(this.textBox31);
             this.groupBox12.Controls.Add(this.textBox29);
-            this.groupBox12.Location = new System.Drawing.Point(263, 425);
+            this.groupBox12.Location = new System.Drawing.Point(263, 472);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(261, 104);
             this.groupBox12.TabIndex = 9;
@@ -316,7 +327,7 @@
             this.groupBox11.Controls.Add(this.textBox24);
             this.groupBox11.Controls.Add(this.textBox20);
             this.groupBox11.Controls.Add(this.groupBox13);
-            this.groupBox11.Location = new System.Drawing.Point(16, 425);
+            this.groupBox11.Location = new System.Drawing.Point(16, 472);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(232, 104);
             this.groupBox11.TabIndex = 8;
@@ -589,11 +600,119 @@
             this.comboBox4.Size = new System.Drawing.Size(165, 21);
             this.comboBox4.TabIndex = 0;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label38);
+            this.groupBox1.Controls.Add(this.comboBox9);
+            this.groupBox1.Controls.Add(this.textBox18);
+            this.groupBox1.Controls.Add(this.label37);
+            this.groupBox1.Controls.Add(this.textBox23);
+            this.groupBox1.Controls.Add(this.label35);
+            this.groupBox1.Controls.Add(this.label36);
+            this.groupBox1.Location = new System.Drawing.Point(16, 192);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(856, 69);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Информация о маршруте";
+            // 
+            // label38
+            // 
+            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label38.Location = new System.Drawing.Point(618, 44);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(110, 17);
+            this.label38.TabIndex = 25;
+            this.label38.Text = "Расстояние км.";
+            // 
+            // label37
+            // 
+            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label37.Location = new System.Drawing.Point(12, 89);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(73, 17);
+            this.label37.TabIndex = 24;
+            this.label37.Text = "Конечная";
+            // 
+            // label36
+            // 
+            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label36.Location = new System.Drawing.Point(61, 43);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(106, 17);
+            this.label36.TabIndex = 23;
+            this.label36.Text = "Вид перевозки";
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(173, 39);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(202, 21);
+            this.comboBox9.TabIndex = 22;
+            // 
+            // label35
+            // 
+            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label35.Location = new System.Drawing.Point(17, 13);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(68, 17);
+            this.label35.TabIndex = 21;
+            this.label35.Text = "Маршрут";
+            // 
+            // textBox23
+            // 
+            this.textBox23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox23.Location = new System.Drawing.Point(741, 43);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(103, 20);
+            this.textBox23.TabIndex = 20;
+            // 
+            // textBox18
+            // 
+            this.textBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox18.Location = new System.Drawing.Point(91, 14);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(371, 20);
+            this.textBox18.TabIndex = 19;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox1.Location = new System.Drawing.Point(487, 14);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(357, 20);
+            this.textBox1.TabIndex = 26;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(468, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 17);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "-";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 541);
+            this.ClientSize = new System.Drawing.Size(884, 588);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox16);
             this.Controls.Add(this.groupBox14);
@@ -619,6 +738,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).EndInit();
             this.groupBox17.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -673,5 +794,15 @@
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
     }
 }
