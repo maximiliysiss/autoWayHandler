@@ -1372,7 +1372,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DatabaseEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DatabaseEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Additional_Operations" EntityType="Self.Additional_Operation" />
           <EntitySet Name="Additional_operation__load_unload_" EntityType="Self.Additional_operation__load_unload_" />
           <EntitySet Name="Car_Trailer" EntityType="Self.Car_Trailer" />
@@ -1511,7 +1511,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities1">
+        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities2">
           <EntitySetMapping Name="Additional_Operations">
             <EntityTypeMapping TypeName="DatabaseModel.Additional_Operation">
               <MappingFragment StoreEntitySet="Additional Operation">
