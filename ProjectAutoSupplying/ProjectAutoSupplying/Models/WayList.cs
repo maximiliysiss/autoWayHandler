@@ -18,7 +18,6 @@ namespace ProjectAutoSupplying.Models
         public WayList()
         {
             this.Car_Tralers_in_WayList = new HashSet<Car_Tralers_in_WayList>();
-            this.Contracts = new HashSet<Contract>();
             this.DownTime_on_Line = new HashSet<DownTime_on_Line>();
             this.Driver_Work = new HashSet<Driver_Work>();
             this.Driver_Accompanying_in_WayList = new HashSet<Driver_Accompanying_in_WayList>();
@@ -27,11 +26,10 @@ namespace ProjectAutoSupplying.Models
         public int Id { get; set; }
         public int Contract_ID { get; set; }
         public System.TimeSpan Arrive_time { get; set; }
+        public Nullable<int> Trip_ID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Car_Tralers_in_WayList> Car_Tralers_in_WayList { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Contract> Contracts { get; set; }
         public virtual Contract Contract { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DownTime_on_Line> DownTime_on_Line { get; set; }
@@ -39,5 +37,6 @@ namespace ProjectAutoSupplying.Models
         public virtual ICollection<Driver_Work> Driver_Work { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Driver_Accompanying_in_WayList> Driver_Accompanying_in_WayList { get; set; }
+        public virtual Trip Trip { get; set; }
     }
 }

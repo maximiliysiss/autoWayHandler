@@ -1,7 +1,6 @@
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\ProjectAutoSupplying.exe.config
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\ProjectAutoSupplying.exe
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\ProjectAutoSupplying.pdb
-C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.Form1.resources
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.Properties.Resources.resources
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.csproj.GenerateResource.cache
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.csproj.CoreCompileInputs.cache
@@ -10,10 +9,15 @@ C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSuppl
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\Database.mdf
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\Database_log.ldf
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.csprojResolveAssemblyReference.cache
-C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.Form2.resources
-C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.Form3.resources
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\EntityFramework.dll
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\EntityFramework.xml
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.csproj.CopyComplete
+C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.CreateCarTrailer.resources
+C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.MainFrame.resources
+C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.WayList.resources
+C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.Waybill.resources
+C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.CreateDriverAccomp.resources
+C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\Newtonsoft.Json.xml

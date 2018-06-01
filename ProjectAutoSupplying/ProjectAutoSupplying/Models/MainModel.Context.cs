@@ -49,5 +49,6 @@ namespace ProjectAutoSupplying.Models
         public virtual DbSet<WayBill> WayBills { get; set; }
         public virtual DbSet<WayBills_In_Contract> WayBills_In_Contracts { get; set; }
         public virtual DbSet<WayList> WayLists { get; set; }
+        public virtual DbSet<Trip> Trips { get; set; }
     }
 }

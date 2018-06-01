@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Additional Operation">
           <Key>
             <PropertyRef Name="Id" />
@@ -27,9 +27,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="State number" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Name" Type="varchar(max)" Nullable="false" />
-          <Property Name="Model" Type="varchar(max)" Nullable="false" />
+          <Property Name="State number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Model" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Type ID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Car/Tralers in WayList">
@@ -45,31 +45,30 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar(max)" Nullable="false" />
-          <Property Name="Units" Type="varchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Units" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Contract">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Company" Type="varchar(max)" Nullable="false" />
+          <Property Name="Company" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Legal entity ID" Type="int" Nullable="false" />
           <Property Name="Arrive time" Type="time" Precision="7" Nullable="false" />
-          <Property Name="Where to get cargo" Type="varchar(max)" Nullable="false" />
-          <Property Name="Where to deliver cargo" Type="varchar(max)" Nullable="false" />
+          <Property Name="Where to get cargo" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Where to deliver cargo" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Cargo ID" Type="int" Nullable="false" />
           <Property Name="Count trips" Type="int" Nullable="false" />
           <Property Name="Distance" Type="float" Nullable="false" />
           <Property Name="Tonnes" Type="float" Nullable="false" />
-          <Property Name="WayList ID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Costing">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Costing kind" Type="varchar(max)" Nullable="false" />
+          <Property Name="Costing kind" Type="nvarchar(max)" Nullable="false" />
           <Property Name="For tonnes" Type="float" Nullable="false" />
           <Property Name="Underweight" Type="float" Nullable="false" />
           <Property Name="For spec. prnsp" Type="float" Nullable="false" />
@@ -96,10 +95,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Start time" Type="datetime" Nullable="false" />
           <Property Name="End time" Type="datetime" Nullable="false" />
-          <Property Name="Code" Type="varchar(max)" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
           <Property Name="WayList ID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Driver Work">
@@ -120,11 +119,15 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar(max)" Nullable="false" />
-          <Property Name="Surname" Type="varchar(max)" Nullable="false" />
-          <Property Name="Thridname" Type="varchar(max)" Nullable="false" />
-          <Property Name="Certification" Type="varchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Thridname" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Certification" Type="nvarchar(max)" />
           <Property Name="Role ID" Type="int" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adress" Type="nvarchar(max)" />
+          <Property Name="DateStart" Type="date" />
+          <Property Name="DateEnd" Type="date" />
         </EntityType>
         <EntityType Name="Driver/Accompanying in WayList">
           <Key>
@@ -139,8 +142,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar(max)" Nullable="false" />
-          <Property Name="Number" Type="varchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Number" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Price" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="Information about the cargo">
@@ -166,10 +169,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar(max)" Nullable="false" />
-          <Property Name="Region" Type="varchar(max)" Nullable="false" />
-          <Property Name="City" Type="varchar(max)" Nullable="false" />
-          <Property Name="Legal Adress" Type="varchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Region" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="City" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Legal Adress" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Loading and unloading operations">
           <Key>
@@ -203,7 +206,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Other Information">
           <Key>
@@ -223,14 +226,23 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Transport Type">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Trip">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="From" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="To" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Distance" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="WayBill">
           <Key>
@@ -239,15 +251,15 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Driver ID" Type="int" Nullable="false" />
           <Property Name="Car ID" Type="int" Nullable="false" />
-          <Property Name="AutoEnterprise" Type="varchar(max)" Nullable="false" />
-          <Property Name="Transport kind" Type="varchar(max)" Nullable="false" />
-          <Property Name="Company customer" Type="varchar(max)" Nullable="false" />
-          <Property Name="Shipper" Type="varchar(max)" Nullable="false" />
-          <Property Name="Consignee" Type="varchar(max)" Nullable="false" />
-          <Property Name="Loading Point" Type="varchar(max)" Nullable="false" />
-          <Property Name="Unloading Point" Type="varchar(max)" Nullable="false" />
-          <Property Name="WayNumber" Type="varchar(max)" Nullable="false" />
-          <Property Name="Redirect" Type="varchar(max)" Nullable="false" />
+          <Property Name="AutoEnterprise" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Transport kind" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Company customer" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Shipper" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Consignee" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Loading Point" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Unloading Point" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="WayNumber" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Redirect" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Costing ID" Type="int" Nullable="false" />
           <Property Name="Other Information ID" Type="int" Nullable="false" />
         </EntityType>
@@ -267,6 +279,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Contract ID" Type="int" Nullable="false" />
           <Property Name="Arrive time" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Trip ID" Type="int" />
         </EntityType>
         <Association Name="FK_Additional operation (load/unload)_Additional_Opr">
           <End Role="Additional Operation" Type="Self.Additional Operation" Multiplicity="1" />
@@ -349,18 +362,6 @@
             </Principal>
             <Dependent Role="Contract">
               <PropertyRef Name="Legal entity ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Contract_WayList">
-          <End Role="WayList" Type="Self.WayList" Multiplicity="1" />
-          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="WayList">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Contract">
-              <PropertyRef Name="WayList ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -509,7 +510,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_WayBill_Car">
-          <End Role="Car/Trailer" Type="Self.Car/Trailer" Multiplicity="1" />
+          <End Role="Car/Trailer" Type="Self.Car/Trailer" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Car/Trailer">
@@ -521,7 +524,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_WayBill_Costing">
-          <End Role="Costing" Type="Self.Costing" Multiplicity="1" />
+          <End Role="Costing" Type="Self.Costing" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Costing">
@@ -533,7 +538,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_WayBill_Driver">
-          <End Role="Driver/Accompanying" Type="Self.Driver/Accompanying" Multiplicity="1" />
+          <End Role="Driver/Accompanying" Type="Self.Driver/Accompanying" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Driver/Accompanying">
@@ -545,7 +552,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_WayBill_Other Information">
-          <End Role="Other Information" Type="Self.Other Information" Multiplicity="1" />
+          <End Role="Other Information" Type="Self.Other Information" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Other Information">
@@ -592,6 +601,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_WayList_Trip">
+          <End Role="Trip" Type="Self.Trip" Multiplicity="0..1" />
+          <End Role="WayList" Type="Self.WayList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trip">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayList">
+              <PropertyRef Name="Trip ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="DatabaseModelStoreContainer">
           <EntitySet Name="Additional Operation" EntityType="Self.Additional Operation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Additional operation (load/unload)" EntityType="Self.Additional operation (load/unload)" Schema="dbo" store:Type="Tables" />
@@ -614,6 +635,7 @@
           <EntitySet Name="Other Information" EntityType="Self.Other Information" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Transport Type" EntityType="Self.Transport Type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Trip" EntityType="Self.Trip" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WayBill" EntityType="Self.WayBill" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WayBills In Contract" EntityType="Self.WayBills In Contract" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WayList" EntityType="Self.WayList" Schema="dbo" store:Type="Tables" />
@@ -643,10 +665,6 @@
           </AssociationSet>
           <AssociationSet Name="FK_Contract_LegalEntity" Association="Self.FK_Contract_LegalEntity">
             <End Role="Legal Entity" EntitySet="Legal Entity" />
-            <End Role="Contract" EntitySet="Contract" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Contract_WayList" Association="Self.FK_Contract_WayList">
-            <End Role="WayList" EntitySet="WayList" />
             <End Role="Contract" EntitySet="Contract" />
           </AssociationSet>
           <AssociationSet Name="FK_DownTime on Line_WayList" Association="Self.FK_DownTime on Line_WayList">
@@ -725,9 +743,12 @@
             <End Role="Contract" EntitySet="Contract" />
             <End Role="WayList" EntitySet="WayList" />
           </AssociationSet>
+          <AssociationSet Name="FK_WayList_Trip" Association="Self.FK_WayList_Trip">
+            <End Role="Trip" EntitySet="Trip" />
+            <End Role="WayList" EntitySet="WayList" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -756,9 +777,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="State_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="State_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Type_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Transport_Type" Relationship="Self.FK_Car_Trailer_Type" FromRole="Car_Trailer" ToRole="Transport_Type" />
           <NavigationProperty Name="Car_Tralers_in_WayList" Relationship="Self.FK_Car_Tralers_in_WayList_Car" FromRole="Car_Trailer" ToRole="Car_Tralers_in_WayList" />
@@ -779,8 +800,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Units" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Units" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Contracts" Relationship="Self.FK_Contract_Cargo" FromRole="Cargo" ToRole="Contract" />
           <NavigationProperty Name="Information_about_the_cargo" Relationship="Self.FK_Information_about_the_cargo_Cargo" FromRole="Cargo" ToRole="Information_about_the_cargo" />
         </EntityType>
@@ -789,19 +810,17 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Company" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Company" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Legal_entity_ID" Type="Int32" Nullable="false" />
           <Property Name="Arrive_time" Type="Time" Nullable="false" Precision="7" />
-          <Property Name="Where_to_get_cargo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Where_to_deliver_cargo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Where_to_get_cargo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Where_to_deliver_cargo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Cargo_ID" Type="Int32" Nullable="false" />
           <Property Name="Count_trips" Type="Int32" Nullable="false" />
           <Property Name="Distance" Type="Double" Nullable="false" />
           <Property Name="Tonnes" Type="Double" Nullable="false" />
-          <Property Name="WayList_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Cargo" Relationship="Self.FK_Contract_Cargo" FromRole="Contract" ToRole="Cargo" />
           <NavigationProperty Name="Legal_Entity" Relationship="Self.FK_Contract_LegalEntity" FromRole="Contract" ToRole="Legal_Entity" />
-          <NavigationProperty Name="WayList" Relationship="Self.FK_Contract_WayList" FromRole="Contract" ToRole="WayList" />
           <NavigationProperty Name="WayBills_In_Contract" Relationship="Self.FK_WayBills_In_Contract_Contract" FromRole="Contract" ToRole="WayBills_In_Contract" />
           <NavigationProperty Name="WayLists" Relationship="Self.FK_WayList_Contract" FromRole="Contract" ToRole="WayList" />
         </EntityType>
@@ -810,7 +829,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Costing_kind" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Costing_kind" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="For_tonnes" Type="Double" Nullable="false" />
           <Property Name="Underweight" Type="Double" Nullable="false" />
           <Property Name="For_spec__prnsp" Type="Double" Nullable="false" />
@@ -839,10 +858,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Start_time" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="End_time" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="WayList_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="WayList" Relationship="Self.FK_DownTime_on_Line_WayList" FromRole="DownTime_on_Line" ToRole="WayList" />
         </EntityType>
@@ -867,11 +886,15 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Thridname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Certification" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thridname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Certification" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Role_ID" Type="Int32" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateStart" Type="DateTime" Precision="0" />
+          <Property Name="DateEnd" Type="DateTime" Precision="0" />
           <NavigationProperty Name="Driver_Accompanying_in_WayList" Relationship="Self.FK_Driver_Accompanying_in_WayList_Dirver_Accompnying" FromRole="Driver_Accompanying" ToRole="Driver_Accompanying_in_WayList" />
           <NavigationProperty Name="Role" Relationship="Self.FK_Driver_Accompanying_Role" FromRole="Driver_Accompanying" ToRole="Role" />
           <NavigationProperty Name="WayBills" Relationship="Self.FK_WayBill_Driver" FromRole="Driver_Accompanying" ToRole="WayBill" />
@@ -891,8 +914,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Price" Type="Double" Nullable="false" />
           <NavigationProperty Name="Moving_Fuel" Relationship="Self.FK_Moving_Fuel_Fuel" FromRole="Fuel" ToRole="Moving_Fuel" />
         </EntityType>
@@ -921,10 +944,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Region" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Legal_Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Region" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Legal_Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Contracts" Relationship="Self.FK_Contract_LegalEntity" FromRole="Legal_Entity" ToRole="Contract" />
         </EntityType>
         <EntityType Name="Loading_and_unloading_operation">
@@ -963,7 +986,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Driver_Work" Relationship="Self.FK_Driver_Work_Operation" FromRole="Operation" ToRole="Driver_Work" />
         </EntityType>
         <EntityType Name="Other_Information">
@@ -986,7 +1009,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Driver_Accompanying" Relationship="Self.FK_Driver_Accompanying_Role" FromRole="Role" ToRole="Driver_Accompanying" />
         </EntityType>
         <EntityType Name="Transport_Type">
@@ -994,7 +1017,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Car_Trailer" Relationship="Self.FK_Car_Trailer_Type" FromRole="Transport_Type" ToRole="Car_Trailer" />
         </EntityType>
         <EntityType Name="WayBill">
@@ -1004,15 +1027,15 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Driver_ID" Type="Int32" Nullable="false" />
           <Property Name="Car_ID" Type="Int32" Nullable="false" />
-          <Property Name="AutoEnterprise" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Transport_kind" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Company_customer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Shipper" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Consignee" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Loading_Point" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Unloading_Point" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="WayNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Redirect" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AutoEnterprise" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Transport_kind" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Company_customer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Shipper" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Consignee" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Loading_Point" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Unloading_Point" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WayNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Redirect" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Costing_ID" Type="Int32" Nullable="false" />
           <Property Name="Other_Information_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Car_Trailer" Relationship="Self.FK_WayBill_Car" FromRole="WayBill" ToRole="Car_Trailer" />
@@ -1042,11 +1065,12 @@
           <Property Name="Contract_ID" Type="Int32" Nullable="false" />
           <Property Name="Arrive_time" Type="Time" Nullable="false" Precision="7" />
           <NavigationProperty Name="Car_Tralers_in_WayList" Relationship="Self.FK_Car_Tralers_in_WayList_WayList" FromRole="WayList" ToRole="Car_Tralers_in_WayList" />
-          <NavigationProperty Name="Contracts" Relationship="Self.FK_Contract_WayList" FromRole="WayList" ToRole="Contract" />
           <NavigationProperty Name="Contract" Relationship="Self.FK_WayList_Contract" FromRole="WayList" ToRole="Contract" />
           <NavigationProperty Name="DownTime_on_Line" Relationship="Self.FK_DownTime_on_Line_WayList" FromRole="WayList" ToRole="DownTime_on_Line" />
           <NavigationProperty Name="Driver_Work" Relationship="Self.FK_Driver_Work_Way_List" FromRole="WayList" ToRole="Driver_Work" />
           <NavigationProperty Name="Driver_Accompanying_in_WayList" Relationship="Self.FK_Driver_Accompanying_in_WayList_WayList" FromRole="WayList" ToRole="Driver_Accompanying_in_WayList" />
+          <Property Name="Trip_ID" Type="Int32" />
+          <NavigationProperty Name="Trip" Relationship="DatabaseModel.FK_WayList_Trip" FromRole="WayList" ToRole="Trip" />
         </EntityType>
         <Association Name="FK_Additional_operation__load_unload__Additional_Opr">
           <End Role="Additional_Operation" Type="Self.Additional_Operation" Multiplicity="1" />
@@ -1153,18 +1177,6 @@
             </Principal>
             <Dependent Role="Contract">
               <PropertyRef Name="Legal_entity_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Contract_WayList">
-          <End Role="WayList" Type="Self.WayList" Multiplicity="1" />
-          <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="WayList">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Contract">
-              <PropertyRef Name="WayList_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1433,10 +1445,6 @@
             <End Role="Legal_Entity" EntitySet="Legal_Entities" />
             <End Role="Contract" EntitySet="Contracts" />
           </AssociationSet>
-          <AssociationSet Name="FK_Contract_WayList" Association="Self.FK_Contract_WayList">
-            <End Role="WayList" EntitySet="WayLists" />
-            <End Role="Contract" EntitySet="Contracts" />
-          </AssociationSet>
           <AssociationSet Name="FK_WayBills_In_Contract_Contract" Association="Self.FK_WayBills_In_Contract_Contract">
             <End Role="Contract" EntitySet="Contracts" />
             <End Role="WayBills_In_Contract" EntitySet="WayBills_In_Contracts" />
@@ -1505,7 +1513,34 @@
             <End Role="WayBill" EntitySet="WayBills" />
             <End Role="WayBills_In_Contract" EntitySet="WayBills_In_Contracts" />
           </AssociationSet>
+          <EntitySet Name="Trips" EntityType="DatabaseModel.Trip" />
+          <AssociationSet Name="FK_WayList_Trip" Association="DatabaseModel.FK_WayList_Trip">
+            <End Role="Trip" EntitySet="Trips" />
+            <End Role="WayList" EntitySet="WayLists" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Trip">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="From" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="To" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Distance" Type="Double" Nullable="false" />
+          <NavigationProperty Name="WayLists" Relationship="DatabaseModel.FK_WayList_Trip" FromRole="Trip" ToRole="WayList" />
+        </EntityType>
+        <Association Name="FK_WayList_Trip">
+          <End Type="DatabaseModel.Trip" Role="Trip" Multiplicity="0..1" />
+          <End Type="DatabaseModel.WayList" Role="WayList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trip">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayList">
+              <PropertyRef Name="Trip_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1573,7 +1608,6 @@
                 <ScalarProperty Name="Count_trips" ColumnName="Count trips" />
                 <ScalarProperty Name="Distance" ColumnName="Distance" />
                 <ScalarProperty Name="Tonnes" ColumnName="Tonnes" />
-                <ScalarProperty Name="WayList_ID" ColumnName="WayList ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1641,6 +1675,10 @@
                 <ScalarProperty Name="Thridname" ColumnName="Thridname" />
                 <ScalarProperty Name="Certification" ColumnName="Certification" />
                 <ScalarProperty Name="Role_ID" ColumnName="Role ID" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+                <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1793,9 +1831,20 @@
           <EntitySetMapping Name="WayLists">
             <EntityTypeMapping TypeName="DatabaseModel.WayList">
               <MappingFragment StoreEntitySet="WayList">
+                <ScalarProperty Name="Trip_ID" ColumnName="Trip ID" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Contract_ID" ColumnName="Contract ID" />
                 <ScalarProperty Name="Arrive_time" ColumnName="Arrive time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trips">
+            <EntityTypeMapping TypeName="DatabaseModel.Trip">
+              <MappingFragment StoreEntitySet="Trip">
+                <ScalarProperty Name="Distance" ColumnName="Distance" />
+                <ScalarProperty Name="To" ColumnName="To" />
+                <ScalarProperty Name="From" ColumnName="From" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

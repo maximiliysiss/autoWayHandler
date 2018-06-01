@@ -27,6 +27,10 @@ namespace ProjectAutoSupplying.Models
         public string Thridname { get; set; }
         public string Certification { get; set; }
         public int Role_ID { get; set; }
+        public string Phone { get; set; }
+        public string Adress { get; set; }
+        public Nullable<System.DateTime> DateStart { get; set; }
+        public Nullable<System.DateTime> DateEnd { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Driver_Accompanying_in_WayList> Driver_Accompanying_in_WayList { get; set; }

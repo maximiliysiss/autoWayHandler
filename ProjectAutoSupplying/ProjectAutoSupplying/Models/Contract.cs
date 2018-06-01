@@ -31,11 +31,9 @@ namespace ProjectAutoSupplying.Models
         public int Count_trips { get; set; }
         public double Distance { get; set; }
         public double Tonnes { get; set; }
-        public int WayList_ID { get; set; }
     
         public virtual Cargo Cargo { get; set; }
         public virtual Legal_Entity Legal_Entity { get; set; }
-        public virtual WayList WayList { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<WayBills_In_Contract> WayBills_In_Contract { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
