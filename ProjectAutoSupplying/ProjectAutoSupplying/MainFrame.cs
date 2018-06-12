@@ -112,7 +112,8 @@ namespace ProjectAutoSupplying
         public MainFrame()
         {
             InitializeComponent();
-            FileStream fileStream = new FileStream("Settings.settings", FileMode.Open);
+
+            /*FileStream fileStream = new FileStream("Settings.settings", FileMode.Open);
             StreamReader streamReader = new StreamReader(fileStream);
             String json = streamReader.ReadToEnd();
             JObject jObject = JObject.Parse(json);
@@ -124,7 +125,8 @@ namespace ProjectAutoSupplying
             textBox4.Text = settings["okonx"].ToString();
             textBox3.Text = settings["okpo"].ToString();
             textBox5.Text = settings["adress"].ToString();
-            textBox6.Text = settings["phone"].ToString();
+            textBox6.Text = settings["phone"].ToString();*/
+
             dataGridView21.DataSource = (from waybill in db.WayBills
                                          select new
                                          {

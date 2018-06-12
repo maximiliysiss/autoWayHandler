@@ -29,31 +29,33 @@
         private void InitializeComponent()
         {
             this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.comboBox21 = new System.Windows.Forms.ComboBox();
-            this.textBox42 = new System.Windows.Forms.TextBox();
-            this.comboBox20 = new System.Windows.Forms.ComboBox();
-            this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.comboBox19 = new System.Windows.Forms.ComboBox();
-            this.comboBox18 = new System.Windows.Forms.ComboBox();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
+            this.units = new System.Windows.Forms.TextBox();
+            this.cargoNameBox = new System.Windows.Forms.TextBox();
+            this.buttonAddCargo = new System.Windows.Forms.Button();
+            this.billNameBox = new System.Windows.Forms.TextBox();
+            this.cargoInfoGroup = new System.Windows.Forms.GroupBox();
+            this.weightDetermCaseBox = new System.Windows.Forms.TextBox();
+            this.prescBox = new System.Windows.Forms.TextBox();
+            this.packageTypeBox = new System.Windows.Forms.TextBox();
             this.label70 = new System.Windows.Forms.Label();
-            this.textBox52 = new System.Windows.Forms.TextBox();
+            this.weightBox = new System.Windows.Forms.TextBox();
             this.label69 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
-            this.textBox50 = new System.Windows.Forms.TextBox();
+            this.codeBox = new System.Windows.Forms.TextBox();
             this.label67 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
-            this.textBox47 = new System.Windows.Forms.TextBox();
-            this.textBox46 = new System.Windows.Forms.TextBox();
+            this.docsBox = new System.Windows.Forms.TextBox();
+            this.priceBox = new System.Windows.Forms.TextBox();
             this.label64 = new System.Windows.Forms.Label();
-            this.textBox45 = new System.Windows.Forms.TextBox();
+            this.countBox = new System.Windows.Forms.TextBox();
             this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
+            this.unloadExecBox = new System.Windows.Forms.TextBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox26 = new System.Windows.Forms.TextBox();
@@ -61,7 +63,6 @@
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox28 = new System.Windows.Forms.TextBox();
-            this.comboBox24 = new System.Windows.Forms.ComboBox();
             this.textBox29 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -74,24 +75,24 @@
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox26 = new System.Windows.Forms.GroupBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.loadExecBox = new System.Windows.Forms.TextBox();
+            this.loadingAdditiongOpCode = new System.Windows.Forms.TextBox();
+            this.loadingAdditionalOpTime = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.loadingHoldingTime = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.loadingDeparureTime = new System.Windows.Forms.TextBox();
+            this.loadingArrivalTime = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox51 = new System.Windows.Forms.TextBox();
-            this.textBox49 = new System.Windows.Forms.TextBox();
+            this.loadingCaseCode = new System.Windows.Forms.TextBox();
+            this.loadingCase = new System.Windows.Forms.TextBox();
             this.textBox48 = new System.Windows.Forms.TextBox();
             this.textBox44 = new System.Windows.Forms.TextBox();
             this.textBox41 = new System.Windows.Forms.TextBox();
-            this.comboBox23 = new System.Windows.Forms.ComboBox();
             this.label57 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox59 = new System.Windows.Forms.TextBox();
@@ -164,114 +165,124 @@
             this.textBox64 = new System.Windows.Forms.TextBox();
             this.textBox67 = new System.Windows.Forms.TextBox();
             this.textBox65 = new System.Windows.Forms.TextBox();
-            this.textBox103 = new System.Windows.Forms.TextBox();
+            this.autoEnterpriseBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox104 = new System.Windows.Forms.TextBox();
+            this.cargoSupplierBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox105 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cargoReceiverBox = new System.Windows.Forms.TextBox();
+            this.cargoReceiver = new System.Windows.Forms.Label();
+            this.buttonSubmit = new System.Windows.Forms.Button();
+            this.cargosView = new System.Windows.Forms.DataGridView();
             this.groupBox24.SuspendLayout();
-            this.groupBox25.SuspendLayout();
+            this.cargoInfoGroup.SuspendLayout();
             this.groupBox23.SuspendLayout();
             this.groupBox27.SuspendLayout();
             this.groupBox26.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cargosView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox24
             // 
-            this.groupBox24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox24.Controls.Add(this.comboBox21);
-            this.groupBox24.Controls.Add(this.textBox42);
-            this.groupBox24.Controls.Add(this.comboBox20);
-            this.groupBox24.Controls.Add(this.groupBox25);
-            this.groupBox24.Controls.Add(this.textBox46);
+            this.groupBox24.Controls.Add(this.units);
+            this.groupBox24.Controls.Add(this.cargoNameBox);
+            this.groupBox24.Controls.Add(this.buttonAddCargo);
+            this.groupBox24.Controls.Add(this.billNameBox);
+            this.groupBox24.Controls.Add(this.cargoInfoGroup);
+            this.groupBox24.Controls.Add(this.priceBox);
             this.groupBox24.Controls.Add(this.label64);
-            this.groupBox24.Controls.Add(this.textBox45);
+            this.groupBox24.Controls.Add(this.countBox);
             this.groupBox24.Controls.Add(this.label60);
             this.groupBox24.Controls.Add(this.label61);
             this.groupBox24.Controls.Add(this.label62);
             this.groupBox24.Controls.Add(this.label63);
-            this.groupBox24.Location = new System.Drawing.Point(12, 113);
+            this.groupBox24.Location = new System.Drawing.Point(12, 93);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Size = new System.Drawing.Size(860, 125);
             this.groupBox24.TabIndex = 4;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Информация по накладной";
             // 
-            // comboBox21
+            // units
             // 
-            this.comboBox21.FormattingEnabled = true;
-            this.comboBox21.Location = new System.Drawing.Point(51, 51);
-            this.comboBox21.Name = "comboBox21";
-            this.comboBox21.Size = new System.Drawing.Size(116, 21);
-            this.comboBox21.TabIndex = 26;
+            this.units.Location = new System.Drawing.Point(118, 83);
+            this.units.Name = "units";
+            this.units.Size = new System.Drawing.Size(49, 20);
+            this.units.TabIndex = 56;
             // 
-            // textBox42
+            // cargoNameBox
             // 
-            this.textBox42.Location = new System.Drawing.Point(94, 20);
-            this.textBox42.Name = "textBox42";
-            this.textBox42.ReadOnly = true;
-            this.textBox42.Size = new System.Drawing.Size(73, 20);
-            this.textBox42.TabIndex = 25;
+            this.cargoNameBox.Location = new System.Drawing.Point(51, 51);
+            this.cargoNameBox.Name = "cargoNameBox";
+            this.cargoNameBox.Size = new System.Drawing.Size(116, 20);
+            this.cargoNameBox.TabIndex = 36;
             // 
-            // comboBox20
+            // buttonAddCargo
             // 
-            this.comboBox20.FormattingEnabled = true;
-            this.comboBox20.Location = new System.Drawing.Point(114, 83);
-            this.comboBox20.Name = "comboBox20";
-            this.comboBox20.Size = new System.Drawing.Size(53, 21);
-            this.comboBox20.TabIndex = 24;
+            this.buttonAddCargo.Location = new System.Drawing.Point(708, 20);
+            this.buttonAddCargo.Name = "buttonAddCargo";
+            this.buttonAddCargo.Size = new System.Drawing.Size(139, 23);
+            this.buttonAddCargo.TabIndex = 35;
+            this.buttonAddCargo.Text = "Добавить новый";
+            this.buttonAddCargo.UseVisualStyleBackColor = true;
             // 
-            // groupBox25
+            // billNameBox
             // 
-            this.groupBox25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox25.Controls.Add(this.comboBox19);
-            this.groupBox25.Controls.Add(this.comboBox18);
-            this.groupBox25.Controls.Add(this.comboBox16);
-            this.groupBox25.Controls.Add(this.label70);
-            this.groupBox25.Controls.Add(this.textBox52);
-            this.groupBox25.Controls.Add(this.label69);
-            this.groupBox25.Controls.Add(this.label68);
-            this.groupBox25.Controls.Add(this.textBox50);
-            this.groupBox25.Controls.Add(this.label67);
-            this.groupBox25.Controls.Add(this.label66);
-            this.groupBox25.Controls.Add(this.label65);
-            this.groupBox25.Controls.Add(this.textBox47);
-            this.groupBox25.Location = new System.Drawing.Point(182, 20);
-            this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(491, 105);
-            this.groupBox25.TabIndex = 9;
-            this.groupBox25.TabStop = false;
-            this.groupBox25.Text = "Характеристики груза";
+            this.billNameBox.Location = new System.Drawing.Point(94, 20);
+            this.billNameBox.Name = "billNameBox";
+            this.billNameBox.ReadOnly = true;
+            this.billNameBox.Size = new System.Drawing.Size(73, 20);
+            this.billNameBox.TabIndex = 25;
             // 
-            // comboBox19
+            // cargoInfoGroup
             // 
-            this.comboBox19.FormattingEnabled = true;
-            this.comboBox19.Location = new System.Drawing.Point(373, 67);
-            this.comboBox19.Name = "comboBox19";
-            this.comboBox19.Size = new System.Drawing.Size(95, 21);
-            this.comboBox19.TabIndex = 23;
+            this.cargoInfoGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cargoInfoGroup.Controls.Add(this.weightDetermCaseBox);
+            this.cargoInfoGroup.Controls.Add(this.prescBox);
+            this.cargoInfoGroup.Controls.Add(this.packageTypeBox);
+            this.cargoInfoGroup.Controls.Add(this.label70);
+            this.cargoInfoGroup.Controls.Add(this.weightBox);
+            this.cargoInfoGroup.Controls.Add(this.label69);
+            this.cargoInfoGroup.Controls.Add(this.label68);
+            this.cargoInfoGroup.Controls.Add(this.codeBox);
+            this.cargoInfoGroup.Controls.Add(this.label67);
+            this.cargoInfoGroup.Controls.Add(this.label66);
+            this.cargoInfoGroup.Controls.Add(this.label65);
+            this.cargoInfoGroup.Controls.Add(this.docsBox);
+            this.cargoInfoGroup.Location = new System.Drawing.Point(182, 20);
+            this.cargoInfoGroup.Name = "cargoInfoGroup";
+            this.cargoInfoGroup.Size = new System.Drawing.Size(491, 105);
+            this.cargoInfoGroup.TabIndex = 9;
+            this.cargoInfoGroup.TabStop = false;
+            this.cargoInfoGroup.Text = "Характеристики груза";
             // 
-            // comboBox18
+            // weightDetermCaseBox
             // 
-            this.comboBox18.FormattingEnabled = true;
-            this.comboBox18.Location = new System.Drawing.Point(142, 28);
-            this.comboBox18.Name = "comboBox18";
-            this.comboBox18.Size = new System.Drawing.Size(45, 21);
-            this.comboBox18.TabIndex = 22;
+            this.weightDetermCaseBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.weightDetermCaseBox.Location = new System.Drawing.Point(369, 66);
+            this.weightDetermCaseBox.Name = "weightDetermCaseBox";
+            this.weightDetermCaseBox.Size = new System.Drawing.Size(114, 20);
+            this.weightDetermCaseBox.TabIndex = 55;
             // 
-            // comboBox16
+            // prescBox
             // 
-            this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Location = new System.Drawing.Point(423, 28);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(45, 21);
-            this.comboBox16.TabIndex = 21;
+            this.prescBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.prescBox.Location = new System.Drawing.Point(141, 28);
+            this.prescBox.Name = "prescBox";
+            this.prescBox.Size = new System.Drawing.Size(51, 20);
+            this.prescBox.TabIndex = 54;
+            // 
+            // packageTypeBox
+            // 
+            this.packageTypeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.packageTypeBox.Location = new System.Drawing.Point(423, 28);
+            this.packageTypeBox.Name = "packageTypeBox";
+            this.packageTypeBox.Size = new System.Drawing.Size(60, 20);
+            this.packageTypeBox.TabIndex = 53;
             // 
             // label70
             // 
@@ -283,12 +294,12 @@
             this.label70.TabIndex = 20;
             this.label70.Text = "Масса";
             // 
-            // textBox52
+            // weightBox
             // 
-            this.textBox52.Location = new System.Drawing.Point(248, 28);
-            this.textBox52.Name = "textBox52";
-            this.textBox52.Size = new System.Drawing.Size(38, 20);
-            this.textBox52.TabIndex = 19;
+            this.weightBox.Location = new System.Drawing.Point(248, 28);
+            this.weightBox.Name = "weightBox";
+            this.weightBox.Size = new System.Drawing.Size(38, 20);
+            this.weightBox.TabIndex = 19;
             // 
             // label69
             // 
@@ -296,9 +307,9 @@
             this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label69.Location = new System.Drawing.Point(89, 29);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(47, 17);
+            this.label69.Size = new System.Drawing.Size(56, 17);
             this.label69.TabIndex = 18;
-            this.label69.Text = "Класс";
+            this.label69.Text = "Преск. ";
             // 
             // label68
             // 
@@ -310,12 +321,12 @@
             this.label68.TabIndex = 16;
             this.label68.Text = "Код";
             // 
-            // textBox50
+            // codeBox
             // 
-            this.textBox50.Location = new System.Drawing.Point(45, 29);
-            this.textBox50.Name = "textBox50";
-            this.textBox50.Size = new System.Drawing.Size(38, 20);
-            this.textBox50.TabIndex = 15;
+            this.codeBox.Location = new System.Drawing.Point(45, 29);
+            this.codeBox.Name = "codeBox";
+            this.codeBox.Size = new System.Drawing.Size(38, 20);
+            this.codeBox.TabIndex = 15;
             // 
             // label67
             // 
@@ -347,20 +358,20 @@
             this.label65.TabIndex = 10;
             this.label65.Text = "Следуют документы";
             // 
-            // textBox47
+            // docsBox
             // 
-            this.textBox47.Location = new System.Drawing.Point(153, 65);
-            this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(53, 20);
-            this.textBox47.TabIndex = 10;
+            this.docsBox.Location = new System.Drawing.Point(153, 65);
+            this.docsBox.Name = "docsBox";
+            this.docsBox.Size = new System.Drawing.Size(53, 20);
+            this.docsBox.TabIndex = 10;
             // 
-            // textBox46
+            // priceBox
             // 
-            this.textBox46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox46.Location = new System.Drawing.Point(790, 61);
-            this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(57, 20);
-            this.textBox46.TabIndex = 8;
+            this.priceBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.priceBox.Location = new System.Drawing.Point(790, 61);
+            this.priceBox.Name = "priceBox";
+            this.priceBox.Size = new System.Drawing.Size(57, 20);
+            this.priceBox.TabIndex = 8;
             // 
             // label64
             // 
@@ -373,13 +384,13 @@
             this.label64.TabIndex = 7;
             this.label64.Text = "Цена";
             // 
-            // textBox45
+            // countBox
             // 
-            this.textBox45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox45.Location = new System.Drawing.Point(811, 93);
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(36, 20);
-            this.textBox45.TabIndex = 6;
+            this.countBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.countBox.Location = new System.Drawing.Point(811, 93);
+            this.countBox.Name = "countBox";
+            this.countBox.Size = new System.Drawing.Size(36, 20);
+            this.countBox.TabIndex = 6;
             // 
             // label60
             // 
@@ -435,6 +446,7 @@
             // 
             // groupBox27
             // 
+            this.groupBox27.Controls.Add(this.unloadExecBox);
             this.groupBox27.Controls.Add(this.textBox25);
             this.groupBox27.Controls.Add(this.textBox13);
             this.groupBox27.Controls.Add(this.textBox26);
@@ -442,7 +454,6 @@
             this.groupBox27.Controls.Add(this.textBox27);
             this.groupBox27.Controls.Add(this.textBox14);
             this.groupBox27.Controls.Add(this.textBox28);
-            this.groupBox27.Controls.Add(this.comboBox24);
             this.groupBox27.Controls.Add(this.textBox29);
             this.groupBox27.Controls.Add(this.textBox15);
             this.groupBox27.Controls.Add(this.textBox2);
@@ -460,6 +471,14 @@
             this.groupBox27.TabIndex = 3;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "Разгрузка";
+            // 
+            // unloadExecBox
+            // 
+            this.unloadExecBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.unloadExecBox.Location = new System.Drawing.Point(73, 14);
+            this.unloadExecBox.Name = "unloadExecBox";
+            this.unloadExecBox.Size = new System.Drawing.Size(108, 20);
+            this.unloadExecBox.TabIndex = 48;
             // 
             // textBox25
             // 
@@ -521,14 +540,6 @@
             this.textBox28.TabIndex = 49;
             this.textBox28.Text = "Время";
             this.textBox28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // comboBox24
-            // 
-            this.comboBox24.FormattingEnabled = true;
-            this.comboBox24.Location = new System.Drawing.Point(73, 16);
-            this.comboBox24.Name = "comboBox24";
-            this.comboBox24.Size = new System.Drawing.Size(101, 21);
-            this.comboBox24.TabIndex = 32;
             // 
             // textBox29
             // 
@@ -637,24 +648,24 @@
             // 
             // groupBox26
             // 
-            this.groupBox26.Controls.Add(this.textBox20);
-            this.groupBox26.Controls.Add(this.textBox21);
+            this.groupBox26.Controls.Add(this.loadExecBox);
+            this.groupBox26.Controls.Add(this.loadingAdditiongOpCode);
+            this.groupBox26.Controls.Add(this.loadingAdditionalOpTime);
             this.groupBox26.Controls.Add(this.textBox22);
             this.groupBox26.Controls.Add(this.textBox23);
             this.groupBox26.Controls.Add(this.textBox24);
-            this.groupBox26.Controls.Add(this.textBox11);
+            this.groupBox26.Controls.Add(this.loadingHoldingTime);
             this.groupBox26.Controls.Add(this.textBox12);
-            this.groupBox26.Controls.Add(this.textBox6);
-            this.groupBox26.Controls.Add(this.textBox7);
+            this.groupBox26.Controls.Add(this.loadingDeparureTime);
+            this.groupBox26.Controls.Add(this.loadingArrivalTime);
             this.groupBox26.Controls.Add(this.textBox8);
             this.groupBox26.Controls.Add(this.textBox9);
             this.groupBox26.Controls.Add(this.textBox10);
-            this.groupBox26.Controls.Add(this.textBox51);
-            this.groupBox26.Controls.Add(this.textBox49);
+            this.groupBox26.Controls.Add(this.loadingCaseCode);
+            this.groupBox26.Controls.Add(this.loadingCase);
             this.groupBox26.Controls.Add(this.textBox48);
             this.groupBox26.Controls.Add(this.textBox44);
             this.groupBox26.Controls.Add(this.textBox41);
-            this.groupBox26.Controls.Add(this.comboBox23);
             this.groupBox26.Controls.Add(this.label57);
             this.groupBox26.Location = new System.Drawing.Point(10, 19);
             this.groupBox26.Name = "groupBox26";
@@ -663,19 +674,27 @@
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Погрузка";
             // 
-            // textBox20
+            // loadExecBox
             // 
-            this.textBox20.Location = new System.Drawing.Point(361, 81);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(41, 20);
-            this.textBox20.TabIndex = 47;
+            this.loadExecBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.loadExecBox.Location = new System.Drawing.Point(66, 15);
+            this.loadExecBox.Name = "loadExecBox";
+            this.loadExecBox.Size = new System.Drawing.Size(108, 20);
+            this.loadExecBox.TabIndex = 27;
             // 
-            // textBox21
+            // loadingAdditiongOpCode
             // 
-            this.textBox21.Location = new System.Drawing.Point(292, 81);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(72, 20);
-            this.textBox21.TabIndex = 46;
+            this.loadingAdditiongOpCode.Location = new System.Drawing.Point(361, 81);
+            this.loadingAdditiongOpCode.Name = "loadingAdditiongOpCode";
+            this.loadingAdditiongOpCode.Size = new System.Drawing.Size(41, 20);
+            this.loadingAdditiongOpCode.TabIndex = 47;
+            // 
+            // loadingAdditionalOpTime
+            // 
+            this.loadingAdditionalOpTime.Location = new System.Drawing.Point(292, 81);
+            this.loadingAdditionalOpTime.Name = "loadingAdditionalOpTime";
+            this.loadingAdditionalOpTime.Size = new System.Drawing.Size(72, 20);
+            this.loadingAdditionalOpTime.TabIndex = 46;
             // 
             // textBox22
             // 
@@ -709,12 +728,12 @@
             this.textBox24.Text = "Доп. операция";
             this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox11
+            // loadingHoldingTime
             // 
-            this.textBox11.Location = new System.Drawing.Point(234, 81);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(52, 20);
-            this.textBox11.TabIndex = 42;
+            this.loadingHoldingTime.Location = new System.Drawing.Point(234, 81);
+            this.loadingHoldingTime.Name = "loadingHoldingTime";
+            this.loadingHoldingTime.Size = new System.Drawing.Size(52, 20);
+            this.loadingHoldingTime.TabIndex = 42;
             // 
             // textBox12
             // 
@@ -727,19 +746,19 @@
             this.textBox12.Text = "Простоя";
             this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox6
+            // loadingDeparureTime
             // 
-            this.textBox6.Location = new System.Drawing.Point(181, 81);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(54, 20);
-            this.textBox6.TabIndex = 40;
+            this.loadingDeparureTime.Location = new System.Drawing.Point(181, 81);
+            this.loadingDeparureTime.Name = "loadingDeparureTime";
+            this.loadingDeparureTime.Size = new System.Drawing.Size(54, 20);
+            this.loadingDeparureTime.TabIndex = 40;
             // 
-            // textBox7
+            // loadingArrivalTime
             // 
-            this.textBox7.Location = new System.Drawing.Point(125, 81);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(59, 20);
-            this.textBox7.TabIndex = 39;
+            this.loadingArrivalTime.Location = new System.Drawing.Point(125, 81);
+            this.loadingArrivalTime.Name = "loadingArrivalTime";
+            this.loadingArrivalTime.Size = new System.Drawing.Size(59, 20);
+            this.loadingArrivalTime.TabIndex = 39;
             // 
             // textBox8
             // 
@@ -773,19 +792,19 @@
             this.textBox10.Text = "Время";
             this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox51
+            // loadingCaseCode
             // 
-            this.textBox51.Location = new System.Drawing.Point(78, 80);
-            this.textBox51.Name = "textBox51";
-            this.textBox51.Size = new System.Drawing.Size(41, 20);
-            this.textBox51.TabIndex = 35;
+            this.loadingCaseCode.Location = new System.Drawing.Point(78, 80);
+            this.loadingCaseCode.Name = "loadingCaseCode";
+            this.loadingCaseCode.Size = new System.Drawing.Size(41, 20);
+            this.loadingCaseCode.TabIndex = 35;
             // 
-            // textBox49
+            // loadingCase
             // 
-            this.textBox49.Location = new System.Drawing.Point(9, 80);
-            this.textBox49.Name = "textBox49";
-            this.textBox49.Size = new System.Drawing.Size(72, 20);
-            this.textBox49.TabIndex = 34;
+            this.loadingCase.Location = new System.Drawing.Point(9, 80);
+            this.loadingCase.Name = "loadingCase";
+            this.loadingCase.Size = new System.Drawing.Size(72, 20);
+            this.loadingCase.TabIndex = 34;
             // 
             // textBox48
             // 
@@ -818,14 +837,6 @@
             this.textBox41.TabIndex = 31;
             this.textBox41.Text = "Способ";
             this.textBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // comboBox23
-            // 
-            this.comboBox23.FormattingEnabled = true;
-            this.comboBox23.Location = new System.Drawing.Point(73, 16);
-            this.comboBox23.Name = "comboBox23";
-            this.comboBox23.Size = new System.Drawing.Size(101, 21);
-            this.comboBox23.TabIndex = 31;
             // 
             // label57
             // 
@@ -1515,13 +1526,13 @@
             this.textBox65.Text = "Недогруз";
             this.textBox65.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox103
+            // autoEnterpriseBox
             // 
-            this.textBox103.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox103.Location = new System.Drawing.Point(163, 29);
-            this.textBox103.Name = "textBox103";
-            this.textBox103.Size = new System.Drawing.Size(360, 20);
-            this.textBox103.TabIndex = 28;
+            this.autoEnterpriseBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.autoEnterpriseBox.Location = new System.Drawing.Point(163, 29);
+            this.autoEnterpriseBox.Name = "autoEnterpriseBox";
+            this.autoEnterpriseBox.Size = new System.Drawing.Size(360, 20);
+            this.autoEnterpriseBox.TabIndex = 28;
             // 
             // label7
             // 
@@ -1534,13 +1545,13 @@
             this.label7.TabIndex = 27;
             this.label7.Text = "Автопредприятие";
             // 
-            // textBox104
+            // cargoSupplierBox
             // 
-            this.textBox104.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox104.Location = new System.Drawing.Point(163, 58);
-            this.textBox104.Name = "textBox104";
-            this.textBox104.Size = new System.Drawing.Size(114, 20);
-            this.textBox104.TabIndex = 31;
+            this.cargoSupplierBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cargoSupplierBox.Location = new System.Drawing.Point(163, 58);
+            this.cargoSupplierBox.Name = "cargoSupplierBox";
+            this.cargoSupplierBox.Size = new System.Drawing.Size(114, 20);
+            this.cargoSupplierBox.TabIndex = 31;
             // 
             // label8
             // 
@@ -1553,45 +1564,54 @@
             this.label8.TabIndex = 30;
             this.label8.Text = "Грузоотправитель";
             // 
-            // textBox105
+            // cargoReceiverBox
             // 
-            this.textBox105.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox105.Location = new System.Drawing.Point(415, 57);
-            this.textBox105.Name = "textBox105";
-            this.textBox105.Size = new System.Drawing.Size(108, 20);
-            this.textBox105.TabIndex = 33;
+            this.cargoReceiverBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cargoReceiverBox.Location = new System.Drawing.Point(415, 57);
+            this.cargoReceiverBox.Name = "cargoReceiverBox";
+            this.cargoReceiverBox.Size = new System.Drawing.Size(108, 20);
+            this.cargoReceiverBox.TabIndex = 33;
             // 
-            // label9
+            // cargoReceiver
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label9.Location = new System.Drawing.Point(291, 59);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 17);
-            this.label9.TabIndex = 32;
-            this.label9.Text = "Грузополучатель";
+            this.cargoReceiver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cargoReceiver.AutoSize = true;
+            this.cargoReceiver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cargoReceiver.Location = new System.Drawing.Point(291, 59);
+            this.cargoReceiver.Name = "cargoReceiver";
+            this.cargoReceiver.Size = new System.Drawing.Size(123, 17);
+            this.cargoReceiver.TabIndex = 32;
+            this.cargoReceiver.Text = "Грузополучатель";
             // 
-            // button1
+            // buttonSubmit
             // 
-            this.button1.Location = new System.Drawing.Point(656, 605);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 23);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Создать накладную";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Location = new System.Drawing.Point(641, 605);
+            this.buttonSubmit.Name = "buttonSubmit";
+            this.buttonSubmit.Size = new System.Drawing.Size(231, 23);
+            this.buttonSubmit.TabIndex = 34;
+            this.buttonSubmit.Text = "Создать";
+            this.buttonSubmit.UseVisualStyleBackColor = true;
+            // 
+            // cargosView
+            // 
+            this.cargosView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cargosView.Location = new System.Drawing.Point(544, 29);
+            this.cargosView.Name = "cargosView";
+            this.cargosView.Size = new System.Drawing.Size(328, 58);
+            this.cargosView.TabIndex = 35;
             // 
             // Waybill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 631);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox105);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox104);
+            this.Controls.Add(this.cargosView);
+            this.Controls.Add(this.buttonSubmit);
+            this.Controls.Add(this.cargoReceiverBox);
+            this.Controls.Add(this.cargoReceiver);
+            this.Controls.Add(this.cargoSupplierBox);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox103);
+            this.Controls.Add(this.autoEnterpriseBox);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
@@ -1603,8 +1623,8 @@
             this.Text = "Form3";
             this.groupBox24.ResumeLayout(false);
             this.groupBox24.PerformLayout();
-            this.groupBox25.ResumeLayout(false);
-            this.groupBox25.PerformLayout();
+            this.cargoInfoGroup.ResumeLayout(false);
+            this.cargoInfoGroup.PerformLayout();
             this.groupBox23.ResumeLayout(false);
             this.groupBox27.ResumeLayout(false);
             this.groupBox27.PerformLayout();
@@ -1616,6 +1636,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cargosView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1624,25 +1645,20 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox24;
-        private System.Windows.Forms.ComboBox comboBox21;
-        private System.Windows.Forms.TextBox textBox42;
-        private System.Windows.Forms.ComboBox comboBox20;
-        private System.Windows.Forms.GroupBox groupBox25;
-        private System.Windows.Forms.ComboBox comboBox19;
-        private System.Windows.Forms.ComboBox comboBox18;
-        private System.Windows.Forms.ComboBox comboBox16;
+        private System.Windows.Forms.TextBox billNameBox;
+        private System.Windows.Forms.GroupBox cargoInfoGroup;
         private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.TextBox textBox52;
+        private System.Windows.Forms.TextBox weightBox;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.TextBox textBox50;
+        private System.Windows.Forms.TextBox codeBox;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.TextBox textBox47;
-        private System.Windows.Forms.TextBox textBox46;
+        private System.Windows.Forms.TextBox docsBox;
+        private System.Windows.Forms.TextBox priceBox;
         private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.TextBox textBox45;
+        private System.Windows.Forms.TextBox countBox;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label62;
@@ -1650,24 +1666,22 @@
         private System.Windows.Forms.GroupBox groupBox23;
         private System.Windows.Forms.GroupBox groupBox27;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox24;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.GroupBox groupBox26;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox loadingDeparureTime;
+        private System.Windows.Forms.TextBox loadingArrivalTime;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox51;
-        private System.Windows.Forms.TextBox textBox49;
+        private System.Windows.Forms.TextBox loadingCaseCode;
+        private System.Windows.Forms.TextBox loadingCase;
         private System.Windows.Forms.TextBox textBox48;
         private System.Windows.Forms.TextBox textBox44;
         private System.Windows.Forms.TextBox textBox41;
-        private System.Windows.Forms.ComboBox comboBox23;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox14;
@@ -1676,15 +1690,15 @@
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox loadingHoldingTime;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.TextBox textBox26;
         private System.Windows.Forms.TextBox textBox27;
         private System.Windows.Forms.TextBox textBox28;
         private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox loadingAdditiongOpCode;
+        private System.Windows.Forms.TextBox loadingAdditionalOpTime;
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.TextBox textBox24;
@@ -1759,12 +1773,21 @@
         private System.Windows.Forms.TextBox textBox97;
         private System.Windows.Forms.TextBox textBox98;
         private System.Windows.Forms.TextBox textBox99;
-        private System.Windows.Forms.TextBox textBox103;
+        private System.Windows.Forms.TextBox autoEnterpriseBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox104;
+        private System.Windows.Forms.TextBox cargoSupplierBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox105;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox cargoReceiverBox;
+        private System.Windows.Forms.Label cargoReceiver;
+        private System.Windows.Forms.Button buttonSubmit;
+        private System.Windows.Forms.TextBox unloadExecBox;
+        private System.Windows.Forms.TextBox loadExecBox;
+        private System.Windows.Forms.TextBox weightDetermCaseBox;
+        private System.Windows.Forms.TextBox prescBox;
+        private System.Windows.Forms.TextBox packageTypeBox;
+        private System.Windows.Forms.Button buttonAddCargo;
+        private System.Windows.Forms.TextBox cargoNameBox;
+        private System.Windows.Forms.DataGridView cargosView;
+        private System.Windows.Forms.TextBox units;
     }
 }
