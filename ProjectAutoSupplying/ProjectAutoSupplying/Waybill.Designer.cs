@@ -56,17 +56,17 @@
             this.groupBox23 = new System.Windows.Forms.GroupBox();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
             this.unloadExecBox = new System.Windows.Forms.TextBox();
-            this.unloadingAdditionalOpCode = new System.Windows.Forms.TextBox();
-            this.unloadingHolding = new System.Windows.Forms.TextBox();
-            this.unloadingAddtionalOpTime = new System.Windows.Forms.TextBox();
+            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox26 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.textBox29 = new System.Windows.Forms.TextBox();
-            this.unloadingDeparture = new System.Windows.Forms.TextBox();
-            this.unloadingCase = new System.Windows.Forms.TextBox();
-            this.unloadingArrival = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
             this.label58 = new System.Windows.Forms.Label();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -447,17 +447,17 @@
             // groupBox27
             // 
             this.groupBox27.Controls.Add(this.unloadExecBox);
-            this.groupBox27.Controls.Add(this.unloadingAdditionalOpCode);
-            this.groupBox27.Controls.Add(this.unloadingHolding);
-            this.groupBox27.Controls.Add(this.unloadingAddtionalOpTime);
+            this.groupBox27.Controls.Add(this.textBox25);
+            this.groupBox27.Controls.Add(this.textBox13);
+            this.groupBox27.Controls.Add(this.textBox26);
             this.groupBox27.Controls.Add(this.textBox1);
             this.groupBox27.Controls.Add(this.textBox27);
             this.groupBox27.Controls.Add(this.textBox14);
             this.groupBox27.Controls.Add(this.textBox28);
             this.groupBox27.Controls.Add(this.textBox29);
-            this.groupBox27.Controls.Add(this.unloadingDeparture);
-            this.groupBox27.Controls.Add(this.unloadingCase);
-            this.groupBox27.Controls.Add(this.unloadingArrival);
+            this.groupBox27.Controls.Add(this.textBox15);
+            this.groupBox27.Controls.Add(this.textBox2);
+            this.groupBox27.Controls.Add(this.textBox16);
             this.groupBox27.Controls.Add(this.label58);
             this.groupBox27.Controls.Add(this.textBox17);
             this.groupBox27.Controls.Add(this.textBox3);
@@ -480,26 +480,26 @@
             this.unloadExecBox.Size = new System.Drawing.Size(108, 20);
             this.unloadExecBox.TabIndex = 48;
             // 
-            // unloadingAdditionalOpCode
+            // textBox25
             // 
-            this.unloadingAdditionalOpCode.Location = new System.Drawing.Point(363, 80);
-            this.unloadingAdditionalOpCode.Name = "unloadingAdditionalOpCode";
-            this.unloadingAdditionalOpCode.Size = new System.Drawing.Size(41, 20);
-            this.unloadingAdditionalOpCode.TabIndex = 52;
+            this.textBox25.Location = new System.Drawing.Point(363, 80);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(41, 20);
+            this.textBox25.TabIndex = 52;
             // 
-            // unloadingHolding
+            // textBox13
             // 
-            this.unloadingHolding.Location = new System.Drawing.Point(234, 80);
-            this.unloadingHolding.Name = "unloadingHolding";
-            this.unloadingHolding.Size = new System.Drawing.Size(54, 20);
-            this.unloadingHolding.TabIndex = 49;
+            this.textBox13.Location = new System.Drawing.Point(234, 80);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(54, 20);
+            this.textBox13.TabIndex = 49;
             // 
-            // unloadingAddtionalOpTime
+            // textBox26
             // 
-            this.unloadingAddtionalOpTime.Location = new System.Drawing.Point(294, 80);
-            this.unloadingAddtionalOpTime.Name = "unloadingAddtionalOpTime";
-            this.unloadingAddtionalOpTime.Size = new System.Drawing.Size(72, 20);
-            this.unloadingAddtionalOpTime.TabIndex = 51;
+            this.textBox26.Location = new System.Drawing.Point(294, 80);
+            this.textBox26.Name = "textBox26";
+            this.textBox26.Size = new System.Drawing.Size(72, 20);
+            this.textBox26.TabIndex = 51;
             // 
             // textBox1
             // 
@@ -551,26 +551,26 @@
             this.textBox29.Text = "Доп. операция";
             this.textBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // unloadingDeparture
+            // textBox15
             // 
-            this.unloadingDeparture.Location = new System.Drawing.Point(181, 80);
-            this.unloadingDeparture.Name = "unloadingDeparture";
-            this.unloadingDeparture.Size = new System.Drawing.Size(54, 20);
-            this.unloadingDeparture.TabIndex = 47;
+            this.textBox15.Location = new System.Drawing.Point(181, 80);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(54, 20);
+            this.textBox15.TabIndex = 47;
             // 
-            // unloadingCase
+            // textBox2
             // 
-            this.unloadingCase.Location = new System.Drawing.Point(9, 80);
-            this.unloadingCase.Name = "unloadingCase";
-            this.unloadingCase.Size = new System.Drawing.Size(72, 20);
-            this.unloadingCase.TabIndex = 39;
+            this.textBox2.Location = new System.Drawing.Point(9, 80);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(72, 20);
+            this.textBox2.TabIndex = 39;
             // 
-            // unloadingArrival
+            // textBox16
             // 
-            this.unloadingArrival.Location = new System.Drawing.Point(125, 80);
-            this.unloadingArrival.Name = "unloadingArrival";
-            this.unloadingArrival.Size = new System.Drawing.Size(59, 20);
-            this.unloadingArrival.TabIndex = 46;
+            this.textBox16.Location = new System.Drawing.Point(125, 80);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(59, 20);
+            this.textBox16.TabIndex = 46;
             // 
             // label58
             // 
@@ -1666,7 +1666,7 @@
         private System.Windows.Forms.GroupBox groupBox23;
         private System.Windows.Forms.GroupBox groupBox27;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox unloadingCase;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox5;
@@ -1683,17 +1683,17 @@
         private System.Windows.Forms.TextBox textBox44;
         private System.Windows.Forms.TextBox textBox41;
         private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.TextBox unloadingHolding;
+        private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox unloadingDeparture;
-        private System.Windows.Forms.TextBox unloadingArrival;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.TextBox loadingHoldingTime;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox unloadingAdditionalOpCode;
-        private System.Windows.Forms.TextBox unloadingAddtionalOpTime;
+        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox textBox26;
         private System.Windows.Forms.TextBox textBox27;
         private System.Windows.Forms.TextBox textBox28;
         private System.Windows.Forms.TextBox textBox29;
