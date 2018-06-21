@@ -8,7 +8,6 @@ C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSuppl
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.pdb
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\Database.mdf
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\Database_log.ldf
-C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.csprojResolveAssemblyReference.cache
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\EntityFramework.dll
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\EntityFramework.xml
@@ -21,3 +20,8 @@ C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSuppl
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.CreateDriverAccomp.resources
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\Newtonsoft.Json.dll
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\Newtonsoft.Json.xml
+C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.CreateDowntime.resources
+C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.CreateFuel.resources
+C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.csprojAssemblyReference.cache
+C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.CreateContract.resources
+C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.CreateLegal.resources

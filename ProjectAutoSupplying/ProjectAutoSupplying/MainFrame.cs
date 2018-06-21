@@ -76,9 +76,24 @@ namespace ProjectAutoSupplying
                                          }).ToList();
         }
 
+        private void ReloadContractData()
+        {
+            dataGridView1.DataSource = db.Contracts.Select(x => new
+            {
+                x.Id,
+                x.Company,
+                Счет = x.Legal_Entity.Account,
+                Банк = x.Legal_Entity.Bank_Name,
+                Адрес = x.Legal_Entity.Legal_Adress,
+                ИНН = x.Legal_Entity.INN,
+                ОКПО = x.Legal_Entity.OKPO,
+                ОКОНХ = x.Legal_Entity.OKONX
+            }).ToList();
+        }
+
         enum TypeClear
         {
-            Car, Driver, Fuel, Downtime
+            Car, Driver, Fuel, Downtime, Contract
         }
 
         private void ClearForm(TypeClear type)
@@ -111,27 +126,66 @@ namespace ProjectAutoSupplying
                 case TypeClear.Fuel:
                     nameTextBoxFuel.Text = numberTextBoxFuel.Text = priceTextBoxFuel.Text = "";
                     break;
+                case TypeClear.Contract:
+                    contractAccountTextBox.Text = contractAddressTextBox.Text = contractBankNameTextBox.Text
+                        = contractINNTextBox.Text = contractOKONXTextBox.Text = contractOKPOTextBox.Text = "";
+                    break;
             }
         }
 
-        public MainFrame()
-        {
-            InitializeComponent();
+        private Dictionary<string, string> bankCount = new Dictionary<string, string>();
+        private Dictionary<string, List<string>> bankInfo = new Dictionary<string, List<string>>();
 
-            /*FileStream fileStream = new FileStream("Settings.settings", FileMode.Open);
+        public void GetAndSetJSonInfo()
+        {
+            FileStream fileStream = new FileStream("Settings.settings", FileMode.Open);
             StreamReader streamReader = new StreamReader(fileStream);
             String json = streamReader.ReadToEnd();
             JObject jObject = JObject.Parse(json);
             streamReader.Close();
             fileStream.Close();
             var settings = jObject["settings"];
-            textBox1.Text = settings["name"].ToString();
-            textBox2.Text = settings["inn"].ToString();
-            textBox4.Text = settings["okonx"].ToString();
-            textBox3.Text = settings["okpo"].ToString();
-            textBox5.Text = settings["adress"].ToString();
-            textBox6.Text = settings["phone"].ToString();*/
+            var bankNames = settings["bankName"].ToList();
+            var accounts = settings["account"].ToList();
+            var aboutBank = settings["about bank"].ToList();
+            var infos = new List<List<string>>();
+            foreach (var obj in aboutBank)
+            {
+                List<string> info = new List<string>();
+                foreach (var elem in obj)
+                    info.Add(elem.ToString());
+                infos.Add(info);
+            }
+            for (int i = 0; i < bankNames.Count; i++)
+            {
+                bankCount[bankNames[i].ToString()] = accounts[i].ToString();
+                bankInfo[bankNames[i].ToString()] = infos[i];
+            }
+            mainFrameNameTextBox.Text = bankNameRichTextBox.Text = settings["name"].ToString();
+            mainFrameINNTextBox.Text = settings["inn"].ToString();
+            mainFrameOKONXTextBox.Text = settings["okonx"].ToString();
+            mainFrameOKPOTextBox.Text = settings["okpo"].ToString();
+            mainFrameAddressTextBox.Text = settings["adress"].ToString();
+            mainFramePhoneTextBox.Text = settings["phone"].ToString();
+            mainFrameRegisterNumTextBox.Text = settings["register number"].ToString();
+            mainFrameSerialTextBox.Text = settings["serial"].ToString();
+            mainFrameBankNameComboBox.DataSource = bankCount.Select(x => x.Key).ToList();
+            string selectedItem = mainFrameBankNameComboBox.SelectedItem.ToString();
+            mainFrameAccountTextBox.Text = bankCount[selectedItem];
+            bankCodeTextBox.Text = bankInfo[selectedItem][0];
+            bankAddressRichTextBox.Text = bankInfo[selectedItem][1];
+            bankAccountTextBox.Text = bankInfo[selectedItem][2];
+            bankBIKTextBox.Text = bankInfo[selectedItem][3];
+            bankINNTextBox.Text = bankInfo[selectedItem][4];
+        }
 
+        public MainFrame()
+        {
+            InitializeComponent();
+            GetAndSetJSonInfo();
+            if (File.Exists("favicon.bmp"))
+                faviconPicture.Image = (Bitmap)Image.FromFile("favicon.bmp");
+            ReloadContractData();
             dataGridView21.DataSource = (from waybill in db.WayBills
                                          select new
                                          {
@@ -366,6 +420,58 @@ namespace ProjectAutoSupplying
             db.SaveChanges();
             ReloadFuelData();
             ClearForm(TypeClear.Fuel);
+        }
+
+        private void mainFrameBankNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedItem = mainFrameBankNameComboBox.SelectedItem.ToString();
+            mainFrameAccountTextBox.Text = bankCount[selectedItem];
+            bankNameRichTextBox.Text = selectedItem;
+            bankCodeTextBox.Text = bankInfo[selectedItem][0];
+            bankAddressRichTextBox.Text = bankInfo[selectedItem][1];
+            bankAccountTextBox.Text = bankInfo[selectedItem][2];
+            bankBIKTextBox.Text = bankInfo[selectedItem][3];
+            bankINNTextBox.Text = bankInfo[selectedItem][4];
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            CreateLegal createLegal = new CreateLegal();
+            createLegal.ShowDialog();
+            CreateContract createContract = new CreateContract();
+            createContract.ShowDialog();
+            ReloadContractData();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var id = int.Parse(dataGridView1.SelectedCells[0].Value.ToString());
+            var elem = db.Contracts.Find(id);
+            contractAccountTextBox.Text = elem.Legal_Entity.Account;
+            contractAddressTextBox.Text = elem.Legal_Entity.Legal_Adress;
+            contractBankNameTextBox.Text = elem.Legal_Entity.Bank_Name;
+            contractINNTextBox.Text = elem.Legal_Entity.INN;
+            contractOKONXTextBox.Text = elem.Legal_Entity.OKONX;
+            contractOKPOTextBox.Text = elem.Legal_Entity.OKPO;
+        }
+
+        private void contractChangeButton_Click(object sender, EventArgs e)
+        {
+            if (contractOKPOTextBox.Text.Trim().Length == 0 || contractOKONXTextBox.Text.Trim().Length == 0
+                || contractINNTextBox.Text.Trim().Length == 0 || contractBankNameTextBox.Text.Trim().Length == 0
+                || contractAddressTextBox.Text.Trim().Length == 0 || contractAccountTextBox.Text.Trim().Length == 0)
+                return;
+            var elem = db.Contracts.Find(int.Parse(dataGridView1.SelectedCells[0].Value.ToString()));
+            elem.Legal_Entity.OKPO = contractOKPOTextBox.Text.Trim();
+            elem.Legal_Entity.OKONX = contractOKONXTextBox.Text.Trim();
+            elem.Legal_Entity.INN = contractINNTextBox.Text.Trim();
+            elem.Legal_Entity.Bank_Name = contractBankNameTextBox.Text.Trim();
+            elem.Legal_Entity.Legal_Adress = contractAddressTextBox.Text.Trim();
+            elem.Legal_Entity.Account = contractAccountTextBox.Text.Trim();
+            db.Entry(elem).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            ClearForm(TypeClear.Contract);
+            ReloadContractData();
         }
     }
 }

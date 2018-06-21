@@ -22,9 +22,12 @@ namespace ProjectAutoSupplying.Models
     
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Region { get; set; }
-        public string City { get; set; }
         public string Legal_Adress { get; set; }
+        public string Account { get; set; }
+        public string Bank_Name { get; set; }
+        public string OKONX { get; set; }
+        public string OKPO { get; set; }
+        public string INN { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Contract> Contracts { get; set; }

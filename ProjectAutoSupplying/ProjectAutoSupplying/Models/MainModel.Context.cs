@@ -27,7 +27,6 @@ namespace ProjectAutoSupplying.Models
     
         public virtual DbSet<Additional_Operation> Additional_Operations { get; set; }
         public virtual DbSet<Additional_operation__load_unload_> Additional_operation__load_unload_ { get; set; }
-        public virtual DbSet<Bank> Banks { get; set; }
         public virtual DbSet<Car_Trailer> Car_Trailer { get; set; }
         public virtual DbSet<Car_Tralers_in_WayList> Car_Tralers_in_WayList { get; set; }
         public virtual DbSet<Cargo> Cargoes { get; set; }

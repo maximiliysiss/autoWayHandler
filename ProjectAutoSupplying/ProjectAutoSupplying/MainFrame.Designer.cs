@@ -33,59 +33,56 @@
             this.tabControlCatalogueInherit = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.mainFramePhoneTextBox = new System.Windows.Forms.TextBox();
+            this.mainFrameAddressTextBox = new System.Windows.Forms.TextBox();
+            this.mainFrameOKONXTextBox = new System.Windows.Forms.TextBox();
+            this.mainFrameOKPOTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.mainFrameINNTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.mainFrameNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.mainFrameSerialTextBox = new System.Windows.Forms.TextBox();
+            this.mainFrameRegisterNumTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.mainFrameBankNameComboBox = new System.Windows.Forms.ComboBox();
+            this.mainFrameAccountTextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.contractOKONXTextBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.contractOKPOTextBox = new System.Windows.Forms.TextBox();
+            this.contractINNTextBox = new System.Windows.Forms.TextBox();
+            this.contractAccountTextBox = new System.Windows.Forms.TextBox();
+            this.contractAddressTextBox = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.bankCodeTextBox = new System.Windows.Forms.TextBox();
+            this.bankAddressRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.bankNameRichTextBox = new System.Windows.Forms.RichTextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.bankINNTextBox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.bankBIKTextBox = new System.Windows.Forms.TextBox();
+            this.bankAccountTextBox = new System.Windows.Forms.TextBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage12 = new System.Windows.Forms.TabPage();
@@ -120,8 +117,26 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.changeButtonDownTime = new System.Windows.Forms.Button();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.wayListComboBoxDownTime = new System.Windows.Forms.ComboBox();
+            this.endDateTimePickerDownTime = new System.Windows.Forms.DateTimePicker();
+            this.beginDateTimePickerDownTime = new System.Windows.Forms.DateTimePicker();
+            this.codeTextBoxDownTime = new System.Windows.Forms.TextBox();
+            this.nameTextBoxDownTime = new System.Windows.Forms.TextBox();
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
             this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.changeButtonFuel = new System.Windows.Forms.Button();
+            this.priceTextBoxFuel = new System.Windows.Forms.TextBox();
+            this.numberTextBoxFuel = new System.Windows.Forms.TextBox();
+            this.nameTextBoxFuel = new System.Windows.Forms.TextBox();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -246,24 +261,9 @@
             this.textBox40 = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.nameTextBoxDownTime = new System.Windows.Forms.TextBox();
-            this.codeTextBoxDownTime = new System.Windows.Forms.TextBox();
-            this.beginDateTimePickerDownTime = new System.Windows.Forms.DateTimePicker();
-            this.endDateTimePickerDownTime = new System.Windows.Forms.DateTimePicker();
-            this.wayListComboBoxDownTime = new System.Windows.Forms.ComboBox();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.changeButtonDownTime = new System.Windows.Forms.Button();
-            this.nameTextBoxFuel = new System.Windows.Forms.TextBox();
-            this.numberTextBoxFuel = new System.Windows.Forms.TextBox();
-            this.priceTextBoxFuel = new System.Windows.Forms.TextBox();
-            this.changeButtonFuel = new System.Windows.Forms.Button();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
+            this.faviconPicture = new System.Windows.Forms.PictureBox();
+            this.contractChangeButton = new System.Windows.Forms.Button();
+            this.contractBankNameTextBox = new System.Windows.Forms.TextBox();
             this.tabControlUpper.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControlCatalogueInherit.SuspendLayout();
@@ -329,6 +329,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.faviconPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlUpper
@@ -377,17 +378,18 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.faviconPicture);
             this.tabPage4.Controls.Add(this.label6);
-            this.tabPage4.Controls.Add(this.textBox6);
-            this.tabPage4.Controls.Add(this.textBox5);
-            this.tabPage4.Controls.Add(this.textBox4);
-            this.tabPage4.Controls.Add(this.textBox3);
+            this.tabPage4.Controls.Add(this.mainFramePhoneTextBox);
+            this.tabPage4.Controls.Add(this.mainFrameAddressTextBox);
+            this.tabPage4.Controls.Add(this.mainFrameOKONXTextBox);
+            this.tabPage4.Controls.Add(this.mainFrameOKPOTextBox);
             this.tabPage4.Controls.Add(this.label5);
             this.tabPage4.Controls.Add(this.label4);
             this.tabPage4.Controls.Add(this.label3);
-            this.tabPage4.Controls.Add(this.textBox2);
+            this.tabPage4.Controls.Add(this.mainFrameINNTextBox);
             this.tabPage4.Controls.Add(this.label2);
-            this.tabPage4.Controls.Add(this.textBox1);
+            this.tabPage4.Controls.Add(this.mainFrameNameTextBox);
             this.tabPage4.Controls.Add(this.label1);
             this.tabPage4.Controls.Add(this.groupBox2);
             this.tabPage4.Controls.Add(this.groupBox1);
@@ -410,37 +412,41 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Код ОКПО";
             // 
-            // textBox6
+            // mainFramePhoneTextBox
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Location = new System.Drawing.Point(148, 156);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(127, 20);
-            this.textBox6.TabIndex = 12;
+            this.mainFramePhoneTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mainFramePhoneTextBox.Enabled = false;
+            this.mainFramePhoneTextBox.Location = new System.Drawing.Point(148, 156);
+            this.mainFramePhoneTextBox.Name = "mainFramePhoneTextBox";
+            this.mainFramePhoneTextBox.Size = new System.Drawing.Size(127, 20);
+            this.mainFramePhoneTextBox.TabIndex = 12;
             // 
-            // textBox5
+            // mainFrameAddressTextBox
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Location = new System.Drawing.Point(148, 130);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(503, 20);
-            this.textBox5.TabIndex = 11;
+            this.mainFrameAddressTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mainFrameAddressTextBox.Enabled = false;
+            this.mainFrameAddressTextBox.Location = new System.Drawing.Point(148, 130);
+            this.mainFrameAddressTextBox.Name = "mainFrameAddressTextBox";
+            this.mainFrameAddressTextBox.Size = new System.Drawing.Size(503, 20);
+            this.mainFrameAddressTextBox.TabIndex = 11;
             // 
-            // textBox4
+            // mainFrameOKONXTextBox
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Location = new System.Drawing.Point(148, 95);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(127, 20);
-            this.textBox4.TabIndex = 10;
+            this.mainFrameOKONXTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mainFrameOKONXTextBox.Enabled = false;
+            this.mainFrameOKONXTextBox.Location = new System.Drawing.Point(148, 95);
+            this.mainFrameOKONXTextBox.Name = "mainFrameOKONXTextBox";
+            this.mainFrameOKONXTextBox.Size = new System.Drawing.Size(127, 20);
+            this.mainFrameOKONXTextBox.TabIndex = 10;
             // 
-            // textBox3
+            // mainFrameOKPOTextBox
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(395, 95);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(127, 20);
-            this.textBox3.TabIndex = 9;
+            this.mainFrameOKPOTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mainFrameOKPOTextBox.Enabled = false;
+            this.mainFrameOKPOTextBox.Location = new System.Drawing.Point(395, 95);
+            this.mainFrameOKPOTextBox.Name = "mainFrameOKPOTextBox";
+            this.mainFrameOKPOTextBox.Size = new System.Drawing.Size(127, 20);
+            this.mainFrameOKPOTextBox.TabIndex = 9;
             // 
             // label5
             // 
@@ -475,13 +481,14 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Код ОКОНХ";
             // 
-            // textBox2
+            // mainFrameINNTextBox
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(148, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 20);
-            this.textBox2.TabIndex = 5;
+            this.mainFrameINNTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mainFrameINNTextBox.Enabled = false;
+            this.mainFrameINNTextBox.Location = new System.Drawing.Point(148, 64);
+            this.mainFrameINNTextBox.Name = "mainFrameINNTextBox";
+            this.mainFrameINNTextBox.Size = new System.Drawing.Size(212, 20);
+            this.mainFrameINNTextBox.TabIndex = 5;
             // 
             // label2
             // 
@@ -494,13 +501,14 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "ИНН ПАТП";
             // 
-            // textBox1
+            // mainFrameNameTextBox
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(148, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 20);
-            this.textBox1.TabIndex = 3;
+            this.mainFrameNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mainFrameNameTextBox.Enabled = false;
+            this.mainFrameNameTextBox.Location = new System.Drawing.Point(148, 33);
+            this.mainFrameNameTextBox.Name = "mainFrameNameTextBox";
+            this.mainFrameNameTextBox.Size = new System.Drawing.Size(346, 20);
+            this.mainFrameNameTextBox.TabIndex = 3;
             // 
             // label1
             // 
@@ -517,26 +525,15 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.mainFrameSerialTextBox);
+            this.groupBox2.Controls.Add(this.mainFrameRegisterNumTextBox);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(17, 195);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(725, 64);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(222, 11);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(147, 21);
-            this.comboBox1.TabIndex = 18;
             // 
             // label9
             // 
@@ -549,21 +546,23 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Серия";
             // 
-            // textBox8
+            // mainFrameSerialTextBox
             // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox8.Location = new System.Drawing.Point(435, 38);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(81, 20);
-            this.textBox8.TabIndex = 16;
+            this.mainFrameSerialTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.mainFrameSerialTextBox.Enabled = false;
+            this.mainFrameSerialTextBox.Location = new System.Drawing.Point(435, 38);
+            this.mainFrameSerialTextBox.Name = "mainFrameSerialTextBox";
+            this.mainFrameSerialTextBox.Size = new System.Drawing.Size(81, 20);
+            this.mainFrameSerialTextBox.TabIndex = 16;
             // 
-            // textBox7
+            // mainFrameRegisterNumTextBox
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox7.Location = new System.Drawing.Point(222, 38);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(147, 20);
-            this.textBox7.TabIndex = 14;
+            this.mainFrameRegisterNumTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.mainFrameRegisterNumTextBox.Enabled = false;
+            this.mainFrameRegisterNumTextBox.Location = new System.Drawing.Point(222, 38);
+            this.mainFrameRegisterNumTextBox.Name = "mainFrameRegisterNumTextBox";
+            this.mainFrameRegisterNumTextBox.Size = new System.Drawing.Size(147, 20);
+            this.mainFrameRegisterNumTextBox.TabIndex = 14;
             // 
             // label8
             // 
@@ -576,23 +575,12 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Регистрационный номер";
             // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(46, 11);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(170, 17);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Лицензионная карточка";
-            // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.textBox9);
+            this.groupBox1.Controls.Add(this.mainFrameBankNameComboBox);
+            this.groupBox1.Controls.Add(this.mainFrameAccountTextBox);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Location = new System.Drawing.Point(16, 265);
@@ -601,22 +589,24 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // comboBox2
+            // mainFrameBankNameComboBox
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(223, 12);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(147, 21);
-            this.comboBox2.TabIndex = 19;
+            this.mainFrameBankNameComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.mainFrameBankNameComboBox.FormattingEnabled = true;
+            this.mainFrameBankNameComboBox.Location = new System.Drawing.Point(223, 12);
+            this.mainFrameBankNameComboBox.Name = "mainFrameBankNameComboBox";
+            this.mainFrameBankNameComboBox.Size = new System.Drawing.Size(147, 21);
+            this.mainFrameBankNameComboBox.TabIndex = 19;
+            this.mainFrameBankNameComboBox.SelectedIndexChanged += new System.EventHandler(this.mainFrameBankNameComboBox_SelectedIndexChanged);
             // 
-            // textBox9
+            // mainFrameAccountTextBox
             // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox9.Location = new System.Drawing.Point(223, 38);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(294, 20);
-            this.textBox9.TabIndex = 18;
+            this.mainFrameAccountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.mainFrameAccountTextBox.Enabled = false;
+            this.mainFrameAccountTextBox.Location = new System.Drawing.Point(223, 38);
+            this.mainFrameAccountTextBox.Name = "mainFrameAccountTextBox";
+            this.mainFrameAccountTextBox.Size = new System.Drawing.Size(294, 20);
+            this.mainFrameAccountTextBox.TabIndex = 18;
             // 
             // label11
             // 
@@ -656,18 +646,19 @@
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.textBox14);
+            this.groupBox4.Controls.Add(this.contractBankNameTextBox);
+            this.groupBox4.Controls.Add(this.contractChangeButton);
+            this.groupBox4.Controls.Add(this.contractOKONXTextBox);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.comboBox3);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.textBox13);
-            this.groupBox4.Controls.Add(this.textBox12);
-            this.groupBox4.Controls.Add(this.textBox11);
-            this.groupBox4.Controls.Add(this.textBox10);
+            this.groupBox4.Controls.Add(this.contractOKPOTextBox);
+            this.groupBox4.Controls.Add(this.contractINNTextBox);
+            this.groupBox4.Controls.Add(this.contractAccountTextBox);
+            this.groupBox4.Controls.Add(this.contractAddressTextBox);
             this.groupBox4.Location = new System.Drawing.Point(16, 204);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(725, 128);
@@ -675,13 +666,13 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Данные о заказчике";
             // 
-            // textBox14
+            // contractOKONXTextBox
             // 
-            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox14.Location = new System.Drawing.Point(604, 76);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(102, 20);
-            this.textBox14.TabIndex = 23;
+            this.contractOKONXTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.contractOKONXTextBox.Location = new System.Drawing.Point(604, 76);
+            this.contractOKONXTextBox.Name = "contractOKONXTextBox";
+            this.contractOKONXTextBox.Size = new System.Drawing.Size(102, 20);
+            this.contractOKONXTextBox.TabIndex = 23;
             // 
             // label17
             // 
@@ -716,15 +707,6 @@
             this.label15.TabIndex = 20;
             this.label15.Text = "ИНН";
             // 
-            // comboBox3
-            // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(128, 75);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(234, 21);
-            this.comboBox3.TabIndex = 19;
-            // 
             // label14
             // 
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -758,37 +740,37 @@
             this.label12.TabIndex = 16;
             this.label12.Text = "Адрес";
             // 
-            // textBox13
+            // contractOKPOTextBox
             // 
-            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox13.Location = new System.Drawing.Point(423, 76);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(111, 20);
-            this.textBox13.TabIndex = 7;
+            this.contractOKPOTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.contractOKPOTextBox.Location = new System.Drawing.Point(423, 76);
+            this.contractOKPOTextBox.Name = "contractOKPOTextBox";
+            this.contractOKPOTextBox.Size = new System.Drawing.Size(111, 20);
+            this.contractOKPOTextBox.TabIndex = 7;
             // 
-            // textBox12
+            // contractINNTextBox
             // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox12.Location = new System.Drawing.Point(585, 47);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(121, 20);
-            this.textBox12.TabIndex = 6;
+            this.contractINNTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.contractINNTextBox.Location = new System.Drawing.Point(585, 47);
+            this.contractINNTextBox.Name = "contractINNTextBox";
+            this.contractINNTextBox.Size = new System.Drawing.Size(121, 20);
+            this.contractINNTextBox.TabIndex = 6;
             // 
-            // textBox11
+            // contractAccountTextBox
             // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox11.Location = new System.Drawing.Point(127, 45);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(274, 20);
-            this.textBox11.TabIndex = 5;
+            this.contractAccountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.contractAccountTextBox.Location = new System.Drawing.Point(127, 45);
+            this.contractAccountTextBox.Name = "contractAccountTextBox";
+            this.contractAccountTextBox.Size = new System.Drawing.Size(274, 20);
+            this.contractAccountTextBox.TabIndex = 5;
             // 
-            // textBox10
+            // contractAddressTextBox
             // 
-            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox10.Location = new System.Drawing.Point(127, 19);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(579, 20);
-            this.textBox10.TabIndex = 4;
+            this.contractAddressTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.contractAddressTextBox.Location = new System.Drawing.Point(127, 19);
+            this.contractAddressTextBox.Name = "contractAddressTextBox";
+            this.contractAddressTextBox.Size = new System.Drawing.Size(579, 20);
+            this.contractAddressTextBox.TabIndex = 4;
             // 
             // groupBox3
             // 
@@ -810,17 +792,20 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 13);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(724, 176);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.label20);
             this.tabPage6.Controls.Add(this.label19);
             this.tabPage6.Controls.Add(this.label18);
-            this.tabPage6.Controls.Add(this.textBox16);
-            this.tabPage6.Controls.Add(this.richTextBox2);
-            this.tabPage6.Controls.Add(this.richTextBox1);
+            this.tabPage6.Controls.Add(this.bankCodeTextBox);
+            this.tabPage6.Controls.Add(this.bankAddressRichTextBox);
+            this.tabPage6.Controls.Add(this.bankNameRichTextBox);
             this.tabPage6.Controls.Add(this.groupBox5);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
@@ -863,55 +848,59 @@
             this.label18.TabIndex = 20;
             this.label18.Text = "Код банка";
             // 
-            // textBox16
+            // bankCodeTextBox
             // 
-            this.textBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox16.Location = new System.Drawing.Point(143, 19);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(287, 20);
-            this.textBox16.TabIndex = 20;
+            this.bankCodeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.bankCodeTextBox.Enabled = false;
+            this.bankCodeTextBox.Location = new System.Drawing.Point(143, 19);
+            this.bankCodeTextBox.Name = "bankCodeTextBox";
+            this.bankCodeTextBox.Size = new System.Drawing.Size(287, 20);
+            this.bankCodeTextBox.TabIndex = 20;
             // 
-            // richTextBox2
+            // bankAddressRichTextBox
             // 
-            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.richTextBox2.Location = new System.Drawing.Point(143, 124);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(408, 74);
-            this.richTextBox2.TabIndex = 10;
-            this.richTextBox2.Text = "";
+            this.bankAddressRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.bankAddressRichTextBox.Enabled = false;
+            this.bankAddressRichTextBox.Location = new System.Drawing.Point(143, 124);
+            this.bankAddressRichTextBox.Name = "bankAddressRichTextBox";
+            this.bankAddressRichTextBox.Size = new System.Drawing.Size(408, 74);
+            this.bankAddressRichTextBox.TabIndex = 10;
+            this.bankAddressRichTextBox.Text = "";
             // 
-            // richTextBox1
+            // bankNameRichTextBox
             // 
-            this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.richTextBox1.Location = new System.Drawing.Point(143, 57);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(408, 46);
-            this.richTextBox1.TabIndex = 9;
-            this.richTextBox1.Text = "";
+            this.bankNameRichTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bankNameRichTextBox.Enabled = false;
+            this.bankNameRichTextBox.Location = new System.Drawing.Point(143, 57);
+            this.bankNameRichTextBox.Name = "bankNameRichTextBox";
+            this.bankNameRichTextBox.Size = new System.Drawing.Size(408, 46);
+            this.bankNameRichTextBox.TabIndex = 9;
+            this.bankNameRichTextBox.Text = "";
             // 
             // groupBox5
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.textBox15);
+            this.groupBox5.Controls.Add(this.bankINNTextBox);
             this.groupBox5.Controls.Add(this.label21);
             this.groupBox5.Controls.Add(this.label22);
             this.groupBox5.Controls.Add(this.label23);
-            this.groupBox5.Controls.Add(this.textBox21);
-            this.groupBox5.Controls.Add(this.textBox22);
+            this.groupBox5.Controls.Add(this.bankBIKTextBox);
+            this.groupBox5.Controls.Add(this.bankAccountTextBox);
             this.groupBox5.Location = new System.Drawing.Point(17, 202);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(728, 132);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
             // 
-            // textBox15
+            // bankINNTextBox
             // 
-            this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox15.Location = new System.Drawing.Point(141, 97);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(194, 20);
-            this.textBox15.TabIndex = 19;
+            this.bankINNTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.bankINNTextBox.Enabled = false;
+            this.bankINNTextBox.Location = new System.Drawing.Point(141, 97);
+            this.bankINNTextBox.Name = "bankINNTextBox";
+            this.bankINNTextBox.Size = new System.Drawing.Size(194, 20);
+            this.bankINNTextBox.TabIndex = 19;
             // 
             // label21
             // 
@@ -946,21 +935,23 @@
             this.label23.TabIndex = 16;
             this.label23.Text = "Кор. Счет банка";
             // 
-            // textBox21
+            // bankBIKTextBox
             // 
-            this.textBox21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox21.Location = new System.Drawing.Point(141, 57);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(194, 20);
-            this.textBox21.TabIndex = 5;
+            this.bankBIKTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.bankBIKTextBox.Enabled = false;
+            this.bankBIKTextBox.Location = new System.Drawing.Point(141, 57);
+            this.bankBIKTextBox.Name = "bankBIKTextBox";
+            this.bankBIKTextBox.Size = new System.Drawing.Size(194, 20);
+            this.bankBIKTextBox.TabIndex = 5;
             // 
-            // textBox22
+            // bankAccountTextBox
             // 
-            this.textBox22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox22.Location = new System.Drawing.Point(141, 19);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(287, 20);
-            this.textBox22.TabIndex = 4;
+            this.bankAccountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.bankAccountTextBox.Enabled = false;
+            this.bankAccountTextBox.Location = new System.Drawing.Point(141, 19);
+            this.bankAccountTextBox.Name = "bankAccountTextBox";
+            this.bankAccountTextBox.Size = new System.Drawing.Size(287, 20);
+            this.bankAccountTextBox.TabIndex = 4;
             // 
             // tabPage7
             // 
@@ -1342,6 +1333,97 @@
             this.tabPage14.Text = "Причины простоя";
             this.tabPage14.UseVisualStyleBackColor = true;
             // 
+            // changeButtonDownTime
+            // 
+            this.changeButtonDownTime.Location = new System.Drawing.Point(532, 276);
+            this.changeButtonDownTime.Name = "changeButtonDownTime";
+            this.changeButtonDownTime.Size = new System.Drawing.Size(185, 23);
+            this.changeButtonDownTime.TabIndex = 11;
+            this.changeButtonDownTime.Text = "Изменить";
+            this.changeButtonDownTime.UseVisualStyleBackColor = true;
+            this.changeButtonDownTime.Click += new System.EventHandler(this.changeButtonDownTime_Click);
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(245, 281);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(75, 13);
+            this.label64.TabIndex = 10;
+            this.label64.Text = "Путевой лист";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(529, 236);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(62, 13);
+            this.label63.TabIndex = 9;
+            this.label63.Text = "Окончание";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(323, 236);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(44, 13);
+            this.label62.TabIndex = 8;
+            this.label62.Text = "Начало";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(170, 236);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(26, 13);
+            this.label61.TabIndex = 7;
+            this.label61.Text = "Код";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(13, 236);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(83, 13);
+            this.label60.TabIndex = 6;
+            this.label60.Text = "Наименование";
+            // 
+            // wayListComboBoxDownTime
+            // 
+            this.wayListComboBoxDownTime.FormattingEnabled = true;
+            this.wayListComboBoxDownTime.Location = new System.Drawing.Point(326, 278);
+            this.wayListComboBoxDownTime.Name = "wayListComboBoxDownTime";
+            this.wayListComboBoxDownTime.Size = new System.Drawing.Size(184, 21);
+            this.wayListComboBoxDownTime.TabIndex = 5;
+            // 
+            // endDateTimePickerDownTime
+            // 
+            this.endDateTimePickerDownTime.Location = new System.Drawing.Point(532, 252);
+            this.endDateTimePickerDownTime.Name = "endDateTimePickerDownTime";
+            this.endDateTimePickerDownTime.Size = new System.Drawing.Size(186, 20);
+            this.endDateTimePickerDownTime.TabIndex = 4;
+            // 
+            // beginDateTimePickerDownTime
+            // 
+            this.beginDateTimePickerDownTime.Location = new System.Drawing.Point(326, 252);
+            this.beginDateTimePickerDownTime.Name = "beginDateTimePickerDownTime";
+            this.beginDateTimePickerDownTime.Size = new System.Drawing.Size(184, 20);
+            this.beginDateTimePickerDownTime.TabIndex = 3;
+            // 
+            // codeTextBoxDownTime
+            // 
+            this.codeTextBoxDownTime.Location = new System.Drawing.Point(173, 252);
+            this.codeTextBoxDownTime.Name = "codeTextBoxDownTime";
+            this.codeTextBoxDownTime.Size = new System.Drawing.Size(122, 20);
+            this.codeTextBoxDownTime.TabIndex = 2;
+            // 
+            // nameTextBoxDownTime
+            // 
+            this.nameTextBoxDownTime.Location = new System.Drawing.Point(16, 252);
+            this.nameTextBoxDownTime.Name = "nameTextBoxDownTime";
+            this.nameTextBoxDownTime.Size = new System.Drawing.Size(123, 20);
+            this.nameTextBoxDownTime.TabIndex = 1;
+            // 
             // dataGridView9
             // 
             this.dataGridView9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1373,6 +1455,64 @@
             this.tabPage15.TabIndex = 3;
             this.tabPage15.Text = "Топливо";
             this.tabPage15.UseVisualStyleBackColor = true;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(508, 250);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(33, 13);
+            this.label67.TabIndex = 7;
+            this.label67.Text = "Цена";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(249, 250);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(41, 13);
+            this.label66.TabIndex = 6;
+            this.label66.Text = "Номер";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(13, 250);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(83, 13);
+            this.label65.TabIndex = 5;
+            this.label65.Text = "Наименование";
+            // 
+            // changeButtonFuel
+            // 
+            this.changeButtonFuel.Location = new System.Drawing.Point(252, 291);
+            this.changeButtonFuel.Name = "changeButtonFuel";
+            this.changeButtonFuel.Size = new System.Drawing.Size(184, 23);
+            this.changeButtonFuel.TabIndex = 4;
+            this.changeButtonFuel.Text = "Изменить";
+            this.changeButtonFuel.UseVisualStyleBackColor = true;
+            this.changeButtonFuel.Click += new System.EventHandler(this.changeButtonFuel_Click);
+            // 
+            // priceTextBoxFuel
+            // 
+            this.priceTextBoxFuel.Location = new System.Drawing.Point(511, 266);
+            this.priceTextBoxFuel.Name = "priceTextBoxFuel";
+            this.priceTextBoxFuel.Size = new System.Drawing.Size(184, 20);
+            this.priceTextBoxFuel.TabIndex = 3;
+            // 
+            // numberTextBoxFuel
+            // 
+            this.numberTextBoxFuel.Location = new System.Drawing.Point(252, 266);
+            this.numberTextBoxFuel.Name = "numberTextBoxFuel";
+            this.numberTextBoxFuel.Size = new System.Drawing.Size(184, 20);
+            this.numberTextBoxFuel.TabIndex = 2;
+            // 
+            // nameTextBoxFuel
+            // 
+            this.nameTextBoxFuel.Location = new System.Drawing.Point(16, 266);
+            this.nameTextBoxFuel.Name = "nameTextBoxFuel";
+            this.nameTextBoxFuel.Size = new System.Drawing.Size(184, 20);
+            this.nameTextBoxFuel.TabIndex = 1;
             // 
             // dataGridView10
             // 
@@ -2667,154 +2807,31 @@
             this.label45.Size = new System.Drawing.Size(79, 17);
             this.label45.TabIndex = 19;
             // 
-            // nameTextBoxDownTime
+            // faviconPicture
             // 
-            this.nameTextBoxDownTime.Location = new System.Drawing.Point(16, 252);
-            this.nameTextBoxDownTime.Name = "nameTextBoxDownTime";
-            this.nameTextBoxDownTime.Size = new System.Drawing.Size(123, 20);
-            this.nameTextBoxDownTime.TabIndex = 1;
+            this.faviconPicture.Location = new System.Drawing.Point(595, 15);
+            this.faviconPicture.Name = "faviconPicture";
+            this.faviconPicture.Size = new System.Drawing.Size(100, 100);
+            this.faviconPicture.TabIndex = 14;
+            this.faviconPicture.TabStop = false;
             // 
-            // codeTextBoxDownTime
+            // contractChangeButton
             // 
-            this.codeTextBoxDownTime.Location = new System.Drawing.Point(173, 252);
-            this.codeTextBoxDownTime.Name = "codeTextBoxDownTime";
-            this.codeTextBoxDownTime.Size = new System.Drawing.Size(122, 20);
-            this.codeTextBoxDownTime.TabIndex = 2;
+            this.contractChangeButton.Location = new System.Drawing.Point(35, 99);
+            this.contractChangeButton.Name = "contractChangeButton";
+            this.contractChangeButton.Size = new System.Drawing.Size(327, 23);
+            this.contractChangeButton.TabIndex = 24;
+            this.contractChangeButton.Text = "Изменить";
+            this.contractChangeButton.UseVisualStyleBackColor = true;
+            this.contractChangeButton.Click += new System.EventHandler(this.contractChangeButton_Click);
             // 
-            // beginDateTimePickerDownTime
+            // contractBankNameTextBox
             // 
-            this.beginDateTimePickerDownTime.Location = new System.Drawing.Point(326, 252);
-            this.beginDateTimePickerDownTime.Name = "beginDateTimePickerDownTime";
-            this.beginDateTimePickerDownTime.Size = new System.Drawing.Size(184, 20);
-            this.beginDateTimePickerDownTime.TabIndex = 3;
-            // 
-            // endDateTimePickerDownTime
-            // 
-            this.endDateTimePickerDownTime.Location = new System.Drawing.Point(532, 252);
-            this.endDateTimePickerDownTime.Name = "endDateTimePickerDownTime";
-            this.endDateTimePickerDownTime.Size = new System.Drawing.Size(186, 20);
-            this.endDateTimePickerDownTime.TabIndex = 4;
-            // 
-            // wayListComboBoxDownTime
-            // 
-            this.wayListComboBoxDownTime.FormattingEnabled = true;
-            this.wayListComboBoxDownTime.Location = new System.Drawing.Point(326, 278);
-            this.wayListComboBoxDownTime.Name = "wayListComboBoxDownTime";
-            this.wayListComboBoxDownTime.Size = new System.Drawing.Size(184, 21);
-            this.wayListComboBoxDownTime.TabIndex = 5;
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(13, 236);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(83, 13);
-            this.label60.TabIndex = 6;
-            this.label60.Text = "Наименование";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(170, 236);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(26, 13);
-            this.label61.TabIndex = 7;
-            this.label61.Text = "Код";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(323, 236);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(44, 13);
-            this.label62.TabIndex = 8;
-            this.label62.Text = "Начало";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(529, 236);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(62, 13);
-            this.label63.TabIndex = 9;
-            this.label63.Text = "Окончание";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(245, 281);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(75, 13);
-            this.label64.TabIndex = 10;
-            this.label64.Text = "Путевой лист";
-            // 
-            // changeButtonDownTime
-            // 
-            this.changeButtonDownTime.Location = new System.Drawing.Point(532, 276);
-            this.changeButtonDownTime.Name = "changeButtonDownTime";
-            this.changeButtonDownTime.Size = new System.Drawing.Size(185, 23);
-            this.changeButtonDownTime.TabIndex = 11;
-            this.changeButtonDownTime.Text = "Изменить";
-            this.changeButtonDownTime.UseVisualStyleBackColor = true;
-            this.changeButtonDownTime.Click += new System.EventHandler(this.changeButtonDownTime_Click);
-            // 
-            // nameTextBoxFuel
-            // 
-            this.nameTextBoxFuel.Location = new System.Drawing.Point(16, 266);
-            this.nameTextBoxFuel.Name = "nameTextBoxFuel";
-            this.nameTextBoxFuel.Size = new System.Drawing.Size(184, 20);
-            this.nameTextBoxFuel.TabIndex = 1;
-            // 
-            // numberTextBoxFuel
-            // 
-            this.numberTextBoxFuel.Location = new System.Drawing.Point(252, 266);
-            this.numberTextBoxFuel.Name = "numberTextBoxFuel";
-            this.numberTextBoxFuel.Size = new System.Drawing.Size(184, 20);
-            this.numberTextBoxFuel.TabIndex = 2;
-            // 
-            // priceTextBoxFuel
-            // 
-            this.priceTextBoxFuel.Location = new System.Drawing.Point(511, 266);
-            this.priceTextBoxFuel.Name = "priceTextBoxFuel";
-            this.priceTextBoxFuel.Size = new System.Drawing.Size(184, 20);
-            this.priceTextBoxFuel.TabIndex = 3;
-            // 
-            // changeButtonFuel
-            // 
-            this.changeButtonFuel.Location = new System.Drawing.Point(252, 291);
-            this.changeButtonFuel.Name = "changeButtonFuel";
-            this.changeButtonFuel.Size = new System.Drawing.Size(184, 23);
-            this.changeButtonFuel.TabIndex = 4;
-            this.changeButtonFuel.Text = "Изменить";
-            this.changeButtonFuel.UseVisualStyleBackColor = true;
-            this.changeButtonFuel.Click += new System.EventHandler(this.changeButtonFuel_Click);
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(13, 250);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(83, 13);
-            this.label65.TabIndex = 5;
-            this.label65.Text = "Наименование";
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(249, 250);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(41, 13);
-            this.label66.TabIndex = 6;
-            this.label66.Text = "Номер";
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(508, 250);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(33, 13);
-            this.label67.TabIndex = 7;
-            this.label67.Text = "Цена";
+            this.contractBankNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.contractBankNameTextBox.Location = new System.Drawing.Point(127, 74);
+            this.contractBankNameTextBox.Name = "contractBankNameTextBox";
+            this.contractBankNameTextBox.Size = new System.Drawing.Size(235, 20);
+            this.contractBankNameTextBox.TabIndex = 25;
             // 
             // MainFrame
             // 
@@ -2909,6 +2926,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.faviconPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2926,52 +2944,49 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox mainFramePhoneTextBox;
+        private System.Windows.Forms.TextBox mainFrameAddressTextBox;
+        private System.Windows.Forms.TextBox mainFrameOKONXTextBox;
+        private System.Windows.Forms.TextBox mainFrameOKPOTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox mainFrameINNTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox mainFrameNameTextBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox mainFrameSerialTextBox;
+        private System.Windows.Forms.TextBox mainFrameRegisterNumTextBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox mainFrameAccountTextBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox mainFrameBankNameComboBox;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox contractOKONXTextBox;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox contractOKPOTextBox;
+        private System.Windows.Forms.TextBox contractINNTextBox;
+        private System.Windows.Forms.TextBox contractAccountTextBox;
+        private System.Windows.Forms.TextBox contractAddressTextBox;
         private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox bankCodeTextBox;
+        private System.Windows.Forms.RichTextBox bankAddressRichTextBox;
+        private System.Windows.Forms.RichTextBox bankNameRichTextBox;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox bankINNTextBox;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox bankBIKTextBox;
+        private System.Windows.Forms.TextBox bankAccountTextBox;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.Label label20;
@@ -3151,6 +3166,9 @@
         private System.Windows.Forms.TextBox priceTextBoxFuel;
         private System.Windows.Forms.TextBox numberTextBoxFuel;
         private System.Windows.Forms.TextBox nameTextBoxFuel;
+        private System.Windows.Forms.PictureBox faviconPicture;
+        private System.Windows.Forms.TextBox contractBankNameTextBox;
+        private System.Windows.Forms.Button contractChangeButton;
     }
 }
 

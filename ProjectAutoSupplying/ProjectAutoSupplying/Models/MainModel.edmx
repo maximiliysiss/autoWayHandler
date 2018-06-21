@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Additional Operation">
           <Key>
             <PropertyRef Name="Id" />
@@ -21,15 +21,6 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Additional Operation ID" Type="int" Nullable="false" />
           <Property Name="Load and Unload operation ID" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Bank">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Adress" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="BIK" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Car/Trailer">
           <Key>
@@ -179,9 +170,12 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Region" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="City" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Legal Adress" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Account" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Bank Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OKONX" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OKPO" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="INN" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Loading and unloading operations">
           <Key>
@@ -644,7 +638,6 @@
         <EntityContainer Name="DatabaseModelStoreContainer">
           <EntitySet Name="Additional Operation" EntityType="Self.Additional Operation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Additional operation (load/unload)" EntityType="Self.Additional operation (load/unload)" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Bank" EntityType="Self.Bank" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Car/Trailer" EntityType="Self.Car/Trailer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Car/Tralers in WayList" EntityType="Self.Car/Tralers in WayList" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cargo" EntityType="Self.Cargo" Schema="dbo" store:Type="Tables" />
@@ -782,8 +775,7 @@
             <End Role="WayList" EntitySet="WayList" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -806,15 +798,6 @@
           <Property Name="Load_and_Unload_operation_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Additional_Operation" Relationship="Self.FK_Additional_operation__load_unload__Additional_Opr" FromRole="Additional_operation__load_unload_" ToRole="Additional_Operation" />
           <NavigationProperty Name="Loading_and_unloading_operations" Relationship="Self.FK_Additional_operation__load_unload__Load_And_Unload" FromRole="Additional_operation__load_unload_" ToRole="Loading_and_unloading_operations" />
-        </EntityType>
-        <EntityType Name="Bank">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="BIK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="Car_Trailer">
           <Key>
@@ -989,10 +972,13 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Region" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Legal_Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Contracts" Relationship="Self.FK_Contract_LegalEntity" FromRole="Legal_Entity" ToRole="Contract" />
+          <Property Name="Bank_Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OKONX" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OKPO" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="INN" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Loading_and_unloading_operation">
           <Key>
@@ -1482,7 +1468,6 @@
         <EntityContainer Name="DatabaseEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Additional_Operations" EntityType="Self.Additional_Operation" />
           <EntitySet Name="Additional_operation__load_unload_" EntityType="Self.Additional_operation__load_unload_" />
-          <EntitySet Name="Banks" EntityType="Self.Bank" />
           <EntitySet Name="Car_Trailer" EntityType="Self.Car_Trailer" />
           <EntitySet Name="Car_Tralers_in_WayList" EntityType="Self.Car_Tralers_in_WayList" />
           <EntitySet Name="Cargoes" EntityType="Self.Cargo" />
@@ -1645,16 +1630,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Banks">
-            <EntityTypeMapping TypeName="DatabaseModel.Bank">
-              <MappingFragment StoreEntitySet="Bank">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Adress" ColumnName="Adress" />
-                <ScalarProperty Name="BIK" ColumnName="BIK" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Car_Trailer">
             <EntityTypeMapping TypeName="DatabaseModel.Car_Trailer">
               <MappingFragment StoreEntitySet="Car/Trailer">
@@ -1812,11 +1787,14 @@
           <EntitySetMapping Name="Legal_Entities">
             <EntityTypeMapping TypeName="DatabaseModel.Legal_Entity">
               <MappingFragment StoreEntitySet="Legal Entity">
+                <ScalarProperty Name="INN" ColumnName="INN" />
+                <ScalarProperty Name="OKPO" ColumnName="OKPO" />
+                <ScalarProperty Name="OKONX" ColumnName="OKONX" />
+                <ScalarProperty Name="Bank_Name" ColumnName="Bank Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Region" ColumnName="Region" />
-                <ScalarProperty Name="City" ColumnName="City" />
                 <ScalarProperty Name="Legal_Adress" ColumnName="Legal Adress" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

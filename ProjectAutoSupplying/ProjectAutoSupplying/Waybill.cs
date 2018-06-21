@@ -19,12 +19,12 @@ namespace ProjectAutoSupplying
             InitializeComponent();
             buttonSubmit.Click += OnSubmitWayBill;
             buttonAddCargo.Click += OnAddCargo;
-
             cargosView.CellMouseClick += OnSelectCargo;
         }
 
-        public Waybill(int index) : this()
+        public Waybill(int index)
         {
+            InitializeComponent();
             buttonSubmit.Text = "Изменить";
             
             var waybill = db.WayBills.Find(index);

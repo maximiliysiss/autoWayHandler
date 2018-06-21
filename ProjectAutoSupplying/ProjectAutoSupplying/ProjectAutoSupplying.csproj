@@ -78,6 +78,12 @@
     <Compile Include="CreateCarTrailer.Designer.cs">
       <DependentUpon>CreateCarTrailer.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateContract.Designer.cs">
+      <DependentUpon>CreateContract.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateDowntime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,12 @@
     <Compile Include="CreateFuel.Designer.cs">
       <DependentUpon>CreateFuel.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateLegal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateLegal.Designer.cs">
+      <DependentUpon>CreateLegal.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainFrame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,9 +112,6 @@
       <DependentUpon>MainModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Additional_operation__load_unload_.cs">
-      <DependentUpon>MainModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Bank.cs">
       <DependentUpon>MainModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Cargo.cs">
@@ -215,11 +224,17 @@
     <EmbeddedResource Include="CreateCarTrailer.resx">
       <DependentUpon>CreateCarTrailer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateContract.resx">
+      <DependentUpon>CreateContract.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateDowntime.resx">
       <DependentUpon>CreateDowntime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateFuel.resx">
       <DependentUpon>CreateFuel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateLegal.resx">
+      <DependentUpon>CreateLegal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
