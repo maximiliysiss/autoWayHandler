@@ -33,7 +33,7 @@ namespace ProjectAutoSupplying
                 LoadBill(waybill);
             }
 
-            cargosView.DataSource = from cargoInfo in db.Information_about_the_cargoes
+            cargosView.DataSource = (from cargoInfo in db.Information_about_the_cargoes
                                     where cargoInfo.Waybill_ID == index
                                     select new
                                     {
@@ -42,7 +42,7 @@ namespace ProjectAutoSupplying
                                         Ед = cargoInfo.Cargo.Units,
                                         Количество = cargoInfo.Count,
                                         Масса = cargoInfo.Mass
-                                    };
+                                    }).ToList();
         }
 
         private void LoadBill(Models.WayBill wayBill)
@@ -55,45 +55,40 @@ namespace ProjectAutoSupplying
 
             try
             {
-                LoadLoadingUnloadingInfo(wayBill.Loading_and_unloading_operations.First());
+                TryFillLoadingUnloadingInfo(wayBill.Loading_and_unloading_operations.First());
             }
             catch (Exception)
             {
-                MessageBox.Show("Невозможно отобразить данные о накладной");
+                MessageBox.Show("Невозможно отобразить все данные о накладной");
             }
 
         }
 
-        private void LoadLoadingUnloadingInfo(Models.Loading_and_unloading_operation luInfo)
+        private Models.Loading_and_unloading_operation LoadLoadingUnloadingInfo()
         {
-            loadExecBox.Text = luInfo.Executor;
-            loadingCase.Text = luInfo.Method.First().ToString();
+            double lArrival = double.Parse(loadingArrivalTime.Text);
+            double lDeparture = double.Parse(loadingDeparureTime.Text);
 
-
-            loadingArrivalTime.Text = luInfo.Additional_operation__load_unload_.First()
-                .Additional_Operation.Time.ToString();
-            
+            var loadingOperation = new Models.Loading_and_unloading_operation()
+            {
+                Operation = "Loading",
+                Method = loadingCase.Text,
+                Arrive_time = TimeSpan.FromMinutes(lArrival),
+                Departure_time = TimeSpan.FromMinutes(lDeparture)
+            };
+            return loadingOperation;
         }
 
         private void OnSubmitWayBill(object sender, EventArgs e)
         {
             var bill = LoadHeaderInfo();
             var cargoInfo = LoadCargoInfo();
+            var luOperations = LoadLoadingUnloadingInfo();
 
             bill.Information_about_the_cargo.Add(cargoInfo);
-        }
+            bill.Loading_and_unloading_operations.Add(luOperations);
 
-        private Models.WayBill LoadHeaderInfo()
-        {
-            Models.WayBill bill = new Models.WayBill()
-            {
-                AutoEnterprise = autoEnterpriseBox.Text,
-                Shipper = cargoSupplierBox.Text,
-
-
-            };
-
-            return bill;
+            db.SaveChanges();
         }
 
         private void OnAddCargo(object sender, EventArgs e)
@@ -106,10 +101,31 @@ namespace ProjectAutoSupplying
 
             Models.Information_about_the_cargo cargoInfo = new Models.Information_about_the_cargo
             {
-
+                Count = int.Parse(countBox.Text),
+                Mass = int.Parse(weightBox.Text),
+                Nomenclature_code = codeBox.Text,
+                Preisc__position = prescBox.Text,
+                Pack_kind =packageTypeBox.Text,
+                Documents_count = int.Parse(docsBox.Text),
+                Mass_determination_method = weightDetermCaseBox.Text,
+                Price = int.Parse(priceBox.Text)
             };
 
+            cargo.Information_about_the_cargo.Add(cargoInfo);
             db.SaveChanges();
+        }
+
+        private Models.WayBill LoadHeaderInfo()
+        {
+            Models.WayBill bill = new Models.WayBill()
+            {
+                AutoEnterprise = autoEnterpriseBox.Text,
+                Shipper = cargoSupplierBox.Text,
+                Redirect = cargoReceiverBox.Text,
+                WayNumber = billNameBox.Text
+            };
+
+            return bill;
         }
 
         private Models.Information_about_the_cargo LoadCargoInfo()
@@ -142,6 +158,14 @@ namespace ProjectAutoSupplying
          
         }
 
+        private void TryFillLoadingUnloadingInfo(Models.Loading_and_unloading_operation lu)
+        {
+            loadingCase.Text = lu.Method;
+            loadingArrivalTime.Text = lu.Arrive_time.TotalHours.ToString();
+            loadingDeparureTime.Text = lu.Departure_time.TotalHours.ToString();
+           
+        }
+
         private void TryFillCargoInfo(Models.Information_about_the_cargo cargoInfo)
         {
             cargoNameBox.Text = cargoInfo.Cargo.Name;
@@ -155,7 +179,5 @@ namespace ProjectAutoSupplying
             priceBox.Text = cargoInfo.Price.ToString();
             countBox.Text = cargoInfo.Count.ToString();
         }
-
-
     }
 }
