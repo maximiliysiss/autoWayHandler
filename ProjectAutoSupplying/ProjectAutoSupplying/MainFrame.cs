@@ -93,6 +93,10 @@ namespace ProjectAutoSupplying
                     selectedCar = null;
                     break;
                 case TypeClear.Downtime:
+                    nameTextBoxDownTime.Text = "";
+                    beginDateTimePickerDownTime.Value = DateTime.Now;
+                    endDateTimePickerDownTime.Value = DateTime.Now;
+                    codeTextBoxDownTime.Text = "";
                     break;
                 case TypeClear.Driver:
                     textBox26.Text = "";
@@ -105,6 +109,7 @@ namespace ProjectAutoSupplying
                     selectedDriver = null;
                     break;
                 case TypeClear.Fuel:
+                    nameTextBoxFuel.Text = numberTextBoxFuel.Text = priceTextBoxFuel.Text = "";
                     break;
             }
         }
@@ -295,6 +300,72 @@ namespace ProjectAutoSupplying
                 return;
             Waybill waybill = new Waybill(int.Parse(dataGridView21.SelectedCells[0].Value.ToString()));
             waybill.ShowDialog();
+        }
+
+        private void dataGridView9_DoubleClick(object sender, EventArgs e)
+        {
+            CreateDowntime createDowntime = new CreateDowntime();
+            createDowntime.ShowDialog();
+            ReloadDownTimesData();
+        }
+
+        private void changeButtonDownTime_Click(object sender, EventArgs e)
+        {
+            if (nameTextBoxDownTime.Text.Trim().Length == 0 || codeTextBoxDownTime.Text.Trim().Length == 0 ||
+                wayListComboBoxDownTime.SelectedIndex == -1)
+                return;
+            var id = int.Parse(dataGridView9.SelectedCells[0].Value.ToString());
+            var elem = db.DownTime_on_Lines.Where(x => x.Id == id).First();
+            elem.Name = nameTextBoxDownTime.Text;
+            elem.Start_time = beginDateTimePickerDownTime.Value;
+            elem.End_time = endDateTimePickerDownTime.Value;
+            elem.Code = codeTextBoxDownTime.Text;
+            elem.WayList_ID = int.Parse(wayListComboBoxDownTime.SelectedItem.ToString());
+            db.Entry(elem).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            ReloadDownTimesData();
+            ClearForm(TypeClear.Downtime);
+        }
+
+        private void dataGridView9_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var id = int.Parse(dataGridView9.SelectedCells[0].Value.ToString());
+            var elem = db.DownTime_on_Lines.Where(x => x.Id == id).First();
+            nameTextBoxDownTime.Text = elem.Name;
+            beginDateTimePickerDownTime.Value = elem.Start_time;
+            endDateTimePickerDownTime.Value = elem.End_time;
+            wayListComboBoxDownTime.DataSource = db.WayLists.Select(x => x.Id).ToList();
+            wayListComboBoxDownTime.SelectedItem = elem.Id.ToString();
+            codeTextBoxDownTime.Text = elem.Code;
+        }
+
+        private void dataGridView10_DoubleClick(object sender, EventArgs e)
+        {
+            CreateFuel createFuel = new CreateFuel();
+            createFuel.ShowDialog();
+            ReloadFuelData();
+        }
+
+        private void dataGridView10_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var id = int.Parse(dataGridView10.SelectedCells[0].Value.ToString());
+            var elem = db.Fuels.Where(x => x.Id == id).First();
+            nameTextBoxFuel.Text = elem.Name;
+            numberTextBoxFuel.Text = elem.Number;
+            priceTextBoxFuel.Text = elem.Price.ToString();
+        }
+
+        private void changeButtonFuel_Click(object sender, EventArgs e)
+        {
+            var id = int.Parse(dataGridView10.SelectedCells[0].Value.ToString());
+            var elem = db.Fuels.Where(x => x.Id == id).First();
+            elem.Name = nameTextBoxFuel.Text;
+            elem.Price = double.Parse(priceTextBoxFuel.Text);
+            elem.Number = numberTextBoxFuel.Text;
+            db.Entry(elem).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            ReloadFuelData();
+            ClearForm(TypeClear.Fuel);
         }
     }
 }

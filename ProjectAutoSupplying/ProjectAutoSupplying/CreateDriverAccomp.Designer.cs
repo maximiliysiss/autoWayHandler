@@ -188,7 +188,7 @@
             this.certificateTextBox.Size = new System.Drawing.Size(100, 20);
             this.certificateTextBox.TabIndex = 16;
             // 
-            // Form4
+            // CreateDriverAccomp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -210,7 +210,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.startTime);
             this.Controls.Add(this.nameTextBox);
-            this.Name = "Form4";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.Name = "CreateDriverAccomp";
             this.Text = "Form4";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Additional Operation">
           <Key>
             <PropertyRef Name="Id" />
@@ -21,6 +21,15 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Additional Operation ID" Type="int" Nullable="false" />
           <Property Name="Load and Unload operation ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Bank">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Adress" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BIK" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Car/Trailer">
           <Key>
@@ -179,7 +188,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Operation" Type="varchar(max)" Nullable="false" />
+          <Property Name="Operation ID" Type="int" Nullable="false" />
           <Property Name="Executor" Type="varchar(max)" Nullable="false" />
           <Property Name="Method" Type="varchar(max)" Nullable="false" />
           <Property Name="Arrive time" Type="time" Precision="7" Nullable="false" />
@@ -202,6 +211,13 @@
           <Property Name="Work Time DvigFe." Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Operation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OperationLoadUnloadEtc">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -279,7 +295,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Contract ID" Type="int" Nullable="false" />
           <Property Name="Arrive time" Type="time" Precision="7" Nullable="false" />
-          <Property Name="Trip ID" Type="int" />
+          <Property Name="Trip ID" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_Additional operation (load/unload)_Additional_Opr">
           <End Role="Additional Operation" Type="Self.Additional Operation" Multiplicity="1" />
@@ -473,6 +489,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Loading and unloading operations_Operation">
+          <End Role="OperationLoadUnloadEtc" Type="Self.OperationLoadUnloadEtc" Multiplicity="1" />
+          <End Role="Loading and unloading operations" Type="Self.Loading and unloading operations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OperationLoadUnloadEtc">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Loading and unloading operations">
+              <PropertyRef Name="Operation ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Loading and unloading operations_Waybill">
           <End Role="WayBill" Type="Self.WayBill" Multiplicity="1" />
           <End Role="Loading and unloading operations" Type="Self.Loading and unloading operations" Multiplicity="*" />
@@ -602,7 +630,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_WayList_Trip">
-          <End Role="Trip" Type="Self.Trip" Multiplicity="0..1" />
+          <End Role="Trip" Type="Self.Trip" Multiplicity="1" />
           <End Role="WayList" Type="Self.WayList" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Trip">
@@ -616,6 +644,7 @@
         <EntityContainer Name="DatabaseModelStoreContainer">
           <EntitySet Name="Additional Operation" EntityType="Self.Additional Operation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Additional operation (load/unload)" EntityType="Self.Additional operation (load/unload)" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bank" EntityType="Self.Bank" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Car/Trailer" EntityType="Self.Car/Trailer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Car/Tralers in WayList" EntityType="Self.Car/Tralers in WayList" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cargo" EntityType="Self.Cargo" Schema="dbo" store:Type="Tables" />
@@ -632,6 +661,7 @@
           <EntitySet Name="Loading and unloading operations" EntityType="Self.Loading and unloading operations" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Moving Fuel" EntityType="Self.Moving Fuel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Operation" EntityType="Self.Operation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OperationLoadUnloadEtc" EntityType="Self.OperationLoadUnloadEtc" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Other Information" EntityType="Self.Other Information" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Transport Type" EntityType="Self.Transport Type" Schema="dbo" store:Type="Tables" />
@@ -703,6 +733,10 @@
             <End Role="WayBill" EntitySet="WayBill" />
             <End Role="Information about the cargo" EntitySet="Information about the cargo" />
           </AssociationSet>
+          <AssociationSet Name="FK_Loading and unloading operations_Operation" Association="Self.FK_Loading and unloading operations_Operation">
+            <End Role="OperationLoadUnloadEtc" EntitySet="OperationLoadUnloadEtc" />
+            <End Role="Loading and unloading operations" EntitySet="Loading and unloading operations" />
+          </AssociationSet>
           <AssociationSet Name="FK_Loading and unloading operations_Waybill" Association="Self.FK_Loading and unloading operations_Waybill">
             <End Role="WayBill" EntitySet="WayBill" />
             <End Role="Loading and unloading operations" EntitySet="Loading and unloading operations" />
@@ -748,7 +782,8 @@
             <End Role="WayList" EntitySet="WayList" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -771,6 +806,15 @@
           <Property Name="Load_and_Unload_operation_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Additional_Operation" Relationship="Self.FK_Additional_operation__load_unload__Additional_Opr" FromRole="Additional_operation__load_unload_" ToRole="Additional_Operation" />
           <NavigationProperty Name="Loading_and_unloading_operations" Relationship="Self.FK_Additional_operation__load_unload__Load_And_Unload" FromRole="Additional_operation__load_unload_" ToRole="Loading_and_unloading_operations" />
+        </EntityType>
+        <EntityType Name="Bank">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BIK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="Car_Trailer">
           <Key>
@@ -955,7 +999,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Operation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Operation_ID" Type="Int32" Nullable="false" />
           <Property Name="Executor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Method" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Arrive_time" Type="Time" Nullable="false" Precision="7" />
@@ -963,6 +1007,7 @@
           <Property Name="Downtime" Type="Time" Nullable="false" Precision="7" />
           <Property Name="Waybill_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Additional_operation__load_unload_" Relationship="Self.FK_Additional_operation__load_unload__Load_And_Unload" FromRole="Loading_and_unloading_operations" ToRole="Additional_operation__load_unload_" />
+          <NavigationProperty Name="OperationLoadUnloadEtc" Relationship="Self.FK_Loading_and_unloading_operations_Operation" FromRole="Loading_and_unloading_operations" ToRole="OperationLoadUnloadEtc" />
           <NavigationProperty Name="WayBill" Relationship="Self.FK_Loading_and_unloading_operations_Waybill" FromRole="Loading_and_unloading_operations" ToRole="WayBill" />
         </EntityType>
         <EntityType Name="Moving_Fuel">
@@ -988,6 +1033,14 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Driver_Work" Relationship="Self.FK_Driver_Work_Operation" FromRole="Operation" ToRole="Driver_Work" />
+        </EntityType>
+        <EntityType Name="OperationLoadUnloadEtc">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Loading_and_unloading_operations" Relationship="Self.FK_Loading_and_unloading_operations_Operation" FromRole="OperationLoadUnloadEtc" ToRole="Loading_and_unloading_operations" />
         </EntityType>
         <EntityType Name="Other_Information">
           <Key>
@@ -1019,6 +1072,16 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Car_Trailer" Relationship="Self.FK_Car_Trailer_Type" FromRole="Transport_Type" ToRole="Car_Trailer" />
+        </EntityType>
+        <EntityType Name="Trip">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="From" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="To" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Distance" Type="Double" Nullable="false" />
+          <NavigationProperty Name="WayLists" Relationship="Self.FK_WayList_Trip" FromRole="Trip" ToRole="WayList" />
         </EntityType>
         <EntityType Name="WayBill">
           <Key>
@@ -1064,13 +1127,13 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Contract_ID" Type="Int32" Nullable="false" />
           <Property Name="Arrive_time" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="Trip_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Car_Tralers_in_WayList" Relationship="Self.FK_Car_Tralers_in_WayList_WayList" FromRole="WayList" ToRole="Car_Tralers_in_WayList" />
           <NavigationProperty Name="Contract" Relationship="Self.FK_WayList_Contract" FromRole="WayList" ToRole="Contract" />
           <NavigationProperty Name="DownTime_on_Line" Relationship="Self.FK_DownTime_on_Line_WayList" FromRole="WayList" ToRole="DownTime_on_Line" />
           <NavigationProperty Name="Driver_Work" Relationship="Self.FK_Driver_Work_Way_List" FromRole="WayList" ToRole="Driver_Work" />
           <NavigationProperty Name="Driver_Accompanying_in_WayList" Relationship="Self.FK_Driver_Accompanying_in_WayList_WayList" FromRole="WayList" ToRole="Driver_Accompanying_in_WayList" />
-          <Property Name="Trip_ID" Type="Int32" />
-          <NavigationProperty Name="Trip" Relationship="DatabaseModel.FK_WayList_Trip" FromRole="WayList" ToRole="Trip" />
+          <NavigationProperty Name="Trip" Relationship="Self.FK_WayList_Trip" FromRole="WayList" ToRole="Trip" />
         </EntityType>
         <Association Name="FK_Additional_operation__load_unload__Additional_Opr">
           <End Role="Additional_Operation" Type="Self.Additional_Operation" Multiplicity="1" />
@@ -1121,7 +1184,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_WayBill_Car">
-          <End Role="Car_Trailer" Type="Self.Car_Trailer" Multiplicity="1" />
+          <End Role="Car_Trailer" Type="Self.Car_Trailer" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Car_Trailer">
@@ -1205,7 +1270,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_WayBill_Costing">
-          <End Role="Costing" Type="Self.Costing" Multiplicity="1" />
+          <End Role="Costing" Type="Self.Costing" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Costing">
@@ -1301,7 +1368,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_WayBill_Driver">
-          <End Role="Driver_Accompanying" Type="Self.Driver_Accompanying" Multiplicity="1" />
+          <End Role="Driver_Accompanying" Type="Self.Driver_Accompanying" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Driver_Accompanying">
@@ -1348,6 +1417,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Loading_and_unloading_operations_Operation">
+          <End Role="OperationLoadUnloadEtc" Type="Self.OperationLoadUnloadEtc" Multiplicity="1" />
+          <End Role="Loading_and_unloading_operations" Type="Self.Loading_and_unloading_operation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OperationLoadUnloadEtc">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Loading_and_unloading_operations">
+              <PropertyRef Name="Operation_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Loading_and_unloading_operations_Waybill">
           <End Role="WayBill" Type="Self.WayBill" Multiplicity="1" />
           <End Role="Loading_and_unloading_operations" Type="Self.Loading_and_unloading_operation" Multiplicity="*" />
@@ -1361,7 +1442,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_WayBill_Other_Information">
-          <End Role="Other_Information" Type="Self.Other_Information" Multiplicity="1" />
+          <End Role="Other_Information" Type="Self.Other_Information" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="WayBill" Type="Self.WayBill" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Other_Information">
@@ -1369,6 +1452,18 @@
             </Principal>
             <Dependent Role="WayBill">
               <PropertyRef Name="Other_Information_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WayList_Trip">
+          <End Role="Trip" Type="Self.Trip" Multiplicity="1" />
+          <End Role="WayList" Type="Self.WayList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trip">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WayList">
+              <PropertyRef Name="Trip_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1387,6 +1482,7 @@
         <EntityContainer Name="DatabaseEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Additional_Operations" EntityType="Self.Additional_Operation" />
           <EntitySet Name="Additional_operation__load_unload_" EntityType="Self.Additional_operation__load_unload_" />
+          <EntitySet Name="Banks" EntityType="Self.Bank" />
           <EntitySet Name="Car_Trailer" EntityType="Self.Car_Trailer" />
           <EntitySet Name="Car_Tralers_in_WayList" EntityType="Self.Car_Tralers_in_WayList" />
           <EntitySet Name="Cargoes" EntityType="Self.Cargo" />
@@ -1403,9 +1499,11 @@
           <EntitySet Name="Loading_and_unloading_operations" EntityType="Self.Loading_and_unloading_operation" />
           <EntitySet Name="Moving_Fuels" EntityType="Self.Moving_Fuel" />
           <EntitySet Name="Operations" EntityType="Self.Operation" />
+          <EntitySet Name="OperationLoadUnloadEtcs" EntityType="Self.OperationLoadUnloadEtc" />
           <EntitySet Name="Other_Information" EntityType="Self.Other_Information" />
           <EntitySet Name="Roles" EntityType="Self.Role" />
           <EntitySet Name="Transport_Types" EntityType="Self.Transport_Type" />
+          <EntitySet Name="Trips" EntityType="Self.Trip" />
           <EntitySet Name="WayBills" EntityType="Self.WayBill" />
           <EntitySet Name="WayBills_In_Contracts" EntityType="Self.WayBills_In_Contract" />
           <EntitySet Name="WayLists" EntityType="Self.WayList" />
@@ -1501,6 +1599,10 @@
             <End Role="WayBill" EntitySet="WayBills" />
             <End Role="Information_about_the_cargo" EntitySet="Information_about_the_cargoes" />
           </AssociationSet>
+          <AssociationSet Name="FK_Loading_and_unloading_operations_Operation" Association="Self.FK_Loading_and_unloading_operations_Operation">
+            <End Role="OperationLoadUnloadEtc" EntitySet="OperationLoadUnloadEtcs" />
+            <End Role="Loading_and_unloading_operations" EntitySet="Loading_and_unloading_operations" />
+          </AssociationSet>
           <AssociationSet Name="FK_Loading_and_unloading_operations_Waybill" Association="Self.FK_Loading_and_unloading_operations_Waybill">
             <End Role="WayBill" EntitySet="WayBills" />
             <End Role="Loading_and_unloading_operations" EntitySet="Loading_and_unloading_operations" />
@@ -1509,38 +1611,15 @@
             <End Role="Other_Information" EntitySet="Other_Information" />
             <End Role="WayBill" EntitySet="WayBills" />
           </AssociationSet>
+          <AssociationSet Name="FK_WayList_Trip" Association="Self.FK_WayList_Trip">
+            <End Role="Trip" EntitySet="Trips" />
+            <End Role="WayList" EntitySet="WayLists" />
+          </AssociationSet>
           <AssociationSet Name="FK_WayBills_In_Contract_Waybill" Association="Self.FK_WayBills_In_Contract_Waybill">
             <End Role="WayBill" EntitySet="WayBills" />
             <End Role="WayBills_In_Contract" EntitySet="WayBills_In_Contracts" />
           </AssociationSet>
-          <EntitySet Name="Trips" EntityType="DatabaseModel.Trip" />
-          <AssociationSet Name="FK_WayList_Trip" Association="DatabaseModel.FK_WayList_Trip">
-            <End Role="Trip" EntitySet="Trips" />
-            <End Role="WayList" EntitySet="WayLists" />
-          </AssociationSet>
         </EntityContainer>
-        <EntityType Name="Trip">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="From" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="To" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Distance" Type="Double" Nullable="false" />
-          <NavigationProperty Name="WayLists" Relationship="DatabaseModel.FK_WayList_Trip" FromRole="Trip" ToRole="WayList" />
-        </EntityType>
-        <Association Name="FK_WayList_Trip">
-          <End Type="DatabaseModel.Trip" Role="Trip" Multiplicity="0..1" />
-          <End Type="DatabaseModel.WayList" Role="WayList" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Trip">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="WayList">
-              <PropertyRef Name="Trip_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1563,6 +1642,16 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Additional_Operation_ID" ColumnName="Additional Operation ID" />
                 <ScalarProperty Name="Load_and_Unload_operation_ID" ColumnName="Load and Unload operation ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Banks">
+            <EntityTypeMapping TypeName="DatabaseModel.Bank">
+              <MappingFragment StoreEntitySet="Bank">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="BIK" ColumnName="BIK" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1735,7 +1824,7 @@
             <EntityTypeMapping TypeName="DatabaseModel.Loading_and_unloading_operation">
               <MappingFragment StoreEntitySet="Loading and unloading operations">
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Operation" ColumnName="Operation" />
+                <ScalarProperty Name="Operation_ID" ColumnName="Operation ID" />
                 <ScalarProperty Name="Executor" ColumnName="Executor" />
                 <ScalarProperty Name="Method" ColumnName="Method" />
                 <ScalarProperty Name="Arrive_time" ColumnName="Arrive time" />
@@ -1768,6 +1857,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="OperationLoadUnloadEtcs">
+            <EntityTypeMapping TypeName="DatabaseModel.OperationLoadUnloadEtc">
+              <MappingFragment StoreEntitySet="OperationLoadUnloadEtc">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Other_Information">
             <EntityTypeMapping TypeName="DatabaseModel.Other_Information">
               <MappingFragment StoreEntitySet="Other Information">
@@ -1795,6 +1892,16 @@
               <MappingFragment StoreEntitySet="Transport Type">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trips">
+            <EntityTypeMapping TypeName="DatabaseModel.Trip">
+              <MappingFragment StoreEntitySet="Trip">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="From" ColumnName="From" />
+                <ScalarProperty Name="To" ColumnName="To" />
+                <ScalarProperty Name="Distance" ColumnName="Distance" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1831,20 +1938,10 @@
           <EntitySetMapping Name="WayLists">
             <EntityTypeMapping TypeName="DatabaseModel.WayList">
               <MappingFragment StoreEntitySet="WayList">
-                <ScalarProperty Name="Trip_ID" ColumnName="Trip ID" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Contract_ID" ColumnName="Contract ID" />
                 <ScalarProperty Name="Arrive_time" ColumnName="Arrive time" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Trips">
-            <EntityTypeMapping TypeName="DatabaseModel.Trip">
-              <MappingFragment StoreEntitySet="Trip">
-                <ScalarProperty Name="Distance" ColumnName="Distance" />
-                <ScalarProperty Name="To" ColumnName="To" />
-                <ScalarProperty Name="From" ColumnName="From" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Trip_ID" ColumnName="Trip ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

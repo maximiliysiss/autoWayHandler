@@ -128,6 +128,8 @@
             this.Controls.Add(this.typeComboBox);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "CreateCarTrailer";
             this.Text = "CreateCarTrailer";
             this.ResumeLayout(false);

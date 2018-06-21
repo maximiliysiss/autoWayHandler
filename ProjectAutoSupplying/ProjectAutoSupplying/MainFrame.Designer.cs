@@ -246,6 +246,24 @@
             this.textBox40 = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
+            this.nameTextBoxDownTime = new System.Windows.Forms.TextBox();
+            this.codeTextBoxDownTime = new System.Windows.Forms.TextBox();
+            this.beginDateTimePickerDownTime = new System.Windows.Forms.DateTimePicker();
+            this.endDateTimePickerDownTime = new System.Windows.Forms.DateTimePicker();
+            this.wayListComboBoxDownTime = new System.Windows.Forms.ComboBox();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.changeButtonDownTime = new System.Windows.Forms.Button();
+            this.nameTextBoxFuel = new System.Windows.Forms.TextBox();
+            this.numberTextBoxFuel = new System.Windows.Forms.TextBox();
+            this.priceTextBoxFuel = new System.Windows.Forms.TextBox();
+            this.changeButtonFuel = new System.Windows.Forms.Button();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
             this.tabControlUpper.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControlCatalogueInherit.SuspendLayout();
@@ -1304,6 +1322,17 @@
             // 
             // tabPage14
             // 
+            this.tabPage14.Controls.Add(this.changeButtonDownTime);
+            this.tabPage14.Controls.Add(this.label64);
+            this.tabPage14.Controls.Add(this.label63);
+            this.tabPage14.Controls.Add(this.label62);
+            this.tabPage14.Controls.Add(this.label61);
+            this.tabPage14.Controls.Add(this.label60);
+            this.tabPage14.Controls.Add(this.wayListComboBoxDownTime);
+            this.tabPage14.Controls.Add(this.endDateTimePickerDownTime);
+            this.tabPage14.Controls.Add(this.beginDateTimePickerDownTime);
+            this.tabPage14.Controls.Add(this.codeTextBoxDownTime);
+            this.tabPage14.Controls.Add(this.nameTextBoxDownTime);
             this.tabPage14.Controls.Add(this.dataGridView9);
             this.tabPage14.Location = new System.Drawing.Point(4, 22);
             this.tabPage14.Name = "tabPage14";
@@ -1321,11 +1350,21 @@
             this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView9.Location = new System.Drawing.Point(16, 6);
             this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.Size = new System.Drawing.Size(721, 304);
+            this.dataGridView9.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView9.Size = new System.Drawing.Size(721, 220);
             this.dataGridView9.TabIndex = 0;
+            this.dataGridView9.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView9_CellClick);
+            this.dataGridView9.DoubleClick += new System.EventHandler(this.dataGridView9_DoubleClick);
             // 
             // tabPage15
             // 
+            this.tabPage15.Controls.Add(this.label67);
+            this.tabPage15.Controls.Add(this.label66);
+            this.tabPage15.Controls.Add(this.label65);
+            this.tabPage15.Controls.Add(this.changeButtonFuel);
+            this.tabPage15.Controls.Add(this.priceTextBoxFuel);
+            this.tabPage15.Controls.Add(this.numberTextBoxFuel);
+            this.tabPage15.Controls.Add(this.nameTextBoxFuel);
             this.tabPage15.Controls.Add(this.dataGridView10);
             this.tabPage15.Location = new System.Drawing.Point(4, 22);
             this.tabPage15.Name = "tabPage15";
@@ -1343,8 +1382,11 @@
             this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView10.Location = new System.Drawing.Point(16, 6);
             this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.Size = new System.Drawing.Size(722, 304);
+            this.dataGridView10.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView10.Size = new System.Drawing.Size(722, 239);
             this.dataGridView10.TabIndex = 0;
+            this.dataGridView10.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView10_CellClick);
+            this.dataGridView10.DoubleClick += new System.EventHandler(this.dataGridView10_DoubleClick);
             // 
             // tabPage2
             // 
@@ -1645,7 +1687,7 @@
             this.tabPage20.Location = new System.Drawing.Point(4, 22);
             this.tabPage20.Name = "tabPage20";
             this.tabPage20.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage20.Size = new System.Drawing.Size(761, 312);
+            this.tabPage20.Size = new System.Drawing.Size(761, 340);
             this.tabPage20.TabIndex = 0;
             this.tabPage20.Text = "Ведомость по водителю";
             this.tabPage20.UseVisualStyleBackColor = true;
@@ -1658,7 +1700,7 @@
             this.dataGridView19.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView19.Location = new System.Drawing.Point(17, 112);
             this.dataGridView19.Name = "dataGridView19";
-            this.dataGridView19.Size = new System.Drawing.Size(727, 194);
+            this.dataGridView19.Size = new System.Drawing.Size(727, 222);
             this.dataGridView19.TabIndex = 15;
             // 
             // groupBox21
@@ -1721,7 +1763,7 @@
             this.tabPage21.Location = new System.Drawing.Point(4, 22);
             this.tabPage21.Name = "tabPage21";
             this.tabPage21.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage21.Size = new System.Drawing.Size(761, 312);
+            this.tabPage21.Size = new System.Drawing.Size(761, 340);
             this.tabPage21.TabIndex = 1;
             this.tabPage21.Text = "Ведомость по автомобилю";
             this.tabPage21.UseVisualStyleBackColor = true;
@@ -1734,7 +1776,7 @@
             this.dataGridView20.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView20.Location = new System.Drawing.Point(17, 112);
             this.dataGridView20.Name = "dataGridView20";
-            this.dataGridView20.Size = new System.Drawing.Size(727, 194);
+            this.dataGridView20.Size = new System.Drawing.Size(727, 222);
             this.dataGridView20.TabIndex = 15;
             // 
             // groupBox22
@@ -2625,12 +2667,163 @@
             this.label45.Size = new System.Drawing.Size(79, 17);
             this.label45.TabIndex = 19;
             // 
+            // nameTextBoxDownTime
+            // 
+            this.nameTextBoxDownTime.Location = new System.Drawing.Point(16, 252);
+            this.nameTextBoxDownTime.Name = "nameTextBoxDownTime";
+            this.nameTextBoxDownTime.Size = new System.Drawing.Size(123, 20);
+            this.nameTextBoxDownTime.TabIndex = 1;
+            // 
+            // codeTextBoxDownTime
+            // 
+            this.codeTextBoxDownTime.Location = new System.Drawing.Point(173, 252);
+            this.codeTextBoxDownTime.Name = "codeTextBoxDownTime";
+            this.codeTextBoxDownTime.Size = new System.Drawing.Size(122, 20);
+            this.codeTextBoxDownTime.TabIndex = 2;
+            // 
+            // beginDateTimePickerDownTime
+            // 
+            this.beginDateTimePickerDownTime.Location = new System.Drawing.Point(326, 252);
+            this.beginDateTimePickerDownTime.Name = "beginDateTimePickerDownTime";
+            this.beginDateTimePickerDownTime.Size = new System.Drawing.Size(184, 20);
+            this.beginDateTimePickerDownTime.TabIndex = 3;
+            // 
+            // endDateTimePickerDownTime
+            // 
+            this.endDateTimePickerDownTime.Location = new System.Drawing.Point(532, 252);
+            this.endDateTimePickerDownTime.Name = "endDateTimePickerDownTime";
+            this.endDateTimePickerDownTime.Size = new System.Drawing.Size(186, 20);
+            this.endDateTimePickerDownTime.TabIndex = 4;
+            // 
+            // wayListComboBoxDownTime
+            // 
+            this.wayListComboBoxDownTime.FormattingEnabled = true;
+            this.wayListComboBoxDownTime.Location = new System.Drawing.Point(326, 278);
+            this.wayListComboBoxDownTime.Name = "wayListComboBoxDownTime";
+            this.wayListComboBoxDownTime.Size = new System.Drawing.Size(184, 21);
+            this.wayListComboBoxDownTime.TabIndex = 5;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(13, 236);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(83, 13);
+            this.label60.TabIndex = 6;
+            this.label60.Text = "Наименование";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(170, 236);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(26, 13);
+            this.label61.TabIndex = 7;
+            this.label61.Text = "Код";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(323, 236);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(44, 13);
+            this.label62.TabIndex = 8;
+            this.label62.Text = "Начало";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(529, 236);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(62, 13);
+            this.label63.TabIndex = 9;
+            this.label63.Text = "Окончание";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(245, 281);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(75, 13);
+            this.label64.TabIndex = 10;
+            this.label64.Text = "Путевой лист";
+            // 
+            // changeButtonDownTime
+            // 
+            this.changeButtonDownTime.Location = new System.Drawing.Point(532, 276);
+            this.changeButtonDownTime.Name = "changeButtonDownTime";
+            this.changeButtonDownTime.Size = new System.Drawing.Size(185, 23);
+            this.changeButtonDownTime.TabIndex = 11;
+            this.changeButtonDownTime.Text = "Изменить";
+            this.changeButtonDownTime.UseVisualStyleBackColor = true;
+            this.changeButtonDownTime.Click += new System.EventHandler(this.changeButtonDownTime_Click);
+            // 
+            // nameTextBoxFuel
+            // 
+            this.nameTextBoxFuel.Location = new System.Drawing.Point(16, 266);
+            this.nameTextBoxFuel.Name = "nameTextBoxFuel";
+            this.nameTextBoxFuel.Size = new System.Drawing.Size(184, 20);
+            this.nameTextBoxFuel.TabIndex = 1;
+            // 
+            // numberTextBoxFuel
+            // 
+            this.numberTextBoxFuel.Location = new System.Drawing.Point(252, 266);
+            this.numberTextBoxFuel.Name = "numberTextBoxFuel";
+            this.numberTextBoxFuel.Size = new System.Drawing.Size(184, 20);
+            this.numberTextBoxFuel.TabIndex = 2;
+            // 
+            // priceTextBoxFuel
+            // 
+            this.priceTextBoxFuel.Location = new System.Drawing.Point(511, 266);
+            this.priceTextBoxFuel.Name = "priceTextBoxFuel";
+            this.priceTextBoxFuel.Size = new System.Drawing.Size(184, 20);
+            this.priceTextBoxFuel.TabIndex = 3;
+            // 
+            // changeButtonFuel
+            // 
+            this.changeButtonFuel.Location = new System.Drawing.Point(252, 291);
+            this.changeButtonFuel.Name = "changeButtonFuel";
+            this.changeButtonFuel.Size = new System.Drawing.Size(184, 23);
+            this.changeButtonFuel.TabIndex = 4;
+            this.changeButtonFuel.Text = "Изменить";
+            this.changeButtonFuel.UseVisualStyleBackColor = true;
+            this.changeButtonFuel.Click += new System.EventHandler(this.changeButtonFuel_Click);
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(13, 250);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(83, 13);
+            this.label65.TabIndex = 5;
+            this.label65.Text = "Наименование";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(249, 250);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(41, 13);
+            this.label66.TabIndex = 6;
+            this.label66.Text = "Номер";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(508, 250);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(33, 13);
+            this.label67.TabIndex = 7;
+            this.label67.Text = "Цена";
+            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 389);
             this.Controls.Add(this.tabControlUpper);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(790, 400);
             this.Name = "MainFrame";
             this.Text = "Управление ";
@@ -2663,8 +2856,10 @@
             this.groupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage14.ResumeLayout(false);
+            this.tabPage14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             this.tabPage15.ResumeLayout(false);
+            this.tabPage15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
@@ -2938,6 +3133,24 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.DateTimePicker endDateTimePickerDownTime;
+        private System.Windows.Forms.DateTimePicker beginDateTimePickerDownTime;
+        private System.Windows.Forms.TextBox codeTextBoxDownTime;
+        private System.Windows.Forms.TextBox nameTextBoxDownTime;
+        private System.Windows.Forms.ComboBox wayListComboBoxDownTime;
+        private System.Windows.Forms.Button changeButtonDownTime;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Button changeButtonFuel;
+        private System.Windows.Forms.TextBox priceTextBoxFuel;
+        private System.Windows.Forms.TextBox numberTextBoxFuel;
+        private System.Windows.Forms.TextBox nameTextBoxFuel;
     }
 }
 

@@ -33,7 +33,7 @@ namespace ProjectAutoSupplying
                 LoadBill(waybill);
             }
 
-            cargosView.DataSource = from cargoInfo in db.Information_about_the_cargoes
+            cargosView.DataSource = (from cargoInfo in db.Information_about_the_cargoes
                                     where cargoInfo.Waybill_ID == index
                                     select new
                                     {
@@ -42,7 +42,7 @@ namespace ProjectAutoSupplying
                                         Ед = cargoInfo.Cargo.Units,
                                         Количество = cargoInfo.Count,
                                         Масса = cargoInfo.Mass
-                                    };
+                                    }).ToList();
         }
 
         private void LoadBill(Models.WayBill wayBill)
@@ -72,7 +72,6 @@ namespace ProjectAutoSupplying
 
             loadingArrivalTime.Text = luInfo.Additional_operation__load_unload_.First()
                 .Additional_Operation.Time.ToString();
-            
         }
 
         private void OnSubmitWayBill(object sender, EventArgs e)
@@ -89,8 +88,6 @@ namespace ProjectAutoSupplying
             {
                 AutoEnterprise = autoEnterpriseBox.Text,
                 Shipper = cargoSupplierBox.Text,
-
-
             };
 
             return bill;
@@ -108,7 +105,6 @@ namespace ProjectAutoSupplying
             {
 
             };
-
             db.SaveChanges();
         }
 
