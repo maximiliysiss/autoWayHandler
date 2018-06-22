@@ -91,6 +91,55 @@ namespace ProjectAutoSupplying
             }).ToList();
         }
 
+        private void ReloadWayBillData()
+        {
+            dataGridView21.DataSource = (from waybill in db.WayBills
+                                         select new
+                                         {
+                                             ID = waybill.Id,
+                                             Автопредприятие = waybill.AutoEnterprise,
+                                             waybill.Loading_Point,
+                                             waybill.Unloading_Point,
+                                             Грузоотправитель = waybill.Shipper,
+                                             Грузополучатель = waybill.Consignee,
+                                             Машина = waybill.Car_Trailer.Name,
+                                             Водитель = waybill.Driver_Accompanying.Name,
+                                             Вид = waybill.Transport_kind
+                                         }).ToList();
+        }
+
+        private void ReloadWayListData()
+        {
+            dataGridView22.DataSource = (from waylist in db.WayLists
+                                         select new
+                                         {
+                                             ID = waylist.Id,
+                                             Прибытие = waylist.Arrive_time,
+                                             Груз = waylist.Contract.Cargo.Name,
+                                             Компания = waylist.Contract.Company,
+                                             Куда = waylist.Contract.Where_to_deliver_cargo,
+                                             Откуда = waylist.Contract.Where_to_get_cargo
+                                         }).ToList();
+        }
+
+        private void ReloadWaysAndShipping()
+        {
+            dataGridView6.DataSource = db.WaysAndShippings.Select(x => new
+            {
+                x.Id,
+                Наименование = x.Name,
+                Перевозка = x.ShippingKind.Name,
+                Круг = x.Time_Loop,
+                Дистанция = x.Distance,
+                Конечная = x.EndStation
+            }).ToList();
+        }
+
+        private void ReloadShippingKind()
+        {
+            dataGridView7.DataSource = db.ShippingKinds.Select(x => new { x.Id, x.Name }).ToList();
+        }
+
         enum TypeClear
         {
             Car, Driver, Fuel, Downtime, Contract
@@ -101,10 +150,10 @@ namespace ProjectAutoSupplying
             switch (type)
             {
                 case TypeClear.Car:
-                    textBox28.Text = "";
-                    textBox41.Text = "";
-                    textBox42.Text = "";
-                    comboBox18.SelectedIndex = 0;
+                    carTrailerNameTextBox.Text = "";
+                    carTrailerModelTextBox.Text = "";
+                    carTrailerNumberTextBox.Text = "";
+                    carTrailerTypeComboBox.SelectedIndex = 0;
                     selectedCar = null;
                     break;
                 case TypeClear.Downtime:
@@ -185,36 +234,8 @@ namespace ProjectAutoSupplying
             GetAndSetJSonInfo();
             if (File.Exists("favicon.bmp"))
                 faviconPicture.Image = (Bitmap)Image.FromFile("favicon.bmp");
-            ReloadContractData();
-            dataGridView21.DataSource = (from waybill in db.WayBills
-                                         select new
-                                         {
-                                             ID = waybill.Id,
-                                             Автопредприятие = waybill.AutoEnterprise,
-                                             waybill.Loading_Point,
-                                             waybill.Unloading_Point,
-                                             Грузоотправитель = waybill.Shipper,
-                                             Грузополучатель = waybill.Consignee,
-                                             Машина = waybill.Car_Trailer.Name,
-                                             Водитель = waybill.Driver_Accompanying.Name,
-                                             Вид = waybill.Transport_kind
-                                         }).ToList();
-            dataGridView22.DataSource = (from waylist in db.WayLists
-                                         select new
-                                         {
-                                             ID = waylist.Id,
-                                             Прибытие = waylist.Arrive_time,
-                                             Груз = waylist.Contract.Cargo.Name,
-                                             Компания = waylist.Contract.Company,
-                                             Куда = waylist.Contract.Where_to_deliver_cargo,
-                                             Откуда = waylist.Contract.Where_to_get_cargo
-                                         }).ToList();
-            this.ReloadCarsData();
-            this.ReloadDownTimesData();
-            this.ReloadDriversData();
-            this.ReloadFuelData();
             comboBox16.DataSource = (from role in db.Roles select role.Name).ToList();
-            comboBox18.DataSource = (from type in db.Transport_Types select type.Name).ToList();
+            carTrailerTypeComboBox.DataSource = (from type in db.Transport_Types select type.Name).ToList();
         }
 
         private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -256,13 +277,6 @@ namespace ProjectAutoSupplying
             this.ReloadDriversData();
         }
 
-        private void dataGridView2_DoubleClick(object sender, EventArgs e)
-        {
-            CreateCarTrailer createCarTrailer = new CreateCarTrailer();
-            createCarTrailer.ShowDialog();
-            this.ReloadCarsData();
-        }
-
         private void button10_Click(object sender, EventArgs e)
         {
             if (selectedDriver == null)
@@ -280,10 +294,10 @@ namespace ProjectAutoSupplying
             {
                 int index = int.Parse(dataGridView2.SelectedCells[0].Value.ToString());
                 var car = db.Car_Trailer.Find(index);
-                textBox28.Text = car.Name;
-                textBox41.Text = car.Model;
-                textBox42.Text = car.State_number;
-                comboBox18.Text = car.Transport_Type.Name;
+                carTrailerNameTextBox.Text = car.Name;
+                carTrailerModelTextBox.Text = car.Model;
+                carTrailerNumberTextBox.Text = car.State_number;
+                carTrailerTypeComboBox.Text = car.Transport_Type.Name;
                 selectedCar = car;
             }
             catch (Exception ex)
@@ -318,10 +332,10 @@ namespace ProjectAutoSupplying
             if (selectedCar == null)
                 return;
             var car = db.Car_Trailer.Find(int.Parse(dataGridView2.SelectedCells[0].Value.ToString()));
-            car.Name = textBox28.Text;
-            car.Model = textBox41.Text;
-            car.State_number = textBox42.Text;
-            car.Type_ID = db.Transport_Types.Where(x => x.Name == comboBox18.SelectedItem.ToString()).ToList()[0].Id;
+            car.Name = carTrailerNameTextBox.Text;
+            car.Model = carTrailerModelTextBox.Text;
+            car.State_number = carTrailerNumberTextBox.Text;
+            car.Type_ID = db.Transport_Types.Where(x => x.Name == carTrailerTypeComboBox.SelectedItem.ToString()).ToList()[0].Id;
             db.Entry(car).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
             this.ReloadCarsData();
@@ -411,6 +425,8 @@ namespace ProjectAutoSupplying
 
         private void changeButtonFuel_Click(object sender, EventArgs e)
         {
+            if (nameTextBoxFuel.Text.Trim().Length == 0 || numberTextBoxFuel.Text.Trim().Length == 0 || priceTextBoxFuel.Text.Trim().Length == 0)
+                return;
             var id = int.Parse(dataGridView10.SelectedCells[0].Value.ToString());
             var elem = db.Fuels.Where(x => x.Id == id).First();
             elem.Name = nameTextBoxFuel.Text;
@@ -472,6 +488,119 @@ namespace ProjectAutoSupplying
             db.SaveChanges();
             ClearForm(TypeClear.Contract);
             ReloadContractData();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (tabControl1.SelectedIndex)
+            {
+                case 0:
+                    ReloadCarsData();
+                    break;
+                case 1:
+                    ReloadDriversData();
+                    break;
+                case 2:
+                    ReloadDownTimesData();
+                    break;
+                case 3:
+                    ReloadFuelData();
+                    break;
+            }
+        }
+
+        private void tabControlCatalogueInherit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (tabControlCatalogueInherit.SelectedIndex)
+            {
+                case 1:
+                    ReloadContractData();
+                    break;
+                case 3:
+                    ReloadCarsData();
+                    break;
+            }
+        }
+
+        private void tabControlUpper_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (tabControlUpper.SelectedIndex)
+            {
+                case 4:
+                    ReloadWayBillData();
+                    break;
+                case 5:
+                    ReloadWayListData();
+                    break;
+            }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (nameTextBoxDownTime.Text.Trim().Length == 0 || codeTextBoxDownTime.Text.Trim().Length == 0 ||
+               wayListComboBoxDownTime.SelectedIndex == -1)
+                return;
+            var id = int.Parse(dataGridView9.SelectedCells[0].Value.ToString());
+            var elem = db.DownTime_on_Lines.Where(x => x.Id == id).First();
+            db.DownTime_on_Lines.Remove(elem);
+            db.SaveChanges();
+            ReloadDownTimesData();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            if (nameTextBoxFuel.Text.Trim().Length == 0 || numberTextBoxFuel.Text.Trim().Length == 0 || priceTextBoxFuel.Text.Trim().Length == 0)
+                return;
+            var id = int.Parse(dataGridView10.SelectedCells[0].Value.ToString());
+            var elem = db.Fuels.Where(x => x.Id == id).First();
+            db.Fuels.Remove(elem);
+            db.SaveChanges();
+            ReloadFuelData();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (contractOKPOTextBox.Text.Trim().Length == 0 || contractOKONXTextBox.Text.Trim().Length == 0
+               || contractINNTextBox.Text.Trim().Length == 0 || contractBankNameTextBox.Text.Trim().Length == 0
+               || contractAddressTextBox.Text.Trim().Length == 0 || contractAccountTextBox.Text.Trim().Length == 0)
+                return;
+            var elem = db.Contracts.Find(int.Parse(dataGridView1.SelectedCells[0].Value.ToString()));
+            var waybillsInContract = db.WayBills_In_Contracts.Where(x => x.Contract_ID == elem.Id);
+            foreach (var obj in waybillsInContract)
+                db.WayBills_In_Contracts.Remove(obj);
+            db.Contracts.Remove(elem);
+            db.SaveChanges();
+            ReloadContractData();
+        }
+
+        private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (tabControl2.SelectedIndex)
+            {
+                case 2:
+                    ReloadWaysAndShipping();
+                    break;
+                case 3:
+                    ReloadShippingKind();
+                    break;
+            }
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            if (carTrailerModelTextBox.Text.Trim().Length == 0 || carTrailerNameTextBox.Text.Trim().Length == 0
+                || carTrailerNumberTextBox.Text.Trim().Length == 0)
+                return;
+            db.Car_Trailer.Add(new Models.Car_Trailer()
+            {
+                Name = carTrailerNameTextBox.Text.Trim(),
+                Model = carTrailerModelTextBox.Text.Trim(),
+                State_number = carTrailerNumberTextBox.Text.Trim(),
+                Type_ID = db.Transport_Types.Where(x => x.Name == carTrailerTypeComboBox.SelectedItem.ToString()).First().Id
+            });
+            db.SaveChanges();
+            ReloadCarsData();
+            ClearForm(TypeClear.Car);
         }
     }
 }

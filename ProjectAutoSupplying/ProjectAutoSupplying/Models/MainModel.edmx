@@ -238,6 +238,13 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
+        <EntityType Name="ShippingKind">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
         <EntityType Name="Transport Type">
           <Key>
             <PropertyRef Name="Id" />
@@ -290,6 +297,17 @@
           <Property Name="Contract ID" Type="int" Nullable="false" />
           <Property Name="Arrive time" Type="time" Precision="7" Nullable="false" />
           <Property Name="Trip ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WaysAndShipping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="EndStation" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Distance" Type="float" Nullable="false" />
+          <Property Name="Time Loop" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Shipping Kind" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_Additional operation (load/unload)_Additional_Opr">
           <End Role="Additional Operation" Type="Self.Additional Operation" Multiplicity="1" />
@@ -635,6 +653,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_WaysAndShipping_Shipping">
+          <End Role="ShippingKind" Type="Self.ShippingKind" Multiplicity="1" />
+          <End Role="WaysAndShipping" Type="Self.WaysAndShipping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ShippingKind">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WaysAndShipping">
+              <PropertyRef Name="Shipping Kind" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="DatabaseModelStoreContainer">
           <EntitySet Name="Additional Operation" EntityType="Self.Additional Operation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Additional operation (load/unload)" EntityType="Self.Additional operation (load/unload)" Schema="dbo" store:Type="Tables" />
@@ -657,11 +687,13 @@
           <EntitySet Name="OperationLoadUnloadEtc" EntityType="Self.OperationLoadUnloadEtc" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Other Information" EntityType="Self.Other Information" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShippingKind" EntityType="Self.ShippingKind" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Transport Type" EntityType="Self.Transport Type" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Trip" EntityType="Self.Trip" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WayBill" EntityType="Self.WayBill" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WayBills In Contract" EntityType="Self.WayBills In Contract" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WayList" EntityType="Self.WayList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WaysAndShipping" EntityType="Self.WaysAndShipping" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Additional operation (load/unload)_Additional_Opr" Association="Self.FK_Additional operation (load/unload)_Additional_Opr">
             <End Role="Additional Operation" EntitySet="Additional Operation" />
             <End Role="Additional operation (load/unload)" EntitySet="Additional operation (load/unload)" />
@@ -773,6 +805,10 @@
           <AssociationSet Name="FK_WayList_Trip" Association="Self.FK_WayList_Trip">
             <End Role="Trip" EntitySet="Trip" />
             <End Role="WayList" EntitySet="WayList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WaysAndShipping_Shipping" Association="Self.FK_WaysAndShipping_Shipping">
+            <End Role="ShippingKind" EntitySet="ShippingKind" />
+            <End Role="WaysAndShipping" EntitySet="WaysAndShipping" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -1604,7 +1640,45 @@
             <End Role="WayBill" EntitySet="WayBills" />
             <End Role="WayBills_In_Contract" EntitySet="WayBills_In_Contracts" />
           </AssociationSet>
+          <EntitySet Name="ShippingKinds" EntityType="DatabaseModel.ShippingKind" />
+          <EntitySet Name="WaysAndShippings" EntityType="DatabaseModel.WaysAndShipping" />
+          <AssociationSet Name="FK_WaysAndShipping_Shipping" Association="DatabaseModel.FK_WaysAndShipping_Shipping">
+            <End Role="ShippingKind" EntitySet="ShippingKinds" />
+            <End Role="WaysAndShipping" EntitySet="WaysAndShippings" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="ShippingKind">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="WaysAndShippings" Relationship="DatabaseModel.FK_WaysAndShipping_Shipping" FromRole="ShippingKind" ToRole="WaysAndShipping" />
+        </EntityType>
+        <EntityType Name="WaysAndShipping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EndStation" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Distance" Type="Double" Nullable="false" />
+          <Property Name="Time_Loop" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="Shipping_Kind" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ShippingKind" Relationship="DatabaseModel.FK_WaysAndShipping_Shipping" FromRole="WaysAndShipping" ToRole="ShippingKind" />
+        </EntityType>
+        <Association Name="FK_WaysAndShipping_Shipping">
+          <End Type="DatabaseModel.ShippingKind" Role="ShippingKind" Multiplicity="1" />
+          <End Type="DatabaseModel.WaysAndShipping" Role="WaysAndShipping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ShippingKind">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WaysAndShipping">
+              <PropertyRef Name="Shipping_Kind" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1920,6 +1994,26 @@
                 <ScalarProperty Name="Contract_ID" ColumnName="Contract ID" />
                 <ScalarProperty Name="Arrive_time" ColumnName="Arrive time" />
                 <ScalarProperty Name="Trip_ID" ColumnName="Trip ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShippingKinds">
+            <EntityTypeMapping TypeName="DatabaseModel.ShippingKind">
+              <MappingFragment StoreEntitySet="ShippingKind">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WaysAndShippings">
+            <EntityTypeMapping TypeName="DatabaseModel.WaysAndShipping">
+              <MappingFragment StoreEntitySet="WaysAndShipping">
+                <ScalarProperty Name="Shipping_Kind" ColumnName="Shipping Kind" />
+                <ScalarProperty Name="Time_Loop" ColumnName="Time Loop" />
+                <ScalarProperty Name="Distance" ColumnName="Distance" />
+                <ScalarProperty Name="EndStation" ColumnName="EndStation" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

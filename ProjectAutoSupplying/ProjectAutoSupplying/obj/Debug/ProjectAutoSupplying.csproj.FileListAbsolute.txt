@@ -13,7 +13,6 @@ C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSuppl
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\EntityFramework.xml
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.csproj.CopyComplete
-C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.CreateCarTrailer.resources
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.MainFrame.resources
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.WayList.resources
 C:\Users\zimma\source\repos\autoWayHandler\ProjectAutoSupplying\ProjectAutoSupplying\obj\Debug\ProjectAutoSupplying.Waybill.resources

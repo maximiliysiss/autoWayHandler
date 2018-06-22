@@ -32,6 +32,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControlCatalogueInherit = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.faviconPicture = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.mainFramePhoneTextBox = new System.Windows.Forms.TextBox();
             this.mainFrameAddressTextBox = new System.Windows.Forms.TextBox();
@@ -56,6 +57,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.contractBankNameTextBox = new System.Windows.Forms.TextBox();
+            this.contractChangeButton = new System.Windows.Forms.Button();
             this.contractOKONXTextBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -89,12 +92,12 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.label59 = new System.Windows.Forms.Label();
-            this.comboBox18 = new System.Windows.Forms.ComboBox();
-            this.textBox42 = new System.Windows.Forms.TextBox();
+            this.carTrailerTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.carTrailerNumberTextBox = new System.Windows.Forms.TextBox();
             this.label58 = new System.Windows.Forms.Label();
-            this.textBox41 = new System.Windows.Forms.TextBox();
+            this.carTrailerModelTextBox = new System.Windows.Forms.TextBox();
             this.label57 = new System.Windows.Forms.Label();
-            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.carTrailerNameTextBox = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage13 = new System.Windows.Forms.TabPage();
@@ -152,14 +155,11 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
-            this.tabPage18 = new System.Windows.Forms.TabPage();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.tabPage19 = new System.Windows.Forms.TabPage();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -261,13 +261,18 @@
             this.textBox40 = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.faviconPicture = new System.Windows.Forms.PictureBox();
-            this.contractChangeButton = new System.Windows.Forms.Button();
-            this.contractBankNameTextBox = new System.Windows.Forms.TextBox();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
             this.tabControlUpper.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControlCatalogueInherit.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.faviconPicture)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -297,8 +302,6 @@
             this.tabPage17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.groupBox9.SuspendLayout();
-            this.tabPage18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             this.tabPage19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -329,7 +332,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faviconPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlUpper
@@ -349,6 +351,7 @@
             this.tabControlUpper.SelectedIndex = 0;
             this.tabControlUpper.Size = new System.Drawing.Size(769, 388);
             this.tabControlUpper.TabIndex = 0;
+            this.tabControlUpper.SelectedIndexChanged += new System.EventHandler(this.tabControlUpper_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -375,6 +378,7 @@
             this.tabControlCatalogueInherit.SelectedIndex = 0;
             this.tabControlCatalogueInherit.Size = new System.Drawing.Size(769, 366);
             this.tabControlCatalogueInherit.TabIndex = 0;
+            this.tabControlCatalogueInherit.SelectedIndexChanged += new System.EventHandler(this.tabControlCatalogueInherit_SelectedIndexChanged);
             // 
             // tabPage4
             // 
@@ -400,6 +404,14 @@
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "Сведения о предприятии";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // faviconPicture
+            // 
+            this.faviconPicture.Location = new System.Drawing.Point(595, 15);
+            this.faviconPicture.Name = "faviconPicture";
+            this.faviconPicture.Size = new System.Drawing.Size(100, 100);
+            this.faviconPicture.TabIndex = 14;
+            this.faviconPicture.TabStop = false;
             // 
             // label6
             // 
@@ -646,6 +658,7 @@
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.button17);
             this.groupBox4.Controls.Add(this.contractBankNameTextBox);
             this.groupBox4.Controls.Add(this.contractChangeButton);
             this.groupBox4.Controls.Add(this.contractOKONXTextBox);
@@ -665,6 +678,24 @@
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Данные о заказчике";
+            // 
+            // contractBankNameTextBox
+            // 
+            this.contractBankNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.contractBankNameTextBox.Location = new System.Drawing.Point(127, 74);
+            this.contractBankNameTextBox.Name = "contractBankNameTextBox";
+            this.contractBankNameTextBox.Size = new System.Drawing.Size(235, 20);
+            this.contractBankNameTextBox.TabIndex = 25;
+            // 
+            // contractChangeButton
+            // 
+            this.contractChangeButton.Location = new System.Drawing.Point(35, 99);
+            this.contractChangeButton.Name = "contractChangeButton";
+            this.contractChangeButton.Size = new System.Drawing.Size(327, 23);
+            this.contractChangeButton.TabIndex = 24;
+            this.contractChangeButton.Text = "Изменить";
+            this.contractChangeButton.UseVisualStyleBackColor = true;
+            this.contractChangeButton.Click += new System.EventHandler(this.contractChangeButton_Click);
             // 
             // contractOKONXTextBox
             // 
@@ -978,18 +1009,20 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(765, 343);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage12
             // 
+            this.tabPage12.Controls.Add(this.button20);
             this.tabPage12.Controls.Add(this.button12);
             this.tabPage12.Controls.Add(this.button11);
             this.tabPage12.Controls.Add(this.label59);
-            this.tabPage12.Controls.Add(this.comboBox18);
-            this.tabPage12.Controls.Add(this.textBox42);
+            this.tabPage12.Controls.Add(this.carTrailerTypeComboBox);
+            this.tabPage12.Controls.Add(this.carTrailerNumberTextBox);
             this.tabPage12.Controls.Add(this.label58);
-            this.tabPage12.Controls.Add(this.textBox41);
+            this.tabPage12.Controls.Add(this.carTrailerModelTextBox);
             this.tabPage12.Controls.Add(this.label57);
-            this.tabPage12.Controls.Add(this.textBox28);
+            this.tabPage12.Controls.Add(this.carTrailerNameTextBox);
             this.tabPage12.Controls.Add(this.label53);
             this.tabPage12.Controls.Add(this.dataGridView2);
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
@@ -1002,7 +1035,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(292, 284);
+            this.button12.Location = new System.Drawing.Point(286, 284);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(236, 23);
             this.button12.TabIndex = 10;
@@ -1029,20 +1062,20 @@
             this.label59.TabIndex = 8;
             this.label59.Text = "Тип";
             // 
-            // comboBox18
+            // carTrailerTypeComboBox
             // 
-            this.comboBox18.FormattingEnabled = true;
-            this.comboBox18.Location = new System.Drawing.Point(407, 245);
-            this.comboBox18.Name = "comboBox18";
-            this.comboBox18.Size = new System.Drawing.Size(121, 21);
-            this.comboBox18.TabIndex = 7;
+            this.carTrailerTypeComboBox.FormattingEnabled = true;
+            this.carTrailerTypeComboBox.Location = new System.Drawing.Point(407, 245);
+            this.carTrailerTypeComboBox.Name = "carTrailerTypeComboBox";
+            this.carTrailerTypeComboBox.Size = new System.Drawing.Size(121, 21);
+            this.carTrailerTypeComboBox.TabIndex = 7;
             // 
-            // textBox42
+            // carTrailerNumberTextBox
             // 
-            this.textBox42.Location = new System.Drawing.Point(286, 246);
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(100, 20);
-            this.textBox42.TabIndex = 6;
+            this.carTrailerNumberTextBox.Location = new System.Drawing.Point(286, 246);
+            this.carTrailerNumberTextBox.Name = "carTrailerNumberTextBox";
+            this.carTrailerNumberTextBox.Size = new System.Drawing.Size(100, 20);
+            this.carTrailerNumberTextBox.TabIndex = 6;
             // 
             // label58
             // 
@@ -1053,12 +1086,12 @@
             this.label58.TabIndex = 5;
             this.label58.Text = "Номер";
             // 
-            // textBox41
+            // carTrailerModelTextBox
             // 
-            this.textBox41.Location = new System.Drawing.Point(164, 246);
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(100, 20);
-            this.textBox41.TabIndex = 4;
+            this.carTrailerModelTextBox.Location = new System.Drawing.Point(164, 246);
+            this.carTrailerModelTextBox.Name = "carTrailerModelTextBox";
+            this.carTrailerModelTextBox.Size = new System.Drawing.Size(100, 20);
+            this.carTrailerModelTextBox.TabIndex = 4;
             // 
             // label57
             // 
@@ -1069,12 +1102,12 @@
             this.label57.TabIndex = 3;
             this.label57.Text = "Модель";
             // 
-            // textBox28
+            // carTrailerNameTextBox
             // 
-            this.textBox28.Location = new System.Drawing.Point(28, 246);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(100, 20);
-            this.textBox28.TabIndex = 2;
+            this.carTrailerNameTextBox.Location = new System.Drawing.Point(28, 246);
+            this.carTrailerNameTextBox.Name = "carTrailerNameTextBox";
+            this.carTrailerNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.carTrailerNameTextBox.TabIndex = 2;
             // 
             // label53
             // 
@@ -1097,7 +1130,7 @@
             this.dataGridView2.Size = new System.Drawing.Size(723, 211);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
-            this.dataGridView2.DoubleClick += new System.EventHandler(this.dataGridView2_DoubleClick);
+          
             // 
             // tabPage13
             // 
@@ -1313,6 +1346,7 @@
             // 
             // tabPage14
             // 
+            this.tabPage14.Controls.Add(this.button15);
             this.tabPage14.Controls.Add(this.changeButtonDownTime);
             this.tabPage14.Controls.Add(this.label64);
             this.tabPage14.Controls.Add(this.label63);
@@ -1440,6 +1474,7 @@
             // 
             // tabPage15
             // 
+            this.tabPage15.Controls.Add(this.button16);
             this.tabPage15.Controls.Add(this.label67);
             this.tabPage15.Controls.Add(this.label66);
             this.tabPage15.Controls.Add(this.label65);
@@ -1546,13 +1581,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl2.Controls.Add(this.tabPage8);
             this.tabControl2.Controls.Add(this.tabPage17);
-            this.tabControl2.Controls.Add(this.tabPage18);
             this.tabControl2.Controls.Add(this.tabPage19);
             this.tabControl2.Location = new System.Drawing.Point(-4, 0);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(769, 338);
             this.tabControl2.TabIndex = 0;
+            this.tabControl2.SelectedIndexChanged += new System.EventHandler(this.tabControl2_SelectedIndexChanged);
             // 
             // tabPage8
             // 
@@ -1637,11 +1672,13 @@
             // 
             this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox9.Controls.Add(this.button19);
+            this.groupBox9.Controls.Add(this.button18);
+            this.groupBox9.Controls.Add(this.textBox1);
             this.groupBox9.Controls.Add(this.label39);
             this.groupBox9.Controls.Add(this.label38);
             this.groupBox9.Controls.Add(this.label37);
             this.groupBox9.Controls.Add(this.label36);
-            this.groupBox9.Controls.Add(this.comboBox10);
             this.groupBox9.Controls.Add(this.comboBox9);
             this.groupBox9.Controls.Add(this.label35);
             this.groupBox9.Controls.Add(this.textBox23);
@@ -1698,15 +1735,6 @@
             this.label36.TabIndex = 16;
             this.label36.Text = "Вид перевозки";
             // 
-            // comboBox10
-            // 
-            this.comboBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(128, 91);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(284, 21);
-            this.comboBox10.TabIndex = 15;
-            // 
             // comboBox9
             // 
             this.comboBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -1750,28 +1778,6 @@
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(284, 20);
             this.textBox18.TabIndex = 4;
-            // 
-            // tabPage18
-            // 
-            this.tabPage18.Controls.Add(this.dataGridView8);
-            this.tabPage18.Location = new System.Drawing.Point(4, 22);
-            this.tabPage18.Name = "tabPage18";
-            this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage18.Size = new System.Drawing.Size(761, 312);
-            this.tabPage18.TabIndex = 2;
-            this.tabPage18.Text = "Конечные и остановочные пункты";
-            this.tabPage18.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView8
-            // 
-            this.dataGridView8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Location = new System.Drawing.Point(16, 6);
-            this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.Size = new System.Drawing.Size(724, 298);
-            this.dataGridView8.TabIndex = 0;
             // 
             // tabPage19
             // 
@@ -2807,31 +2813,70 @@
             this.label45.Size = new System.Drawing.Size(79, 17);
             this.label45.TabIndex = 19;
             // 
-            // faviconPicture
+            // button15
             // 
-            this.faviconPicture.Location = new System.Drawing.Point(595, 15);
-            this.faviconPicture.Name = "faviconPicture";
-            this.faviconPicture.Size = new System.Drawing.Size(100, 100);
-            this.faviconPicture.TabIndex = 14;
-            this.faviconPicture.TabStop = false;
+            this.button15.Location = new System.Drawing.Point(16, 276);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(185, 23);
+            this.button15.TabIndex = 12;
+            this.button15.Text = "Удалить";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
-            // contractChangeButton
+            // button16
             // 
-            this.contractChangeButton.Location = new System.Drawing.Point(35, 99);
-            this.contractChangeButton.Name = "contractChangeButton";
-            this.contractChangeButton.Size = new System.Drawing.Size(327, 23);
-            this.contractChangeButton.TabIndex = 24;
-            this.contractChangeButton.Text = "Изменить";
-            this.contractChangeButton.UseVisualStyleBackColor = true;
-            this.contractChangeButton.Click += new System.EventHandler(this.contractChangeButton_Click);
+            this.button16.Location = new System.Drawing.Point(511, 291);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(184, 23);
+            this.button16.TabIndex = 8;
+            this.button16.Text = "Удалить";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
-            // contractBankNameTextBox
+            // button17
             // 
-            this.contractBankNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.contractBankNameTextBox.Location = new System.Drawing.Point(127, 74);
-            this.contractBankNameTextBox.Name = "contractBankNameTextBox";
-            this.contractBankNameTextBox.Size = new System.Drawing.Size(235, 20);
-            this.contractBankNameTextBox.TabIndex = 25;
+            this.button17.Location = new System.Drawing.Point(371, 99);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(327, 23);
+            this.button17.TabIndex = 26;
+            this.button17.Text = "Удалить";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(128, 94);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(202, 20);
+            this.textBox1.TabIndex = 20;
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(355, 95);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(114, 23);
+            this.button18.TabIndex = 21;
+            this.button18.Text = "Изменить";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(501, 95);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(114, 23);
+            this.button19.TabIndex = 22;
+            this.button19.Text = "Удалить";
+            this.button19.UseVisualStyleBackColor = true;
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(534, 284);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(217, 23);
+            this.button20.TabIndex = 11;
+            this.button20.Text = "Создать";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // MainFrame
             // 
@@ -2849,6 +2894,7 @@
             this.tabControlCatalogueInherit.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.faviconPicture)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -2889,8 +2935,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
-            this.tabPage18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             this.tabPage19.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             this.tabPage3.ResumeLayout(false);
@@ -2926,7 +2970,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faviconPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3004,7 +3047,6 @@
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.TabPage tabPage17;
-        private System.Windows.Forms.TabPage tabPage18;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.DataGridView dataGridView5;
@@ -3015,7 +3057,6 @@
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.DataGridView dataGridView8;
         private System.Windows.Forms.DataGridView dataGridView7;
         private System.Windows.Forms.DataGridView dataGridView9;
         private System.Windows.Forms.DataGridView dataGridView10;
@@ -3031,7 +3072,6 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.ComboBox comboBox10;
         private System.Windows.Forms.ComboBox comboBox9;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TabControl tabControl3;
@@ -3136,14 +3176,14 @@
         private System.Windows.Forms.ComboBox comboBox16;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox42;
+        private System.Windows.Forms.TextBox carTrailerNumberTextBox;
         private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.TextBox textBox41;
+        private System.Windows.Forms.TextBox carTrailerModelTextBox;
         private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.TextBox textBox28;
+        private System.Windows.Forms.TextBox carTrailerNameTextBox;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.ComboBox comboBox18;
+        private System.Windows.Forms.ComboBox carTrailerTypeComboBox;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button13;
@@ -3169,6 +3209,13 @@
         private System.Windows.Forms.PictureBox faviconPicture;
         private System.Windows.Forms.TextBox contractBankNameTextBox;
         private System.Windows.Forms.Button contractChangeButton;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button20;
     }
 }
 

@@ -76,12 +76,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateCarTrailer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateCarTrailer.Designer.cs">
-      <DependentUpon>CreateCarTrailer.cs</DependentUpon>
-    </Compile>
     <Compile Include="CreateContract.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +100,7 @@
     <Compile Include="CreateLegal.Designer.cs">
       <DependentUpon>CreateLegal.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBInteract.cs" />
     <Compile Include="ExcelConstractor.cs" />
     <Compile Include="MainFrame.cs">
       <SubType>Form</SubType>
@@ -191,6 +186,9 @@
     <Compile Include="Models\Role.cs">
       <DependentUpon>MainModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ShippingKind.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Transport_Type.cs">
       <DependentUpon>MainModel.tt</DependentUpon>
     </Compile>
@@ -204,6 +202,9 @@
       <DependentUpon>MainModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\WayList.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WaysAndShipping.cs">
       <DependentUpon>MainModel.tt</DependentUpon>
     </Compile>
     <Compile Include="WayList.cs">
@@ -226,9 +227,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CreateCarTrailer.resx">
-      <DependentUpon>CreateCarTrailer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CreateContract.resx">
       <DependentUpon>CreateContract.cs</DependentUpon>
     </EmbeddedResource>
