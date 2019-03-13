@@ -10,7 +10,7 @@ namespace ProjectTransportSystem.Models.Database
     /// <summary>
     /// Дополнительные операции
     /// </summary>
-    class AdditionalOperation
+    public class AdditionalOperation
     {
         [Key]
         public int ID { get; set; }

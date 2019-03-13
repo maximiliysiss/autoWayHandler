@@ -10,7 +10,7 @@ namespace ProjectTransportSystem.Models.Database
     /// <summary>
     /// Средство передвижения или первозки
     /// </summary>
-    class TrailerCar
+    public class TrailerCar
     {
         [Key]
         public int ID { get; set; }
