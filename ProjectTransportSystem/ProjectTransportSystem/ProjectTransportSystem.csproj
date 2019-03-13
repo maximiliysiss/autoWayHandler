@@ -70,8 +70,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Database\AdditionalOperation.cs" />
+    <Compile Include="Models\Database\Cargo.cs" />
+    <Compile Include="Models\Database\Contract.cs" />
+    <Compile Include="Models\Database\Costing.cs" />
+    <Compile Include="Models\Database\DistanceOnRoadGroup.cs" />
+    <Compile Include="Models\Database\DownTimeOnLine.cs" />
+    <Compile Include="Models\Database\DriverAccompanying.cs" />
+    <Compile Include="Models\Database\InformationAboutCargo.cs" />
+    <Compile Include="Models\Database\LegalEntity.cs" />
+    <Compile Include="Models\Database\LoadUnloadOperation.cs" />
+    <Compile Include="Models\Database\OperationLoadUnloadEtc.cs" />
+    <Compile Include="Models\Database\OtherInformation.cs" />
+    <Compile Include="Models\Database\Role.cs" />
     <Compile Include="Models\Database\TrailerCar.cs" />
     <Compile Include="Models\Database\TransportType.cs" />
+    <Compile Include="Models\Database\Trip.cs" />
+    <Compile Include="Models\Database\Waybill.cs" />
+    <Compile Include="Models\Database\WayList.cs" />
     <Compile Include="Models\MainDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -109,6 +124,5 @@
       <Version>1.1.6</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

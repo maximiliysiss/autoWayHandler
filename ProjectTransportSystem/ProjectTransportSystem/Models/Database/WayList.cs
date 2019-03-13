@@ -9,9 +9,7 @@ namespace ProjectTransportSystem.Models.Database
     public class WayList
     {
         public int Id { get; set; }
-        public int Contract_ID { get; set; }
         public System.TimeSpan Arrive_time { get; set; }
-        public int Trip_ID { get; set; }
 
         public virtual Contract Contract { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
