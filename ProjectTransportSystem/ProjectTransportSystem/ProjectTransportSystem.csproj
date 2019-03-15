@@ -55,6 +55,42 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Forms\Dictionary\DistanceOnRoadGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\Dictionary\DriverAccompanyingDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\Dictionary\FuelDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\Dictionary\LegalEntityDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\Dictionary\Operation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\Dictionary\RoleDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\Dictionary\ShippingKind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\Dictionary\TrailerCar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\Dictionary\TransportType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,6 +98,33 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionary\DistanceOnRoadGroup.xaml.cs">
+      <DependentUpon>DistanceOnRoadGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\DriverAccompanyingDictionary.xaml.cs">
+      <DependentUpon>DriverAccompanyingDictionary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\FuelDictionary.xaml.cs">
+      <DependentUpon>FuelDictionary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\LegalEntityDictionary.xaml.cs">
+      <DependentUpon>LegalEntityDictionary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\Operation.xaml.cs">
+      <DependentUpon>Operation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\RoleDictionary.xaml.cs">
+      <DependentUpon>RoleDictionary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\ShippingKind.xaml.cs">
+      <DependentUpon>ShippingKind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\TrailerCar.xaml.cs">
+      <DependentUpon>TrailerCar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\TransportType.xaml.cs">
+      <DependentUpon>TransportType.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
