@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ProjectTransportSystem.Models.Database
 {
+    /// <summary>
+    /// Путевой лист
+    /// </summary>
     public class WayList
     {
+        [Key]
         public int Id { get; set; }
-        public System.TimeSpan Arrive_time { get; set; }
-
-        public virtual Contract Contract { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DownTime_on_Line> DownTime_on_Line { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Driver_Work> Driver_Work { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Driver_Accompanying_in_WayList> Driver_Accompanying_in_WayList { get; set; }
-        public virtual Trip Trip { get; set; }
+        public DateTime ArriveTime { get; set; }
+        public Contract Contract { get; set; }
+        public Trip Trip { get; set; }
+        public List<TrailerCar> TrailerCars { get; set; }
+        public List<DriverAccompanying> DriverAccompanyings { get; set; }
     }
 }

@@ -8,12 +8,16 @@ using System.Threading.Tasks;
 namespace ProjectTransportSystem.Models.Database
 {
     /// <summary>
-    /// Тип транспорта (Справочник)
+    /// ?
     /// </summary>
-    public class TransportType
+    public class WaysAndShipping
     {
         [Key]
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
+        public string EndStation { get; set; }
+        public double Distance { get; set; }
+        public DateTime Time_Loop { get; set; }
+        public ShippingKind ShippingKind { get; set; }
     }
 }

@@ -1,7 +1,13 @@
-﻿namespace ProjectTransportSystem.Models.Database
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProjectTransportSystem.Models.Database
 {
+    /// <summary>
+    /// Юр лицо
+    /// </summary>
     public class LegalEntity
     {
+        [Key]
         public int Id { get; set; }
         public string Name { get; set; }
         public string LegalAdress { get; set; }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjectTransportSystem.Models.Database
 {
@@ -7,6 +8,7 @@ namespace ProjectTransportSystem.Models.Database
     /// </summary>
     public class DriverAccompanying
     {
+        [Key]
         public int ID { get; set; }
         public string Name { get; set; }
         public string SurName { get; set; }

@@ -3,14 +3,12 @@
 namespace ProjectTransportSystem.Models.Database
 {
     /// <summary>
-    /// Маршрут
+    /// Операция
     /// </summary>
-    public class Trip
+    public class Operation
     {
         [Key]
         public int Id { get; set; }
-        public string From { get; set; }
-        public string To { get; set; }
-        public double Distance { get; set; }
+        public string Name { get; set; }
     }
 }

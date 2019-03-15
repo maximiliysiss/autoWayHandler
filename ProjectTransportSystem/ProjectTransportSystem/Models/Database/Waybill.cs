@@ -1,7 +1,13 @@
-﻿namespace ProjectTransportSystem.Models.Database
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProjectTransportSystem.Models.Database
 {
-    public class Waybill
+    /// <summary>
+    /// Путевая bill
+    /// </summary>
+    public class WayBill
     {
+        [Key]
         int ID { get; set; }
         public DriverAccompanying Driver { get; set; }
         public TrailerCar Car { get; set; }

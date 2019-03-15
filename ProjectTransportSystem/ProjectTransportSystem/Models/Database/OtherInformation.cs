@@ -1,7 +1,13 @@
-﻿namespace ProjectTransportSystem.Models.Database
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProjectTransportSystem.Models.Database
 {
+    /// <summary>
+    /// Другая информация
+    /// </summary>
     public class OtherInformation
     {
+        [Key]
         public int Id { get; set; }
         public DistanceOnRoadGroup DistanceOnRoadGroup  { get; set; }
         public int CodeExp { get; set; }

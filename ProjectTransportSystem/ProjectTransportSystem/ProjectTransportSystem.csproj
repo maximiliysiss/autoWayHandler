@@ -76,17 +76,23 @@
     <Compile Include="Models\Database\DistanceOnRoadGroup.cs" />
     <Compile Include="Models\Database\DownTimeOnLine.cs" />
     <Compile Include="Models\Database\DriverAccompanying.cs" />
+    <Compile Include="Models\Database\DriverWork.cs" />
+    <Compile Include="Models\Database\Fuel.cs" />
     <Compile Include="Models\Database\InformationAboutCargo.cs" />
     <Compile Include="Models\Database\LegalEntity.cs" />
     <Compile Include="Models\Database\LoadUnloadOperation.cs" />
+    <Compile Include="Models\Database\MovingFuel.cs" />
+    <Compile Include="Models\Database\Operation.cs" />
     <Compile Include="Models\Database\OperationLoadUnloadEtc.cs" />
     <Compile Include="Models\Database\OtherInformation.cs" />
     <Compile Include="Models\Database\Role.cs" />
+    <Compile Include="Models\Database\ShippingKind.cs" />
     <Compile Include="Models\Database\TrailerCar.cs" />
     <Compile Include="Models\Database\TransportType.cs" />
     <Compile Include="Models\Database\Trip.cs" />
     <Compile Include="Models\Database\Waybill.cs" />
     <Compile Include="Models\Database\WayList.cs" />
+    <Compile Include="Models\Database\WaysAndShipping.cs" />
     <Compile Include="Models\MainDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
