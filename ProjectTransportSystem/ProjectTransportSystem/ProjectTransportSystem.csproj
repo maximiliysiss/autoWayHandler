@@ -99,6 +99,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Extensions\DataGrid.cs" />
+    <Compile Include="Extensions\DependecyObject.cs" />
     <Compile Include="Forms\Dictionary\DistanceOnRoadGroupDictionary.xaml.cs">
       <DependentUpon>DistanceOnRoadGroupDictionary.xaml</DependentUpon>
     </Compile>
@@ -126,7 +128,11 @@
     <Compile Include="Forms\Dictionary\TransportTypeDictionary.xaml.cs">
       <DependentUpon>TransportTypeDictionary.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormGenerator\DictionaryBuilder.cs" />
+    <Compile Include="Forms\FormGenerator\DictionaryFormBuilder.cs" />
     <Compile Include="Forms\FormGenerator\DictionaryList.cs" />
+    <Compile Include="Forms\FormGenerator\IDictionaryType.cs" />
+    <Compile Include="Forms\FormGenerator\StaticDictionaryActions.cs" />
     <Compile Include="Forms\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -162,6 +168,7 @@
     <Compile Include="Models\Database\Waybill.cs" />
     <Compile Include="Models\Database\WayList.cs" />
     <Compile Include="Models\Database\WaysAndShipping.cs" />
+    <Compile Include="Models\GlobalStaticContext.cs" />
     <Compile Include="Models\MainDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

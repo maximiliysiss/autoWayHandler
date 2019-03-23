@@ -1,14 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjectTransportSystem.Models.Database
 {
     /// <summary>
     /// Оплата (цена)?
     /// </summary>
-    public class Costing
+    public class Costing: IEquatable<Costing>
     {
         [Key]
-        public int Id { get; set; }
+        public int ID { get; set; }
         /// <summary>
         /// Тип оплаты
         /// </summary>
@@ -49,5 +50,10 @@ namespace ProjectTransportSystem.Models.Database
         /// ?
         /// </summary>
         public double DiscountsForReducingDowntime { get; set; }
+
+        public bool Equals(Costing other)
+        {
+            return this.ID == other.ID;
+        }
     }
 }

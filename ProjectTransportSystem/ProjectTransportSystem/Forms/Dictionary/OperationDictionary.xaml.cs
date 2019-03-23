@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjectTransportSystem.Forms.FormGenerator;
+using ProjectTransportSystem.Models.Database;
 
 namespace ProjectTransportSystem.Forms.Dictionary
 {
@@ -22,6 +24,15 @@ namespace ProjectTransportSystem.Forms.Dictionary
         public OperationDictionary()
         {
             InitializeComponent();
+            DataContext = new Operation();
+            //StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()));
+        }
+
+        public OperationDictionary(Operation obj)
+        {
+            InitializeComponent();
+            DataContext = obj;
+            //StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()));
         }
     }
 }

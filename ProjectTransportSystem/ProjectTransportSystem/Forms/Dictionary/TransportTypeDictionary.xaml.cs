@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjectTransportSystem.Models.Database;
 
 namespace ProjectTransportSystem.Forms.Dictionary
 {
@@ -22,6 +23,13 @@ namespace ProjectTransportSystem.Forms.Dictionary
         public TransportTypeDictionary()
         {
             InitializeComponent();
+            DataContext = new TransportType();
+        }
+
+        public TransportTypeDictionary(TransportType obj)
+        {
+            InitializeComponent();
+            DataContext = obj;
         }
     }
 }

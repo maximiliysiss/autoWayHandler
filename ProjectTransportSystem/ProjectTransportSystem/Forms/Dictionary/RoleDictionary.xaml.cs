@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjectTransportSystem.Forms.FormGenerator;
+using ProjectTransportSystem.Models.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,15 @@ namespace ProjectTransportSystem.Forms.Dictionary
         public RoleDictionary()
         {
             InitializeComponent();
+            this.DataContext = new Role();
+            StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()));
+        }
+
+        public RoleDictionary(Role role)
+        {
+            InitializeComponent();
+            this.DataContext = role;
+            StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()), true);
         }
     }
 }

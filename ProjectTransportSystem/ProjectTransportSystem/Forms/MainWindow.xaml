@@ -8,8 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TabControl>
-            <TabItem Header="Dictionary">
-
+            <TabItem Header="Dictionary" VirtualizingPanel.IsVirtualizing="False">
                 <TabControl Name="Dictionary">
                     <TabItem Name="DistanceOnRoadGroups" Header="Distance On Road Group"></TabItem>
                     <TabItem Name="DriverAccompanyings" Header="Driver Accompanying"></TabItem>
@@ -21,7 +20,6 @@
                     <TabItem Name="CarTrailers" Header="Trailer Car"></TabItem>
                     <TabItem Name="TransportTypes" Header="TransportType"></TabItem>
                 </TabControl>
-
             </TabItem>
         </TabControl>
     </Grid>

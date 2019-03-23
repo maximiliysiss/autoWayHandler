@@ -23,8 +23,6 @@ namespace ProjectTransportSystem
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainDbContext mainDbContext = new MainDbContext();
-
         public MainWindow()
         {
             InitializeComponent();
@@ -32,7 +30,8 @@ namespace ProjectTransportSystem
             foreach (var dict in Dictionary.Items.Cast<TabItem>())
                 try
                 {
-                    DictionaryList.InitDictionary(dict, DictionaryBuilder.GetDictionaryBuilder(dict.Name), mainDbContext.GetContext(dict.Name));
+                    DictionaryList.InitDictionary(dict, DictionaryBuilder.GetDictionaryBuilder(dict.Name),
+                        GlobalStaticContext.MainDbContext.GetContext(dict.Name));
                 }
                 catch (Exception ex)
                 {

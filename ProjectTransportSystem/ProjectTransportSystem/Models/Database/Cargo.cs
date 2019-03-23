@@ -1,14 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjectTransportSystem.Models.Database
 {
     /// <summary>
     /// Название
     /// </summary>
-    public class Cargo
+    public class Cargo: IEquatable<Cargo>
     {
         [Key]
-        public int Id { get; set; }
+        public int ID { get; set; }
         /// <summary>
         /// Наименование
         /// </summary>
@@ -17,5 +18,10 @@ namespace ProjectTransportSystem.Models.Database
         /// Единицы измерения
         /// </summary>
         public string Units { get; set; }
+
+        public bool Equals(Cargo other)
+        {
+            return this.ID == other.ID;
+        }
     }
 }

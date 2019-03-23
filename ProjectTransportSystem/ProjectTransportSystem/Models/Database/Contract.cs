@@ -10,10 +10,10 @@ namespace ProjectTransportSystem.Models.Database
     /// <summary>
     /// Контракт
     /// </summary>
-    public class Contract
+    public class Contract: IEquatable<Contract>
     {
         [Key]
-        public int Id { get; set; }
+        public int ID { get; set; }
         /// <summary>
         /// Компания
         /// </summary>
@@ -42,5 +42,10 @@ namespace ProjectTransportSystem.Models.Database
         /// </summary>
         public LegalEntity LegalEntity { get; set; }
         public List<WayBill> Waybills { get; set; }
+
+        public bool Equals(Contract other)
+        {
+            return this.ID == other.ID;
+        }
     }
 }
