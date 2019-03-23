@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TabControl>
+            <TabItem Header="Dictionary">
+
+                <TabControl Name="Dictionary">
+                    <TabItem Name="DistanceOnRoadGroups" Header="Distance On Road Group"></TabItem>
+                    <TabItem Name="DriverAccompanyings" Header="Driver Accompanying"></TabItem>
+                    <TabItem Name="Fuels" Header="Fuel"></TabItem>
+                    <TabItem Name="LegalEntities" Header="Legal Entity"></TabItem>
+                    <TabItem Name="Operations" Header="Operation"></TabItem>
+                    <TabItem Name="Roles" Header="Role"></TabItem>
+                    <TabItem Name="ShippingKinds" Header="Shipping"></TabItem>
+                    <TabItem Name="CarTrailers" Header="Trailer Car"></TabItem>
+                    <TabItem Name="TransportTypes" Header="TransportType"></TabItem>
+                </TabControl>
+
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace ProjectTransportSystem.Forms.Dictionary
 {
     /// <summary>
-    /// Interaction logic for ShippingKind.xaml
+    /// Interaction logic for TrailerCar.xaml
     /// </summary>
-    public partial class ShippingKind : Window
+    public partial class TrailerCarDictionary : Window
     {
-        public ShippingKind()
+        public TrailerCarDictionary()
         {
             InitializeComponent();
         }

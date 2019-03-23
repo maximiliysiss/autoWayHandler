@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace ProjectTransportSystem.Forms.Dictionary
 {
     /// <summary>
-    /// Interaction logic for DistanceOnRoadGroup.xaml
+    /// Interaction logic for TransportType.xaml
     /// </summary>
-    public partial class DistanceOnRoadGroup : Window
+    public partial class TransportTypeDictionary : Window
     {
-        public DistanceOnRoadGroup()
+        public TransportTypeDictionary()
         {
             InitializeComponent();
         }

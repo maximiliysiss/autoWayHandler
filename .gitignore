@@ -19,6 +19,7 @@ AssemblyInfo.generated.cs
 [Rr]eleases/
 x64/
 x86/
+Migrations/
 bld/
 [Bb]in/
 [Bb]in[Ss]erver/

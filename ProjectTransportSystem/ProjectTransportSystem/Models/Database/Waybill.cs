@@ -8,7 +8,7 @@ namespace ProjectTransportSystem.Models.Database
     public class WayBill
     {
         [Key]
-        int ID { get; set; }
+        public int ID { get; set; }
         public DriverAccompanying Driver { get; set; }
         public TrailerCar Car { get; set; }
         public string AutoEnterprise { get; set; }

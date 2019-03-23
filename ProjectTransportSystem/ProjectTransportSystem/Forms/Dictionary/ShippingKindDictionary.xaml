@@ -1,11 +1,11 @@
-﻿<Window x:Class="ProjectTransportSystem.Forms.Dictionary.TransportType"
+﻿<Window x:Class="ProjectTransportSystem.Forms.Dictionary.ShippingKindDictionary"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectTransportSystem.Forms.Dictionary"
         mc:Ignorable="d"
-        Title="TransportType" Height="450" Width="800">
+        Title="ShippingKind" Height="450" Width="800">
     <Grid>
         
     </Grid>

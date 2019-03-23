@@ -17,9 +17,9 @@ namespace ProjectTransportSystem.Forms.Dictionary
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class FuelDictionary : Window
     {
-        public Window1()
+        public FuelDictionary()
         {
             InitializeComponent();
         }

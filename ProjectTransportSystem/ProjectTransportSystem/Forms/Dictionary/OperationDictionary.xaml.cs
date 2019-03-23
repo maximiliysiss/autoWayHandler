@@ -17,9 +17,9 @@ namespace ProjectTransportSystem.Forms.Dictionary
     /// <summary>
     /// Interaction logic for Operation.xaml
     /// </summary>
-    public partial class Operation : Window
+    public partial class OperationDictionary : Window
     {
-        public Operation()
+        public OperationDictionary()
         {
             InitializeComponent();
         }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ProjectTransportSystem.Forms.FormGenerator;
+using ProjectTransportSystem.Models;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +23,21 @@ namespace ProjectTransportSystem
     /// </summary>
     public partial class MainWindow : Window
     {
+        public MainDbContext mainDbContext = new MainDbContext();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            foreach (var dict in Dictionary.Items.Cast<TabItem>())
+                try
+                {
+                    DictionaryList.InitDictionary(dict, DictionaryBuilder.GetDictionaryBuilder(dict.Name), mainDbContext.GetContext(dict.Name));
+                }
+                catch (Exception ex)
+                {
+
+                }
         }
     }
 }

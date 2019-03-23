@@ -55,7 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Forms\Dictionary\DistanceOnRoadGroup.xaml">
+    <Page Include="Forms\Dictionary\DistanceOnRoadGroupDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -71,7 +71,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Forms\Dictionary\Operation.xaml">
+    <Page Include="Forms\Dictionary\OperationDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -79,15 +79,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Forms\Dictionary\ShippingKind.xaml">
+    <Page Include="Forms\Dictionary\ShippingKindDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Forms\Dictionary\TrailerCar.xaml">
+    <Page Include="Forms\Dictionary\TrailerCarDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Forms\Dictionary\TransportType.xaml">
+    <Page Include="Forms\Dictionary\TransportTypeDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -99,8 +99,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Forms\Dictionary\DistanceOnRoadGroup.xaml.cs">
-      <DependentUpon>DistanceOnRoadGroup.xaml</DependentUpon>
+    <Compile Include="Forms\Dictionary\DistanceOnRoadGroupDictionary.xaml.cs">
+      <DependentUpon>DistanceOnRoadGroupDictionary.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dictionary\DriverAccompanyingDictionary.xaml.cs">
       <DependentUpon>DriverAccompanyingDictionary.xaml</DependentUpon>
@@ -111,27 +111,33 @@
     <Compile Include="Forms\Dictionary\LegalEntityDictionary.xaml.cs">
       <DependentUpon>LegalEntityDictionary.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Dictionary\Operation.xaml.cs">
-      <DependentUpon>Operation.xaml</DependentUpon>
+    <Compile Include="Forms\Dictionary\OperationDictionary.xaml.cs">
+      <DependentUpon>OperationDictionary.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dictionary\RoleDictionary.xaml.cs">
       <DependentUpon>RoleDictionary.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Dictionary\ShippingKind.xaml.cs">
-      <DependentUpon>ShippingKind.xaml</DependentUpon>
+    <Compile Include="Forms\Dictionary\ShippingKindDictionary.xaml.cs">
+      <DependentUpon>ShippingKindDictionary.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Dictionary\TrailerCar.xaml.cs">
-      <DependentUpon>TrailerCar.xaml</DependentUpon>
+    <Compile Include="Forms\Dictionary\TrailerCarDictionary.xaml.cs">
+      <DependentUpon>TrailerCarDictionary.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Dictionary\TransportType.xaml.cs">
-      <DependentUpon>TransportType.xaml</DependentUpon>
+    <Compile Include="Forms\Dictionary\TransportTypeDictionary.xaml.cs">
+      <DependentUpon>TransportTypeDictionary.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormGenerator\DictionaryList.cs" />
     <Compile Include="Forms\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\20190323141201_Init.cs" />
+    <Compile Include="Migrations\20190323141201_Init.designer.cs">
+      <DependentUpon>20190323141201_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\MainDbContextModelSnapshot.cs" />
     <Compile Include="Models\Database\AdditionalOperation.cs" />
     <Compile Include="Models\Database\Cargo.cs" />
     <Compile Include="Models\Database\Contract.cs" />
@@ -191,6 +197,11 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design">
       <Version>1.1.6</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+      <Version>2.1.1</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

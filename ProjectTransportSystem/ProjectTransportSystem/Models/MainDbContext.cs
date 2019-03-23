@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProjectTransportSystem.Models.Database;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,39 +9,89 @@ using System.Threading.Tasks;
 
 namespace ProjectTransportSystem.Models
 {
+    public class ContextAttribute : Attribute { }
+
+
     /// <summary>
     /// Главный контекст для доступа к БД
     /// </summary>
     public class MainDbContext : DbContext
     {
-        public DbSet<AdditionalOperation> Additional_Operations { get; set; }
-        public DbSet<TrailerCar> Car_Trailer { get; set; }
+        public Dictionary<string, IEnumerable> dictionaryOfContext;
+
+        public Dictionary<string, IEnumerable> DictionaryOfContext
+        {
+            get
+            {
+                if (dictionaryOfContext == null)
+                    dictionaryOfContext = this.GetType().GetProperties()
+                       .Where(x => x.GetCustomAttributes(typeof(ContextAttribute), false).Length > 0)
+                       .ToDictionary(x => x.Name, x => x.GetValue(this) as IEnumerable);
+                return dictionaryOfContext;
+            }
+        }
+
+        public IEnumerable GetContext(string name)
+        {
+           if (DictionaryOfContext.TryGetValue(name, out var value))
+                return value;
+            throw new Exception("Not found context");
+        }
+
+        [Context]
+        public DbSet<AdditionalOperation> AdditionalOperations { get; set; }
+        [ContextAttribute]
+        public DbSet<TrailerCar> CarTrailers { get; set; }
+        [ContextAttribute]
         public DbSet<Cargo> Cargoes { get; set; }
+        [ContextAttribute]
         public DbSet<Contract> Contracts { get; set; }
+        [ContextAttribute]
         public DbSet<Costing> Costings { get; set; }
-        public DbSet<DistanceOnRoadGroup> Distance_of_transportation_by_road_groups { get; set; }
-        public DbSet<DownTimeOnLine> DownTime_on_Lines { get; set; }
-        public DbSet<DriverWork> Driver_Works { get; set; }
-        public DbSet<DriverAccompanying> Driver_Accompanying { get; set; }
+        [ContextAttribute]
+        public DbSet<DistanceOnRoadGroup> DistanceOnRoadGroups { get; set; }
+        [ContextAttribute]
+        public DbSet<DownTimeOnLine> DownTimeOnLines { get; set; }
+        [ContextAttribute]
+        public DbSet<DriverWork> DriverWorks { get; set; }
+        [ContextAttribute]
+        public DbSet<DriverAccompanying> DriverAccompanyings { get; set; }
+        [ContextAttribute]
         public DbSet<Fuel> Fuels { get; set; }
-        public DbSet<InformationAboutCargo> Information_about_the_cargoes { get; set; }
-        public DbSet<LegalEntity> Legal_Entities { get; set; }
-        public DbSet<LoadUnloadOperation> Loading_and_unloading_operations { get; set; }
-        public DbSet<MovingFuel> Moving_Fuels { get; set; }
+        [ContextAttribute]
+        public DbSet<InformationAboutCargo> InformationAboutTheCargoes { get; set; }
+        [ContextAttribute]
+        public DbSet<LegalEntity> LegalEntities { get; set; }
+        [ContextAttribute]
+        public DbSet<LoadUnloadOperation> LoadingAndUnloadingOperations { get; set; }
+        [ContextAttribute]
+        public DbSet<MovingFuel> MovingFuels { get; set; }
+        [ContextAttribute]
         public DbSet<Operation> Operations { get; set; }
+        [ContextAttribute]
         public DbSet<OperationLoadUnloadEtc> OperationLoadUnloadEtcs { get; set; }
-        public DbSet<OtherInformation> Other_Information { get; set; }
+        [ContextAttribute]
+        public DbSet<OtherInformation> OtherInformation { get; set; }
+        [ContextAttribute]
         public DbSet<Role> Roles { get; set; }
-        public DbSet<TransportType> Transport_Types { get; set; }
+        [ContextAttribute]
+        public DbSet<TransportType> TransportTypes { get; set; }
+        [ContextAttribute]
         public DbSet<Trip> Trips { get; set; }
+        [ContextAttribute]
         public DbSet<WayBill> WayBills { get; set; }
+        [ContextAttribute]
         public DbSet<WayList> WayLists { get; set; }
+        [ContextAttribute]
         public DbSet<ShippingKind> ShippingKinds { get; set; }
+        [ContextAttribute]
         public DbSet<WaysAndShipping> WaysAndShippings { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
+
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-MU02QL6\SQLEXPRESS;Initial Catalog=TransportSystem;Integrated Security=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
