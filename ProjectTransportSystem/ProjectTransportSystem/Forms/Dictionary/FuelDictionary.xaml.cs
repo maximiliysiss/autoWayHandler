@@ -25,14 +25,14 @@ namespace ProjectTransportSystem.Forms.Dictionary
         {
             InitializeComponent();
             DataContext = new Fuel();
-            //StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()));
+            StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()));
         }
 
         public FuelDictionary(Fuel obj)
         {
             InitializeComponent();
             DataContext = obj;
-            //StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()));
+            StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()), true);
         }
     }
 }

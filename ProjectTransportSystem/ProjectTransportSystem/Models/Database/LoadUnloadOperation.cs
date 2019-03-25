@@ -7,7 +7,7 @@ namespace ProjectTransportSystem.Models.Database
     /// <summary>
     /// Операции загрузки/выгрузки
     /// </summary>
-    public class LoadUnloadOperation
+    public class LoadUnloadOperation : IEquatable<LoadUnloadOperation>
     {
         [Key]
         public int ID { get; set; }
@@ -28,5 +28,10 @@ namespace ProjectTransportSystem.Models.Database
         /// </summary>
         public OperationLoadUnloadEtc OperationLoadUnloadEtc { get; set; }
         public List<AdditionalOperation> AdditionalOperations { get; set; }
+
+        public bool Equals(LoadUnloadOperation other)
+        {
+            return this.ID == other.ID;
+        }
     }
 }

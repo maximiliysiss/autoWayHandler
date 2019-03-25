@@ -1,11 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjectTransportSystem.Models.Database
 {
     /// <summary>
     /// Движение топлива
     /// </summary>
-    public class MovingFuel
+    public class MovingFuel : IEquatable<MovingFuel>
     {
         [Key]
         public int Id { get; set; }
@@ -29,5 +30,10 @@ namespace ProjectTransportSystem.Models.Database
         public double CoefficientOfChangeInTheNorm { get; set; }
         public int WorkTimeSpecObor { get; set; }
         public int WorkTimeDvigFe { get; set; }
+
+        public bool Equals(MovingFuel other)
+        {
+            return this.Id == other.Id;
+        }
     }
 }

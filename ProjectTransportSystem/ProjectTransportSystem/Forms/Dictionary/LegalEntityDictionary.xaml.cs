@@ -25,14 +25,14 @@ namespace ProjectTransportSystem.Forms.Dictionary
         {
             InitializeComponent();
             DataContext = new LegalEntity();
-            //StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()));
+            StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()));
         }
 
         public LegalEntityDictionary(LegalEntity obj)
         {
             InitializeComponent();
             DataContext = obj;
-            //StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()));
+            StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()), true);
         }
     }
 }

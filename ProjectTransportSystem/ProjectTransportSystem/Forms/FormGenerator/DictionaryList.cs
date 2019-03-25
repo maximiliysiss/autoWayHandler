@@ -17,7 +17,7 @@ namespace ProjectTransportSystem.Forms.FormGenerator
 
     public class DictionaryList
     {
-        public static void InitDictionary(TabItem tabItem, DictionaryBuilder actionAdd, IEnumerable data)
+        public static DockPanel InitDictionary(DictionaryBuilder actionAdd, IEnumerable data)
         {
             DockPanel dockPanel = new DockPanel
             {
@@ -43,7 +43,6 @@ namespace ProjectTransportSystem.Forms.FormGenerator
             dataGrid.Name = $"{actionAdd.DictionaryType.ToString()}Dict";
             dockPanel.Children.Add(dataGrid);
 
-            tabItem.Content = dockPanel;
             dataGrid.LoadingRow += (s, e) =>
             {
                 var action = actionAdd.Actions.FirstOrDefault(x => x.Key.ToLower() == "open");
@@ -53,6 +52,8 @@ namespace ProjectTransportSystem.Forms.FormGenerator
                     e.Row.MouseDoubleClick += new MouseButtonEventHandler(action.Value.EventHandler);
                 }
             };
+
+            return dockPanel;
         }
     }
 }

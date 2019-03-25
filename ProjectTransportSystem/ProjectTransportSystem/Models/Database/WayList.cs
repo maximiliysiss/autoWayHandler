@@ -10,7 +10,7 @@ namespace ProjectTransportSystem.Models.Database
     /// <summary>
     /// Путевой лист
     /// </summary>
-    public class WayList
+    public class WayList: IEquatable<WayList>
     {
         [Key]
         public int Id { get; set; }
@@ -19,5 +19,10 @@ namespace ProjectTransportSystem.Models.Database
         public Trip Trip { get; set; }
         public List<TrailerCar> TrailerCars { get; set; }
         public List<DriverAccompanying> DriverAccompanyings { get; set; }
+
+        public bool Equals(WayList other)
+        {
+            return this.Id == other.Id;
+        }
     }
 }

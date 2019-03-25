@@ -10,7 +10,7 @@ namespace ProjectTransportSystem.Models.Database
     /// <summary>
     /// Работа водителя
     /// </summary>
-    public class DriverWork
+    public class DriverWork: IEquatable<DriverWork>
     {
         [Key]
         public int Id { get; set; }
@@ -27,5 +27,10 @@ namespace ProjectTransportSystem.Models.Database
         /// </summary>
         public MovingFuel MovingFuel { get; set; }
         public WayList WayList { get; set; }
+
+        public bool Equals(DriverWork other)
+        {
+            return this.Id == other.Id;
+        }
     }
 }

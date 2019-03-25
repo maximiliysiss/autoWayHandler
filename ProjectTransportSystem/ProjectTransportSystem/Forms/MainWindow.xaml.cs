@@ -3,8 +3,10 @@ using ProjectTransportSystem.Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,20 +25,15 @@ namespace ProjectTransportSystem
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
-
-            foreach (var dict in Dictionary.Items.Cast<TabItem>())
-                try
-                {
-                    DictionaryList.InitDictionary(dict, DictionaryBuilder.GetDictionaryBuilder(dict.Name),
-                        GlobalStaticContext.MainDbContext.GetContext(dict.Name));
-                }
-                catch (Exception ex)
-                {
-
-                }
+            foreach (var item in Dictionary.Items.Cast<TabItem>())
+                item.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(item.Name),
+                              GlobalStaticContext.MainDbContext.GetContext(item.Name));
+            MainControl.IsEnabled = true;
+            Loading.Visibility = Visibility.Hidden;
         }
     }
 }

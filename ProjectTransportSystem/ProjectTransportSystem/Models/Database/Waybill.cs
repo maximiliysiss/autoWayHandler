@@ -1,11 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjectTransportSystem.Models.Database
 {
     /// <summary>
     /// Путевая bill
     /// </summary>
-    public class WayBill
+    public class WayBill: IEquatable<WayBill>
     {
         [Key]
         public int ID { get; set; }
@@ -22,5 +23,10 @@ namespace ProjectTransportSystem.Models.Database
         public string Redirect { get; set; }
         public Costing Costing { get; set; }
         public OtherInformation OtherInformation { get; set; }
+
+        public bool Equals(WayBill other)
+        {
+            return this.ID == other.ID;
+        }
     }
 }

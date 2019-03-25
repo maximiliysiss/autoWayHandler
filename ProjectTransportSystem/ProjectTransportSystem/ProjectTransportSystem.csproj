@@ -143,6 +143,10 @@
     <Compile Include="Migrations\20190323141201_Init.designer.cs">
       <DependentUpon>20190323141201_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190324144724_Init2.cs" />
+    <Compile Include="Migrations\20190324144724_Init2.designer.cs">
+      <DependentUpon>20190324144724_Init2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\MainDbContextModelSnapshot.cs" />
     <Compile Include="Models\Database\AdditionalOperation.cs" />
     <Compile Include="Models\Database\Cargo.cs" />
@@ -196,6 +200,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="FontAwesome.WPF">
+      <Version>4.7.0.9</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore">
       <Version>2.1.1</Version>
     </PackageReference>

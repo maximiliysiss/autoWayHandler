@@ -4,10 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectTransportSystem"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TabControl>
+        <TabControl IsEnabled="False" Name="MainControl">
             <TabItem Header="Dictionary" VirtualizingPanel.IsVirtualizing="False">
                 <TabControl Name="Dictionary">
                     <TabItem Name="DistanceOnRoadGroups" Header="Distance On Road Group"></TabItem>
@@ -22,5 +23,6 @@
                 </TabControl>
             </TabItem>
         </TabControl>
+        <fa:ImageAwesome Name="Loading" Width="100" Icon="Spinner" Spin="True" SpinDuration="4" />
     </Grid>
 </Window>

@@ -6,7 +6,7 @@ namespace ProjectTransportSystem.Models.Database
     /// <summary>
     /// Роль
     /// </summary>
-    public class Role: IEquatable<Role>
+    public class Role : IEquatable<Role>
     {
         [Key]
         public int ID { get; set; }
@@ -15,6 +15,11 @@ namespace ProjectTransportSystem.Models.Database
         public bool Equals(Role other)
         {
             return this.ID == other.ID;
+        }
+
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }

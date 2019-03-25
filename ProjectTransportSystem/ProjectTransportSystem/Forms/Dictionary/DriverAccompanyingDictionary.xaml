@@ -4,9 +4,46 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectTransportSystem.Forms.Dictionary"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
-        Title="DriverAccompanyingDictionary" Height="450" Width="800">
-    <Grid>
-        
+        Title="Driver Accompanying (Dictionary)" Height="300" Width="400">
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Name</Label>
+        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Surname</Label>
+        <Label Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Third name</Label>
+        <Label Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Certification</Label>
+        <Label Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Role</Label>
+        <Label Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center">Phone</Label>
+        <Label Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center">Adress</Label>
+        <Label Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center">Start dateTime</Label>
+        <Label Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Center">End dateTime</Label>
+
+        <Button Name="Action" Grid.Row="9" Grid.ColumnSpan="2">Action</Button>
+
+        <TextBox Text="{Binding Name}" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+        <TextBox Text="{Binding SurName}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+        <TextBox Text="{Binding ThirdName}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+        <TextBox Text="{Binding Certification}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+        <ComboBox Name="Roles" DisplayMemberPath="Name"  SelectedValue="{Binding Role}" Grid.Row="4" Grid.Column="1"/>
+        <TextBox Text="{Binding Phone}" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+        <TextBox Text="{Binding Adress}" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+        <DatePicker Text="{Binding StartDateTime}" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center"></DatePicker>
+        <DatePicker Text="{Binding EndDateTime}" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center"></DatePicker>
     </Grid>
 </Window>

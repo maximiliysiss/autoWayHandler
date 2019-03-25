@@ -1,11 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjectTransportSystem.Models.Database
 {
     /// <summary>
     /// Другая информация
     /// </summary>
-    public class OtherInformation
+    public class OtherInformation: IEquatable<OtherInformation>
     {
         [Key]
         public int Id { get; set; }
@@ -16,5 +17,10 @@ namespace ProjectTransportSystem.Models.Database
         public double DriverAdjustmentFactor { get; set; }
         public double MainTariffAdjustmentFactor { get; set; }
         public double Fine { get; set; }
+
+        public bool Equals(OtherInformation other)
+        {
+            return this.Id == other.Id;
+        }
     }
 }

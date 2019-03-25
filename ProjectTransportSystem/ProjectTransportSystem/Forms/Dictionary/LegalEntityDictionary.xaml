@@ -5,8 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectTransportSystem.Forms.Dictionary"
         mc:Ignorable="d"
-        Title="LegalEntityDictionary" Height="450" Width="800">
-    <Grid>
-        
+        Title="Legal Entity (Dictionary)" Height="300" Width="400">
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">Name</Label>
+        <Label Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">Legal Adress</Label>
+        <Label Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">Account</Label>
+        <Label Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">Bank Name</Label>
+        <Label Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center">OKONX</Label>
+        <Label Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center">OKPO</Label>
+        <Label Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center">INN</Label>
+
+        <TextBox Text="{Binding Name}" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+        <TextBox Text="{Binding LegalAdress}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+        <TextBox Text="{Binding Account}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+        <TextBox Text="{Binding BankName}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+        <TextBox Text="{Binding OKONX}" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+        <TextBox Text="{Binding OKPO}" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+        <TextBox Text="{Binding INN}" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+
+        <Button Name="Action" Grid.Row="7" Grid.ColumnSpan="2">Action</Button>
     </Grid>
 </Window>

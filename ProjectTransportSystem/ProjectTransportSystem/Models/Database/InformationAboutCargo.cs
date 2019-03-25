@@ -10,7 +10,7 @@ namespace ProjectTransportSystem.Models.Database
     /// <summary>
     /// Информация о грузе
     /// </summary>
-    public class InformationAboutCargo
+    public class InformationAboutCargo : IEquatable<InformationAboutCargo>
     {
         [Key]
         public int Id { get; set; }
@@ -26,5 +26,10 @@ namespace ProjectTransportSystem.Models.Database
         public double Mass { get; set; }
         public Cargo Cargo { get; set; }
         public WayBill WayBill { get; set; }
+
+        public bool Equals(InformationAboutCargo other)
+        {
+            return this.Id == other.Id;
+        }
     }
 }

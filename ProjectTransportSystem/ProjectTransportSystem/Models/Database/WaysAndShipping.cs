@@ -10,7 +10,7 @@ namespace ProjectTransportSystem.Models.Database
     /// <summary>
     /// ?
     /// </summary>
-    public class WaysAndShipping
+    public class WaysAndShipping : IEquatable<WaysAndShipping>
     {
         [Key]
         public int Id { get; set; }
@@ -19,5 +19,10 @@ namespace ProjectTransportSystem.Models.Database
         public double Distance { get; set; }
         public DateTime Time_Loop { get; set; }
         public ShippingKind ShippingKind { get; set; }
+
+        public bool Equals(WaysAndShipping other)
+        {
+            return this.Id == other.Id;
+        }
     }
 }
