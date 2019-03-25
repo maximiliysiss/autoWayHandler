@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectTransportSystem.Forms.Dictionary"
+        xmlns:p="clr-namespace:ProjectTransportSystem.Properties"
         mc:Ignorable="d"
         Title="Legal Entity (Dictionary)" Height="300" Width="400">
     <Grid Margin="5">
@@ -22,13 +23,13 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">Name</Label>
-        <Label Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">Legal Adress</Label>
-        <Label Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">Account</Label>
-        <Label Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">Bank Name</Label>
-        <Label Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center">OKONX</Label>
-        <Label Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center">OKPO</Label>
-        <Label Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center">INN</Label>
+        <Label Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Content="{x:Static p:Resources.Name}"></Label>
+        <Label Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="{x:Static p:Resources.LegalAdress}"></Label>
+        <Label Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="{x:Static p:Resources.Account}"></Label>
+        <Label Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Content="{x:Static p:Resources.BankName}"></Label>
+        <Label Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Content="{x:Static p:Resources.OKONX}"></Label>
+        <Label Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Content="{x:Static p:Resources.OKPO}"></Label>
+        <Label Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Content="{x:Static p:Resources.INN}"></Label>
 
         <TextBox Text="{Binding Name}" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"></TextBox>
         <TextBox Text="{Binding LegalAdress}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"></TextBox>

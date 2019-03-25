@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectTransportSystem.Forms.Dictionary"
+        xmlns:p="clr-namespace:ProjectTransportSystem.Properties"
         mc:Ignorable="d"
         Title="ShippingKind" Height="100" Width="250">
     <Grid Margin="5">
@@ -16,8 +17,8 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center">Name</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Content="{x:Static p:Resources.Name}"></Label>
         <TextBox Text="{Binding Name}" Grid.Column="1" VerticalAlignment="Center"></TextBox>
-        <Button Name="Action" Grid.Row="1" Grid.ColumnSpan="2">Action</Button>
+        <Button Name="Action" Grid.Row="1" Grid.ColumnSpan="2"></Button>
     </Grid>
 </Window>

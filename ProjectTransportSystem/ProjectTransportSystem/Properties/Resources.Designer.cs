@@ -97,6 +97,87 @@ namespace ProjectTransportSystem.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Driver Accompanying (Dictionary).
+        /// </summary>
+        public static string DictionaryDriverAccompanying {
+            get {
+                return ResourceManager.GetString("DictionaryDriverAccompanying", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fuel (Dictionary).
+        /// </summary>
+        public static string DictionaryFuel {
+            get {
+                return ResourceManager.GetString("DictionaryFuel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Legal Entity (Dictionary).
+        /// </summary>
+        public static string DictionaryLegalEntity {
+            get {
+                return ResourceManager.GetString("DictionaryLegalEntity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Distance On Road Group (Dictionary).
+        /// </summary>
+        public static string DictionaryOnDistanceOnRoadGroup {
+            get {
+                return ResourceManager.GetString("DictionaryOnDistanceOnRoadGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Operation (Dictionary).
+        /// </summary>
+        public static string DictionaryOperation {
+            get {
+                return ResourceManager.GetString("DictionaryOperation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Role (Dictionary).
+        /// </summary>
+        public static string DictionaryRole {
+            get {
+                return ResourceManager.GetString("DictionaryRole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shipping Kind (Dictionary).
+        /// </summary>
+        public static string DictionaryShippingKind {
+            get {
+                return ResourceManager.GetString("DictionaryShippingKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trailer/Car (Dictionary).
+        /// </summary>
+        public static string DictionaryTrailerCar {
+            get {
+                return ResourceManager.GetString("DictionaryTrailerCar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transport Type (Dictionary).
+        /// </summary>
+        public static string DictionaryTransportType {
+            get {
+                return ResourceManager.GetString("DictionaryTransportType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to EndDateTime.
         /// </summary>
         public static string EndDateTime {

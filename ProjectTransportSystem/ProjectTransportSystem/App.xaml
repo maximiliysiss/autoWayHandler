@@ -4,6 +4,5 @@
              xmlns:local="clr-namespace:ProjectTransportSystem"
              StartupUri="Forms/MainWindow.xaml">
     <Application.Resources>
-         
     </Application.Resources>
 </Application>

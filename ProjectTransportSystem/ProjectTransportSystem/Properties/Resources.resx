@@ -192,4 +192,31 @@
   <data name="TransportType" xml:space="preserve">
     <value>Transport Type</value>
   </data>
+  <data name="DictionaryDriverAccompanying" xml:space="preserve">
+    <value>Driver Accompanying (Dictionary)</value>
+  </data>
+  <data name="DictionaryFuel" xml:space="preserve">
+    <value>Fuel (Dictionary)</value>
+  </data>
+  <data name="DictionaryLegalEntity" xml:space="preserve">
+    <value>Legal Entity (Dictionary)</value>
+  </data>
+  <data name="DictionaryOnDistanceOnRoadGroup" xml:space="preserve">
+    <value>Distance On Road Group (Dictionary)</value>
+  </data>
+  <data name="DictionaryOperation" xml:space="preserve">
+    <value>Operation (Dictionary)</value>
+  </data>
+  <data name="DictionaryRole" xml:space="preserve">
+    <value>Role (Dictionary)</value>
+  </data>
+  <data name="DictionaryShippingKind" xml:space="preserve">
+    <value>Shipping Kind (Dictionary)</value>
+  </data>
+  <data name="DictionaryTrailerCar" xml:space="preserve">
+    <value>Trailer/Car (Dictionary)</value>
+  </data>
+  <data name="DictionaryTransportType" xml:space="preserve">
+    <value>Transport Type (Dictionary)</value>
+  </data>
 </root>

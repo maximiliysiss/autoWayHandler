@@ -192,4 +192,31 @@
   <data name="TransportType" xml:space="preserve">
     <value>Тип транспорта</value>
   </data>
+  <data name="DictionaryDriverAccompanying" xml:space="preserve">
+    <value>Водитель/Сопровождающий (Словарь)</value>
+  </data>
+  <data name="DictionaryFuel" xml:space="preserve">
+    <value>Топливо (Словарь)</value>
+  </data>
+  <data name="DictionaryLegalEntity" xml:space="preserve">
+    <value>Юридическое лицо (Словарь)</value>
+  </data>
+  <data name="DictionaryOnDistanceOnRoadGroup" xml:space="preserve">
+    <value>Distance On Road Group (Словарь)</value>
+  </data>
+  <data name="DictionaryOperation" xml:space="preserve">
+    <value>Операция (Словарь)</value>
+  </data>
+  <data name="DictionaryRole" xml:space="preserve">
+    <value>Роль (Словарь)</value>
+  </data>
+  <data name="DictionaryShippingKind" xml:space="preserve">
+    <value>Shipping Kind (Словарь)</value>
+  </data>
+  <data name="DictionaryTrailerCar" xml:space="preserve">
+    <value>Автомобиль/Прицеп (Словарь)</value>
+  </data>
+  <data name="DictionaryTransportType" xml:space="preserve">
+    <value>Тип транспорта (Словарь)</value>
+  </data>
 </root>

@@ -5,21 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectTransportSystem"
         xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:p="clr-namespace:ProjectTransportSystem.Properties"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TabControl IsEnabled="False" Name="MainControl">
             <TabItem Header="Dictionary" VirtualizingPanel.IsVirtualizing="False">
                 <TabControl Name="Dictionary">
-                    <TabItem Name="DistanceOnRoadGroups" Header="Distance On Road Group"></TabItem>
-                    <TabItem Name="DriverAccompanyings" Header="Driver Accompanying"></TabItem>
-                    <TabItem Name="Fuels" Header="Fuel"></TabItem>
-                    <TabItem Name="LegalEntities" Header="Legal Entity"></TabItem>
-                    <TabItem Name="Operations" Header="Operation"></TabItem>
-                    <TabItem Name="Roles" Header="Role"></TabItem>
-                    <TabItem Name="ShippingKinds" Header="Shipping"></TabItem>
-                    <TabItem Name="CarTrailers" Header="Trailer Car"></TabItem>
-                    <TabItem Name="TransportTypes" Header="TransportType"></TabItem>
+                    <TabItem Name="DistanceOnRoadGroups" Header="{x:Static p:Resources.DictionaryOnDistanceOnRoadGroup}"></TabItem>
+                    <TabItem Name="DriverAccompanyings" Header="{x:Static p:Resources.DictionaryDriverAccompanying}"></TabItem>
+                    <TabItem Name="Fuels" Header="{x:Static p:Resources.DictionaryFuel}"></TabItem>
+                    <TabItem Name="LegalEntities" Header="{x:Static p:Resources.DictionaryLegalEntity}"></TabItem>
+                    <TabItem Name="Operations" Header="{x:Static p:Resources.DictionaryOperation}"></TabItem>
+                    <TabItem Name="Roles" Header="{x:Static p:Resources.DictionaryRole}"></TabItem>
+                    <TabItem Name="ShippingKinds" Header="{x:Static p:Resources.DictionaryShippingKind}"></TabItem>
+                    <TabItem Name="CarTrailers" Header="{x:Static p:Resources.DictionaryTrailerCar}"></TabItem>
+                    <TabItem Name="TransportTypes" Header="{x:Static p:Resources.DictionaryTransportType}"></TabItem>
                 </TabControl>
             </TabItem>
         </TabControl>

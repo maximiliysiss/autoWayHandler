@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectTransportSystem.Forms.Dictionary"
+        xmlns:p="clr-namespace:ProjectTransportSystem.Properties"
         mc:Ignorable="d"
         Title="TrailerCar" Height="200" Width="400">
     <Grid Margin="5">
@@ -19,16 +20,16 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Name</Label>
-        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Transport Type</Label>
-        <Label Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Model</Label>
-        <Label Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">State Number</Label>
+        <Label Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{x:Static p:Resources.Name}"></Label>
+        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{x:Static p:Resources.TransportType}"></Label>
+        <Label Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{x:Static p:Resources.Model}"></Label>
+        <Label Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{x:Static p:Resources.StateNumber}"></Label>
 
         <TextBox Text="{Binding Name}" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"></TextBox>
         <ComboBox Grid.Column="1" Grid.Row="1" Name="TransportTypes" SelectedItem="{Binding TransportType}" DisplayMemberPath="Name"></ComboBox>
         <TextBox Text="{Binding Model}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"></TextBox>
         <TextBox Text="{Binding StateNumber}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"></TextBox>
 
-        <Button Name="Action" Grid.Row="4" Grid.ColumnSpan="2">Action</Button>
+        <Button Name="Action" Grid.Row="4" Grid.ColumnSpan="2"></Button>
     </Grid>
 </Window>
