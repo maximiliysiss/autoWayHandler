@@ -118,40 +118,40 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Account" xml:space="preserve">
-    <value>Account</value>
+    <value>Аккаунт</value>
   </data>
   <data name="Adress" xml:space="preserve">
-    <value>Adress</value>
+    <value>Адрес</value>
   </data>
   <data name="BankName" xml:space="preserve">
-    <value>Bank Name</value>
+    <value>Имя банка</value>
   </data>
   <data name="Certification" xml:space="preserve">
-    <value>Certification</value>
+    <value>Сертификат</value>
   </data>
   <data name="EndDateTime" xml:space="preserve">
-    <value>EndDateTime</value>
+    <value>Дата увольнения</value>
   </data>
   <data name="FirstGroup" xml:space="preserve">
-    <value>First Group</value>
+    <value>Первая группа</value>
   </data>
   <data name="InCity" xml:space="preserve">
-    <value>In City</value>
+    <value>В городе</value>
   </data>
   <data name="INN" xml:space="preserve">
-    <value>INN</value>
+    <value>ИНН</value>
   </data>
   <data name="LegalAdress" xml:space="preserve">
-    <value>Legal Adress</value>
+    <value>Адрес</value>
   </data>
   <data name="Model" xml:space="preserve">
-    <value>Model</value>
+    <value>Модель</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Name</value>
+    <value>Имя</value>
   </data>
   <data name="Number" xml:space="preserve">
-    <value>Number</value>
+    <value>Номер</value>
   </data>
   <data name="OKONX" xml:space="preserve">
     <value>OKONX</value>
@@ -160,36 +160,36 @@
     <value>OKPO</value>
   </data>
   <data name="Phone" xml:space="preserve">
-    <value>Phone</value>
+    <value>Номер телефона</value>
   </data>
   <data name="Price" xml:space="preserve">
-    <value>Price</value>
+    <value>Цена</value>
   </data>
   <data name="Role" xml:space="preserve">
-    <value>Role</value>
+    <value>Роль</value>
   </data>
   <data name="SecondGroup" xml:space="preserve">
-    <value>Second Group</value>
+    <value>Вторая группа</value>
   </data>
   <data name="StartDateTime" xml:space="preserve">
-    <value>Start DateTime</value>
+    <value>Начало работы</value>
   </data>
   <data name="StateNumber" xml:space="preserve">
-    <value>State Number</value>
+    <value>Номер</value>
   </data>
   <data name="Surname" xml:space="preserve">
-    <value>Surname</value>
+    <value>Фамилия</value>
   </data>
   <data name="ThirdGroup" xml:space="preserve">
-    <value>Third Group</value>
+    <value>Третья группа</value>
   </data>
   <data name="ThirdName" xml:space="preserve">
-    <value>Third Name</value>
+    <value>Отчество</value>
   </data>
   <data name="Total" xml:space="preserve">
-    <value>Total</value>
+    <value>Итог</value>
   </data>
   <data name="TransportType" xml:space="preserve">
-    <value>Transport Type</value>
+    <value>Тип транспорта</value>
   </data>
 </root>

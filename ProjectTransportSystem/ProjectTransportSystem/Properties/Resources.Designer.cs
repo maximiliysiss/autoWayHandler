@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjectTransportSystem.Properties
-{
-
-
+namespace ProjectTransportSystem.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -19,52 +19,269 @@ namespace ProjectTransportSystem.Properties
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    public class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        public static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ProjectTransportSystem.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        public static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account.
+        /// </summary>
+        public static string Account {
+            get {
+                return ResourceManager.GetString("Account", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adress.
+        /// </summary>
+        public static string Adress {
+            get {
+                return ResourceManager.GetString("Adress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bank Name.
+        /// </summary>
+        public static string BankName {
+            get {
+                return ResourceManager.GetString("BankName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Certification.
+        /// </summary>
+        public static string Certification {
+            get {
+                return ResourceManager.GetString("Certification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EndDateTime.
+        /// </summary>
+        public static string EndDateTime {
+            get {
+                return ResourceManager.GetString("EndDateTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Group.
+        /// </summary>
+        public static string FirstGroup {
+            get {
+                return ResourceManager.GetString("FirstGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In City.
+        /// </summary>
+        public static string InCity {
+            get {
+                return ResourceManager.GetString("InCity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INN.
+        /// </summary>
+        public static string INN {
+            get {
+                return ResourceManager.GetString("INN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Legal Adress.
+        /// </summary>
+        public static string LegalAdress {
+            get {
+                return ResourceManager.GetString("LegalAdress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Model.
+        /// </summary>
+        public static string Model {
+            get {
+                return ResourceManager.GetString("Model", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number.
+        /// </summary>
+        public static string Number {
+            get {
+                return ResourceManager.GetString("Number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OKONX.
+        /// </summary>
+        public static string OKONX {
+            get {
+                return ResourceManager.GetString("OKONX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OKPO.
+        /// </summary>
+        public static string OKPO {
+            get {
+                return ResourceManager.GetString("OKPO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone.
+        /// </summary>
+        public static string Phone {
+            get {
+                return ResourceManager.GetString("Phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string Price {
+            get {
+                return ResourceManager.GetString("Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Role.
+        /// </summary>
+        public static string Role {
+            get {
+                return ResourceManager.GetString("Role", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Second Group.
+        /// </summary>
+        public static string SecondGroup {
+            get {
+                return ResourceManager.GetString("SecondGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start DateTime.
+        /// </summary>
+        public static string StartDateTime {
+            get {
+                return ResourceManager.GetString("StartDateTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to State Number.
+        /// </summary>
+        public static string StateNumber {
+            get {
+                return ResourceManager.GetString("StateNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Surname.
+        /// </summary>
+        public static string Surname {
+            get {
+                return ResourceManager.GetString("Surname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Third Group.
+        /// </summary>
+        public static string ThirdGroup {
+            get {
+                return ResourceManager.GetString("ThirdGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Third Name.
+        /// </summary>
+        public static string ThirdName {
+            get {
+                return ResourceManager.GetString("ThirdName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total.
+        /// </summary>
+        public static string Total {
+            get {
+                return ResourceManager.GetString("Total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transport Type.
+        /// </summary>
+        public static string TransportType {
+            get {
+                return ResourceManager.GetString("TransportType", resourceCulture);
             }
         }
     }
