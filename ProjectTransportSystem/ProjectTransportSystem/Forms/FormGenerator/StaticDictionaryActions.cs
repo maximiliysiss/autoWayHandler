@@ -1,5 +1,6 @@
 ﻿using ProjectTransportSystem.Extensions;
 using ProjectTransportSystem.Models;
+using ProjectTransportSystem.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +43,7 @@ namespace ProjectTransportSystem.Forms.FormGenerator
             where T : Window, new()
             where D : IDictionaryType, new()
         {
-            return new KeyValuePair<string, DictionaryAction>("Add", new DictionaryAction
+            return new KeyValuePair<string, DictionaryAction>(Resources.Add, new DictionaryAction
             {
                 EventHandler = OnAddButton<T, D>
             });
@@ -69,7 +70,9 @@ namespace ProjectTransportSystem.Forms.FormGenerator
 
         public static void InitializeComponent(Button action, Action closeEvent, bool isEdit = false)
         {
-            action.Content = isEdit ? "Edit" : "Add";
+            if (action == null)
+                return;
+            action.Content = isEdit ? Resources.Edit : Resources.Create;
             if (isEdit)
                 action.Click += OnEdit;
             else

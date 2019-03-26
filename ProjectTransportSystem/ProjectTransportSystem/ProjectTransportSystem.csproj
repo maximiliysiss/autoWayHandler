@@ -137,8 +137,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Forms\WayBillForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\WayListForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\WayBillForm.xaml.cs">
+      <DependentUpon>WayBillForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WayListForm.xaml.cs">
+      <DependentUpon>WayListForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\20190323141201_Init.cs" />
     <Compile Include="Migrations\20190323141201_Init.designer.cs">
       <DependentUpon>20190323141201_Init.cs</DependentUpon>

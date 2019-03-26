@@ -10,7 +10,7 @@ namespace ProjectTransportSystem.Models.Database
     /// <summary>
     /// Средство передвижения или первозки
     /// </summary>
-    public class TrailerCar: IEquatable<TrailerCar>
+    public class TrailerCar : IEquatable<TrailerCar>
     {
         [Key]
         public int ID { get; set; }
@@ -28,6 +28,11 @@ namespace ProjectTransportSystem.Models.Database
         public bool Equals(TrailerCar other)
         {
             return this.ID == other.ID;
+        }
+
+        public override string ToString()
+        {
+            return $"{Name} {Model} {StateNumber}";
         }
     }
 }

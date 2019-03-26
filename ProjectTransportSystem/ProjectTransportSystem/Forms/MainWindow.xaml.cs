@@ -32,6 +32,13 @@ namespace ProjectTransportSystem
             foreach (var item in Dictionary.Items.Cast<TabItem>())
                 item.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(item.Name),
                               GlobalStaticContext.MainDbContext.GetContext(item.Name));
+
+            WayBills.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(WayBills.Name),
+                                                            GlobalStaticContext.MainDbContext.GetContext(WayBills.Name));
+
+            WayLists.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(WayLists.Name),
+                                                            GlobalStaticContext.MainDbContext.GetContext(WayLists.Name));
+
             MainControl.IsEnabled = true;
             Loading.Visibility = Visibility.Hidden;
         }

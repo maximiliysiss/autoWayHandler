@@ -70,6 +70,15 @@ namespace ProjectTransportSystem.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        public static string Add {
+            get {
+                return ResourceManager.GetString("Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Adress.
         /// </summary>
         public static string Adress {
@@ -93,6 +102,15 @@ namespace ProjectTransportSystem.Properties {
         public static string Certification {
             get {
                 return ResourceManager.GetString("Certification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string Create {
+            get {
+                return ResourceManager.GetString("Create", resourceCulture);
             }
         }
         
@@ -160,6 +178,15 @@ namespace ProjectTransportSystem.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dictionary.
+        /// </summary>
+        public static string DictionaryTab {
+            get {
+                return ResourceManager.GetString("DictionaryTab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Trailer/Car (Dictionary).
         /// </summary>
         public static string DictionaryTrailerCar {
@@ -174,6 +201,15 @@ namespace ProjectTransportSystem.Properties {
         public static string DictionaryTransportType {
             get {
                 return ResourceManager.GetString("DictionaryTransportType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
             }
         }
         

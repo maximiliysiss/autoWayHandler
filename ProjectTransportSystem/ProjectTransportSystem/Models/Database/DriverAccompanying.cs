@@ -30,5 +30,10 @@ namespace ProjectTransportSystem.Models.Database
         {
             return this.ID == other.ID;
         }
+
+        public override string ToString()
+        {
+            return $"{Name} {SurName} {ThirdName}";
+        }
     }
 }

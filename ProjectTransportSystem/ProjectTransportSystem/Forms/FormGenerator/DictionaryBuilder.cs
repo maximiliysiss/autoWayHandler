@@ -23,7 +23,9 @@ namespace ProjectTransportSystem.Forms.FormGenerator
         Roles,
         ShippingKinds,
         CarTrailers,
-        TransportTypes
+        TransportTypes,
+        WayLists,
+        WayBills,
     }
 
     public class DictionaryAction
@@ -83,6 +85,14 @@ namespace ProjectTransportSystem.Forms.FormGenerator
                 case DictionaryType.TransportTypes:
                     dictionaryBuilder.Actions.Add(StaticDictionaryActions.Add<TransportTypeDictionary, DictionaryTypeTransportType>());
                     dictionaryBuilder.Actions.Add(StaticDictionaryActions.Open<BuilderTransportType, TransportType>());
+                    break;
+                case DictionaryType.WayBills:
+                    dictionaryBuilder.Actions.Add(StaticDictionaryActions.Add<WayBillForm, DictionaryTypeWayBill>());
+                    dictionaryBuilder.Actions.Add(StaticDictionaryActions.Open<BuilderWayBill, WayBill>());
+                    break;
+                case DictionaryType.WayLists:
+                    dictionaryBuilder.Actions.Add(StaticDictionaryActions.Add<WayListForm, DictionaryTypeWayList>());
+                    dictionaryBuilder.Actions.Add(StaticDictionaryActions.Open<BuilderWayList, WayList>());
                     break;
             }
             return dictionaryBuilder;

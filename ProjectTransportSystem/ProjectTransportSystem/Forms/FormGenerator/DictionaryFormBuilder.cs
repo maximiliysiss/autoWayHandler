@@ -132,4 +132,30 @@ namespace ProjectTransportSystem.Forms.FormGenerator
             return new TransportTypeDictionary(obj);
         }
     }
+
+    public class BuilderWayBill : IDictionaryFormBuilder<WayBill>
+    {
+        public Window GetWindow()
+        {
+            return new WayBillForm();
+        }
+
+        public Window GetWindow(WayBill obj)
+        {
+            return new WayBillForm(obj);
+        }
+    }
+
+    public class BuilderWayList : IDictionaryFormBuilder<WayList>
+    {
+        public Window GetWindow()
+        {
+            return new WayListForm();
+        }
+
+        public Window GetWindow(WayList obj)
+        {
+            return new WayListForm(obj);
+        }
+    }
 }

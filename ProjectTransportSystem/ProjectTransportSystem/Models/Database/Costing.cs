@@ -6,7 +6,7 @@ namespace ProjectTransportSystem.Models.Database
     /// <summary>
     /// Оплата (цена)?
     /// </summary>
-    public class Costing: IEquatable<Costing>
+    public class Costing : IEquatable<Costing>
     {
         [Key]
         public int ID { get; set; }
@@ -54,6 +54,11 @@ namespace ProjectTransportSystem.Models.Database
         public bool Equals(Costing other)
         {
             return this.ID == other.ID;
+        }
+
+        public override string ToString()
+        {
+            return CostingKind;
         }
     }
 }

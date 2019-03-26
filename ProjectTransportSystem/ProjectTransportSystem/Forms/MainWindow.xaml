@@ -8,9 +8,9 @@
         xmlns:p="clr-namespace:ProjectTransportSystem.Properties"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Name="WindowMain">
         <TabControl IsEnabled="False" Name="MainControl">
-            <TabItem Header="Dictionary" VirtualizingPanel.IsVirtualizing="False">
+            <TabItem Header="{x:Static p:Resources.DictionaryTab}">
                 <TabControl Name="Dictionary">
                     <TabItem Name="DistanceOnRoadGroups" Header="{x:Static p:Resources.DictionaryOnDistanceOnRoadGroup}"></TabItem>
                     <TabItem Name="DriverAccompanyings" Header="{x:Static p:Resources.DictionaryDriverAccompanying}"></TabItem>
@@ -23,7 +23,13 @@
                     <TabItem Name="TransportTypes" Header="{x:Static p:Resources.DictionaryTransportType}"></TabItem>
                 </TabControl>
             </TabItem>
+            <TabItem Name="WayBills" Header="Way bills">
+                
+            </TabItem>
+            <TabItem Name="WayLists" Header="Way lists">
+
+            </TabItem>
         </TabControl>
-        <fa:ImageAwesome Name="Loading" Width="100" Icon="Spinner" Spin="True" SpinDuration="4" />
+        <fa:ImageAwesome Name="Loading" Width="100" Icon="Spinner" Spin="True" SpinDuration="2.5" />
     </Grid>
 </Window>
