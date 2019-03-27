@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ProjectTransportSystem.Models.Database
@@ -6,12 +7,12 @@ namespace ProjectTransportSystem.Models.Database
     /// <summary>
     /// Путевая bill
     /// </summary>
-    public class WayBill: IEquatable<WayBill>
+    public class WayBill : IEquatable<WayBill>
     {
         [Key]
         public int ID { get; set; }
-        public DriverAccompanying Driver { get; set; }
-        public TrailerCar Car { get; set; }
+        public List<DriverAccompanying> Driver { get; set; }
+        public List<TrailerCar> Car { get; set; }
         public string AutoEnterprise { get; set; }
         public string TransportKind { get; set; }
         public string CompanyCustomer { get; set; }

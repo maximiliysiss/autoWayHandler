@@ -6,27 +6,48 @@
         xmlns:local="clr-namespace:ProjectTransportSystem.Forms"
         mc:Ignorable="d"
         Title="WayBill" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="5">
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" Name="DriverCont">
             <Grid.RowDefinitions>
                 <RowDefinition Height="25"></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
 
-            <Label>Add</Label>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label HorizontalAlignment="Center" VerticalAlignment="Center">Add Driver/Accompanying</Label>
+                <ComboBox Name="SelectDriver" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"></ComboBox>
+            </Grid>
+
         </Grid>
-        <Grid Grid.Row="1"></Grid>
+        <Grid Grid.Row="1" Name="CarCont">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label HorizontalAlignment="Center" VerticalAlignment="Center">Add Car/Trailer</Label>
+                <ComboBox Name="SelectCar" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"></ComboBox>
+            </Grid>
+
+        </Grid>
     </Grid>
 </Window>

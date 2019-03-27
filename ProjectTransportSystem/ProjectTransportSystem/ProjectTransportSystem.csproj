@@ -161,6 +161,10 @@
     <Compile Include="Migrations\20190324144724_Init2.designer.cs">
       <DependentUpon>20190324144724_Init2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190327184424_ExtNext.cs" />
+    <Compile Include="Migrations\20190327184424_ExtNext.designer.cs">
+      <DependentUpon>20190327184424_ExtNext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\MainDbContextModelSnapshot.cs" />
     <Compile Include="Models\Database\AdditionalOperation.cs" />
     <Compile Include="Models\Database\Cargo.cs" />

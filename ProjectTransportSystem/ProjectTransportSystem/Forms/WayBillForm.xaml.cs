@@ -1,7 +1,10 @@
 ﻿using ProjectTransportSystem.Forms.FormGenerator;
+using ProjectTransportSystem.Models;
 using ProjectTransportSystem.Models.Database;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +27,9 @@ namespace ProjectTransportSystem.Forms
         public WayBillForm()
         {
             InitializeComponent();
-            DataContext = new WayBill();
+            var wayBill = new WayBill();
+            DataContext = wayBill;
+            InitWayBill(wayBill);
         }
 
         public WayBillForm(WayBill wayBill)
@@ -32,6 +37,18 @@ namespace ProjectTransportSystem.Forms
             InitializeComponent();
             StaticDictionaryActions.InitializeComponent(null, new Action(() => Close()));
             DataContext = wayBill;
+            InitWayBill(wayBill);
+        }
+
+        private void InitWayBill(WayBill wayBill)
+        {
+            CarCont.Children.Add(DictionaryList.GetDataGridRemovable("CarDict", wayBill.Car,
+                (o, e) => { }, new Dictionary<DependencyProperty, object> { { Grid.RowProperty, 1 } }));
+            DriverCont.Children.Add(DictionaryList.GetDataGridRemovable("DriverDict", wayBill.Driver,
+                (o, e) => { }, new Dictionary<DependencyProperty, object> { { Grid.RowProperty, 1 } }));
+
+            SelectCar.ItemsSource = new ObservableCollection<TrailerCar>(GlobalStaticContext.MainDbContext.CarTrailers);
+            SelectDriver.ItemsSource = new ObservableCollection<DriverAccompanying>(GlobalStaticContext.MainDbContext.DriverAccompanyings);
         }
     }
 }

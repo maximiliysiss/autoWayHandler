@@ -18,7 +18,29 @@ namespace ProjectTransportSystem.Forms.FormGenerator
     public class DictionaryList
     {
 
-        public static DataGrid GetDataGridRemovable(string name, IEnumerable data, Dictionary<DependencyProperty, object> properties)
+        public static DataGrid GetDataGridRemovable(string name, IEnumerable data, RoutedEventHandler routedEvent,
+            Dictionary<DependencyProperty, object> properties)
+        {
+            DataGrid dataGrid = new DataGrid();
+            foreach (var prop in properties)
+                dataGrid.SetValue(prop.Key, prop.Value);
+            if (data != null)
+                dataGrid.ItemsSource = new ObservableCollection<object>(data.Cast<object>().ToList());
+            dataGrid.IsReadOnly = true;
+            dataGrid.Name = name;
+            dataGrid.LoadingRow += (s, e) =>
+            {
+                var contextMenu = new ContextMenu();
+                var menuItem = new MenuItem { Header = "Delete", Name = $"{name}Delete" };
+                menuItem.Click += routedEvent;
+                contextMenu.Items.Add(menuItem);
+                e.Row.ContextMenu = contextMenu;
+            };
+            return dataGrid;
+        }
+
+        public static DataGrid GetDataGridSelectable(string name, IEnumerable data, Dictionary<DependencyProperty, object> properties,
+            MouseButtonEventHandler reaction)
         {
             DataGrid dataGrid = new DataGrid();
             foreach (var prop in properties)
@@ -28,11 +50,7 @@ namespace ProjectTransportSystem.Forms.FormGenerator
             dataGrid.Name = name;
             dataGrid.LoadingRow += (s, e) =>
             {
-                var contextMenu = new ContextMenu();
-                var menuItem = new MenuItem { Header = "Delete", Name = $"{name}Delete" };
-                menuItem.Click += StaticDictionaryActions.DeleteDictionary;
-                contextMenu.Items.Add(menuItem);
-                e.Row.ContextMenu = contextMenu;
+                e.Row.MouseDoubleClick += reaction;
             };
             return dataGrid;
         }
@@ -55,7 +73,7 @@ namespace ProjectTransportSystem.Forms.FormGenerator
                 grid.Children.Add(button);
             }
             dockPanel.Children.Add(grid);
-            var dataGrid = GetDataGridRemovable($"{actionAdd.DictionaryType.ToString()}Dict", data,
+            var dataGrid = GetDataGridRemovable($"{actionAdd.DictionaryType.ToString()}Dict", data, StaticDictionaryActions.DeleteDictionary,
                 new Dictionary<DependencyProperty, object> { { DockPanel.DockProperty, Dock.Top } });
             dockPanel.Children.Add(dataGrid);
 
