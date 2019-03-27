@@ -17,6 +17,26 @@ namespace ProjectTransportSystem.Forms.FormGenerator
 
     public class DictionaryList
     {
+
+        public static DataGrid GetDataGridRemovable(string name, IEnumerable data, Dictionary<DependencyProperty, object> properties)
+        {
+            DataGrid dataGrid = new DataGrid();
+            foreach (var prop in properties)
+                dataGrid.SetValue(prop.Key, prop.Value);
+            dataGrid.ItemsSource = new ObservableCollection<object>(data.Cast<object>().ToList());
+            dataGrid.IsReadOnly = true;
+            dataGrid.Name = name;
+            dataGrid.LoadingRow += (s, e) =>
+            {
+                var contextMenu = new ContextMenu();
+                var menuItem = new MenuItem { Header = "Delete", Name = $"{name}Delete" };
+                menuItem.Click += StaticDictionaryActions.DeleteDictionary;
+                contextMenu.Items.Add(menuItem);
+                e.Row.ContextMenu = contextMenu;
+            };
+            return dataGrid;
+        }
+
         public static DockPanel InitDictionary(DictionaryBuilder actionAdd, IEnumerable data)
         {
             DockPanel dockPanel = new DockPanel
@@ -35,12 +55,8 @@ namespace ProjectTransportSystem.Forms.FormGenerator
                 grid.Children.Add(button);
             }
             dockPanel.Children.Add(grid);
-
-            DataGrid dataGrid = new DataGrid();
-            dataGrid.SetValue(DockPanel.DockProperty, Dock.Top);
-            dataGrid.ItemsSource = new ObservableCollection<object>(data.Cast<object>().ToList());
-            dataGrid.IsReadOnly = true;
-            dataGrid.Name = $"{actionAdd.DictionaryType.ToString()}Dict";
+            var dataGrid = GetDataGridRemovable($"{actionAdd.DictionaryType.ToString()}Dict", data,
+                new Dictionary<DependencyProperty, object> { { DockPanel.DockProperty, Dock.Top } });
             dockPanel.Children.Add(dataGrid);
 
             dataGrid.LoadingRow += (s, e) =>
@@ -50,11 +66,6 @@ namespace ProjectTransportSystem.Forms.FormGenerator
                 {
                     e.Row.MouseDoubleClick -= new MouseButtonEventHandler(action.Value.EventHandler);
                     e.Row.MouseDoubleClick += new MouseButtonEventHandler(action.Value.EventHandler);
-                    var contextMenu = new ContextMenu();
-                    var menuItem = new MenuItem { Header = "Delete" };
-                    menuItem.Click += StaticDictionaryActions.DeleteDictionary;
-                    contextMenu.Items.Add(menuItem);
-                    e.Row.ContextMenu = contextMenu;
                 }
             };
 

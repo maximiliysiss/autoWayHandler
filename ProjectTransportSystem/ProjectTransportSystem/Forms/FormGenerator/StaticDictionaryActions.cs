@@ -84,6 +84,12 @@ namespace ProjectTransportSystem.Forms.FormGenerator
         {
             GlobalStaticContext.MainDbContext.Remove((e.Source as MenuItem).DataContext);
             GlobalStaticContext.MainDbContext.SaveChanges();
+            MainWindow window = (MainWindow)Window.GetWindow(sender as MenuItem);
+            var name = (sender as MenuItem).Name;
+            name = name.Substring(0, name.IndexOf("Delete"));
+            DataGrid grid = window.FindVisualChildByName<DataGrid>(name);
+            grid.ItemsSource = GlobalStaticContext.MainDbContext.GetContext(name.Substring(0, name.IndexOf("Dict")))
+                .Cast<object>().ToList();
         }
     }
 }
