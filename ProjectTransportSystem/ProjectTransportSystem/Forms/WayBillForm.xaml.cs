@@ -42,13 +42,6 @@ namespace ProjectTransportSystem.Forms
 
         private void InitWayBill(WayBill wayBill)
         {
-            CarCont.Children.Add(DictionaryList.GetDataGridRemovable("CarDict", wayBill.Car,
-                (o, e) => { }, new Dictionary<DependencyProperty, object> { { Grid.RowProperty, 1 } }));
-            DriverCont.Children.Add(DictionaryList.GetDataGridRemovable("DriverDict", wayBill.Driver,
-                (o, e) => { }, new Dictionary<DependencyProperty, object> { { Grid.RowProperty, 1 } }));
-
-            SelectCar.ItemsSource = new ObservableCollection<TrailerCar>(GlobalStaticContext.MainDbContext.CarTrailers);
-            SelectDriver.ItemsSource = new ObservableCollection<DriverAccompanying>(GlobalStaticContext.MainDbContext.DriverAccompanyings);
         }
     }
 }

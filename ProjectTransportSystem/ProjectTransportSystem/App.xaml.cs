@@ -17,6 +17,7 @@ namespace ProjectTransportSystem
     {
         public App()
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru-RU");
         }
     }
 }

@@ -232,10 +232,10 @@ namespace ProjectAutoSupplying
         {
             InitializeComponent();
             //GetAndSetJSonInfo();
-            if (File.Exists("favicon.bmp"))
+            /*if (File.Exists("favicon.bmp"))
                 faviconPicture.Image = (Bitmap)Image.FromFile("favicon.bmp");
             comboBox16.DataSource = (from role in db.Roles select role.Name).ToList();
-            carTrailerTypeComboBox.DataSource = (from type in db.Transport_Types select type.Name).ToList();
+            carTrailerTypeComboBox.DataSource = (from type in db.Transport_Types select type.Name).ToList();*/
         }
 
         private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

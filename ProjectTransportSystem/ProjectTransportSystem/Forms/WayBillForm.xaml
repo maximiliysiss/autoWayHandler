@@ -5,49 +5,516 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectTransportSystem.Forms"
         mc:Ignorable="d"
-        Title="WayBill" Height="450" Width="800">
+        Title="WayBill" Height="720" Width="1200">
+
     <Grid Margin="5">
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="160"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="120"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Name="DriverCont">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="25"></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.3*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
-            <Grid Grid.Row="0">
+            <Grid Grid.Column="0" Margin="10" Height="75">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label HorizontalAlignment="Center" VerticalAlignment="Center">Автопредприятие</Label>
+                <TextBox Grid.Column="1" VerticalAlignment="Center"></TextBox>
+                <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Грузоотправитель</Label>
+                    <TextBox Grid.Column="1" VerticalAlignment="Center"></TextBox>
+                    <Label Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">Грузополучатель</Label>
+                    <TextBox Grid.Column="3" VerticalAlignment="Center"></TextBox>
+                </Grid>
+            </Grid>
+            <DataGrid Grid.Column="1"></DataGrid>
+        </Grid>
+
+        <GroupBox Grid.Row="1" Header="Информация по накладной">
+            <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <Label HorizontalAlignment="Center" VerticalAlignment="Center">Add Driver/Accompanying</Label>
-                <ComboBox Name="SelectDriver" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"></ComboBox>
+                <Grid Height="75">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center">Накладная</Label>
+                    <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Груз</Label>
+                    <Label Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Ед. измерения</Label>
+
+                    <TextBox Grid.Column="1"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="1"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="2"></TextBox>
+
+                </Grid>
+
+                <GroupBox Grid.Column="1" Header="Характеристика груза">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Margin="3">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label HorizontalAlignment="Center" VerticalAlignment="Center">Код</Label>
+                                <TextBox Grid.Row="1"></TextBox>
+                            </Grid>
+                            <Grid Margin="3" Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label HorizontalAlignment="Center" VerticalAlignment="Center">Преск.</Label>
+                                <TextBox Grid.Row="1"></TextBox>
+                            </Grid>
+                            <Grid Margin="3" Grid.Column="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label HorizontalAlignment="Center" VerticalAlignment="Center">Масса</Label>
+                                <TextBox Grid.Row="1"></TextBox>
+                            </Grid>
+                            <Grid Margin="3" Grid.Column="3">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label HorizontalAlignment="Center" VerticalAlignment="Center">Вид упаковки</Label>
+                                <TextBox Grid.Row="1"></TextBox>
+                            </Grid>
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Margin="3">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label HorizontalAlignment="Center" VerticalAlignment="Center">Следуют документы</Label>
+                                <TextBox Grid.Row="1"></TextBox>
+                            </Grid>
+                            <Grid Margin="3" Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label HorizontalAlignment="Center" VerticalAlignment="Center">Способ определения массы</Label>
+                                <TextBox Grid.Row="1"></TextBox>
+                            </Grid>
+                        </Grid>
+
+                    </Grid>
+                </GroupBox>
+
+                <Grid Grid.Column="2" Height="50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center">Цена</Label>
+                    <Label Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center">Количество</Label>
+                    <TextBox Grid.Column="1"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="1"></TextBox>
+                </Grid>
+
             </Grid>
+        </GroupBox>
 
-        </Grid>
-        <Grid Grid.Row="1" Name="CarCont">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="25"></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-
-            <Grid Grid.Row="0">
+        <GroupBox Height="150" Header="Погрузочно разгрузочные операции" Grid.Row="2">
+            <Grid>
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <GroupBox Grid.Column="0" Header="Погрузка">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Horizontal">
+                            <Label HorizontalAlignment="Center" VerticalAlignment="Center">Исполнитель</Label>
+                            <TextBox Width="300" VerticalAlignment="Center"></TextBox>
+                        </StackPanel>
+                        <Grid Height="80" Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="150"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Background="#ddd" Margin="4">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">Способ</Label>
+                                <Grid Grid.Row="1">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">Руч. нал.</Label>
+                                    <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Код</Label>
+                                    <TextBox Grid.Row="1"></TextBox>
+                                    <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+                                </Grid>
+                            </Grid>
+
+                            <Grid Background="#ddd" Margin="4" Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">Время</Label>
+                                <Grid Grid.Row="1">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">Прибытия</Label>
+                                    <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Убытия</Label>
+                                    <Label Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Простоя</Label>
+                                    <TextBox Grid.Row="1"></TextBox>
+                                    <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+                                    <TextBox Grid.Row="1" Grid.Column="2"></TextBox>
+                                </Grid>
+                            </Grid>
+
+                            <Grid Background="#ddd" Margin="4" Grid.Column="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">Доп. операция</Label>
+                                <Grid Grid.Row="1">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">Время</Label>
+                                    <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Код</Label>
+                                    <TextBox Grid.Row="1"></TextBox>
+                                    <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+                                </Grid>
+                            </Grid>
+
+                        </Grid>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Column="1" Header="Разгрузка">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Horizontal">
+                            <Label HorizontalAlignment="Center" VerticalAlignment="Center">Исполнитель</Label>
+                            <TextBox Width="300" VerticalAlignment="Center"></TextBox>
+                        </StackPanel>
+                        <Grid Height="80" Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="150"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Background="#ddd" Margin="4">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">Способ</Label>
+                                <Grid Grid.Row="1">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">Руч. нал.</Label>
+                                    <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Код</Label>
+                                    <TextBox Grid.Row="1"></TextBox>
+                                    <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+                                </Grid>
+                            </Grid>
+
+                            <Grid Background="#ddd" Margin="4" Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">Время</Label>
+                                <Grid Grid.Row="1">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">Прибытия</Label>
+                                    <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Убытия</Label>
+                                    <Label Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Простоя</Label>
+                                    <TextBox Grid.Row="1"></TextBox>
+                                    <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+                                    <TextBox Grid.Row="1" Grid.Column="2"></TextBox>
+                                </Grid>
+                            </Grid>
+
+                            <Grid Background="#ddd" Margin="4" Grid.Column="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">Доп. операция</Label>
+                                <Grid Grid.Row="1">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">Время</Label>
+                                    <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Код</Label>
+                                    <TextBox Grid.Row="1"></TextBox>
+                                    <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+                                </Grid>
+                            </Grid>
+
+                        </Grid>
+                    </Grid>
+                </GroupBox>
+
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Row="3" Header="Прочие сведения">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <Label HorizontalAlignment="Center" VerticalAlignment="Center">Add Car/Trailer</Label>
-                <ComboBox Name="SelectCar" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"></ComboBox>
-            </Grid>
+                <Grid Background="#ddd" Margin="4" Height="75">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">Расст. перевоз. по группам дорог</Label>
+                    <Grid Grid.Row="1" Height="50">
 
-        </Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="70"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">Всего</Label>
+                        <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">В городе</Label>
+                        <Label Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">1 Гр.</Label>
+                        <Label Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">2 Гр.</Label>
+                        <Label Grid.Column="4" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">3 Гр.</Label>
+                        <TextBox Grid.Row="1"></TextBox>
+                        <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+                        <TextBox Grid.Row="1" Grid.Column="2"></TextBox>
+                        <TextBox Grid.Row="1" Grid.Column="3"></TextBox>
+                        <TextBox Grid.Row="1" Grid.Column="4"></TextBox>
+                    </Grid>
+                </Grid>
+
+                <Grid Background="#ddd" Margin="4" Grid.Column="1" Height="75">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">За трансп. услуги</Label>
+                    <Grid Grid.Row="1">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">С клиента</Label>
+                        <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">С водителя</Label>
+                        <TextBox Grid.Row="1"></TextBox>
+                        <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+                    </Grid>
+                </Grid>
+
+                <GroupBox Margin="10" Grid.Column="2" Header="Поправочные коэффиценты">
+                    <Grid Height="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center">Расц. водителя</Label>
+                        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Осн. тариф</Label>
+                        <TextBox Grid.Column="1"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="1"></TextBox>
+                    </Grid>
+                </GroupBox>
+                <Grid Height="50" Margin="10" Grid.Column="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Осн. тариф</Label>
+                    <TextBox Grid.Column="1" Grid.Row="1"></TextBox>
+                </Grid>
+
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="Расчет стоимости" Grid.Row="4">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <DataGrid></DataGrid>
+                <Grid Grid.Row="1" Margin="4" Height="25">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center">Выполнено сумм.</Label>
+                    <Label Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">Расценка сумм.</Label>
+                    <Label Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">К оплате сумм.</Label>
+
+                    <TextBox Grid.Column="1" VerticalAlignment="Center"></TextBox>
+                    <TextBox Grid.Column="3" VerticalAlignment="Center"></TextBox>
+                    <TextBox Grid.Column="7" VerticalAlignment="Center"></TextBox>
+                </Grid>
+            </Grid>
+        </GroupBox>
+
     </Grid>
 </Window>

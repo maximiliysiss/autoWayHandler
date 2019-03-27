@@ -33,7 +33,7 @@ namespace ProjectTransportSystem.Models
 
         public IEnumerable GetContext(string name)
         {
-           if (DictionaryOfContext.TryGetValue(name, out var value))
+            if (DictionaryOfContext.TryGetValue(name, out var value))
                 return value;
             throw new Exception("Not found context");
         }
