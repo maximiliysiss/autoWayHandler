@@ -50,6 +50,11 @@ namespace ProjectTransportSystem.Forms.FormGenerator
                 {
                     e.Row.MouseDoubleClick -= new MouseButtonEventHandler(action.Value.EventHandler);
                     e.Row.MouseDoubleClick += new MouseButtonEventHandler(action.Value.EventHandler);
+                    var contextMenu = new ContextMenu();
+                    var menuItem = new MenuItem { Header = "Delete" };
+                    menuItem.Click += StaticDictionaryActions.DeleteDictionary;
+                    contextMenu.Items.Add(menuItem);
+                    e.Row.ContextMenu = contextMenu;
                 }
             };
 

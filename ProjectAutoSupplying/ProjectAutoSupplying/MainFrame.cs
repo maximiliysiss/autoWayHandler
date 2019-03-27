@@ -231,7 +231,7 @@ namespace ProjectAutoSupplying
         public MainFrame()
         {
             InitializeComponent();
-            GetAndSetJSonInfo();
+            //GetAndSetJSonInfo();
             if (File.Exists("favicon.bmp"))
                 faviconPicture.Image = (Bitmap)Image.FromFile("favicon.bmp");
             comboBox16.DataSource = (from role in db.Roles select role.Name).ToList();

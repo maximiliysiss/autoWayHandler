@@ -79,5 +79,11 @@ namespace ProjectTransportSystem.Forms.FormGenerator
                 action.Click += OnCreate;
             action.Click += (o, e) => closeEvent();
         }
+
+        public static void DeleteDictionary(object sender, RoutedEventArgs e)
+        {
+            GlobalStaticContext.MainDbContext.Remove((e.Source as MenuItem).DataContext);
+            GlobalStaticContext.MainDbContext.SaveChanges();
+        }
     }
 }
