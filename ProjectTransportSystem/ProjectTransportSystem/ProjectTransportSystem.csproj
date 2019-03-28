@@ -55,6 +55,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Forms\AddingsForms\CargoForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\AddingsForms\ContractForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\AddingsForms\FormForAdd\CargoAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\AddingsForms\FormForAdd\ContractAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\Dictionary\DistanceOnRoadGroupDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -101,6 +117,18 @@
     </Compile>
     <Compile Include="Extensions\DataGrid.cs" />
     <Compile Include="Extensions\DependecyObject.cs" />
+    <Compile Include="Forms\AddingsForms\CargoForm.xaml.cs">
+      <DependentUpon>CargoForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddingsForms\ContractForm.xaml.cs">
+      <DependentUpon>ContractForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddingsForms\FormForAdd\CargoAdd.xaml.cs">
+      <DependentUpon>CargoAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddingsForms\FormForAdd\ContractAdd.xaml.cs">
+      <DependentUpon>ContractAdd.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Dictionary\DistanceOnRoadGroupDictionary.xaml.cs">
       <DependentUpon>DistanceOnRoadGroupDictionary.xaml</DependentUpon>
     </Compile>
@@ -164,6 +192,10 @@
     <Compile Include="Migrations\20190327184424_ExtNext.cs" />
     <Compile Include="Migrations\20190327184424_ExtNext.designer.cs">
       <DependentUpon>20190327184424_ExtNext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190328061452_ExtWayBills.cs" />
+    <Compile Include="Migrations\20190328061452_ExtWayBills.designer.cs">
+      <DependentUpon>20190328061452_ExtWayBills.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\MainDbContextModelSnapshot.cs" />
     <Compile Include="Models\Database\AdditionalOperation.cs" />

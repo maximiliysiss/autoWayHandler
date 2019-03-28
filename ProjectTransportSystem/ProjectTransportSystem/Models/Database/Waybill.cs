@@ -24,6 +24,7 @@ namespace ProjectTransportSystem.Models.Database
         public string Redirect { get; set; }
         public Costing Costing { get; set; }
         public OtherInformation OtherInformation { get; set; }
+        public List<Contract> Contracts { get; set; }
 
         public bool Equals(WayBill other)
         {

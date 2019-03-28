@@ -23,7 +23,7 @@ namespace ProjectTransportSystem.Forms.AddingsForms.FormForAdd
         public CargoAdd()
         {
             InitializeComponent();
-            DataContext = new Cargo()
+            DataContext = new Cargo();
         }
 
         public CargoAdd(Cargo cargo)

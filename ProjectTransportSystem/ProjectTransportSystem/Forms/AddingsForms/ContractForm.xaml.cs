@@ -22,7 +22,7 @@ namespace ProjectTransportSystem.Forms.AddingsForms
     /// </summary>
     public partial class ContractForm : Window
     {
-        public ContractForm()
+        public ContractForm(WayBill wayBill)
         {
             InitializeComponent();
             ContractListGrid.Children.Add(DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder("Contracts"),

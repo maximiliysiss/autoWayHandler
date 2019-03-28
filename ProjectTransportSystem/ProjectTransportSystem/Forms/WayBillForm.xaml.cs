@@ -1,4 +1,5 @@
-﻿using ProjectTransportSystem.Forms.FormGenerator;
+﻿using ProjectTransportSystem.Forms.AddingsForms;
+using ProjectTransportSystem.Forms.FormGenerator;
 using ProjectTransportSystem.Models;
 using ProjectTransportSystem.Models.Database;
 using System;
@@ -47,7 +48,7 @@ namespace ProjectTransportSystem.Forms
 
         private void AddCargo(object sender, RoutedEventArgs e)
         {
-
+            new ContractForm(DataContext as WayBill).ShowDialog();
         }
     }
 }

@@ -41,7 +41,6 @@ namespace ProjectTransportSystem.Models.Database
         /// Юридическое лицо
         /// </summary>
         public LegalEntity LegalEntity { get; set; }
-        public List<WayBill> Waybills { get; set; }
 
         public bool Equals(Contract other)
         {
