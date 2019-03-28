@@ -1,5 +1,7 @@
-﻿using ProjectTransportSystem.Extensions;
+﻿using Microsoft.Extensions.Logging;
+using ProjectTransportSystem.Extensions;
 using ProjectTransportSystem.Forms.Dictionary;
+using ProjectTransportSystem.Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -61,31 +63,38 @@ namespace ProjectTransportSystem.Forms.FormGenerator
             {
                 LastChildFill = true
             };
-            Grid grid = new Grid();
-            foreach (var action in actionAdd.Actions.Where(x => x.Value.IsShow).Select((e, x) => new { Index = x, Value = e }))
+            try
             {
-                grid.ColumnDefinitions.Add(new ColumnDefinition());
-                grid.SetValue(DockPanel.DockProperty, Dock.Bottom);
-                Button button = new Button();
-                button.SetValue(Grid.ColumnProperty, action.Index);
-                button.Content = action.Value.Key;
-                button.Click += new RoutedEventHandler(action.Value.Value.EventHandler);
-                grid.Children.Add(button);
-            }
-            dockPanel.Children.Add(grid);
-            var dataGrid = GetDataGridRemovable($"{actionAdd.DictionaryType.ToString()}Dict", data, StaticDictionaryActions.DeleteDictionary,
-                new Dictionary<DependencyProperty, object> { { DockPanel.DockProperty, Dock.Top } });
-            dockPanel.Children.Add(dataGrid);
-
-            dataGrid.LoadingRow += (s, e) =>
-            {
-                var action = actionAdd.Actions.FirstOrDefault(x => x.Key.ToLower() == "open");
-                if (action.Value != null)
+                Grid grid = new Grid();
+                foreach (var action in actionAdd.Actions.Where(x => x.Value.IsShow).Select((e, x) => new { Index = x, Value = e }))
                 {
-                    e.Row.MouseDoubleClick -= new MouseButtonEventHandler(action.Value.EventHandler);
-                    e.Row.MouseDoubleClick += new MouseButtonEventHandler(action.Value.EventHandler);
+                    grid.ColumnDefinitions.Add(new ColumnDefinition());
+                    grid.SetValue(DockPanel.DockProperty, Dock.Bottom);
+                    Button button = new Button();
+                    button.SetValue(Grid.ColumnProperty, action.Index);
+                    button.Content = action.Value.Key;
+                    button.Click += new RoutedEventHandler(action.Value.Value.EventHandler);
+                    grid.Children.Add(button);
                 }
-            };
+                dockPanel.Children.Add(grid);
+                var dataGrid = GetDataGridRemovable($"{actionAdd.DictionaryType.ToString()}Dict", data, StaticDictionaryActions.DeleteDictionary,
+                    new Dictionary<DependencyProperty, object> { { DockPanel.DockProperty, Dock.Top } });
+                dockPanel.Children.Add(dataGrid);
+
+                dataGrid.LoadingRow += (s, e) =>
+                {
+                    var action = actionAdd.Actions.FirstOrDefault(x => x.Key.ToLower() == "open");
+                    if (action.Value != null)
+                    {
+                        e.Row.MouseDoubleClick -= new MouseButtonEventHandler(action.Value.EventHandler);
+                        e.Row.MouseDoubleClick += new MouseButtonEventHandler(action.Value.EventHandler);
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                GlobalStaticContext.Logger.Log(LogLevel.Error, ex, ex.InnerException.Message);
+            }
 
             return dockPanel;
         }

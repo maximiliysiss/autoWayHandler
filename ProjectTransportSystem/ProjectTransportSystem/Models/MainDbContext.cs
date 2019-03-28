@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using ProjectTransportSystem.Models.Database;
 using System;
 using System.Collections;
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ProjectTransportSystem.Models
 {
@@ -33,9 +35,17 @@ namespace ProjectTransportSystem.Models
 
         public IEnumerable GetContext(string name)
         {
-            if (DictionaryOfContext.TryGetValue(name, out var value))
-                return value;
-            throw new Exception("Not found context");
+            try
+            {
+                if (DictionaryOfContext.TryGetValue(name, out var value))
+                    return value;
+                throw new Exception("Not found context");
+            }
+            catch (Exception ex)
+            {
+                GlobalStaticContext.Logger.Log(LogLevel.Information, ex, ex.InnerException.Message);
+            }
+            return null;
         }
 
         [Context]
@@ -91,7 +101,8 @@ namespace ProjectTransportSystem.Models
         {
             base.OnConfiguring(optionsBuilder);
 
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-MU02QL6\SQLEXPRESS;Initial Catalog=TransportSystem;Integrated Security=True");
+            //optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-MU02QL6\SQLEXPRESS;Initial Catalog=TransportSystem;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\LocalDatabase\LocalDatabase.mdf;Integrated Security=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -1,4 +1,5 @@
-﻿using ProjectTransportSystem.Forms.FormGenerator;
+﻿using Microsoft.Extensions.Logging;
+using ProjectTransportSystem.Forms.FormGenerator;
 using ProjectTransportSystem.Models;
 using System;
 using System.Collections;
@@ -28,19 +29,27 @@ namespace ProjectTransportSystem
 
         public MainWindow()
         {
-            InitializeComponent();
-            foreach (var item in Dictionary.Items.Cast<TabItem>())
-                item.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(item.Name),
-                              GlobalStaticContext.MainDbContext.GetContext(item.Name));
 
-            WayBills.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(WayBills.Name),
-                                                            GlobalStaticContext.MainDbContext.GetContext(WayBills.Name));
+            try
+            {
+                InitializeComponent();
+                foreach (var item in Dictionary.Items.Cast<TabItem>())
+                    item.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(item.Name),
+                                  GlobalStaticContext.MainDbContext.GetContext(item.Name));
 
-            WayLists.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(WayLists.Name),
-                                                            GlobalStaticContext.MainDbContext.GetContext(WayLists.Name));
+                WayBills.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(WayBills.Name),
+                                                                GlobalStaticContext.MainDbContext.GetContext(WayBills.Name));
 
-            MainControl.IsEnabled = true;
-            Loading.Visibility = Visibility.Hidden;
+                WayLists.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(WayLists.Name),
+                                                                GlobalStaticContext.MainDbContext.GetContext(WayLists.Name));
+
+                MainControl.IsEnabled = true;
+                Loading.Visibility = Visibility.Hidden;
+            }
+            catch (Exception ex)
+            {
+                GlobalStaticContext.Logger.Log(LogLevel.Error, ex, ex.InnerException.Message);
+            }
         }
     }
 }

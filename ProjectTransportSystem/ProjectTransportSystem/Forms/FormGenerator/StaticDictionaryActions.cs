@@ -1,4 +1,5 @@
-﻿using ProjectTransportSystem.Extensions;
+﻿using Microsoft.Extensions.Logging;
+using ProjectTransportSystem.Extensions;
 using ProjectTransportSystem.Models;
 using ProjectTransportSystem.Properties;
 using System;
@@ -16,16 +17,32 @@ namespace ProjectTransportSystem.Forms.FormGenerator
     {
         public static void OnCreate(object sender, RoutedEventArgs routedEvent)
         {
-            var obj = (sender as Button).DataContext;
-            GlobalStaticContext.MainDbContext.Add(obj);
-            GlobalStaticContext.MainDbContext.SaveChanges();
+            try
+            {
+                var obj = (sender as Button).DataContext;
+                GlobalStaticContext.Logger.Log(LogLevel.Information, $"On Create - {obj}");
+                GlobalStaticContext.MainDbContext.Add(obj);
+                GlobalStaticContext.MainDbContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                GlobalStaticContext.Logger.Log(LogLevel.Error, ex, ex.InnerException.Message);
+            }
         }
 
         public static void OnEdit(object sender, RoutedEventArgs routedEvent)
         {
-            var obj = (sender as Button).DataContext;
-            GlobalStaticContext.MainDbContext.Update(obj);
-            GlobalStaticContext.MainDbContext.SaveChanges();
+            try
+            {
+                var obj = (sender as Button).DataContext;
+                GlobalStaticContext.Logger.Log(LogLevel.Information, $"On Edit - {obj}");
+                GlobalStaticContext.MainDbContext.Update(obj);
+                GlobalStaticContext.MainDbContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                GlobalStaticContext.Logger.Log(LogLevel.Error, ex, ex.InnerException.Message);
+            }
         }
 
         private static void OnAddButton<T, D>(object sender, EventArgs e)
@@ -34,9 +51,17 @@ namespace ProjectTransportSystem.Forms.FormGenerator
         {
             var dictType = new D().DictionaryType.ToString();
             new T().ShowDialog();
-            MainWindow window = (MainWindow)Window.GetWindow(sender as Button);
-            DataGrid grid = window.FindVisualChildByName<DataGrid>($"{dictType}Dict");
-            grid.ItemsSource = GlobalStaticContext.MainDbContext.GetContext(dictType).Cast<object>().ToList();
+            try
+            {
+                GlobalStaticContext.Logger.Log(LogLevel.Information, $"On Add - {dictType}");
+                MainWindow window = (MainWindow)Window.GetWindow(sender as Button);
+                DataGrid grid = window.FindVisualChildByName<DataGrid>($"{dictType}Dict");
+                grid.ItemsSource = GlobalStaticContext.MainDbContext.GetContext(dictType).Cast<object>().ToList();
+            }
+            catch (Exception ex)
+            {
+                GlobalStaticContext.Logger.Log(LogLevel.Error, ex, ex.InnerException.Message);
+            }
         }
 
         public static KeyValuePair<string, DictionaryAction> Add<T, D>()
@@ -54,6 +79,7 @@ namespace ProjectTransportSystem.Forms.FormGenerator
             where T : class
         {
             var obj = ((e as MouseButtonEventArgs).Source as DataGridRow).DataContext;
+            GlobalStaticContext.Logger.Log(LogLevel.Information, $"On Open Row - {obj}");
             new W().GetWindow((T)obj).ShowDialog();
         }
 
@@ -82,14 +108,23 @@ namespace ProjectTransportSystem.Forms.FormGenerator
 
         public static void DeleteDictionary(object sender, RoutedEventArgs e)
         {
-            GlobalStaticContext.MainDbContext.Remove((e.Source as MenuItem).DataContext);
-            GlobalStaticContext.MainDbContext.SaveChanges();
-            MainWindow window = (MainWindow)Window.GetWindow(sender as MenuItem);
-            var name = (sender as MenuItem).Name;
-            name = name.Substring(0, name.IndexOf("Delete"));
-            DataGrid grid = window.FindVisualChildByName<DataGrid>(name);
-            grid.ItemsSource = GlobalStaticContext.MainDbContext.GetContext(name.Substring(0, name.IndexOf("Dict")))
-                .Cast<object>().ToList();
+            try
+            {
+                var obj = (e.Source as MenuItem).DataContext;
+                GlobalStaticContext.MainDbContext.Remove(obj);
+                GlobalStaticContext.MainDbContext.SaveChanges();
+                GlobalStaticContext.Logger.Log(LogLevel.Information, $"On Delete - {obj}");
+                MainWindow window = (MainWindow)Window.GetWindow(sender as MenuItem);
+                var name = (sender as MenuItem).Name;
+                name = name.Substring(0, name.IndexOf("Delete"));
+                DataGrid grid = window.FindVisualChildByName<DataGrid>(name);
+                grid.ItemsSource = GlobalStaticContext.MainDbContext.GetContext(name.Substring(0, name.IndexOf("Dict")))
+                    .Cast<object>().ToList();
+            }
+            catch (Exception ex)
+            {
+                GlobalStaticContext.Logger.Log(LogLevel.Error, ex, ex.InnerException.Message);
+            }
         }
     }
 }
