@@ -1,4 +1,5 @@
-﻿using ProjectTransportSystem.Forms.Dictionary;
+﻿using ProjectTransportSystem.Forms.AddingsForms.FormForAdd;
+using ProjectTransportSystem.Forms.Dictionary;
 using ProjectTransportSystem.Models.Database;
 using System;
 using System.Collections.Generic;
@@ -156,6 +157,32 @@ namespace ProjectTransportSystem.Forms.FormGenerator
         public Window GetWindow(WayList obj)
         {
             return new WayListForm(obj);
+        }
+    }
+
+    public class BuilderContract : IDictionaryFormBuilder<Contract>
+    {
+        public Window GetWindow()
+        {
+            return new ContractAdd();
+        }
+
+        public Window GetWindow(Contract obj)
+        {
+            return new ContractAdd(obj);
+        }
+    }
+
+    public class BuilderCargo : IDictionaryFormBuilder<Cargo>
+    {
+        public Window GetWindow()
+        {
+            return new CargoAdd();
+        }
+
+        public Window GetWindow(Cargo obj)
+        {
+            return new CargoAdd(obj);
         }
     }
 }

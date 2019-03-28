@@ -1,4 +1,5 @@
 ﻿using ProjectTransportSystem.Extensions;
+using ProjectTransportSystem.Forms.AddingsForms.FormForAdd;
 using ProjectTransportSystem.Forms.Dictionary;
 using ProjectTransportSystem.Models;
 using ProjectTransportSystem.Models.Database;
@@ -26,6 +27,8 @@ namespace ProjectTransportSystem.Forms.FormGenerator
         TransportTypes,
         WayLists,
         WayBills,
+        Cargoes,
+        Contracts
     }
 
     public class DictionaryAction
@@ -93,6 +96,14 @@ namespace ProjectTransportSystem.Forms.FormGenerator
                 case DictionaryType.WayLists:
                     dictionaryBuilder.Actions.Add(StaticDictionaryActions.Add<WayListForm, DictionaryTypeWayList>());
                     dictionaryBuilder.Actions.Add(StaticDictionaryActions.Open<BuilderWayList, WayList>());
+                    break;
+                case DictionaryType.Cargoes:
+                    dictionaryBuilder.Actions.Add(StaticDictionaryActions.Add<CargoAdd, DictionaryTypeCargo>());
+                    dictionaryBuilder.Actions.Add(StaticDictionaryActions.Open<BuilderCargo, Cargo>());
+                    break;
+                case DictionaryType.Contracts:
+                    dictionaryBuilder.Actions.Add(StaticDictionaryActions.Add<ContractAdd, DictionaryTypeContract>());
+                    dictionaryBuilder.Actions.Add(StaticDictionaryActions.Open<BuilderContract, Contract>());
                     break;
             }
             return dictionaryBuilder;

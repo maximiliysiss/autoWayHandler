@@ -65,4 +65,14 @@ namespace ProjectTransportSystem.Forms.FormGenerator
     {
         public DictionaryType DictionaryType => DictionaryType.WayLists;
     }
+
+    public class DictionaryTypeContract : IDictionaryType
+    {
+        public DictionaryType DictionaryType => DictionaryType.Contracts;
+    }
+
+    public class DictionaryTypeCargo : IDictionaryType
+    {
+        public DictionaryType DictionaryType => DictionaryType.Cargoes;
+    }
 }

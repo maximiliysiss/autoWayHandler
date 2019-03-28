@@ -28,6 +28,7 @@ namespace ProjectTransportSystem.Forms
         {
             InitializeComponent();
             var wayBill = new WayBill();
+            StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()));
             DataContext = wayBill;
             InitWayBill(wayBill);
         }
@@ -35,13 +36,18 @@ namespace ProjectTransportSystem.Forms
         public WayBillForm(WayBill wayBill)
         {
             InitializeComponent();
-            StaticDictionaryActions.InitializeComponent(null, new Action(() => Close()));
+            StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()), true);
             DataContext = wayBill;
             InitWayBill(wayBill);
         }
 
         private void InitWayBill(WayBill wayBill)
         {
+        }
+
+        private void AddCargo(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
