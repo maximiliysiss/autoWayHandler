@@ -10,6 +10,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Name="WindowMain">
         <TabControl IsEnabled="False" Name="MainControl">
+            <TabItem Header="Start page"></TabItem>
             <TabItem Header="{x:Static p:Resources.DictionaryTab}">
                 <TabControl Name="Dictionary">
                     <TabItem Name="DistanceOnRoadGroups" Header="{x:Static p:Resources.DictionaryOnDistanceOnRoadGroup}"></TabItem>

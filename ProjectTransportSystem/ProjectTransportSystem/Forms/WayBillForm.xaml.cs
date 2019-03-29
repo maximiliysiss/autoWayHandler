@@ -48,7 +48,7 @@ namespace ProjectTransportSystem.Forms
 
         private void AddCargo(object sender, RoutedEventArgs e)
         {
-            new ContractForm(DataContext as WayBill).ShowDialog();
+            new CargoForm(DataContext as WayBill).ShowDialog();
         }
     }
 }

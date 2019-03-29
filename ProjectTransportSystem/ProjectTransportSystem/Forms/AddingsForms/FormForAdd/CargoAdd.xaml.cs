@@ -1,4 +1,5 @@
-﻿using ProjectTransportSystem.Models.Database;
+﻿using ProjectTransportSystem.Forms.FormGenerator;
+using ProjectTransportSystem.Models.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,12 +25,14 @@ namespace ProjectTransportSystem.Forms.AddingsForms.FormForAdd
         {
             InitializeComponent();
             DataContext = new Cargo();
+            StaticDictionaryActions.InitializeComponent(Action, new System.Action(this.Close));
         }
 
         public CargoAdd(Cargo cargo)
         {
             InitializeComponent();
             DataContext = cargo;
+            StaticDictionaryActions.InitializeComponent(Action, new System.Action(this.Close), true);
         }
     }
 }

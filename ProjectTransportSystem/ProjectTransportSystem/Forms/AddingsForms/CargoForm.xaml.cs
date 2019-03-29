@@ -1,5 +1,6 @@
 ﻿using ProjectTransportSystem.Forms.FormGenerator;
 using ProjectTransportSystem.Models;
+using ProjectTransportSystem.Models.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace ProjectTransportSystem.Forms.AddingsForms
     /// </summary>
     public partial class CargoForm : Window
     {
-        public CargoForm()
+        public CargoForm(WayBill wayBill)
         {
             InitializeComponent();
             CargoListGrid.Children.Add(DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder("Cargoes"),

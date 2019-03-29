@@ -101,8 +101,9 @@ namespace ProjectTransportSystem.Models
         {
             base.OnConfiguring(optionsBuilder);
 
-            //optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-MU02QL6\SQLEXPRESS;Initial Catalog=TransportSystem;Integrated Security=True");
-            optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\LocalDatabase\LocalDatabase.mdf;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-MU02QL6\SQLEXPRESS;Initial Catalog=TransportSystem;Integrated Security=True");
+            //GlobalStaticContext.Logger.LogInformation($"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={AppDomain.CurrentDomain.BaseDirectory}App_Data\\LocalDatabase.mdf;Integrated Security=True");
+            //optionsBuilder.UseSqlServer($"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={AppDomain.CurrentDomain.BaseDirectory}App_Data\\LocalDatabase.mdf;Integrated Security=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

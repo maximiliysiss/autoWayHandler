@@ -27,24 +27,46 @@ namespace ProjectTransportSystem
     public partial class MainWindow : Window
     {
 
+        BackgroundWorker backgroundWorker = new BackgroundWorker();
+
         public MainWindow()
+        {
+            InitializeComponent();
+            backgroundWorker.DoWork += BackgroundWorker_DoWork;
+            backgroundWorker.RunWorkerAsync();
+        }
+
+        private void BackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
 
             try
             {
-                InitializeComponent();
                 foreach (var item in Dictionary.Items.Cast<TabItem>())
-                    item.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(item.Name),
-                                  GlobalStaticContext.MainDbContext.GetContext(item.Name));
+                {
+                    item.Dispatcher.Invoke(() =>
+                    {
+                        item.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(item.Name),
+                                        GlobalStaticContext.MainDbContext.GetContext(item.Name));
+                    });
+                }
 
-                WayBills.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(WayBills.Name),
-                                                                GlobalStaticContext.MainDbContext.GetContext(WayBills.Name));
+                WayBills.Dispatcher.Invoke(() =>
+                {
+                    WayBills.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(WayBills.Name),
+                                                               GlobalStaticContext.MainDbContext.GetContext(WayBills.Name));
+                });
 
-                WayLists.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(WayLists.Name),
+                WayLists.Dispatcher.Invoke(() =>
+                {
+                    WayLists.Content = DictionaryList.InitDictionary(DictionaryBuilder.GetDictionaryBuilder(WayLists.Name),
                                                                 GlobalStaticContext.MainDbContext.GetContext(WayLists.Name));
+                });
 
-                MainControl.IsEnabled = true;
-                Loading.Visibility = Visibility.Hidden;
+                MainControl.Dispatcher.Invoke(() =>
+                {
+                    MainControl.IsEnabled = true;
+                    Loading.Visibility = Visibility.Hidden;
+                });
             }
             catch (Exception ex)
             {

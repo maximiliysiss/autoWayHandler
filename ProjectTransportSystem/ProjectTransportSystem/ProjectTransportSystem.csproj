@@ -196,9 +196,9 @@
     <Compile Include="Forms\WayListForm.xaml.cs">
       <DependentUpon>WayListForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20190328085118_Init.cs" />
-    <Compile Include="Migrations\20190328085118_Init.designer.cs">
-      <DependentUpon>20190328085118_Init.cs</DependentUpon>
+    <Compile Include="Migrations\20190329083813_Init.cs" />
+    <Compile Include="Migrations\20190329083813_Init.designer.cs">
+      <DependentUpon>20190329083813_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\MainDbContextModelSnapshot.cs" />
     <Compile Include="Models\Database\AdditionalOperation.cs" />
@@ -290,10 +290,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="LocalDatabase\LocalDatabase.mdf">
+    <Content Include="App_Data\LocalDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="LocalDatabase\LocalDatabase_log.ldf">
+    <Content Include="App_Data\LocalDatabase_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>LocalDatabase.mdf</DependentUpon>
     </Content>

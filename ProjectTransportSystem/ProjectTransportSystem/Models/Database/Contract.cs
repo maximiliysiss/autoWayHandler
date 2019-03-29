@@ -32,7 +32,7 @@ namespace ProjectTransportSystem.Models.Database
         /// <summary>
         /// Тоннаж
         /// </summary>
-        public double Tonnes { get; set; }
+
         /// <summary>
         /// Груз
         /// </summary>

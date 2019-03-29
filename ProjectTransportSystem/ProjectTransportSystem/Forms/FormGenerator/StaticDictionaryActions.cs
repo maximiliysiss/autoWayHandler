@@ -54,7 +54,7 @@ namespace ProjectTransportSystem.Forms.FormGenerator
             try
             {
                 GlobalStaticContext.Logger.Log(LogLevel.Information, $"On Add - {dictType}");
-                MainWindow window = (MainWindow)Window.GetWindow(sender as Button);
+                var window = Window.GetWindow(sender as Button);
                 DataGrid grid = window.FindVisualChildByName<DataGrid>($"{dictType}Dict");
                 grid.ItemsSource = GlobalStaticContext.MainDbContext.GetContext(dictType).Cast<object>().ToList();
             }
