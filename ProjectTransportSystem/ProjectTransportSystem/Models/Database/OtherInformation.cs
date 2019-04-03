@@ -10,7 +10,6 @@ namespace ProjectTransportSystem.Models.Database
     {
         [Key]
         public int Id { get; set; }
-        public DistanceOnRoadGroup DistanceOnRoadGroup { get; set; }
         public int CodeExp { get; set; }
         public double ForTransportServiceOfClient { get; set; }
         public double ForTransportServiceOfDriver { get; set; }

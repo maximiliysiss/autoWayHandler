@@ -10,6 +10,7 @@ namespace ProjectTransportSystem.Models.Database
     {
         [Key]
         public int ID { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// Тип оплаты
         /// </summary>

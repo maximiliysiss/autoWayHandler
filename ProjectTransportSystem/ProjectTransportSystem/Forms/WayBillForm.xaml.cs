@@ -1,4 +1,5 @@
-﻿using ProjectTransportSystem.Forms.AddingsForms;
+﻿using ProjectTransportSystem.Extensions;
+using ProjectTransportSystem.Forms.AddingsForms;
 using ProjectTransportSystem.Forms.FormGenerator;
 using ProjectTransportSystem.Models;
 using ProjectTransportSystem.Models.Database;
@@ -31,7 +32,8 @@ namespace ProjectTransportSystem.Forms
             var wayBill = new WayBill();
             StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()));
             DataContext = wayBill;
-            InitWayBill(wayBill);
+            Init(wayBill);
+            LoadingWayBill(wayBill);
         }
 
         public WayBillForm(WayBill wayBill)
@@ -39,16 +41,42 @@ namespace ProjectTransportSystem.Forms
             InitializeComponent();
             StaticDictionaryActions.InitializeComponent(Action, new Action(() => Close()), true);
             DataContext = wayBill;
-            InitWayBill(wayBill);
+            Init(wayBill);
+            LoadingWayBill(wayBill);
         }
 
-        private void InitWayBill(WayBill wayBill)
+        private void Init(WayBill wayBill)
         {
+            CargoBlock.Children.Add(DictionaryList.GetDataGridRemovable("CargoGrid", wayBill.Cargos, (s, e) =>
+            {
+                var obj = (e.Source as MenuItem).DataContext as Cargo;
+                wayBill.Cargos.Remove(obj);
+                LoadingWayBill(wayBill);
+            }, new Dictionary<DependencyProperty, object> { { Grid.RowProperty, 1 }, { DataGrid.IsReadOnlyProperty, true } }));
+        }
+
+        private void LoadingWayBill(WayBill wayBill)
+        {
+            DataGrid dataGrid = CargoBlock.FindVisualChildByName<DataGrid>("CargoGrid");
+            dataGrid.ItemsSource = new ObservableCollection<Cargo>(wayBill.Cargos);
         }
 
         private void AddCargo(object sender, RoutedEventArgs e)
         {
             new CargoForm(DataContext as WayBill).ShowDialog();
+            LoadingWayBill(DataContext as WayBill);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            new AdditionalOperations(DataContext as WayBill, (DataContext as WayBill).Loading.AdditionalOperations)
+                .ShowDialog();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            new AdditionalOperations(DataContext as WayBill, (DataContext as WayBill).Uploading.AdditionalOperations)
+                .ShowDialog();
         }
     }
 }

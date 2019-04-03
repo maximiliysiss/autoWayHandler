@@ -28,7 +28,17 @@ namespace ProjectTransportSystem.Forms.FormGenerator
         WayLists,
         WayBills,
         Cargoes,
-        Contracts
+        Contracts,
+        AdditionalOperations,
+        Trips
+    }
+
+    public enum ActionsType
+    {
+        AddDelete,
+        Delete,
+        Add,
+        Select
     }
 
     public class DictionaryAction
@@ -41,6 +51,7 @@ namespace ProjectTransportSystem.Forms.FormGenerator
     {
         public IDictionary<string, DictionaryAction> Actions { get; set; } = new Dictionary<string, DictionaryAction>();
         public DictionaryType DictionaryType { get; set; }
+        public ActionsType ActionsType { get; set; } = ActionsType.AddDelete;
 
         public static DictionaryBuilder GetDictionaryBuilder(string name)
         {
@@ -104,6 +115,14 @@ namespace ProjectTransportSystem.Forms.FormGenerator
                 case DictionaryType.Contracts:
                     dictionaryBuilder.Actions.Add(StaticDictionaryActions.Add<ContractAdd, DictionaryTypeContract>());
                     dictionaryBuilder.Actions.Add(StaticDictionaryActions.Open<BuilderContract, Contract>());
+                    break;
+                case DictionaryType.AdditionalOperations:
+                    dictionaryBuilder.Actions.Add(StaticDictionaryActions.Add<AdditionalOperationAdd, DictionaryTypeAdditionalOperation>());
+                    dictionaryBuilder.Actions.Add(StaticDictionaryActions.Open<BuilderAdditionalOperation, AdditionalOperation>());
+                    break;
+                case DictionaryType.Trips:
+                    dictionaryBuilder.Actions.Add(StaticDictionaryActions.Add<TripAdd, DictionaryTypeTrip>());
+                    dictionaryBuilder.Actions.Add(StaticDictionaryActions.Open<BuilderTrip, Trip>());
                     break;
             }
             return dictionaryBuilder;

@@ -70,6 +70,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Forms\AddingsForms\AccompaingForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\AddingsForms\AdditionalOperations.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\AddingsForms\CargoForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -78,11 +86,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forms\AddingsForms\FormForAdd\AdditionalOperationAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\AddingsForms\FormForAdd\CargoAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Forms\AddingsForms\FormForAdd\ContractAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\AddingsForms\FormForAdd\TripAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\AddingsForms\TrailerForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\AddingsForms\TripForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,17 +156,35 @@
     </Compile>
     <Compile Include="Extensions\DataGrid.cs" />
     <Compile Include="Extensions\DependecyObject.cs" />
+    <Compile Include="Forms\AddingsForms\AccompaingForm.xaml.cs">
+      <DependentUpon>AccompaingForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddingsForms\AdditionalOperations.xaml.cs">
+      <DependentUpon>AdditionalOperations.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddingsForms\CargoForm.xaml.cs">
       <DependentUpon>CargoForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\AddingsForms\ContractForm.xaml.cs">
       <DependentUpon>ContractForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddingsForms\FormForAdd\AdditionalOperationAdd.xaml.cs">
+      <DependentUpon>AdditionalOperationAdd.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddingsForms\FormForAdd\CargoAdd.xaml.cs">
       <DependentUpon>CargoAdd.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\AddingsForms\FormForAdd\ContractAdd.xaml.cs">
       <DependentUpon>ContractAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddingsForms\FormForAdd\TripAdd.xaml.cs">
+      <DependentUpon>TripAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddingsForms\TrailerForm.xaml.cs">
+      <DependentUpon>TrailerForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddingsForms\TripForm.xaml.cs">
+      <DependentUpon>TripForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dictionary\DistanceOnRoadGroupDictionary.xaml.cs">
       <DependentUpon>DistanceOnRoadGroupDictionary.xaml</DependentUpon>
@@ -200,7 +242,28 @@
     <Compile Include="Migrations\20190329083813_Init.designer.cs">
       <DependentUpon>20190329083813_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190403015029_BigExt.cs" />
+    <Compile Include="Migrations\20190403015029_BigExt.designer.cs">
+      <DependentUpon>20190403015029_BigExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190403015604_BigExtRemove.cs" />
+    <Compile Include="Migrations\20190403015604_BigExtRemove.designer.cs">
+      <DependentUpon>20190403015604_BigExtRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190403020739_BigExt2.cs" />
+    <Compile Include="Migrations\20190403020739_BigExt2.designer.cs">
+      <DependentUpon>20190403020739_BigExt2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190403025146_BigExt3.cs" />
+    <Compile Include="Migrations\20190403025146_BigExt3.designer.cs">
+      <DependentUpon>20190403025146_BigExt3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190403040351_BigExt4.cs" />
+    <Compile Include="Migrations\20190403040351_BigExt4.designer.cs">
+      <DependentUpon>20190403040351_BigExt4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\MainDbContextModelSnapshot.cs" />
+    <Compile Include="Models\AboutComplanyXML.cs" />
     <Compile Include="Models\Database\AdditionalOperation.cs" />
     <Compile Include="Models\Database\Cargo.cs" />
     <Compile Include="Models\Database\Contract.cs" />

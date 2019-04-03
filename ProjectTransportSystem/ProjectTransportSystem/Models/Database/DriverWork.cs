@@ -22,11 +22,6 @@ namespace ProjectTransportSystem.Models.Database
         public double ZeroMileage { get; set; }
         public double SpeedometerDisplay { get; set; }
         public DateTime FactTime { get; set; }
-        /// <summary>
-        /// Движение топлива
-        /// </summary>
-        public MovingFuel MovingFuel { get; set; }
-        public WayList WayList { get; set; }
 
         public bool Equals(DriverWork other)
         {

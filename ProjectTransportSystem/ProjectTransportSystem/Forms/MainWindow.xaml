@@ -10,7 +10,73 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Name="WindowMain">
         <TabControl IsEnabled="False" Name="MainControl">
-            <TabItem Header="Start page"></TabItem>
+            <TabItem Header="Start page">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="75"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="200"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Name</Label>
+                        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">INN</Label>
+                        <Label Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">OKONX</Label>
+                        <Label Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Adress</Label>
+                        <Label Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Phone Number</Label>
+                        <Label Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center">OKPO</Label>
+                        <TextBox IsReadOnly="True" Text="{Binding Name}" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+                        <TextBox IsReadOnly="True" Text="{Binding INN}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+                        <TextBox IsReadOnly="True" Text="{Binding OKONX}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+                        <TextBox IsReadOnly="True" Text="{Binding Adress}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+                        <TextBox IsReadOnly="True" Text="{Binding Phone}" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+                        <TextBox IsReadOnly="True" Text="{Binding OKPO}" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+                        <Image Name="Icon" Margin="10" Grid.Column="2" Grid.Row="1" Grid.RowSpan="4"></Image>
+                    </Grid>
+                    <GroupBox Grid.Row="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label HorizontalAlignment="Center" VerticalAlignment="Center">Регистрационный номер</Label>
+                            <Label Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">Серия</Label>
+                            <TextBox IsReadOnly="True" Text="{Binding RegisterPhone}" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+                            <TextBox IsReadOnly="True" Text="{Binding Serial}" Grid.Column="3" VerticalAlignment="Center"></TextBox>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Grid.Row="2">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label HorizontalAlignment="Center" VerticalAlignment="Center">Наименование банка</Label>
+                            <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Рассчетный счет</Label>
+                            <TextBox IsReadOnly="True" Text="{Binding BankName}" Grid.Column="1" VerticalAlignment="Center"></TextBox>
+                            <TextBox IsReadOnly="True" Text="{Binding BankNumber}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center"></TextBox>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
             <TabItem Header="{x:Static p:Resources.DictionaryTab}">
                 <TabControl Name="Dictionary">
                     <TabItem Name="DistanceOnRoadGroups" Header="{x:Static p:Resources.DictionaryOnDistanceOnRoadGroup}"></TabItem>
@@ -25,7 +91,7 @@
                 </TabControl>
             </TabItem>
             <TabItem Name="WayBills" Header="Way bills">
-                
+
             </TabItem>
             <TabItem Name="WayLists" Header="Way lists">
 

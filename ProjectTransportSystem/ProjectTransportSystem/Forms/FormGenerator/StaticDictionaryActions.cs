@@ -60,7 +60,7 @@ namespace ProjectTransportSystem.Forms.FormGenerator
             }
             catch (Exception ex)
             {
-                GlobalStaticContext.Logger.Log(LogLevel.Error, ex, ex.InnerException.Message);
+                GlobalStaticContext.Logger.LogError(ex, ex.InnerException.Message);
             }
         }
 

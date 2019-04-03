@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -18,6 +19,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
 
 namespace ProjectTransportSystem
 {
@@ -26,6 +28,7 @@ namespace ProjectTransportSystem
     /// </summary>
     public partial class MainWindow : Window
     {
+        public AboutCompanyXML AboutCompanyXML { get; set; } = new AboutCompanyXML();
 
         BackgroundWorker backgroundWorker = new BackgroundWorker();
 
@@ -33,7 +36,27 @@ namespace ProjectTransportSystem
         {
             InitializeComponent();
             backgroundWorker.DoWork += BackgroundWorker_DoWork;
+            backgroundWorker.DoWork += LoadInformationAboutCompany;
             backgroundWorker.RunWorkerAsync();
+            DataContext = AboutCompanyXML;
+        }
+
+        private void LoadInformationAboutCompany(object sender, DoWorkEventArgs e)
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(AboutCompanyXML));
+            if (!File.Exists("config.ini"))
+            {
+                var stream = File.Create("config.ini");
+                xmlSerializer.Serialize(new StreamWriter(stream), AboutCompanyXML);
+                stream.Close();
+                return;
+            }
+
+            var fStream = new FileStream("config.ini", FileMode.Open);
+            AboutCompanyXML = xmlSerializer.Deserialize(fStream) as AboutCompanyXML;
+            fStream.Close();
+
+            this.Dispatcher.Invoke(() => { DataContext = AboutCompanyXML; });
         }
 
         private void BackgroundWorker_DoWork(object sender, DoWorkEventArgs e)

@@ -11,20 +11,20 @@ namespace ProjectTransportSystem.Models.Database
     {
         [Key]
         public int ID { get; set; }
-        public List<DriverAccompanying> Driver { get; set; }
-        public List<TrailerCar> Car { get; set; }
+        public List<Cargo> Cargos { get; set; } = new List<Cargo>();
+        public DistanceOnRoadGroup DistanceOnRoadGroup { get; set; } = new DistanceOnRoadGroup();
         public string AutoEnterprise { get; set; }
-        public string TransportKind { get; set; }
-        public string CompanyCustomer { get; set; }
         public string Shipper { get; set; }
         public string Consignee { get; set; }
-        public string LoadingPoint { get; set; }
-        public string UnLoadingPoint { get; set; }
-        public string WayNumber { get; set; }
-        public string Redirect { get; set; }
-        public Costing Costing { get; set; }
-        public OtherInformation OtherInformation { get; set; }
-        public List<Cargo> Contracts { get; set; }
+        public LoadUnloadOperation Loading { get; set; } = new LoadUnloadOperation();
+        public LoadUnloadOperation Uploading { get; set; } = new LoadUnloadOperation();
+        public List<Costing> Costing { get; set; } = new List<Costing>
+        {
+            new Costing{ Name="Выполнено" },
+            new Costing{ Name="Расценка" },
+            new Costing{ Name="К оплате" }
+        };
+        public OtherInformation OtherInformation { get; set; } = new OtherInformation();
 
         public bool Equals(WayBill other)
         {

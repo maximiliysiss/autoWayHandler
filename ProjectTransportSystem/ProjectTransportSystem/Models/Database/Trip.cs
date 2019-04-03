@@ -18,5 +18,12 @@ namespace ProjectTransportSystem.Models.Database
         {
             return this.Id == other.Id;
         }
+
+        public override string ToString()
+        {
+            if (string.IsNullOrEmpty(From))
+                return string.Empty;
+            return $"{From} - {To}";
+        }
     }
 }

@@ -185,4 +185,30 @@ namespace ProjectTransportSystem.Forms.FormGenerator
             return new CargoAdd(obj);
         }
     }
+
+    public class BuilderAdditionalOperation : IDictionaryFormBuilder<AdditionalOperation>
+    {
+        public Window GetWindow()
+        {
+            return new AdditionalOperationAdd();
+        }
+
+        public Window GetWindow(AdditionalOperation obj)
+        {
+            return new AdditionalOperationAdd(obj);
+        }
+    }
+
+    public class BuilderTrip : IDictionaryFormBuilder<Trip>
+    {
+        public Window GetWindow()
+        {
+            return new TripAdd();
+        }
+
+        public Window GetWindow(Trip obj)
+        {
+            return new TripAdd(obj);
+        }
+    }
 }

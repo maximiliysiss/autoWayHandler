@@ -22,12 +22,10 @@ namespace ProjectTransportSystem.Models.Database
         /// Исполнитель
         /// </summary>
         public string Executor { get; set; }
-        public WayBill Waybill { get; set; }
         /// <summary>
         /// ?
         /// </summary>
-        public OperationLoadUnloadEtc OperationLoadUnloadEtc { get; set; }
-        public List<AdditionalOperation> AdditionalOperations { get; set; }
+        public List<AdditionalOperation> AdditionalOperations { get; set; } = new List<AdditionalOperation>();
 
         public bool Equals(LoadUnloadOperation other)
         {

@@ -47,15 +47,18 @@ namespace ProjectTransportSystem.Forms.FormGenerator
             DataGrid dataGrid = new DataGrid();
             foreach (var prop in properties)
                 dataGrid.SetValue(prop.Key, prop.Value);
-            dataGrid.ItemsSource = new ObservableCollection<object>(data.Cast<object>().ToList());
+            if (data != null)
+                dataGrid.ItemsSource = new ObservableCollection<object>(data.Cast<object>().ToList());
             dataGrid.IsReadOnly = true;
             dataGrid.Name = name;
-            dataGrid.LoadingRow += (s, e) =>
-            {
-                e.Row.MouseDoubleClick += reaction;
-            };
+            if (reaction != null)
+                dataGrid.LoadingRow += (s, e) =>
+                {
+                    e.Row.MouseDoubleClick += reaction;
+                };
             return dataGrid;
         }
+
 
         public static DockPanel InitDictionary(DictionaryBuilder actionAdd, IEnumerable data)
         {
@@ -77,13 +80,29 @@ namespace ProjectTransportSystem.Forms.FormGenerator
                     grid.Children.Add(button);
                 }
                 dockPanel.Children.Add(grid);
-                var dataGrid = GetDataGridRemovable($"{actionAdd.DictionaryType.ToString()}Dict", data, StaticDictionaryActions.DeleteDictionary,
-                    new Dictionary<DependencyProperty, object> { { DockPanel.DockProperty, Dock.Top } });
+                DataGrid dataGrid = null;
+                switch (actionAdd.ActionsType)
+                {
+                    case ActionsType.Delete:
+                    case ActionsType.AddDelete:
+                        dataGrid = GetDataGridRemovable($"{actionAdd.DictionaryType.ToString()}Dict", data, StaticDictionaryActions.DeleteDictionary,
+                                    new Dictionary<DependencyProperty, object> { { DockPanel.DockProperty, Dock.Top } });
+                        break;
+                    case ActionsType.Add:
+                        dataGrid = GetDataGridSelectable($"{actionAdd.DictionaryType.ToString()}Dict", data,
+                                    new Dictionary<DependencyProperty, object> { { DockPanel.DockProperty, Dock.Top } }, null);
+                        break;
+                    case ActionsType.Select:
+                        dataGrid = GetDataGridSelectable($"{actionAdd.DictionaryType.ToString()}Dict", data,
+                                    new Dictionary<DependencyProperty, object> { { DockPanel.DockProperty, Dock.Top } },
+                                    new MouseButtonEventHandler(actionAdd.Actions.FirstOrDefault(x => x.Key.ToLower() == "select").Value.EventHandler) ?? ((s, e) => { }));
+                        break;
+                }
                 dockPanel.Children.Add(dataGrid);
 
                 dataGrid.LoadingRow += (s, e) =>
                 {
-                    var action = actionAdd.Actions.FirstOrDefault(x => x.Key.ToLower() == "open");
+                    var action = actionAdd.Actions.FirstOrDefault(x => x.Key.ToLower() == "open" && actionAdd.ActionsType != ActionsType.Select);
                     if (action.Value != null)
                     {
                         e.Row.MouseDoubleClick -= new MouseButtonEventHandler(action.Value.EventHandler);

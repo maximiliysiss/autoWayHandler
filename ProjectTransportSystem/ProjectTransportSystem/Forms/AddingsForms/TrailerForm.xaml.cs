@@ -18,27 +18,27 @@ using System.Windows.Shapes;
 namespace ProjectTransportSystem.Forms.AddingsForms
 {
     /// <summary>
-    /// Interaction logic for CargoForm.xaml
+    /// Interaction logic for TrailerForm.xaml
     /// </summary>
-    public partial class CargoForm : Window
+    public partial class TrailerForm : Window
     {
-        public CargoForm(WayBill wayBill)
+        public TrailerForm(WayList wayList)
         {
             InitializeComponent();
-            var formBuilder = DictionaryBuilder.GetDictionaryBuilder("Cargoes");
+            var formBuilder = DictionaryBuilder.GetDictionaryBuilder(DictionaryType.CarTrailers);
             formBuilder.ActionsType = ActionsType.Select;
             formBuilder.Actions.Add(new KeyValuePair<string, DictionaryAction>("select", new DictionaryAction
             {
                 IsShow = false,
                 EventHandler = ((s, e) =>
                 {
-                    if (((e as MouseButtonEventArgs).Source as DataGridRow).DataContext is Cargo cargo)
-                        wayBill.Cargos.Add(cargo);
+                    if (((e as MouseButtonEventArgs).Source as DataGridRow).DataContext is TrailerCar cars)
+                        wayList.TrailerCars.Add(cars);
                     GetWindow(s as DependencyObject).Close();
                 })
             }));
-            CargoListGrid.Children.Add(DictionaryList.InitDictionary(formBuilder,
-            GlobalStaticContext.MainDbContext.Cargoes));
+            Block.Children.Add(DictionaryList.InitDictionary(formBuilder,
+                        GlobalStaticContext.MainDbContext.CarTrailers));
         }
     }
 }
